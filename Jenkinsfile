@@ -1,6 +1,13 @@
 pipeline {
      agent any
      stages {
+          stage('workspace clean up') {
+            steps {
+                // Clean before build
+                cleanWs()
+                // We need to explicitly checkout from SCM here
+            }
+        }
         stage("Build") {
             steps {
                 sh "sudo npm install"
