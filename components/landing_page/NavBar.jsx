@@ -9,7 +9,7 @@ class NavBar extends Component {
     }
 
     componentDidMount() {
-        var navbar_items = ["iten 1", "item 2", "item 3"];
+        var navbar_items = ["iten 1", "item 2", "item 3","item 4"];
         
         this.setState({ navbar_items: navbar_items });
     }
