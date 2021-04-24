@@ -12,7 +12,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh "sudo rm -rf /var/www/af-frontend"
-                sh "cp -r ${WORKSPACE}/dist/ /var/www/af-frontend/"
+                sh "sudo cp -r ${WORKSPACE}/dist/ /var/www/af-frontend/"
             }
         }
         stage('workspace clean up') {
