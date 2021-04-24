@@ -4,7 +4,7 @@ pipeline {
         stage("Build") {
             steps {
                 sh "sudo npm install"
-                sh "sudo parcel build -d build index.html"
+                sh "parcel build -d build index.html"
             }
         }
         stage("Deploy") {
