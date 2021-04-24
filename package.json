@@ -1,0 +1,27 @@
+{
+  "name": "icaf-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akilaliyanage/ICAF-frontend.git"
+  },
+  "author": "mlakilaliyanage@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akilaliyanage/ICAF-frontend/issues"
+  },
+  "homepage": "https://github.com/akilaliyanage/ICAF-frontend#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
