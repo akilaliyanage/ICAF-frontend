@@ -7,7 +7,6 @@ pipeline {
                 sh "sudo npm install"
                 sh "pwd"
                 sh "ls -lrth"
-                sh "parcel build -d build index.html"
             }
         }
         stage("Deploy") {
