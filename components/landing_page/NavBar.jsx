@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../../assets/css/Landing_Page/index.scss'
 class NavBar extends Component {
     constructor(props) {
         super(props);
@@ -8,7 +9,7 @@ class NavBar extends Component {
     }
 
     componentDidMount() {
-        var navbar_items = ["iten 1", "item 2", "item 3"];
+        var navbar_items = ["iten 1", "item 2", "item 3","item 4"];
         
         this.setState({ navbar_items: navbar_items });
     }
@@ -18,7 +19,7 @@ class NavBar extends Component {
         return (
             <div className='akila-header'>
                 <nav className='akila-navbar'>
-                    <a href="" className='akila-brand'>Brand</a>
+                    <a href="" className='akila-brand'>ICAF</a>
                     <input type="checkbox" id="nav" className='akila-hidden' />
                     <label htmlFor="nav" className='akila-nav-toggle'>
                         <span></span>
