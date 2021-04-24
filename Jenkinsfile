@@ -18,7 +18,7 @@ pipeline {
         stage('Slack it'){
             steps {
                 slackSend channel: '#af-project', 
-                          message: 'test msg'
+                          message: 'There is a new version of AF front-end avaibable'
             }
         }
         stage('workspace clean up') {
