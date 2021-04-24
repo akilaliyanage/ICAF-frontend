@@ -15,6 +15,12 @@ pipeline {
                 sh "sudo cp -r ${WORKSPACE}/dist/ /var/www/af-frontend/"
             }
         }
+        stage('Slack it'){
+            steps {
+                slackSend channel: '#af-project', 
+                          message: 'Hello, world'
+            }
+        }
         stage('workspace clean up') {
             steps {
                 // Clean before build
