@@ -26471,6 +26471,8 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _reactRouterDom = require('react-router-dom');
+  var _componentsLanding_pageTemplate = require('./components/landing_page/Template');
+  var _componentsLanding_pageTemplateDefault = _parcelHelpers.interopDefault(_componentsLanding_pageTemplate);
   var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
@@ -26482,14 +26484,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26498,14 +26500,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14,
+            lineNumber: 15,
             columnNumber: 21
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(PostsHolder, {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_componentsLanding_pageTemplateDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 25
           }
         }))))
@@ -26519,7 +26521,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK"}],"1PMSK":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK","./components/landing_page/Template":"5Job1"}],"1PMSK":[function(require,module,exports) {
 "use strict";
 if ("development" === "production") {
   module.exports = require("./cjs/react-router-dom.min.js");
@@ -30455,6 +30457,197 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"68QIU"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
+},{"react-is":"68QIU"}],"5Job1":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _NavBar = require('./NavBar');
+  var _NavBarDefault = _parcelHelpers.interopDefault(_NavBar);
+  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\Template.jsx";
+  class Template extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {};
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-template-header",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_NavBarDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 21
+          }
+        })))
+      );
+    }
+  }
+  exports.default = Template;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./NavBar":"691Yq","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"691Yq":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
+  class NavBar extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        navbar_items: []
+      };
+    }
+    componentDidMount() {
+      var navbar_items = ["iten 1", "item 2", "item 3"];
+      this.setState({
+        navbar_items: navbar_items
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-header",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("nav", {
+          className: "akila-navbar",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          href: "",
+          className: "akila-brand",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21,
+            columnNumber: 21
+          }
+        }, "Brand"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "checkbox",
+          id: "nav",
+          className: "akila-hidden",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "nav",
+          className: "akila-nav-toggle",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-wrapper",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          className: "akila-menu",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30,
+            columnNumber: 25
+          }
+        }, this.state.navbar_items.map(item => {
+          return (
+            /*#__PURE__*/_reactDefault.default.createElement("li", {
+              className: "akila-menu-item",
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 33,
+                columnNumber: 37
+              }
+            }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+              href: "#",
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 33,
+                columnNumber: 69
+              }
+            }, item))
+          );
+        })))))
+      );
+    }
+  }
+  exports.default = NavBar;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
 
 //# sourceMappingURL=index.63f10152.js.map
