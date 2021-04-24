@@ -30520,6 +30520,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../../assets/css/Landing_Page/index.scss');
   var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
   class NavBar extends _react.Component {
     constructor(props) {
@@ -30529,7 +30530,7 @@ try {
       };
     }
     componentDidMount() {
-      var navbar_items = ["iten 1", "item 2", "item 3"];
+      var navbar_items = ["iten 1", "item 2", "item 3", "item 4"];
       this.setState({
         navbar_items: navbar_items
       });
@@ -30541,7 +30542,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
+            lineNumber: 20,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("nav", {
@@ -30549,7 +30550,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -30558,17 +30559,17 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 21
           }
-        }, "Brand"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        }, "ICAF"), /*#__PURE__*/_reactDefault.default.createElement("input", {
           type: "checkbox",
           id: "nav",
           className: "akila-hidden",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 21
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30577,17 +30578,10 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 24,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 24,
-            columnNumber: 25
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -30601,12 +30595,19 @@ try {
             lineNumber: 26,
             columnNumber: 25
           }
+        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 25
+          }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "akila-wrapper",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
@@ -30614,7 +30615,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30,
+            lineNumber: 31,
             columnNumber: 25
           }
         }, this.state.navbar_items.map(item => {
@@ -30624,7 +30625,7 @@ try {
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 37
               }
             }, /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -30632,7 +30633,7 @@ try {
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 69
               }
             }, item))
@@ -30648,6 +30649,6 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../assets/css/Landing_Page/index.scss":"4EsHu"}],"4EsHu":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
 
 //# sourceMappingURL=index.63f10152.js.map
