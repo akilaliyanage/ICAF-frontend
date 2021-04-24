@@ -1,5 +1,6 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Template from './components/landing_page/Template'
 
 export default class App extends React.Component {
     constructor(props) {
@@ -12,7 +13,7 @@ export default class App extends React.Component {
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <PostsHolder />
+                        <Template />
                     </Route>
                 </Switch>
             </Router>
