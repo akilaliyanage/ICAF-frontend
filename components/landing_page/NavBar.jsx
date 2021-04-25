@@ -9,9 +9,7 @@ class NavBar extends Component {
     }
 
     componentDidMount() {
-        var navbar_items = ["iten 1", "item 2", "item 3","item 4"];
         
-        this.setState({ navbar_items: navbar_items });
     }
 
 
@@ -29,9 +27,9 @@ class NavBar extends Component {
 
                     <div className='akila-wrapper'>
                         <ul className='akila-menu'>
-                            {this.state.navbar_items.map(item => {
+                            {this.props.items.map(item => {
                                 return (
-                                    <li className="akila-menu-item"><a href="#">{item}</a></li>
+                                    <li className="akila-menu-item"><a href={item.url}>{item.name}</a></li>
                                 );
                             })}
                         </ul>

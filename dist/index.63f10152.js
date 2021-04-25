@@ -1053,7 +1053,7 @@ try {
   var _reactDom = require('react-dom');
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\index.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26274,7 +26274,7 @@ try {
   var _reactRouterDom = require('react-router-dom');
   var _componentsLanding_pageTemplate = require('./components/landing_page/Template');
   var _componentsLanding_pageTemplateDefault = _parcelHelpers.interopDefault(_componentsLanding_pageTemplate);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\App.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
       super(props);
@@ -30270,11 +30270,27 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _NavBar = require('./NavBar');
   var _NavBarDefault = _parcelHelpers.interopDefault(_NavBar);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\Template.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/Template.jsx";
   class Template extends _react.Component {
     constructor(props) {
       super(props);
-      this.state = {};
+      this.state = {
+        navbar_items: []
+      };
+    }
+    componentDidMount() {
+      // the item array should have array ob obkects as per lister in the below example before passing as props to the nav Bar
+      // {
+      // "name" : "item 1",
+      // "url" : "test url"
+      // }
+      var navbar_items = [{
+        "name": "item 1",
+        "url": "test url"
+      }];
+      this.setState({
+        navbar_items: navbar_items
+      });
     }
     render() {
       return (
@@ -30282,7 +30298,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 11,
+            lineNumber: 26,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30290,14 +30306,15 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 27,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_NavBarDefault.default, {
+          items: this.state.navbar_items,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 28,
             columnNumber: 21
           }
         })))
@@ -30322,7 +30339,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/Landing_Page/index.scss');
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/NavBar.jsx";
   class NavBar extends _react.Component {
     constructor(props) {
       super(props);
@@ -30330,12 +30347,7 @@ try {
         navbar_items: []
       };
     }
-    componentDidMount() {
-      var navbar_items = ["iten 1", "item 2", "item 3", "item 4"];
-      this.setState({
-        navbar_items: navbar_items
-      });
-    }
+    componentDidMount() {}
     render() {
       return (
         /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30343,7 +30355,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 18,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("nav", {
@@ -30351,7 +30363,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 19,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -30360,7 +30372,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 20,
             columnNumber: 21
           }
         }, "ICAF"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30370,7 +30382,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 21,
             columnNumber: 21
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30379,28 +30391,28 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 22,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
             lineNumber: 25,
-            columnNumber: 25
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 26,
-            columnNumber: 25
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 27,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30408,7 +30420,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30,
+            lineNumber: 28,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
@@ -30416,28 +30428,28 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31,
+            lineNumber: 29,
             columnNumber: 25
           }
-        }, this.state.navbar_items.map(item => {
+        }, this.props.items.map(item => {
           return (
             /*#__PURE__*/_reactDefault.default.createElement("li", {
               className: "akila-menu-item",
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 34,
+                lineNumber: 32,
                 columnNumber: 37
               }
             }, /*#__PURE__*/_reactDefault.default.createElement("a", {
-              href: "#",
+              href: item.url,
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 34,
+                lineNumber: 32,
                 columnNumber: 69
               }
-            }, item))
+            }, item.name))
           );
         })))))
       );
