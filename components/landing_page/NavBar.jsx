@@ -8,11 +8,6 @@ class NavBar extends Component {
          }
     }
 
-    componentDidMount() {
-        
-    }
-
-
     render() { 
         return (
             <div className='akila-header'>
