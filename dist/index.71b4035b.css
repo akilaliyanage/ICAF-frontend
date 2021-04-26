@@ -231,6 +231,9 @@ body::-webkit-scrollbar-thumb {
   font-family: "Antonio", sans-serif;
   font-size: 3vw;
 }
+.akila-main-topic h3 span {
+  font-size: 2vw;
+}
 .akila-main-topic img {
   color: #ffffff;
   width: 2vw;
@@ -241,5 +244,8 @@ body::-webkit-scrollbar-thumb {
 .akila-main-topic span a {
   color: #ffffff;
   text-decoration: underline;
+}
+.akila-about-icaf {
+  height: 100vh;
 }
 /*# sourceMappingURL=index.71b4035b.css.map */

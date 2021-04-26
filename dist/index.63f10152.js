@@ -30349,7 +30349,14 @@ try {
             lineNumber: 37,
             columnNumber: 21
           }
-        }, "Sri Lanka, 10/20 Dec"), /*#__PURE__*/_reactDefault.default.createElement("span", {
+        }, "Sri Lanka, 10/20 Dec ", /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37,
+            columnNumber: 46
+          }
+        }, " @ SLIIT")), /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -30379,7 +30386,15 @@ try {
             lineNumber: 38,
             columnNumber: 73
           }
-        }))))
+        }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-about-icaf",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41,
+            columnNumber: 17
+          }
+        }))
       );
     }
   }

@@ -269,6 +269,10 @@ body::-webkit-scrollbar-thumb {
   h3{
     font-family: 'Antonio', sans-serif;
     font-size: 3vw;
+
+    span{
+      font-size: 2vw;
+    }
   }
 
   img{
@@ -283,4 +287,7 @@ body::-webkit-scrollbar-thumb {
       text-decoration: underline;
     }
   }
+}
+.akila-about-icaf{
+  height: 100vh;
 }
