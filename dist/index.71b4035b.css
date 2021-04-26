@@ -395,8 +395,15 @@ body::-webkit-scrollbar-thumb {
 .akila-keynote-speakers table tr {
   width: 100%;
 }
+.akila-keynote-speakers table td {
+  width: 50%;
+}
+.akila-keynote-speakers .akila-speaker {
+  position: relative;
+}
 .akila-keynote-speakers .akila-speaker img {
   width: 100%;
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi");
 }
 .overlay {
   position: absolute;
@@ -405,11 +412,17 @@ body::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5);
   /* Black see-through */
   color: #f1f1f1;
+  width: 100%;
   transition: 0.5s ease;
   opacity: 0;
   color: white;
-  font-size: 20px;
   padding: 20px;
-  text-align: center;
+  text-align: left;
+}
+.overlay h1 {
+  font-size: 1px;
+}
+.akila-speaker:hover .overlay {
+  opacity: 1;
 }
 /*# sourceMappingURL=index.71b4035b.css.map */

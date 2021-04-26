@@ -31186,11 +31186,12 @@ try {
             columnNumber: 33
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_SpeakerDefault.default, {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 23,
-            columnNumber: 37
+            columnNumber: 41
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("td", {
           __self: this,
@@ -31200,6 +31201,7 @@ try {
             columnNumber: 37
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_SpeakerDefault.default, {
+          url: "https://indiaeducationdiary.in/wp-content/uploads/2020/11/shitij-kapur.xae50dfd9.jpg",
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -31220,14 +31222,30 @@ try {
             lineNumber: 30,
             columnNumber: 33
           }
-        }), /*#__PURE__*/_reactDefault.default.createElement("td", {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_SpeakerDefault.default, {
+          url: "https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201907/1%2520Patrick%2520Winston%2520at%2520____%2520-%2520photo%2520credit%2520Jason%2520Dorfman%252C%2520MIT%2520CSAIL_0.jpg?itok=r6epNmaH",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33,
+            lineNumber: 31,
+            columnNumber: 41
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34,
             columnNumber: 33
           }
-        })))))))
+        }, /*#__PURE__*/_reactDefault.default.createElement(_SpeakerDefault.default, {
+          url: "https://media1.s-nbcnews.com/j/newscms/2020_30/3393635/200630-mike-adams-unc-mc-1354_9abcaec4d365b36dd6352627f7d155b2.fit-2000w.jpg",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35,
+            columnNumber: 37
+          }
+        }))))))))
       );
     }
   }
@@ -31265,7 +31283,7 @@ try {
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-          src: "https://researchportal.port.ac.uk/portal/files/26435561/16245598.jpg",
+          src: this.props.url,
           alt: "",
           __self: this,
           __source: {
@@ -31281,7 +31299,21 @@ try {
             lineNumber: 11,
             columnNumber: 17
           }
-        }, "akila"))
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12,
+            columnNumber: 21
+          }
+        }, "Prof. Nobody"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 21
+          }
+        }, "SLIIT, Sri Lanka")))
       );
     }
   }

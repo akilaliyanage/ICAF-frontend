@@ -7,9 +7,10 @@ class Speaker extends Component {
     render() { 
         return (
             <div className="akila-speaker">
-               <img src="https://researchportal.port.ac.uk/portal/files/26435561/16245598.jpg" alt=""/>
+               <img src={this.props.url} alt=""/>
                 <div className="overlay">
-                    akila
+                    <p>Prof. Nobody</p>
+                    <p>SLIIT, Sri Lanka</p>
                </div>
             </div>
          );
