@@ -15,6 +15,7 @@ class LatestNews extends Component {
         //fetching the data from the database
 
         fetch(config.host + "/news/").then(res => res.json()).then(data => {
+            console.log(data)
             this.setState({news:data})
         })
     }
@@ -25,7 +26,7 @@ class LatestNews extends Component {
                 <div class="flex-container">
                     {this.state.news.map(item => {
                         return (
-                            <div><NewsCard /></div>
+                            <div><NewsCard date={new Date(item.date)} des={item.des} url={ item.url}/></div>
                         );
                     })}
                 </div>
