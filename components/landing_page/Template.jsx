@@ -3,6 +3,7 @@ import NavBar from './NavBar'
 import MainTopic from './MainTopic'
 import About from './About'
 import LatestNews from '../landing_page/LatestNews'
+import KeynoteTemplate from './KeynoteTemplate'
 import config from '../../config.json'
 
 class Template extends Component {
@@ -45,6 +46,10 @@ class Template extends Component {
                 <div className="akila-latest-news">
                     <LatestNews/>
                 </div>
+
+                <dir className="akila-keynote-speakers">
+                    <KeynoteTemplate/>
+                </dir>
             </div>
         );
     }

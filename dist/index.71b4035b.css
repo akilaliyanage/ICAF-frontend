@@ -357,4 +357,59 @@ body::-webkit-scrollbar-thumb {
 .akila-news-card .fourth:hover {
   background-position: 0;
 }
+.akila-keynote-speakers {
+  height: 100vh;
+  margin-top: 100px;
+  color: #252a32;
+}
+.akila-keynote-speakers .topics {
+  margin-top: 100px;
+}
+.akila-keynote-speakers .flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.akila-keynote-speakers .flex-container {
+  text-align: left;
+  padding-left: 40px;
+  text-align: left;
+  line-height: 100px;
+}
+.akila-keynote-speakers .flex-container h1 {
+  font-size: 5vw;
+}
+.akila-keynote-speakers .flex-container h2 {
+  font-size: 7vw;
+  margin-left: 3vw;
+}
+.akila-keynote-speakers .flex-container .info {
+  width: 100%;
+  line-height: normal;
+  padding-left: 5%;
+  text-align: justify;
+}
+.akila-keynote-speakers table {
+  width: 100%;
+}
+.akila-keynote-speakers table tr {
+  width: 100%;
+}
+.akila-keynote-speakers .akila-speaker img {
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
 /*# sourceMappingURL=index.71b4035b.css.map */
