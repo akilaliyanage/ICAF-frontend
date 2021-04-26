@@ -1053,7 +1053,7 @@ try {
   var _reactDom = require('react-dom');
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/index.jsx";
+  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26274,7 +26274,7 @@ try {
   var _reactRouterDom = require('react-router-dom');
   var _componentsLanding_pageTemplate = require('./components/landing_page/Template');
   var _componentsLanding_pageTemplateDefault = _parcelHelpers.interopDefault(_componentsLanding_pageTemplate);
-  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/App.jsx";
+  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
       super(props);
@@ -30272,7 +30272,7 @@ try {
   var _NavBarDefault = _parcelHelpers.interopDefault(_NavBar);
   var _configJson = require('../../config.json');
   var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
-  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/Template.jsx";
+  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\Template.jsx";
   class Template extends _react.Component {
     constructor(props) {
       super(props);
@@ -30297,6 +30297,7 @@ try {
     render() {
       return (
         /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-main-1",
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -30319,7 +30320,66 @@ try {
             lineNumber: 31,
             columnNumber: 21
           }
-        })))
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-main-topic",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35,
+            columnNumber: 21
+          }
+        }, "ICAF 2021"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 36,
+            columnNumber: 21
+          }
+        }, "Strategic.Innovation"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37,
+            columnNumber: 21
+          }
+        }, "Sri Lanka, 10/20 Dec"), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 21
+          }
+        }, " ", /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 28
+          }
+        }, " Join us via "), " ", /*#__PURE__*/_reactDefault.default.createElement("a", {
+          href: "",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 49
+          }
+        }, "Ms Teams "), /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAD5ElEQVR4nO2bTYscVRSG3xOSiMS40KWYzASCOjEaiYYguEzEuFBxfoEh+AvEP+DXzl0y0Qhu/AVJXAoS3TkQJ18GQU0GRBeCkxGSGQcfF3U6XV1dPV23vm5nul5oqrlf5z3vPaf7VtW9UocOUw2LaRzYLemApOckzUlak/SVmS21xaEVAYDtkvZLOqjE2Wf9+2wOhw1Jr5rZN21wq10A4AklDqYdnZP0UE7zNUnXJV2RdFXSU5JOSlo0sxfr5paH0gJkwveg+k4/ltdc0q/qO7rk3382s43UmDskrUvaMLMdZbmFYKwAHr57lDh7WMlsHpD0tKRtOV3+lnTNP9clLUr60cxWixACkCQzayU9t+cQ2CfpTUnPKyx8lyRdMbPfG2PbAO4LAGyT9LGk9zQYGUj6RWPC94EHcJIEd4FzwCngqOd6mzzopUGrAC677fnWjQ/yiCbAmtve2brxQR6tCpD+Fd8pSWa23pbxzQDsAz4DloF//boAzDRlME7ojeABrJKPO8CxxgzXPnBJHo7zwEvALr9e8PIVYG8jhmsdtAIP4PyI+p4IZ0bUzwBnPWXWC6fOBAqQey8AHPH6Wzl1xz1FwlNnAgXIXX8Au73+XqZ8NuV8eOpMoADjIuC3TPnZKqkziQKMcuSi15/OlC+XTZ0Bw2PIfT+cWoVxKVAAfNaOAI/4tef8CrAn06+3kAtKnaG7wTH4L7D9AIfA9quSXvdPGnckzZvZ7Uz5n5KeVPJQ5Yec8Z7x6x/57ApEwGao2j87Dsnf2QJwm+Tv7BZwOjvzqX4L3i8odWpzoG4BSvSbof8vUDh1anMgtgDe95g7mYcVmlwHTIIA3n8vcMZTZm1c6tRpuFYBCmAZeK2qvfuPvnrkyz6MrNo/O05BLJvZ5jMbYniSIiC0HXCC/mIoPHK2gABFnO8hu4bYEgKU6pf3YmOq0AkQm0BsdALEJhAbnQCxCcRGJ0BsArExVQIAQzdqoc8EN8N3Cn/u1zbe9uvNoZq61vJV0dS9ADAH/OXN3i1tuGkU4QHYKAGAD4FXgMdJ3gwdAj6g/7b5a5LtQOGG20BBAea92U+psm8Zjy+Bh0sbbgNlQ9mj4mXgU2DRZ/wf4CbwOXC0kuG2kJqtT4AXgEeDQrmq4doGrMijdChXNVzroBV4kLzpueFhXDyUqxpuZPAJ5pHOoXUnEHWbXNtIC3DDr2/EIBIdwDseffeAL5iSrbLpN0Mm6SNJ72t4s/TYvf51oed8W9vlh4wAs5LeUqTt8tEFyIItfmCiOzJT94BUOzS1X9IpPQiHpkLANB2bCwHDByfvKjk4eTUmrw4dpgj/A9ch2EWJwogoAAAAAElFTkSuQmCC",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 73
+          }
+        }))))
       );
     }
   }
@@ -30330,7 +30390,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./NavBar":"691Yq","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../config.json":"7LU2l"}],"691Yq":[function(require,module,exports) {
+},{"react":"3b2NM","./NavBar":"691Yq","../../config.json":"7LU2l","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"691Yq":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30341,7 +30401,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/Landing_Page/index.scss');
-  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/NavBar.jsx";
+  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
   class NavBar extends _react.Component {
     constructor(props) {
       super(props);
@@ -30349,7 +30409,6 @@ try {
         navbar_items: []
       };
     }
-    componentDidMount() {}
     render() {
       return (
         /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30357,7 +30416,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
+            lineNumber: 13,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("nav", {
@@ -30365,7 +30424,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
+            lineNumber: 14,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -30374,7 +30433,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 15,
             columnNumber: 21
           }
         }, "ICAF"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30384,7 +30443,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 16,
             columnNumber: 21
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30393,28 +30452,28 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 17,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 18,
             columnNumber: 25
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 19,
             columnNumber: 25
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25,
+            lineNumber: 20,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30422,7 +30481,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28,
+            lineNumber: 23,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
@@ -30430,7 +30489,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 24,
             columnNumber: 25
           }
         }, this.props.items.map(item => {
@@ -30440,7 +30499,7 @@ try {
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 32,
+                lineNumber: 27,
                 columnNumber: 37
               }
             }, /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -30448,7 +30507,7 @@ try {
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 32,
+                lineNumber: 27,
                 columnNumber: 69
               }
             }, item.name))
