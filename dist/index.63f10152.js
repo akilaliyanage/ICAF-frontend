@@ -1053,7 +1053,7 @@ try {
   var _reactDom = require('react-dom');
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\index.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26274,7 +26274,7 @@ try {
   var _reactRouterDom = require('react-router-dom');
   var _componentsLanding_pageTemplate = require('./components/landing_page/Template');
   var _componentsLanding_pageTemplateDefault = _parcelHelpers.interopDefault(_componentsLanding_pageTemplate);
-  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\App.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
       super(props);
@@ -30270,7 +30270,9 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _NavBar = require('./NavBar');
   var _NavBarDefault = _parcelHelpers.interopDefault(_NavBar);
-  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\Template.jsx";
+  var _configJson = require('../../config.json');
+  var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/Template.jsx";
   class Template extends _react.Component {
     constructor(props) {
       super(props);
@@ -30284,12 +30286,12 @@ try {
       // "name" : "item 1",
       // "url" : "test url"
       // }
-      var navbar_items = [{
-        "name": "item 1",
-        "url": "test url"
-      }];
-      this.setState({
-        navbar_items: navbar_items
+      // calling the api to fetch data
+      fetch(_configJsonDefault.default.host + "/nav-items").then(res => res.json()).then(data => {
+        console.log(data);
+        this.setState({
+          navbar_items: data
+        });
       });
     }
     render() {
@@ -30298,7 +30300,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
+            lineNumber: 29,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30306,7 +30308,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
+            lineNumber: 30,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_NavBarDefault.default, {
@@ -30314,7 +30316,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28,
+            lineNumber: 31,
             columnNumber: 21
           }
         })))
@@ -30328,7 +30330,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./NavBar":"691Yq","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"691Yq":[function(require,module,exports) {
+},{"react":"3b2NM","./NavBar":"691Yq","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../config.json":"7LU2l"}],"691Yq":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30339,7 +30341,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/Landing_Page/index.scss');
-  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/NavBar.jsx";
   class NavBar extends _react.Component {
     constructor(props) {
       super(props);
@@ -30661,6 +30663,9 @@ function registerExportsForReactRefresh(module) {
   }
 }
 
-},{"react-refresh/runtime":"592mh"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
+},{"react-refresh/runtime":"592mh"}],"7LU2l":[function(require,module,exports) {
+module.exports = JSON.parse("{\"host\":\"http://localhost:8000\"}");
+
+},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
 
 //# sourceMappingURL=index.63f10152.js.map
