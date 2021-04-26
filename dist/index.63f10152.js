@@ -30270,6 +30270,8 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _NavBar = require('./NavBar');
   var _NavBarDefault = _parcelHelpers.interopDefault(_NavBar);
+  var _landing_pageLatestNews = require('../landing_page/LatestNews');
+  var _landing_pageLatestNewsDefault = _parcelHelpers.interopDefault(_landing_pageLatestNews);
   var _configJson = require('../../config.json');
   var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
   var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\Template.jsx";
@@ -30301,7 +30303,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30309,7 +30311,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30,
+            lineNumber: 31,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_NavBarDefault.default, {
@@ -30317,7 +30319,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31,
+            lineNumber: 32,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30325,49 +30327,49 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34,
+            lineNumber: 35,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35,
+            lineNumber: 36,
             columnNumber: 21
           }
         }, "ICAF 2021"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 21
           }
         }, "Strategic.Innovation"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 37,
+            lineNumber: 38,
             columnNumber: 21
           }
         }, "Sri Lanka, 10/20 Dec ", /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 37,
+            lineNumber: 38,
             columnNumber: 46
           }
         }, " @ SLIIT")), /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38,
+            lineNumber: 39,
             columnNumber: 21
           }
         }, " ", /*#__PURE__*/_reactDefault.default.createElement("b", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38,
+            lineNumber: 39,
             columnNumber: 28
           }
         }, " Join us via "), " ", /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -30375,7 +30377,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38,
+            lineNumber: 39,
             columnNumber: 49
           }
         }, "Ms Teams "), /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -30383,7 +30385,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38,
+            lineNumber: 39,
             columnNumber: 73
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30391,7 +30393,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41,
+            lineNumber: 42,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30399,35 +30401,35 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42,
+            lineNumber: 43,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43,
+            lineNumber: 44,
             columnNumber: 25
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44,
+            lineNumber: 45,
             columnNumber: 29
           }
         }, "About"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45,
+            lineNumber: 46,
             columnNumber: 29
           }
         }, "ICAF"), /*#__PURE__*/_reactDefault.default.createElement("h1", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46,
+            lineNumber: 47,
             columnNumber: 29
           }
         }, "Conference")), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30435,31 +30437,46 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48,
+            lineNumber: 49,
             columnNumber: 25
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49,
+            lineNumber: 50,
             columnNumber: 29
           }
         }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure similique neque minus, dolore, cumque ratione vitae aut reiciendis, nisi odit eius veritatis doloribus aperiam eveniet nemo aspernatur aliquid impedit quos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure labore nulla autem doloribus dolorum libero praesentium optio perferendis, incidunt reiciendis excepturi, sed omnis maxime quae repellat cupiditate odit, dolore amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam distinctio illo animi ullam omnis, est beatae commodi veritatis nihil, consequuntur rerum. Rerum laborum expedita sunt debitis? Aspernatur placeat quis laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae adipisci, dolore deserunt ea excepturi fugiat distinctio provident, ipsum non, quod alias officiis. Nisi culpa officiis, animi repellendus ex ullam facilis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem velit sunt ullam quia delectus cumque pariatur officia quis aut reprehenderit a natus culpa, ducimus inventore id rerum aliquid rem ad? ", /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49,
+            lineNumber: 50,
             columnNumber: 1139
           }
         }), " ", /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49,
+            lineNumber: 50,
             columnNumber: 1145
           }
-        }), " Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero fugit voluptatibus cupiditate repudiandae eligendi excepturi odio neque, voluptatum ab cum deserunt ex ea impedit sit alias vel ipsum obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe molestiae nulla facere distinctio, est iusto impedit quod vitae nobis suscipit. Mollitia quod asperiores, ea distinctio maxime nesciunt! Possimus, a temporibus! ")))))
+        }), " Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero fugit voluptatibus cupiditate repudiandae eligendi excepturi odio neque, voluptatum ab cum deserunt ex ea impedit sit alias vel ipsum obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe molestiae nulla facere distinctio, est iusto impedit quod vitae nobis suscipit. Mollitia quod asperiores, ea distinctio maxime nesciunt! Possimus, a temporibus! ")))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-latest-news",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_landing_pageLatestNewsDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56,
+            columnNumber: 21
+          }
+        })))
       );
     }
   }
@@ -30470,7 +30487,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./NavBar":"691Yq","../../config.json":"7LU2l","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"691Yq":[function(require,module,exports) {
+},{"react":"3b2NM","./NavBar":"691Yq","../../config.json":"7LU2l","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../landing_page/LatestNews":"6unvj"}],"691Yq":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30805,6 +30822,157 @@ function registerExportsForReactRefresh(module) {
 },{"react-refresh/runtime":"592mh"}],"7LU2l":[function(require,module,exports) {
 module.exports = JSON.parse("{\"host\":\"http://localhost:8000\"}");
 
-},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
+},{}],"6unvj":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../../assets/css/Landing_Page/index.scss');
+  var _configJson = require('../../config.json');
+  var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
+  var _NewsCard = require('./NewsCard');
+  var _NewsCardDefault = _parcelHelpers.interopDefault(_NewsCard);
+  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\LatestNews.jsx";
+  class LatestNews extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        news: []
+      };
+    }
+    componentDidMount() {
+      // fetching the data from the database
+      fetch(_configJsonDefault.default.host + "/news/").then(res => res.json()).then(data => {
+        this.setState({
+          news: data
+        });
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 17
+          }
+        }, "Latest ", /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 28
+          }
+        }, "News")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "flex-container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 17
+          }
+        }, this.state.news.map(item => {
+          return (
+            /*#__PURE__*/_reactDefault.default.createElement("div", {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 28,
+                columnNumber: 29
+              }
+            }, /*#__PURE__*/_reactDefault.default.createElement(_NewsCardDefault.default, {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 28,
+                columnNumber: 34
+              }
+            }))
+          );
+        })))
+      );
+    }
+  }
+  exports.default = LatestNews;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../assets/css/Landing_Page/index.scss":"4EsHu","./NewsCard":"R7H0P","../../config.json":"7LU2l"}],"4EsHu":[function() {},{}],"R7H0P":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\NewsCard.jsx";
+  class NewsCard extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {};
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-news-card",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 17
+          }
+        }, "Dec 09, 2021"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11,
+            columnNumber: 17
+          }
+        }, "Test Description about the event"), /*#__PURE__*/_reactDefault.default.createElement("a", {
+          href: "",
+          className: "btn fourth",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12,
+            columnNumber: 17
+          }
+        }, "Show more"))
+      );
+    }
+  }
+  exports.default = NewsCard;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
 
 //# sourceMappingURL=index.63f10152.js.map

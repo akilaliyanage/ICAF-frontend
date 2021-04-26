@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import NavBar from './NavBar'
+import LatestNews from '../landing_page/LatestNews'
 import config from '../../config.json'
 
 class Template extends Component {
@@ -49,6 +50,10 @@ class Template extends Component {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure similique neque minus, dolore, cumque ratione vitae aut reiciendis, nisi odit eius veritatis doloribus aperiam eveniet nemo aspernatur aliquid impedit quos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure labore nulla autem doloribus dolorum libero praesentium optio perferendis, incidunt reiciendis excepturi, sed omnis maxime quae repellat cupiditate odit, dolore amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam distinctio illo animi ullam omnis, est beatae commodi veritatis nihil, consequuntur rerum. Rerum laborum expedita sunt debitis? Aspernatur placeat quis laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae adipisci, dolore deserunt ea excepturi fugiat distinctio provident, ipsum non, quod alias officiis. Nisi culpa officiis, animi repellendus ex ullam facilis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem velit sunt ullam quia delectus cumque pariatur officia quis aut reprehenderit a natus culpa, ducimus inventore id rerum aliquid rem ad? <br/> <br/> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero fugit voluptatibus cupiditate repudiandae eligendi excepturi odio neque, voluptatum ab cum deserunt ex ea impedit sit alias vel ipsum obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe molestiae nulla facere distinctio, est iusto impedit quod vitae nobis suscipit. Mollitia quod asperiores, ea distinctio maxime nesciunt! Possimus, a temporibus! </p>
                         </div>
                     </div>
+                </div>
+
+                <div className="akila-latest-news">
+                    <LatestNews/>
                 </div>
             </div>
         );
