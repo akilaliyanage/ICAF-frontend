@@ -30394,7 +30394,72 @@ try {
             lineNumber: 41,
             columnNumber: 17
           }
-        }))
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "flex-container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44,
+            columnNumber: 29
+          }
+        }, "About"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45,
+            columnNumber: 29
+          }
+        }, "ICAF"), /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 29
+          }
+        }, "Conference")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "info",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49,
+            columnNumber: 29
+          }
+        }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure similique neque minus, dolore, cumque ratione vitae aut reiciendis, nisi odit eius veritatis doloribus aperiam eveniet nemo aspernatur aliquid impedit quos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure labore nulla autem doloribus dolorum libero praesentium optio perferendis, incidunt reiciendis excepturi, sed omnis maxime quae repellat cupiditate odit, dolore amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam distinctio illo animi ullam omnis, est beatae commodi veritatis nihil, consequuntur rerum. Rerum laborum expedita sunt debitis? Aspernatur placeat quis laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae adipisci, dolore deserunt ea excepturi fugiat distinctio provident, ipsum non, quod alias officiis. Nisi culpa officiis, animi repellendus ex ullam facilis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem velit sunt ullam quia delectus cumque pariatur officia quis aut reprehenderit a natus culpa, ducimus inventore id rerum aliquid rem ad? ", /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49,
+            columnNumber: 1139
+          }
+        }), " ", /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49,
+            columnNumber: 1145
+          }
+        }), " Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero fugit voluptatibus cupiditate repudiandae eligendi excepturi odio neque, voluptatum ab cum deserunt ex ea impedit sit alias vel ipsum obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe molestiae nulla facere distinctio, est iusto impedit quod vitae nobis suscipit. Mollitia quod asperiores, ea distinctio maxime nesciunt! Possimus, a temporibus! ")))))
       );
     }
   }

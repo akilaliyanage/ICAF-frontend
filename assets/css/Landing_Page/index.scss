@@ -289,5 +289,38 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .akila-about-icaf{
-  height: 100vh;
+  margin-top: 98vh;
+  color: #252a32;
+  //overflow-x: hidden;
+
+
+ .flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.flex-container {
+  text-align: left;
+  padding-left: 40px;
+  text-align: left;
+  line-height: 170px;
+
+  h1{
+    font-size: 7vw;
+  }
+  h2{
+    font-size: 12vw;
+    margin-left: 3vw;
+  }
+
+  .info{
+    background-color: #d8e3e7;
+    line-height: normal;
+    padding-top: 3%;
+    padding-left: 7%;
+    padding-right: 6%;
+    text-align: justify;
+  }
+}
 }
