@@ -3,8 +3,9 @@ $color-black: #252a32;
 $color-light: #f1f5f8;
 $color-red: #d32f2f;
 $color-blue: #0061a8;
+$color-light-blue: #d8e3e7;
 
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap");
 
 * {
   padding: 0;
@@ -13,8 +14,8 @@ $color-blue: #0061a8;
   list-style: none;
   text-decoration: none;
   -moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -23,8 +24,8 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: $color-white;
-  scrollbar-width: thin;          /* "auto" or "thin" */
-  scrollbar-color: $color-blue $color-black; 
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: $color-blue $color-black;
 }
 /* Works on Firefox */
 * {
@@ -113,7 +114,7 @@ body {
     .akila-navbar {
       padding: 1rem 2rem;
       margin: 0 auto;
-      
+
       .akila-wrapper {
         position: fixed;
         top: 0;
@@ -235,25 +236,26 @@ body {
   }
 }
 
-.akila-main-1{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('../../media/akila/main.png');
+.akila-main-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../../media/akila/main.png");
   height: 100vh;
 }
 
 body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 12px; /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: $color-black;        /* color of the tracking area */
+  background: $color-black; /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $color-blue;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid $color-black;  /* creates padding around scroll thumb */
+  background-color: $color-blue; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid $color-black; /* creates padding around scroll thumb */
 }
-.akila-main-topic{
+.akila-main-topic {
   text-align: left;
   margin: 0;
   position: absolute;
@@ -263,64 +265,236 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-50%);
   font-size: 4vw;
 
-  h2{
+  h2 {
     font-size: 2vw;
   }
-  h3{
-    font-family: 'Antonio', sans-serif;
+  h3 {
+    font-family: "Antonio", sans-serif;
     font-size: 3vw;
 
-    span{
+    span {
       font-size: 2vw;
     }
   }
 
-  img{
+  img {
     color: $color-white;
     width: 2vw;
   }
-  span{
+  span {
     font-size: 1.5vw;
 
-    a{
+    a {
       color: #ffffff;
       text-decoration: underline;
     }
   }
 }
-.akila-about-icaf{
+.akila-about-icaf {
   margin-top: 98vh;
   color: #252a32;
   //overflow-x: hidden;
 
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
 
- .flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
+  .flex-container {
+    text-align: left;
+    padding-left: 40px;
+    text-align: left;
+    line-height: 170px;
+
+    h1 {
+      font-size: 7vw;
+    }
+    h2 {
+      font-size: 12vw;
+      margin-left: 3vw;
+    }
+
+    .info {
+      background-color: #d8e3e7;
+      line-height: normal;
+      padding-top: 3%;
+      padding-left: 5%;
+      padding-right: 6%;
+      text-align: justify;
+    }
+  }
+}
+.akila-latest-news {
+  margin-top: 3%;
+  color: #252a32;
+  text-align: center;
+  font-size: 1vw;
+
+  span {
+    text-decoration: underline;
+    font-size: 3vw;
+  }
+
+  .flex-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .flex-container::before {
+    content: none;
+    border-left: #252a32 2px solid;
+  }
+
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: auto;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
 }
 
-.flex-container {
+.akila-news-card {
+  width: 300px;
+  border-left: $color-blue 4px solid;
+  line-height: 40px;
+  padding: 10px;
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: small;
+  }
+  a{
+    text-align: center;
+  }
+
+  .btn {
+    text-align: center;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid $color-blue;
+    border-radius: 0.0rem;
+    color: $color-blue;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 10px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      outline: 0;
+    }
+  }
+      .fourth {
+      // background: $yellow;
+      text-align: center;
+      border-color: $color-blue;
+      color: $color-blue;
+      background: {
+        image: linear-gradient(45deg, $color-blue 50%, transparent 50%);
+        position: 100%;
+        size: 400%;
+      }
+      transition: background 300ms ease-in-out;
+
+      &:hover {
+        background-position: 0;
+      }
+    }
+}
+.akila-keynote-speakers {
+  height: 100vh;
+  margin-top: 100px;
+  color: #252a32;
+  //overflow-x: hidden;
+
+  .topics{
+    margin-top: 100px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .flex-container {
+    text-align: left;
+    padding-left: 40px;
+    text-align: left;
+    line-height: 100px;
+
+    h1 {
+      font-size: 5vw;
+    }
+    h2 {
+      font-size: 7vw;
+      margin-left: 3vw;
+    }
+
+    .info {
+      width: 100%;
+      line-height: normal;
+      padding-left: 5%;
+      text-align: justify;
+    }
+  }
+
+  table{
+    width: 100%;
+    tr{
+      width: 100%;
+    }
+    td{
+      width: 50%;
+    }
+  }
+
+  .akila-speaker{
+
+    img{
+      width: 100%;
+      background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi");
+    }
+
+      position: relative;
+  }
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  padding: 20px;
   text-align: left;
-  padding-left: 40px;
-  text-align: left;
-  line-height: 170px;
 
   h1{
-    font-size: 7vw;
-  }
-  h2{
-    font-size: 12vw;
-    margin-left: 3vw;
-  }
-
-  .info{
-    background-color: #d8e3e7;
-    line-height: normal;
-    padding-top: 3%;
-    padding-left: 7%;
-    padding-right: 6%;
-    text-align: justify;
+    font-size: 1px;
   }
 }
+.akila-speaker:hover .overlay {
+  opacity: 1;
 }
+   

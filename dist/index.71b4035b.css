@@ -271,8 +271,158 @@ body::-webkit-scrollbar-thumb {
   background-color: #d8e3e7;
   line-height: normal;
   padding-top: 3%;
-  padding-left: 7%;
+  padding-left: 5%;
   padding-right: 6%;
   text-align: justify;
+}
+.akila-latest-news {
+  margin-top: 3%;
+  color: #252a32;
+  text-align: center;
+  font-size: 1vw;
+}
+.akila-latest-news span {
+  text-decoration: underline;
+  font-size: 3vw;
+}
+.akila-latest-news .flex-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: auto;
+}
+.akila-latest-news .flex-container::before {
+  content: none;
+  border-left: #252a32 2px solid;
+}
+.akila-latest-news .flex-container > div {
+  background-color: #f1f1f1;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.akila-news-card {
+  width: 300px;
+  border-left: #0061a8 4px solid;
+  line-height: 40px;
+  padding: 10px;
+}
+.akila-news-card h1 {
+  font-size: 20px;
+}
+.akila-news-card p {
+  font-size: small;
+}
+.akila-news-card a {
+  text-align: center;
+}
+.akila-news-card .btn {
+  text-align: center;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #0061a8;
+  border-radius: 0rem;
+  color: #0061a8;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 10px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.akila-news-card .btn:hover, .akila-news-card .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+.akila-news-card .fourth {
+  text-align: center;
+  border-color: #0061a8;
+  color: #0061a8;
+  background-image: linear-gradient(45deg, #0061a8 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
+}
+.akila-news-card .fourth:hover {
+  background-position: 0;
+}
+.akila-keynote-speakers {
+  height: 100vh;
+  margin-top: 100px;
+  color: #252a32;
+}
+.akila-keynote-speakers .topics {
+  margin-top: 100px;
+}
+.akila-keynote-speakers .flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.akila-keynote-speakers .flex-container {
+  text-align: left;
+  padding-left: 40px;
+  text-align: left;
+  line-height: 100px;
+}
+.akila-keynote-speakers .flex-container h1 {
+  font-size: 5vw;
+}
+.akila-keynote-speakers .flex-container h2 {
+  font-size: 7vw;
+  margin-left: 3vw;
+}
+.akila-keynote-speakers .flex-container .info {
+  width: 100%;
+  line-height: normal;
+  padding-left: 5%;
+  text-align: justify;
+}
+.akila-keynote-speakers table {
+  width: 100%;
+}
+.akila-keynote-speakers table tr {
+  width: 100%;
+}
+.akila-keynote-speakers table td {
+  width: 50%;
+}
+.akila-keynote-speakers .akila-speaker {
+  position: relative;
+}
+.akila-keynote-speakers .akila-speaker img {
+  width: 100%;
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi");
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+.overlay h1 {
+  font-size: 1px;
+}
+.akila-speaker:hover .overlay {
+  opacity: 1;
 }
 /*# sourceMappingURL=index.71b4035b.css.map */
