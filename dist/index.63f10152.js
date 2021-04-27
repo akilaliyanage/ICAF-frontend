@@ -1053,7 +1053,7 @@ try {
   var _reactDom = require('react-dom');
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\index.jsx";
+  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26274,7 +26274,7 @@ try {
   var _reactRouterDom = require('react-router-dom');
   var _componentsLanding_pageTemplate = require('./components/landing_page/Template');
   var _componentsLanding_pageTemplateDefault = _parcelHelpers.interopDefault(_componentsLanding_pageTemplate);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\App.jsx";
+  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
       super(props);
@@ -30272,7 +30272,7 @@ try {
   var _NavBarDefault = _parcelHelpers.interopDefault(_NavBar);
   var _configJson = require('../../config.json');
   var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\Template.jsx";
+  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\components\\landing_page\\Template.jsx";
   class Template extends _react.Component {
     constructor(props) {
       super(props);
@@ -30481,7 +30481,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/Landing_Page/index.scss');
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
+  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
   class NavBar extends _react.Component {
     constructor(props) {
       super(props);
