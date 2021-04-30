@@ -20,18 +20,19 @@ class KeynoteTemplate extends Component {
                              <table>
                             <tr>
                                 <td>
-                                    <Speaker/>
+                                        <Speaker url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU"/>
                                     </td>
                                     <td>
-                                        <Speaker/>
+                                        <Speaker url="https://indiaeducationdiary.in/wp-content/uploads/2020/11/shitij-kapur.xae50dfd9.jpg"/>
                                     </td>
                             </tr>
                             <tr>
                                 <td>
-
+                                        <Speaker url="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201907/1%2520Patrick%2520Winston%2520at%2520____%2520-%2520photo%2520credit%2520Jason%2520Dorfman%252C%2520MIT%2520CSAIL_0.jpg?itok=r6epNmaH" />
+                                        
                                 </td>
                                 <td>
-
+                                    <Speaker url="https://media1.s-nbcnews.com/j/newscms/2020_30/3393635/200630-mike-adams-unc-mc-1354_9abcaec4d365b36dd6352627f7d155b2.fit-2000w.jpg"/>
                                 </td>
                             </tr>
                         </table>
