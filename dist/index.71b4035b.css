@@ -425,4 +425,29 @@ body::-webkit-scrollbar-thumb {
 .akila-speaker:hover .overlay {
   opacity: 1;
 }
+.nethsara-workshopCards {
+  background-color: #e0e0e0;
+}
+.nethsara-card-container {
+  display: flex;
+}
+.nethsara-card {
+  padding: 1%;
+  margin: 5%;
+  background-color: #ffffff;
+  width: 40%;
+  color: #000000;
+}
+.nethsara-card-image {
+  width: 100%;
+  height: 100%;
+  background-color: #d32f2f;
+  color: #ffffff;
+  word-wrap: break-word;
+  object-fit: cover;
+}
+.nethsara-card-text {
+  margin: 1%;
+  word-wrap: break-word;
+}
 /*# sourceMappingURL=index.71b4035b.css.map */
