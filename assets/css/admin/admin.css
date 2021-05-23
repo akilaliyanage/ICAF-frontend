@@ -1,0 +1,67 @@
+body {
+
+    background-color: #282c34;
+
+}
+
+.reviewers{
+    color: #0061a8;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.reviewercard-align{
+    left: 85%;
+    top: 70%;
+}
+
+.uditha-card{
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    background-color: #252a32;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0,0,0,.8);
+    border-radius: 5px;
+    display: flex;
+}
+
+.uditha-small-card{
+    position: absolute;
+    width: 18%;
+    height: 15%;
+    background-color: paleturquoise;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0,0,0,.8);
+    border-radius: 5px;
+    display: flex;
+}
+
+.workshopcard-align{
+    left: 12%;
+    top: 20%;
+}
+
+.research-align{
+    left: 37%;
+    top: 20%;
+}
+
+.participation-align{
+    left: 62%;
+    top: 20%;
+}
+
+.other-align{
+    left: 87%;
+    top: 20%;
+}
+
+
+.smallcard-text-align{
+    color: #0061a8;
+    margin-left: 25%;
+    margin-top: 5%;
+}
