@@ -31354,22 +31354,48 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _WorkshopCardsJsx = require('./WorkshopCards.jsx');
   var _WorkshopCardsJsxDefault = _parcelHelpers.interopDefault(_WorkshopCardsJsx);
+  var _landing_pageNavBar = require('./../landing_page/NavBar');
+  var _landing_pageNavBarDefault = _parcelHelpers.interopDefault(_landing_pageNavBar);
+  var _configJson = require('../../config.json');
+  var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
   var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\components\\workshopDetails\\WorkshopTemplate.jsx";
   class WorkshopTemplate extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        navbar_items: []
+      };
+    }
+    componentDidMount() {
+      fetch(_configJsonDefault.default.host + "/nav-items").then(res => res.json()).then(data => {
+        console.log(data);
+        this.setState({
+          navbar_items: data
+        });
+      });
+    }
     render() {
       return (
         /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 7,
+            lineNumber: 25,
             columnNumber: 13
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_WorkshopCardsJsxDefault.default, {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_landing_pageNavBarDefault.default, {
+          items: this.state.navbar_items,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 8,
+            lineNumber: 26,
+            columnNumber: 17
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_WorkshopCardsJsxDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
             columnNumber: 17
           }
         }))
@@ -31383,7 +31409,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./WorkshopCards.jsx":"9YwX2","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"9YwX2":[function(require,module,exports) {
+},{"react":"3b2NM","./WorkshopCards.jsx":"9YwX2","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./../landing_page/NavBar":"691Yq","../../config.json":"7LU2l"}],"9YwX2":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31412,11 +31438,11 @@ try {
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "nethsara-card-container",
+          className: "nethsara-grid-container",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_SingleCardDefault.default, {
@@ -31424,7 +31450,23 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 14,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_SingleCardDefault.default, {
+          url: "https://st.depositphotos.com/1056393/5008/i/600/depositphotos_50088039-stock-photo-speaker-at-business-convention-and.jpg",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_SingleCardDefault.default, {
+          url: "https://st.depositphotos.com/1056393/5008/i/600/depositphotos_50088039-stock-photo-speaker-at-business-convention-and.jpg",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16,
             columnNumber: 21
           }
         })))
@@ -31438,7 +31480,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./SingleCard":"2nYnn"}],"2nYnn":[function(require,module,exports) {
+},{"react":"3b2NM","./SingleCard":"2nYnn","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"2nYnn":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31479,38 +31521,51 @@ try {
             lineNumber: 14,
             columnNumber: 25
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-          src: this.props.url,
-          alt: "",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 15,
-            columnNumber: 29
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "nethsara-card-text",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 17,
-            columnNumber: 25
-          }
         }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
+            lineNumber: 16,
             columnNumber: 29
           }
-        }, "hello this is a card"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }, "WORKSHOP TITLE")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "nethsara-card-text",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 19,
             columnNumber: 29
           }
-        }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore architecto saepe consectetur, alias delectus assumenda. Delectus quae, vero debitis voluptatibus cupiditate ipsa non doloribus natus voluptatum obcaecati hic itaque!"))))
+        }, "Workshop Coordinator"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 29
+          }
+        }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore architecto saepe consectetur, alias delectus assumenda. Delectus quae, vero debitis voluptatibus cupiditate ipsa non doloribus natus voluptatum obcaecati hic itaque!")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+          className: "nethsara-card-button",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 29
+          }
+        }, "View Workshop"))))
       );
     }
   }

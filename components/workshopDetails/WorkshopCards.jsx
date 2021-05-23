@@ -9,7 +9,10 @@ class WorkshopCards extends Component {
     render() {
         return (
             <div class="nethsara-workshopCards">
-                <div className="nethsara-card-container">
+
+                <div className="nethsara-grid-container">
+                    <SingleCard url="https://st.depositphotos.com/1056393/5008/i/600/depositphotos_50088039-stock-photo-speaker-at-business-convention-and.jpg"/>
+                    <SingleCard url="https://st.depositphotos.com/1056393/5008/i/600/depositphotos_50088039-stock-photo-speaker-at-business-convention-and.jpg"/>
                     <SingleCard url="https://st.depositphotos.com/1056393/5008/i/600/depositphotos_50088039-stock-photo-speaker-at-business-convention-and.jpg"/>
                 </div>
             </div>
