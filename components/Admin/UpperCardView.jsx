@@ -12,7 +12,6 @@ function UpperCard(){
 
             <div className="smallcard-text-align">
                 <h3>Workshops</h3>
-                <br/>
                 <h2>08</h2>
             </div>
         </div>
@@ -21,7 +20,6 @@ function UpperCard(){
 
             <div className="smallcard-text-align">
                 <h3>Research</h3>
-                <br/>
                 <h2>09</h2>
             </div>
 
@@ -32,7 +30,6 @@ function UpperCard(){
 
             <div className="smallcard-text-align">
                 <h3>Participation</h3>
-                <br/>
                 <h2>78</h2>
             </div>
 
@@ -42,7 +39,6 @@ function UpperCard(){
 
                 <div className="smallcard-text-align">
                     <h3>other</h3>
-                    <br/>
                     <h2>????</h2>
                 </div>
 
