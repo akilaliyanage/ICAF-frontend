@@ -31554,18 +31554,11 @@ try {
           lineNumber: 14,
           columnNumber: 17
         }
-      }, "Workshops"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+      }, "Workshops"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16,
           columnNumber: 17
         }
       }, "08"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31573,7 +31566,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20,
+          lineNumber: 19,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31581,28 +31574,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22,
+          lineNumber: 21,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 22,
+          columnNumber: 17
+        }
+      }, "Research"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
           lineNumber: 23,
-          columnNumber: 17
-        }
-      }, "Research"), /*#__PURE__*/_reactDefault.default.createElement("br", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25,
           columnNumber: 17
         }
       }, "09"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31610,7 +31596,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 29,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31618,28 +31604,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33,
+          lineNumber: 31,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34,
+          lineNumber: 32,
           columnNumber: 17
         }
-      }, "Participation"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+      }, "Participation"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36,
+          lineNumber: 33,
           columnNumber: 17
         }
       }, "78"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31647,7 +31626,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41,
+          lineNumber: 38,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31655,28 +31634,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43,
+          lineNumber: 40,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 41,
           columnNumber: 21
         }
-      }, "other"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+      }, "other"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45,
-          columnNumber: 21
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 42,
           columnNumber: 21
         }
       }, "????"))))
