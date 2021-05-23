@@ -432,7 +432,19 @@ body {
 }
 
 .reviewers{
-    color: #0061a8;
+    color: paleturquoise;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.uditha-current-conf-detail{
+    color: paleturquoise;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.uditha-edit-content{
+    color: paleturquoise;
     margin-left: 35%;
     margin-top: 5%;
 }
@@ -442,6 +454,41 @@ body {
     top: 70%;
 }
 
+.button-add-reviewer{
+    height: 30px;
+    width: 30px;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-color: #4CAF50;
+    color: #282c34;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.conf-detail-card-align{
+    left: 15%;
+    top: 70%;
+}
+
+.uditha-main-card-align{
+    left: 50%;
+    top: 65%;
+}
+
+.uditha-main-card{
+    position: absolute;
+    width: 35%;
+    height: 60%;
+    background-color: #252a32;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0,0,0,1);
+    border-radius: 5px;
+    display: flex;
+}
+
 .uditha-card{
     position: absolute;
     width: 25%;
@@ -449,7 +496,7 @@ body {
     background-color: #252a32;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    box-shadow: 0 1px 4px rgba(0,0,0,.8);
+    box-shadow: 0 1px 4px rgba(0,0,0,1);
     border-radius: 5px;
     display: flex;
 }
@@ -458,10 +505,10 @@ body {
     position: absolute;
     width: 18%;
     height: 15%;
-    background-color: paleturquoise;
     transform: translate(-50%, -50%);
+    color: #f1f5f8;
     box-sizing: border-box;
-    box-shadow: 0 1px 4px rgba(0,0,0,.8);
+    box-shadow: 0 1px 4px rgba(0,0,0,1);
     border-radius: 5px;
     display: flex;
 }
@@ -469,28 +516,69 @@ body {
 .workshopcard-align{
     left: 12%;
     top: 20%;
+    background: rgb(191,70,30);
+    background: linear-gradient(90deg, rgba(191,70,30,1) 0%, rgba(214,154,98,1) 100%);
 }
 
 .research-align{
     left: 37%;
     top: 20%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,57,194,1) 0%, rgba(0,212,255,1) 100%);
 }
 
 .participation-align{
     left: 62%;
     top: 20%;
+    background: rgb(106,21,139);
+    background: linear-gradient(90deg, rgba(106,21,139,1) 0%, rgba(176,116,203,1) 100%);
 }
 
 .other-align{
     left: 87%;
     top: 20%;
+    background: rgb(17,126,43);
+    background: linear-gradient(90deg, rgba(17,126,43,1) 0%, rgba(97,218,154,1) 100%);
 }
 
 
 .smallcard-text-align{
-    color: #0061a8;
     margin-left: 25%;
     margin-top: 5%;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #282c34;
+    overflow: auto;
+    border-bottom: azure;
+    border-bottom-style: groove;
+}
+
+.navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+.navbar a:hover {
+    background-color: #000;
+}
+
+
+.active {
+    background-color: #0061a8;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
 }
 
 /*# sourceMappingURL=index.71b4035b.css.map */

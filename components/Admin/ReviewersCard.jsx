@@ -1,7 +1,7 @@
 import React from "react";
 import '../../assets/css/admin/admin.css'
 
-function Reviewers(){
+function ReviewersCard(){
 
 
 
@@ -15,10 +15,13 @@ function Reviewers(){
 
             <p>Mr John Doe</p>
 
+
+
         </div>
+            <button className="button-add-reviewer">+</button>
         </div>
 
 )
 }
 
-export default Reviewers;
+export default ReviewersCard;
