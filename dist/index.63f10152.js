@@ -1053,7 +1053,7 @@ try {
   var _reactDom = require('react-dom');
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\index.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26278,7 +26278,9 @@ try {
   var _componentsAdminBaseDefault = _parcelHelpers.interopDefault(_componentsAdminBase);
   var _componentsWorkshopDetailsWorkshopTemplateJsx = require('./components/workshopDetails/WorkshopTemplate.jsx');
   var _componentsWorkshopDetailsWorkshopTemplateJsxDefault = _parcelHelpers.interopDefault(_componentsWorkshopDetailsWorkshopTemplateJsx);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\App.jsx";
+  var _componentsAdminAddReviewer = require("./components/Admin/AddReviewer");
+  var _componentsAdminAddReviewerDefault = _parcelHelpers.interopDefault(_componentsAdminAddReviewer);
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
       super(props);
@@ -26289,14 +26291,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26305,14 +26307,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17,
+            lineNumber: 18,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_componentsLanding_pageTemplateDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
+            lineNumber: 19,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26321,14 +26323,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_componentsAdminBaseDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26337,14 +26339,30 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 24,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_componentsWorkshopDetailsWorkshopTemplateJsxDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 25,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/add-reviewer",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_componentsAdminAddReviewerDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28,
             columnNumber: 25
           }
         }))))
@@ -26358,7 +26376,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-router-dom":"1PMSK","./components/landing_page/Template":"5Job1","./components/Admin/Base":"4cycB","./components/workshopDetails/WorkshopTemplate.jsx":"4PyWU","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"1PMSK":[function(require,module,exports) {
+},{"react":"3b2NM","react-router-dom":"1PMSK","./components/landing_page/Template":"5Job1","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Admin/Base":"4cycB","./components/workshopDetails/WorkshopTemplate.jsx":"4PyWU","./components/Admin/AddReviewer":"7Ga5n"}],"1PMSK":[function(require,module,exports) {
 "use strict";
 if ("development" === "production") {
   module.exports = require("./cjs/react-router-dom.min.js");
@@ -30316,7 +30334,7 @@ try {
   var _KeynoteTemplateDefault = _parcelHelpers.interopDefault(_KeynoteTemplate);
   var _configJson = require('../../config.json');
   var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\Template.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\Template.jsx";
   class Template extends _react.Component {
     constructor(props) {
       super(props);
@@ -30446,7 +30464,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/Landing_Page/index.scss');
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
   class NavBar extends _react.Component {
     constructor(props) {
       super(props);
@@ -30777,7 +30795,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\MainTopic.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\MainTopic.jsx";
   class MainTopic extends _react.Component {
     constructor(props) {
       super(props);
@@ -30871,7 +30889,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\About.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\About.jsx";
   class About extends _react.Component {
     constructor(props) {
       super(props);
@@ -30977,7 +30995,7 @@ try {
   var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
   var _NewsCard = require('./NewsCard');
   var _NewsCardDefault = _parcelHelpers.interopDefault(_NewsCard);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\LatestNews.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\LatestNews.jsx";
   class LatestNews extends _react.Component {
     constructor(props) {
       super(props);
@@ -31070,7 +31088,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\NewsCard.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\NewsCard.jsx";
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   class NewsCard extends _react.Component {
     constructor(props) {
@@ -31133,7 +31151,7 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _Speaker = require('./Speaker');
   var _SpeakerDefault = _parcelHelpers.interopDefault(_Speaker);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\KeynoteTemplate.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\KeynoteTemplate.jsx";
   class KeynoteTemplate extends _react.Component {
     constructor(props) {
       super(props);
@@ -31302,7 +31320,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\Speaker.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\landing_page\\Speaker.jsx";
   class Speaker extends _react.Component {
     constructor(props) {
       super(props);
@@ -31370,6 +31388,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../../assets/css/admin/admin.css');
   var _ReviewersCard = require("./ReviewersCard");
   var _ReviewersCardDefault = _parcelHelpers.interopDefault(_ReviewersCard);
   var _UpperCardView = require("./UpperCardView");
@@ -31380,54 +31399,60 @@ try {
   var _MainCardDefault = _parcelHelpers.interopDefault(_MainCard);
   var _AdminNavBar = require("./AdminNavBar");
   var _AdminNavBarDefault = _parcelHelpers.interopDefault(_AdminNavBar);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\Admin\\Base.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\Base.jsx", _s = $RefreshSig$();
   function AdminDashboard() {
+    _s();
+    _react.useEffect(() => {
+      document.body.style.backgroundColor = "#282c34";
+    });
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: true,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13,
+          lineNumber: 19,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_AdminNavBarDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 20,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_ReviewersCardDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15,
+          lineNumber: 21,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_ConfDetailsCardDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
+          lineNumber: 22,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_UpperCardViewDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17,
+          lineNumber: 23,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_MainCardDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18,
+          lineNumber: 24,
           columnNumber: 13
         }
       }))
     );
   }
+  _s(AdminDashboard, "OD7bBpZva5O2jO+Puf00hKivP7c=");
   _c = AdminDashboard;
   exports.default = AdminDashboard;
   var _c;
@@ -31438,7 +31463,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./ReviewersCard":"CFKZD","./UpperCardView":"mx2kl","./ConfDetailsCard":"1zeoG","./MainCard":"5AB4g","./AdminNavBar":"3cL4C","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"CFKZD":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../assets/css/admin/admin.css":"3lUEX","./ReviewersCard":"CFKZD","./UpperCardView":"mx2kl","./ConfDetailsCard":"1zeoG","./MainCard":"5AB4g","./AdminNavBar":"3cL4C"}],"3lUEX":[function() {},{}],"CFKZD":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31449,7 +31474,7 @@ try {
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/admin/admin.css');
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\Admin\\ReviewersCard.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\ReviewersCard.jsx";
   function ReviewersCard() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31521,7 +31546,7 @@ try {
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/admin/admin.css');
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\Admin\\UpperCardView.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\UpperCardView.jsx";
   function UpperCard() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31675,7 +31700,7 @@ try {
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/admin/admin.css');
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\Admin\\ConfDetailsCard.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\ConfDetailsCard.jsx";
   function ConfDetails() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31739,7 +31764,7 @@ try {
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/admin/admin.css');
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\Admin\\MainCard.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\MainCard.jsx";
   function Reviewers() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31803,7 +31828,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/admin/admin.css');
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\Admin\\AdminNavBar.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\AdminNavBar.jsx";
   function AdminNavbar() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31916,7 +31941,7 @@ try {
   var _configJson = require('../../config.json');
   var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
   require('./../../assets/css/WorkshopDetails/workshopDetails.css');
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\workshopDetails\\WorkshopTemplate.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\workshopDetails\\WorkshopTemplate.jsx";
   class WorkshopTemplate extends _react.Component {
     constructor(props) {
       super(props);
@@ -31979,7 +32004,7 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _SingleCard = require('./SingleCard');
   var _SingleCardDefault = _parcelHelpers.interopDefault(_SingleCard);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\workshopDetails\\WorkshopCards.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\workshopDetails\\WorkshopCards.jsx";
   class WorkshopCards extends _react.Component {
     constructor(props) {
       super(props);
@@ -32048,7 +32073,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\workshopDetails\\SingleCard.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\workshopDetails\\SingleCard.jsx";
   class SingleCard extends _react.Component {
     constructor(props) {
       super(props);
@@ -32134,6 +32159,221 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6qynF":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6qynF":[function() {},{}],"7Ga5n":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../../assets/css/admin/admin.css');
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\AddReviewer.jsx";
+  function AddReviewer() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("form", {
+        id: "form_26057",
+        className: "appnitro",
+        method: "post",
+        action: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "form_description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11,
+          columnNumber: 21
+        }
+      }, "Untitled Form"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12,
+          columnNumber: 21
+        }
+      }, "This is your form description. Click here to edit.")), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+        id: "li_1",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+        className: "description",
+        htmlFor: "element_1",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 25
+        }
+      }, "Name "), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        id: "element_1",
+        name: "element_1",
+        className: "element text medium",
+        type: "text",
+        maxLength: "255",
+        value: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19,
+          columnNumber: 29
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        id: "li_2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+        className: "description",
+        htmlFor: "element_2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24,
+          columnNumber: 25
+        }
+      }, "Username "), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        id: "element_2",
+        name: "element_2",
+        className: "element text medium",
+        type: "text",
+        maxLength: "255",
+        value: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26,
+          columnNumber: 29
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        id: "li_3",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+        className: "description",
+        htmlFor: "element_3",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31,
+          columnNumber: 25
+        }
+      }, "Access Key "), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        id: "element_3",
+        name: "element_3",
+        className: "element text medium",
+        type: "text",
+        maxLength: "255",
+        value: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 29
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        className: "buttons",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "hidden",
+        name: "form_id",
+        value: "26057",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 25
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        id: "saveForm",
+        className: "button_text",
+        type: "submit",
+        name: "submit",
+        value: "Submit",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 25
+        }
+      })))))
+    );
+  }
+  _c = AddReviewer;
+  exports.default = AddReviewer;
+  var _c;
+  $RefreshReg$(_c, "AddReviewer");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../../assets/css/admin/admin.css":"3lUEX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3lUEX":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
 
 //# sourceMappingURL=index.63f10152.js.map

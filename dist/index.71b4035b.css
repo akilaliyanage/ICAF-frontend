@@ -425,11 +425,7 @@ body::-webkit-scrollbar-thumb {
 .akila-speaker:hover .overlay {
   opacity: 1;
 }
-body {
 
-    background-color: #282c34;
-
-}
 
 .reviewers{
     color: paleturquoise;
@@ -547,39 +543,39 @@ body {
     margin-top: 5%;
 }
 
-.navbar {
-    width: 100%;
-    background-color: #282c34;
-    overflow: auto;
-    border-bottom: azure;
-    border-bottom-style: groove;
-}
+/*.navbar{*/
+/*    width: 100%;*/
+/*    background-color: #282c34;*/
+/*    overflow: auto;*/
+/*    border-bottom: azure;*/
+/*    border-bottom-style: groove;*/
+/*}*/
 
-.navbar a {
-    float: left;
-    text-align: center;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-
-.navbar a:hover {
-    background-color: #000;
-}
+/*.navbar a {*/
+/*    float: left;*/
+/*    text-align: center;*/
+/*    padding: 12px;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    font-size: 17px;*/
+/*}*/
 
 
-.active {
-    background-color: #0061a8;
-}
+/*.navbar a:hover {*/
+/*    background-color: #000;*/
+/*}*/
 
-@media screen and (max-width: 500px) {
-    .navbar a {
-        float: none;
-        display: block;
-    }
-}
+
+/*.active {*/
+/*    background-color: #0061a8;*/
+/*}*/
+
+/*@media screen and (max-width: 500px) {*/
+/*    .navbar a {*/
+/*        float: none;*/
+/*        display: block;*/
+/*    }*/
+/*}*/
 
 
 .nethsara-workshopCards{
