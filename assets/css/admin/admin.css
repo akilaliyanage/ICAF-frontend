@@ -1,13 +1,17 @@
 
 
-.reviewers{
-    color: paleturquoise;
-    margin-left: 35%;
-    margin-top: 5%;
-}
+/*.reviewers{*/
+/*    color: paleturquoise;*/
+/*    margin-left: 35%;*/
+/*    margin-top: 5%;*/
+/*}*/
 
 .uditha-current-conf-detail{
     color: paleturquoise;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.uditha-reviewers{
     margin-left: 10%;
     margin-top: 5%;
 }
@@ -18,9 +22,10 @@
     margin-top: 5%;
 }
 
-.reviewercard-align{
+.uditha-reviewer-card-align{
     left: 85%;
-    top: 70%;
+    top: 65%;
+
 }
 
 .button-add-reviewer{
@@ -36,9 +41,9 @@
 
 }
 
-.conf-detail-card-align{
+.uditha-conf-detail-card-align{
     left: 15%;
-    top: 70%;
+    top: 65%;
 }
 
 .uditha-main-card-align{
@@ -61,13 +66,14 @@
 .uditha-card{
     position: absolute;
     width: 25%;
-    height: 50%;
+    height: 60%;
     background-color: #252a32;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 1px 4px rgba(0,0,0,1);
     border-radius: 5px;
     display: flex;
+    overflow: auto;
 }
 
 .uditha-small-card{
@@ -114,6 +120,70 @@
 .smallcard-text-align{
     margin-left: 25%;
     margin-top: 5%;
+}
+
+.uditha-add-reviewer-form{
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 800px;
+    height: 450px;
+    padding: 40px;
+    color: azure;
+    background-color: #282c34;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+    align-content: center;
+
+}
+
+.uditha-form-control{
+    position: absolute;
+    top: 50%;
+    left: 72%;
+    width: 400px;
+    height: 420px;
+    padding: 40px;
+    color: azure;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+}
+
+.uditha-text-control{
+    width: 300px;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-style: hidden;
+    text-align: center;
+    font-family: "Arial Black";
+}
+
+.uditha-add-button{
+
+    width: 150px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 25%;
+    background-color: #0061a8;
+    border-radius: 20px;
+    border-style: hidden;
+    align-content: center;
+}
+
+.uditha-avatarInput{
+    position: absolute;
+    top: 80%;
+    left: -80%;
+}
+.uditha-avatar-Preview{
+
 }
 
 /*.navbar{*/

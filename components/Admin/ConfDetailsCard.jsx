@@ -7,7 +7,7 @@ function ConfDetails(){
 
     return(
 
-        <div className="uditha-card conf-detail-card-align">
+        <div className="uditha-card uditha-conf-detail-card-align">
             <div className="uditha-current-conf-detail">
 
                 <h4>Workshop Limit:</h4>

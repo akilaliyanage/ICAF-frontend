@@ -31476,50 +31476,106 @@ try {
   require('../../assets/css/admin/admin.css');
   var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\ReviewersCard.jsx";
   function ReviewersCard() {
+    const reviewers = [{
+      name: "Prof John Doe",
+      picture: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
+    }, {
+      name: " Dr Nancy draw",
+      picture: "https://images.unsplash.com/photo-1584997159889-8bb96d0a2217?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
+    }, {
+      name: " Dr Oliver Charles   ",
+      picture: "https://images.unsplash.com/photo-1605857840732-188f2f08cb31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    }];
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "uditha-card reviewercard-align",
+        className: "uditha-card uditha-reviewer-card-align",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10,
+          lineNumber: 27,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "reviewers",
+        className: "uditha-reviewers",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11,
+          lineNumber: 28,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13,
+          lineNumber: 29,
           columnNumber: 13
         }
       }, "Reviewers"), /*#__PURE__*/_reactDefault.default.createElement("br", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 30,
           columnNumber: 13
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement("p", {
+      }), reviewers.map(reviewer => /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
-          columnNumber: 13
+          lineNumber: 34,
+          columnNumber: 21
         }
-      }, "Mr John Doe")), /*#__PURE__*/_reactDefault.default.createElement("button", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("table", {
+        style: {
+          padding: "5px",
+          borderSpacing: "5px"
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 29
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 33
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+        src: reviewer.picture,
+        width: "70",
+        height: "70",
+        style: {
+          "border-radius": "50%"
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 37
+        }
+      }), " "), /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 33
+        }
+      }, reviewer.name)))))), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        onClick: e => window.location.href = '/add-reviewer',
         className: "button-add-reviewer",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21,
+          lineNumber: 58,
           columnNumber: 13
         }
       }, "+"))
@@ -31704,7 +31760,7 @@ try {
   function ConfDetails() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "uditha-card conf-detail-card-align",
+        className: "uditha-card uditha-conf-detail-card-align",
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -32167,203 +32223,226 @@ helpers.prelude(module);
 try {
   var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
   _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
+  var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/admin/admin.css');
-  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\AddReviewer.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\AddReviewer.jsx", _s = $RefreshSig$();
   function AddReviewer() {
+    _s();
+    const [name, setName] = _react.useState('');
+    const [username, setUsername] = _react.useState('');
+    const [picture, setPicture] = _react.useState();
+    const [password, setPassword] = _react.useState('');
+    const [selectedFile, setSelectedFile] = _react.useState();
+    const [preview, setPreview] = _react.useState();
+    _react.useEffect(() => {
+      document.body.style.backgroundColor = "#282c34";
+      if (!selectedFile) {
+        setPreview(undefined);
+        return;
+      }
+      const objectUrl = URL.createObjectURL(selectedFile);
+      setPreview(objectUrl);
+      return () => URL.revokeObjectURL(objectUrl);
+    }, [selectedFile]);
+    const onSelectFile = e => {
+      if (!e.target.files || e.target.files.length === 0) {
+        setSelectedFile(undefined);
+        return;
+      }
+      setSelectedFile(e.target.files[0]);
+      setPicture(e.target.files[0]);
+    };
+    const AddReviewer = e => {
+      e.preventDefault();
+      const reviewer = {
+        name,
+        username,
+        password,
+        picture
+      };
+      console.log(reviewer);
+    };
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8,
+          lineNumber: 52,
           columnNumber: 9
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("form", {
-        id: "form_26057",
-        className: "appnitro",
-        method: "post",
-        action: "",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9,
-          columnNumber: 13
-        }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "form_description",
+        className: "uditha-add-reviewer-form",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10,
-          columnNumber: 17
+          lineNumber: 54,
+          columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11,
-          columnNumber: 21
-        }
-      }, "Untitled Form"), /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12,
-          columnNumber: 21
-        }
-      }, "This is your form description. Click here to edit.")), /*#__PURE__*/_reactDefault.default.createElement("ul", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 55,
           columnNumber: 17
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("li", {
-        id: "li_1",
+      }, "Add new Reviewer"), /*#__PURE__*/_reactDefault.default.createElement("form", {
+        className: "uditha-form-control",
+        onSubmit: AddReviewer,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
+          lineNumber: 56,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-avatarPreview",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 17
+        }
+      }, selectedFile && /*#__PURE__*/_reactDefault.default.createElement("img", {
+        style: {
+          borderRadius: '50%'
+        },
+        src: preview,
+        width: "200",
+        height: "200",
+        alt: "avatar",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 39
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-avatarInput",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "form-group",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63,
           columnNumber: 21
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "file",
+        className: "uditha-file-control",
+        onChange: onSelectFile,
+        name: "picture",
+        id: "exampleFormControlFile1",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64,
+          columnNumber: 25
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("label", {
         className: "description",
         htmlFor: "element_1",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17,
+          lineNumber: 70,
           columnNumber: 25
         }
       }, "Name "), /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18,
+          lineNumber: 71,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", {
-        id: "element_1",
-        name: "element_1",
-        className: "element text medium",
         type: "text",
-        maxLength: "255",
-        value: "",
+        onChange: e => {
+          setName(e.target.value);
+        },
+        className: "uditha-text-control",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19,
+          lineNumber: 72,
           columnNumber: 29
         }
-      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
-        id: "li_2",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23,
-          columnNumber: 21
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+      })), /*#__PURE__*/_reactDefault.default.createElement("label", {
         className: "description",
         htmlFor: "element_2",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24,
+          lineNumber: 75,
           columnNumber: 25
         }
       }, "Username "), /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25,
+          lineNumber: 76,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", {
-        id: "element_2",
-        name: "element_2",
-        className: "element text medium",
         type: "text",
-        maxLength: "255",
-        value: "",
+        onChange: e => {
+          setUsername(e.target.value);
+        },
+        className: "uditha-text-control",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26,
+          lineNumber: 77,
           columnNumber: 29
         }
-      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
-        id: "li_3",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30,
-          columnNumber: 21
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+      })), /*#__PURE__*/_reactDefault.default.createElement("label", {
         className: "description",
         htmlFor: "element_3",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 81,
           columnNumber: 25
         }
       }, "Access Key "), /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
+          lineNumber: 82,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", {
-        id: "element_3",
-        name: "element_3",
-        className: "element text medium",
-        type: "text",
-        maxLength: "255",
-        value: "",
+        type: "password",
+        onChange: e => {
+          setPassword(e.target.value);
+        },
+        className: "uditha-text-control",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33,
+          lineNumber: 83,
           columnNumber: 29
         }
-      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
-        className: "buttons",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38,
-          columnNumber: 21
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
-        type: "hidden",
-        name: "form_id",
-        value: "26057",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39,
-          columnNumber: 25
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
-        id: "saveForm",
-        className: "button_text",
+      })), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        className: "uditha-add-button",
         type: "submit",
-        name: "submit",
         value: "Submit",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41,
+          lineNumber: 87,
           columnNumber: 25
         }
-      })))))
+      }))))
     );
   }
+  _s(AddReviewer, "d9fxFXMQKZmXHC2RI+44tQoH87I=");
   _c = AddReviewer;
   exports.default = AddReviewer;
   var _c;
