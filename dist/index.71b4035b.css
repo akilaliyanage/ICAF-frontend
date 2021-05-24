@@ -15,7 +15,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #ffffff;
-  scrollbar-width: thin;
+  scrollbar-width: 0px;
   /* "auto" or "thin" */
   scrollbar-color: #0061a8 #252a32;
 }
@@ -26,15 +26,16 @@ body {
 }
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 0px;
+  display: none;
 }
 *::-webkit-scrollbar-track {
   background: #252a32;
 }
 *::-webkit-scrollbar-thumb {
   background-color: #0061a8;
-  border-radius: 20px;
-  border: 3px solid #252a32;
+  border-radius: 10px;
+  border: 0px solid #252a32;
 }
 .akila-hidden {
   display: none;
@@ -199,7 +200,7 @@ body {
   height: 100vh;
 }
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 9px;
   /* width of the entire scrollbar */
 }
 body::-webkit-scrollbar-track {
@@ -209,16 +210,16 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #0061a8;
   /* color of the scroll thumb */
-  border-radius: 20px;
+  border-radius: 6px;
   /* roundness of the scroll thumb */
-  border: 3px solid #252a32;
+  border: 1px solid #252a32;
   /* creates padding around scroll thumb */
 }
 .akila-main-topic {
   text-align: left;
   margin: 0;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 10%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -275,11 +276,20 @@ body::-webkit-scrollbar-thumb {
   padding-right: 6%;
   text-align: justify;
 }
+.akila-latest-news::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
 .akila-latest-news {
   margin-top: 3%;
   color: #252a32;
   text-align: center;
   font-size: 1vw;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 .akila-latest-news span {
   text-decoration: underline;
@@ -426,123 +436,192 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 
-
-.reviewers{
-    color: paleturquoise;
-    margin-left: 35%;
-    margin-top: 5%;
-}
-
 .uditha-current-conf-detail{
-    color: paleturquoise;
+    color: #f1f5f8;
     margin-left: 10%;
     margin-top: 5%;
 }
-
+.uditha-reviewers{
+    margin-left: 5%;
+    margin-top: 5%;
+}
 .uditha-edit-content{
     color: paleturquoise;
-    margin-left: 35%;
-    margin-top: 5%;
-}
-
-.reviewercard-align{
-    left: 85%;
-    top: 70%;
-}
-
-.button-add-reviewer{
-    height: 30px;
-    width: 30px;
     margin-left: 10%;
-    margin-top: 5%;
-    background-color: #4CAF50;
-    color: #282c34;
-    font-size: 20px;
-    border: none;
-    border-radius: 50%;
+    margin-top: 15%;
+}
+.uditha-reviewer-card-align{
+    left: 85%;
+    top: 65%;
 
 }
-
-.conf-detail-card-align{
+.button-add-reviewer{
+    margin-left: 65%;
+    margin-top: -10px;
+    background-color:#44c767;
+    border-radius:42px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Verdana;
+    font-size:19px;
+    font-weight:bold;
+    padding:10px 13px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+.button-add-reviewer:hover {
+    background-color:#5cbf2a;
+}
+.button-add-reviewer:active {
+    position:relative;
+    top:1px;
+}
+.uditha-conf-detail-card-align{
     left: 15%;
-    top: 70%;
+    top: 65%;
 }
-
 .uditha-main-card-align{
     left: 50%;
     top: 65%;
 }
-
 .uditha-main-card{
     position: absolute;
-    width: 35%;
+    width: 40%;
     height: 60%;
-    background-color: #252a32;
+    background-image: url("main.447cf594.png");
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 1px 4px rgba(0,0,0,1);
     border-radius: 5px;
-    display: flex;
+    overflow: auto;
 }
-
 .uditha-card{
     position: absolute;
     width: 25%;
-    height: 50%;
-    background-color: #252a32;
+    height: 60%;
+    background-color: #2C3539;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 1px 4px rgba(0,0,0,1);
     border-radius: 5px;
     display: flex;
+    overflow: auto;
 }
-
 .uditha-small-card{
     position: absolute;
     width: 18%;
     height: 18%;
     transform: translate(-50%, -50%);
     color: #f1f5f8;
+    font-size: 1.5vw;
     box-sizing: border-box;
     box-shadow: 0 1px 4px rgba(0,0,0,1);
     border-radius: 5px;
     display: flex;
 }
-
 .workshopcard-align{
     left: 12%;
     top: 20%;
     background: rgb(191,70,30);
     background: linear-gradient(90deg, rgba(191,70,30,1) 0%, rgba(214,154,98,1) 100%);
 }
-
 .research-align{
     left: 37%;
     top: 20%;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,57,194,1) 0%, rgba(0,212,255,1) 100%);
 }
-
 .participation-align{
     left: 62%;
     top: 20%;
     background: rgb(106,21,139);
     background: linear-gradient(90deg, rgba(106,21,139,1) 0%, rgba(176,116,203,1) 100%);
 }
-
 .other-align{
     left: 87%;
     top: 20%;
     background: rgb(17,126,43);
     background: linear-gradient(90deg, rgba(17,126,43,1) 0%, rgba(97,218,154,1) 100%);
 }
-
-
 .smallcard-text-align{
     margin-left: 25%;
     margin-top: 5%;
 }
+.uditha-add-reviewer-form{
 
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 800px;
+    height: 450px;
+    padding: 40px;
+    color: azure;
+    background-color: #282c34;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+    align-content: center;
+    overflow: auto;
+
+}
+.uditha-form-control{
+    position: absolute;
+    top: 50%;
+    left: 72%;
+    width: 400px;
+    height: 420px;
+    padding: 40px;
+    color: azure;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+    overflow: auto;
+
+}
+.uditha-text-control{
+    width: 300px;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-style: hidden;
+    text-align: center;
+    font-family: "Arial Black";
+}
+.uditha-add-button{
+
+    width: 150px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 25%;
+    background-color: #0061a8;
+    border-radius: 20px;
+    border-style: hidden;
+    align-content: center;
+}
+.uditha-notify-button{
+    position: absolute;
+    width: 150px;
+    height: 35px;
+    left: 70%;
+    top:10%;
+    background-color: orange;
+    border-radius: 5px;
+    border-style: hidden;
+    align-content: center;
+}
+.uditha-avatarInput{
+    position: absolute;
+    top: 80%;
+    left: -80%;
+}
+.uditha-avatar-Preview{
+
+}
 /*.navbar{*/
 /*    width: 100%;*/
 /*    background-color: #282c34;*/
@@ -550,7 +629,6 @@ body::-webkit-scrollbar-thumb {
 /*    border-bottom: azure;*/
 /*    border-bottom-style: groove;*/
 /*}*/
-
 /*.navbar a {*/
 /*    float: left;*/
 /*    text-align: center;*/
@@ -559,17 +637,12 @@ body::-webkit-scrollbar-thumb {
 /*    text-decoration: none;*/
 /*    font-size: 17px;*/
 /*}*/
-
-
 /*.navbar a:hover {*/
 /*    background-color: #000;*/
 /*}*/
-
-
 /*.active {*/
 /*    background-color: #0061a8;*/
 /*}*/
-
 /*@media screen and (max-width: 500px) {*/
 /*    .navbar a {*/
 /*        float: none;*/
