@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Template from './components/landing_page/Template'
+import AdminDashboard from "./components/Admin/Base";
+import WorkshopTemplate from './components/workshopDetails/WorkshopTemplate.jsx'
+import AddReviewer from "./components/Admin/AddReviewer";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -14,6 +17,15 @@ export default class App extends React.Component {
                 <Switch>
                     <Route exact path="/">
                         <Template />
+                    </Route>
+                    <Route exact path="/admin">
+                        <AdminDashboard />
+                    </Route>
+                    <Route exact path="/workshop">
+                        <WorkshopTemplate />
+                    </Route>
+                    <Route exact path="/add-reviewer">
+                        <AddReviewer/>
                     </Route>
                 </Switch>
             </Router>
