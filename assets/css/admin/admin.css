@@ -1,6 +1,6 @@
 
 .uditha-current-conf-detail{
-    color: paleturquoise;
+    color: #f1f5f8;
     margin-left: 10%;
     margin-top: 5%;
 }
@@ -11,8 +11,8 @@
 
 .uditha-edit-content{
     color: paleturquoise;
-    margin-left: 35%;
-    margin-top: 5%;
+    margin-left: 10%;
+    margin-top: 15%;
 }
 
 .uditha-reviewer-card-align{
@@ -22,7 +22,7 @@
 }
 
 .button-add-reviewer{
-    margin-left: 67%;
+    margin-left: 65%;
     margin-top: -10px;
     background-color:#44c767;
     border-radius:42px;
@@ -59,9 +59,9 @@
 
 .uditha-main-card{
     position: absolute;
-    width: 35%;
+    width: 40%;
     height: 60%;
-    background-color: #252a32;
+    background-image: url("../../media/akila/main.png");
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 1px 4px rgba(0,0,0,1);
@@ -73,7 +73,7 @@
     position: absolute;
     width: 25%;
     height: 60%;
-    background-color: #252a32;
+    background-color: #2C3539;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 1px 4px rgba(0,0,0,1);
@@ -94,6 +94,8 @@
     border-radius: 5px;
     display: flex;
 }
+
+
 
 .workshopcard-align{
     left: 12%;
@@ -144,6 +146,7 @@
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
     border-radius: 10px;
     align-content: center;
+    overflow: auto;
 
 }
 
@@ -159,6 +162,8 @@
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
     border-radius: 10px;
+    overflow: auto;
+
 }
 
 .uditha-text-control{
@@ -180,6 +185,16 @@
     margin-left: 25%;
     background-color: #0061a8;
     border-radius: 20px;
+    border-style: hidden;
+    align-content: center;
+}
+
+.uditha-notify-button{
+    width: 150px;
+    height: 35px;
+    margin: auto;
+    background-color: orange;
+    border-radius: 5px;
     border-style: hidden;
     align-content: center;
 }
