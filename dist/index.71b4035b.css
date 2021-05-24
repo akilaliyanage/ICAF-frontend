@@ -425,11 +425,7 @@ body::-webkit-scrollbar-thumb {
 .akila-speaker:hover .overlay {
   opacity: 1;
 }
-body {
 
-    background-color: #282c34;
-
-}
 
 .reviewers{
     color: paleturquoise;

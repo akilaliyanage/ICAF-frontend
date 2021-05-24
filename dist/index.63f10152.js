@@ -31352,6 +31352,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../../assets/css/admin/admin.css');
   var _ReviewersCard = require("./ReviewersCard");
   var _ReviewersCardDefault = _parcelHelpers.interopDefault(_ReviewersCard);
   var _UpperCardView = require("./UpperCardView");
@@ -31362,54 +31363,59 @@ try {
   var _MainCardDefault = _parcelHelpers.interopDefault(_MainCard);
   var _AdminNavBar = require("./AdminNavBar");
   var _AdminNavBarDefault = _parcelHelpers.interopDefault(_AdminNavBar);
-  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\Base.jsx";
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\Base.jsx", _s = $RefreshSig$();
   function AdminDashboard() {
+    _s();
+    _react.useEffect(() => {
+      document.body.style.backgroundColor = "#282c34";
+    });
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13,
+          lineNumber: 19,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_AdminNavBarDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 20,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_ReviewersCardDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15,
+          lineNumber: 21,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_ConfDetailsCardDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
+          lineNumber: 22,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_UpperCardViewDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17,
+          lineNumber: 23,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_MainCardDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18,
+          lineNumber: 24,
           columnNumber: 13
         }
       }))
     );
   }
+  _s(AdminDashboard, "OD7bBpZva5O2jO+Puf00hKivP7c=");
   _c = AdminDashboard;
   exports.default = AdminDashboard;
   var _c;
@@ -31420,7 +31426,79 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./UpperCardView":"mx2kl","./ConfDetailsCard":"1zeoG","./MainCard":"5AB4g","./ReviewersCard":"CFKZD","./AdminNavBar":"3cL4C"}],"mx2kl":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./ReviewersCard":"CFKZD","./UpperCardView":"mx2kl","./ConfDetailsCard":"1zeoG","./MainCard":"5AB4g","./AdminNavBar":"3cL4C","../../assets/css/admin/admin.css":"3lUEX"}],"CFKZD":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../../assets/css/admin/admin.css');
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\ReviewersCard.jsx";
+  function ReviewersCard() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-card reviewercard-align",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "reviewers",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13,
+          columnNumber: 13
+        }
+      }, "Reviewers"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14,
+          columnNumber: 13
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 13
+        }
+      }, "Mr John Doe")), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "button-add-reviewer",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21,
+          columnNumber: 13
+        }
+      }, "+"))
+    );
+  }
+  _c = ReviewersCard;
+  exports.default = ReviewersCard;
+  var _c;
+  $RefreshReg$(_c, "ReviewersCard");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../../assets/css/admin/admin.css":"3lUEX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3lUEX":[function() {},{}],"mx2kl":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31650,7 +31728,7 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/admin/admin.css');
   var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\MainCard.jsx";
-  function ReviewersCard() {
+  function Reviewers() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         className: "uditha-main-card uditha-main-card-align",
@@ -31692,82 +31770,10 @@ try {
       }, "??????")))
     );
   }
-  _c = ReviewersCard;
-  exports.default = ReviewersCard;
+  _c = Reviewers;
+  exports.default = Reviewers;
   var _c;
-  $RefreshReg$(_c, "ReviewersCard");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","../../assets/css/admin/admin.css":"3lUEX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3lUEX":[function() {},{}],"CFKZD":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('../../assets/css/admin/admin.css');
-  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\ReviewersCard.jsx";
-  function ReviewersCard() {
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "uditha-card reviewercard-align",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "reviewers",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13,
-          columnNumber: 13
-        }
-      }, "Reviewers"), /*#__PURE__*/_reactDefault.default.createElement("br", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14,
-          columnNumber: 13
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16,
-          columnNumber: 13
-        }
-      }, "Mr John Doe")), /*#__PURE__*/_reactDefault.default.createElement("button", {
-        className: "button-add-reviewer",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21,
-          columnNumber: 13
-        }
-      }, "+"))
-    );
-  }
-  _c = ReviewersCard;
-  exports.default = ReviewersCard;
-  var _c;
-  $RefreshReg$(_c, "ReviewersCard");
+  $RefreshReg$(_c, "Reviewers");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
@@ -31881,6 +31887,6 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","../../assets/css/admin/admin.css":"3lUEX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3lUEX":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
+},{"react":"3b2NM","../../assets/css/admin/admin.css":"3lUEX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3lUEX":[function() {},{}],"3lUEX":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
 
 //# sourceMappingURL=index.63f10152.js.map
