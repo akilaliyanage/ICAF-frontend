@@ -16,7 +16,7 @@ function AdminDashboard(){
 
     return(
 
-        <div>
+        <div className>
             <AdminNavbar/>
             <ReviewersCard/>
             <ConfDetails/>
