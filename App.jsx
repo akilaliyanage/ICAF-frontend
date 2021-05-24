@@ -5,6 +5,7 @@ import AdminDashboard from "./components/Admin/Base";
 import WorkshopTemplate from './components/workshopDetails/WorkshopTemplate'
 import AddReviewer from "./components/Admin/AddReviewer";
 import WorkshopDashboard from './components/workshop_dashboard/WorkshpDTemp'
+import ResearcherRegistration from './components/ResearcherRegistration/Registration'
 
 export default class App extends React.Component {
     constructor(props) {
@@ -30,6 +31,9 @@ export default class App extends React.Component {
                     </Route>
                     <Route exact path="/workshopDash">
                         <WorkshopDashboard/>
+                    </Route>
+                    <Route exact path="/ResearcherRegistration">
+                        <ResearcherRegistration/>
                     </Route>
                 </Switch>
             </Router>
