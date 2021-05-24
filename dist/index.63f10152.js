@@ -740,9 +740,9 @@ if ("development" !== "production") {
   })();
 }
 
-},{}],"3L2qK":[function(require,module,exports) {
+},{}],"7nVgl":[function(require,module,exports) {
 var HMR_HOST = null;
-var HMR_PORT = 1234;
+var HMR_PORT = 3000;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
 module.bundle.HMR_BUNDLE_ID = "ca6253830bf612b84ef417e863f10152";
@@ -1053,7 +1053,7 @@ try {
   var _reactDom = require('react-dom');
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\index.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26274,7 +26274,7 @@ try {
   var _reactRouterDom = require('react-router-dom');
   var _componentsLanding_pageTemplate = require('./components/landing_page/Template');
   var _componentsLanding_pageTemplateDefault = _parcelHelpers.interopDefault(_componentsLanding_pageTemplate);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\App.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
       super(props);
@@ -30280,7 +30280,7 @@ try {
   var _KeynoteTemplateDefault = _parcelHelpers.interopDefault(_KeynoteTemplate);
   var _configJson = require('../../config.json');
   var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\components\\landing_page\\Template.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/Template.jsx";
   class Template extends _react.Component {
     constructor(props) {
       super(props);
@@ -30289,11 +30289,6 @@ try {
       };
     }
     componentDidMount() {
-      // the item array should have array ob obkects as per lister in the below example before passing as props to the nav Bar
-      // {
-      // "name" : "item 1",
-      // "url" : "test url"
-      // }
       // calling the api to fetch data
       fetch(_configJsonDefault.default.host + "/nav-items").then(res => res.json()).then(data => {
         console.log(data);
@@ -30309,7 +30304,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33,
+            lineNumber: 27,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30317,7 +30312,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34,
+            lineNumber: 28,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_NavBarDefault.default, {
@@ -30325,7 +30320,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35,
+            lineNumber: 29,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30333,14 +30328,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38,
+            lineNumber: 32,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_MainTopicDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 39,
+            lineNumber: 33,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30348,14 +30343,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42,
+            lineNumber: 36,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_AboutDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43,
+            lineNumber: 37,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30363,14 +30358,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46,
+            lineNumber: 40,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_landing_pageLatestNewsDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47,
+            lineNumber: 41,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("dir", {
@@ -30378,14 +30373,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 50,
+            lineNumber: 44,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_KeynoteTemplateDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51,
+            lineNumber: 45,
             columnNumber: 21
           }
         })))
@@ -30399,7 +30394,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./NavBar":"691Yq","../../config.json":"7LU2l","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../landing_page/LatestNews":"6unvj","./MainTopic":"17xYo","./About":"4nGGx","./KeynoteTemplate":"5Kh9y"}],"691Yq":[function(require,module,exports) {
+},{"react":"3b2NM","./NavBar":"691Yq","../../config.json":"7LU2l","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./MainTopic":"17xYo","./About":"4nGGx","../landing_page/LatestNews":"6unvj","./KeynoteTemplate":"5Kh9y"}],"691Yq":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30410,7 +30405,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../../assets/css/Landing_Page/index.scss');
-  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\ICAF-frontend\\components\\landing_page\\NavBar.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/NavBar.jsx";
   class NavBar extends _react.Component {
     constructor(props) {
       super(props);
@@ -30734,7 +30729,7 @@ function registerExportsForReactRefresh(module) {
 },{"react-refresh/runtime":"592mh"}],"7LU2l":[function(require,module,exports) {
 module.exports = JSON.parse("{\"host\":\"http://localhost:8000\"}");
 
-},{}],"6unvj":[function(require,module,exports) {
+},{}],"17xYo":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30744,163 +30739,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('../../assets/css/Landing_Page/index.scss');
-  var _configJson = require('../../config.json');
-  var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
-  var _NewsCard = require('./NewsCard');
-  var _NewsCardDefault = _parcelHelpers.interopDefault(_NewsCard);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\LatestNews.jsx";
-  class LatestNews extends _react.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        news: []
-      };
-    }
-    componentDidMount() {
-      // fetching the data from the database
-      fetch(_configJsonDefault.default.host + "/news/").then(res => res.json()).then(data => {
-        console.log(data);
-        this.setState({
-          news: data
-        });
-      });
-    }
-    render() {
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 24,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 25,
-            columnNumber: 17
-          }
-        }, "Latest ", /*#__PURE__*/_reactDefault.default.createElement("span", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 25,
-            columnNumber: 28
-          }
-        }, "News")), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          class: "flex-container",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 26,
-            columnNumber: 17
-          }
-        }, this.state.news.map(item => {
-          return (
-            /*#__PURE__*/_reactDefault.default.createElement("div", {
-              __self: this,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 29,
-                columnNumber: 29
-              }
-            }, /*#__PURE__*/_reactDefault.default.createElement(_NewsCardDefault.default, {
-              date: new Date(item.date),
-              des: item.des,
-              url: item.url,
-              __self: this,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 29,
-                columnNumber: 34
-              }
-            }))
-          );
-        })))
-      );
-    }
-  }
-  exports.default = LatestNews;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../assets/css/Landing_Page/index.scss":"4EsHu","./NewsCard":"R7H0P","../../config.json":"7LU2l"}],"4EsHu":[function() {},{}],"R7H0P":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\NewsCard.jsx";
-  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  class NewsCard extends _react.Component {
-    constructor(props) {
-      super(props);
-      this.state = {};
-    }
-    render() {
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "akila-news-card",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 13,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14,
-            columnNumber: 17
-          }
-        }, months[this.props.date.getMonth()], " ", this.props.date.getDate(), ", ", this.props.date.getFullYear()), /*#__PURE__*/_reactDefault.default.createElement("p", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 15,
-            columnNumber: 17
-          }
-        }, this.props.des), /*#__PURE__*/_reactDefault.default.createElement("a", {
-          href: this.props.url,
-          className: "btn fourth",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 16,
-            columnNumber: 17
-          }
-        }, "Show more"))
-      );
-    }
-  }
-  exports.default = NewsCard;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"17xYo":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\MainTopic.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/MainTopic.jsx";
   class MainTopic extends _react.Component {
     constructor(props) {
       super(props);
@@ -30994,7 +30833,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\About.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/About.jsx";
   class About extends _react.Component {
     constructor(props) {
       super(props);
@@ -31085,6 +30924,162 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6unvj":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../../assets/css/Landing_Page/index.scss');
+  var _configJson = require('../../config.json');
+  var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
+  var _NewsCard = require('./NewsCard');
+  var _NewsCardDefault = _parcelHelpers.interopDefault(_NewsCard);
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/LatestNews.jsx";
+  class LatestNews extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        news: []
+      };
+    }
+    componentDidMount() {
+      // fetching the data from the database
+      fetch(_configJsonDefault.default.host + "/news/").then(res => res.json()).then(data => {
+        console.log(data);
+        this.setState({
+          news: data
+        });
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 17
+          }
+        }, "Latest ", /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 28
+          }
+        }, "News")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "flex-container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 17
+          }
+        }, this.state.news.map(item => {
+          return (
+            /*#__PURE__*/_reactDefault.default.createElement("div", {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 29,
+                columnNumber: 29
+              }
+            }, /*#__PURE__*/_reactDefault.default.createElement(_NewsCardDefault.default, {
+              date: new Date(item.date),
+              des: item.des,
+              url: item.url,
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 29,
+                columnNumber: 34
+              }
+            }))
+          );
+        })))
+      );
+    }
+  }
+  exports.default = LatestNews;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../../assets/css/Landing_Page/index.scss":"4EsHu","../../config.json":"7LU2l","./NewsCard":"R7H0P","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4EsHu":[function() {},{}],"R7H0P":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/NewsCard.jsx";
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  class NewsCard extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {};
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "akila-news-card",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14,
+            columnNumber: 17
+          }
+        }, months[this.props.date.getMonth()], " ", this.props.date.getDate(), ", ", this.props.date.getFullYear()), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15,
+            columnNumber: 17
+          }
+        }, this.props.des), /*#__PURE__*/_reactDefault.default.createElement("a", {
+          href: this.props.url,
+          className: "btn fourth",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16,
+            columnNumber: 17
+          }
+        }, "Show more"))
+      );
+    }
+  }
+  exports.default = NewsCard;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
 },{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5Kh9y":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -31097,7 +31092,7 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _Speaker = require('./Speaker');
   var _SpeakerDefault = _parcelHelpers.interopDefault(_Speaker);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\KeynoteTemplate.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/KeynoteTemplate.jsx";
   class KeynoteTemplate extends _react.Component {
     constructor(props) {
       super(props);
@@ -31256,7 +31251,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./Speaker":"2W2R1"}],"2W2R1":[function(require,module,exports) {
+},{"react":"3b2NM","./Speaker":"2W2R1","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"2W2R1":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31266,7 +31261,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "D:\\Practicals\\AF\\ICAF-frontend\\components\\landing_page\\Speaker.jsx";
+  var _jsxFileName = "/home/akila/Work/tutorials/ICAF-frontend/components/landing_page/Speaker.jsx";
   class Speaker extends _react.Component {
     constructor(props) {
       super(props);
@@ -31324,6 +31319,6 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","7nVgl","5Qvcc"], "5Qvcc", "parcelRequire9867")
 
 //# sourceMappingURL=index.63f10152.js.map
