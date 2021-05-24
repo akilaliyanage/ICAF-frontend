@@ -23,9 +23,9 @@
     color: rgb(163, 163, 163);
     margin-bottom: 10%;
   }
-  .nt-sav-links{
+  /* .nt-sav-links{
     
-  }
+  } */
   .nt-sidenav a {
     padding: 4% 3% 2% 15%;
     text-decoration: none;
@@ -57,11 +57,16 @@
     background-color: #191d25;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 85%;
+    padding-right: 4%;
   }
-  
-  .nt-navbar a {
+  .nt-head-name{
     float: left;
+    padding: 1%;
+    margin-left: 3%;
+  }
+  .nt-navbar a {
+    float: right;
     display: block;
     color: #f2f2f2;
     text-align: center;

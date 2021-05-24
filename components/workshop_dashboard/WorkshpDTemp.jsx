@@ -15,7 +15,7 @@ class WorkshpDTemp extends Component {
                         <p className="nt-prof-name">Name goes here</p>
                     </div>
                     <div className="nt-sav-links">
-                        <a href="#about">About</a>
+                        <a href="#about">Home</a>
                         <a href="#services">Services</a>
                         <a href="#clients">Clients</a>
                         <a href="#contact">Contact</a>
@@ -25,9 +25,10 @@ class WorkshpDTemp extends Component {
                 <div class="nt-main">
 
                     <div class="nt-navbar">
-                        <a href="#home">Home</a>
-                        <a href="#news">News</a>
-                        <a href="#contact">Contact</a>
+                        
+                        <p className="nt-head-name">Reviewer Dashboard</p>
+
+                        <a href="#home">Log out</a>
                     </div>
 
                     <div className="nt-main-cont">
