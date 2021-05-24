@@ -15,7 +15,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #ffffff;
-  scrollbar-width: thin;
+  scrollbar-width: 0px;
   /* "auto" or "thin" */
   scrollbar-color: #0061a8 #252a32;
 }
@@ -26,15 +26,16 @@ body {
 }
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 0px;
+  display: none;
 }
 *::-webkit-scrollbar-track {
   background: #252a32;
 }
 *::-webkit-scrollbar-thumb {
   background-color: #0061a8;
-  border-radius: 20px;
-  border: 3px solid #252a32;
+  border-radius: 10px;
+  border: 0px solid #252a32;
 }
 .akila-hidden {
   display: none;
@@ -199,7 +200,7 @@ body {
   height: 100vh;
 }
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 9px;
   /* width of the entire scrollbar */
 }
 body::-webkit-scrollbar-track {
@@ -209,16 +210,16 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #0061a8;
   /* color of the scroll thumb */
-  border-radius: 20px;
+  border-radius: 6px;
   /* roundness of the scroll thumb */
-  border: 3px solid #252a32;
+  border: 1px solid #252a32;
   /* creates padding around scroll thumb */
 }
 .akila-main-topic {
   text-align: left;
   margin: 0;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 10%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -275,11 +276,20 @@ body::-webkit-scrollbar-thumb {
   padding-right: 6%;
   text-align: justify;
 }
+.akila-latest-news::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
 .akila-latest-news {
   margin-top: 3%;
   color: #252a32;
   text-align: center;
   font-size: 1vw;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 .akila-latest-news span {
   text-decoration: underline;

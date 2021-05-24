@@ -16,12 +16,6 @@ class Template extends Component {
 
     componentDidMount(){
 
-        // the item array should have array ob obkects as per lister in the below example before passing as props to the nav Bar
-        // {
-        //     "name" : "item 1",
-        //     "url" : "test url"
-        // }
-
         //calling the api to fetch data
         fetch(config.host + "/nav-items").then(res => res.json()).then(data =>{
             console.log(data)
