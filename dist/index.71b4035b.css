@@ -436,20 +436,13 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 
-
-/*.reviewers{*/
-/*    color: paleturquoise;*/
-/*    margin-left: 35%;*/
-/*    margin-top: 5%;*/
-/*}*/
-
 .uditha-current-conf-detail{
     color: paleturquoise;
     margin-left: 10%;
     margin-top: 5%;
 }
 .uditha-reviewers{
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 5%;
 }
 
@@ -466,17 +459,30 @@ body::-webkit-scrollbar-thumb {
 }
 
 .button-add-reviewer{
-    height: 30px;
-    width: 30px;
-    margin-left: 10%;
-    margin-top: 5%;
-    background-color: #4CAF50;
-    color: #282c34;
-    font-size: 20px;
-    border: none;
-    border-radius: 50%;
-
+    margin-left: 67%;
+    margin-top: -10px;
+    background-color:#44c767;
+    border-radius:42px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Verdana;
+    font-size:19px;
+    font-weight:bold;
+    padding:10px 13px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
 }
+
+.button-add-reviewer:hover {
+    background-color:#5cbf2a;
+}
+.button-add-reviewer:active {
+    position:relative;
+    top:1px;
+}
+
 
 .uditha-conf-detail-card-align{
     left: 15%;
@@ -519,6 +525,7 @@ body::-webkit-scrollbar-thumb {
     height: 18%;
     transform: translate(-50%, -50%);
     color: #f1f5f8;
+    font-size: 1.5vw;
     box-sizing: border-box;
     box-shadow: 0 1px 4px rgba(0,0,0,1);
     border-radius: 5px;

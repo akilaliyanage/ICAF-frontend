@@ -26,19 +26,21 @@ function ReviewersCard(){
 
         <div className="uditha-card uditha-reviewer-card-align">
         <div className="uditha-reviewers">
-            <h3>Reviewers</h3>
-            <br/>
 
+            <h3>Current Reviewers</h3>
+            <button onClick={e =>  window.location.href='/add-reviewer'} className="button-add-reviewer">+</button>
+            <br/>
             {
                 reviewers.map((reviewer) =>
                     <div>
 
 
-                        <table style={{padding:"5px",borderSpacing:"5px"}}>
+                        <table style={{padding:"5px",borderSpacing:"1px",tableLayout:"fixed",width:"400px"}}>
                             <tr>
 
                                 <th><img src={reviewer.picture} width="70" height="70" style={{"border-radius": "50%"}}/> </th>
-                                <th>{reviewer.name}</th>
+                                <td>{reviewer.name}</td>
+                                <td><img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698873-icon-136-document-edit-512.png" width="20" height="20"/></td>
 
                             </tr>
 
@@ -55,7 +57,7 @@ function ReviewersCard(){
 
 
         </div>
-            <button onClick={e =>  window.location.href='/add-reviewer'} className="button-add-reviewer">+</button>
+
         </div>
 
 )
