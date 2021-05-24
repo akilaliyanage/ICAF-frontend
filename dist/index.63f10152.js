@@ -30352,6 +30352,8 @@ try {
   var _KeynoteTemplateDefault = _parcelHelpers.interopDefault(_KeynoteTemplate);
   var _configJson = require('../../config.json');
   var _configJsonDefault = _parcelHelpers.interopDefault(_configJson);
+  var _MoreKeynote = require('./MoreKeynote');
+  var _MoreKeynoteDefault = _parcelHelpers.interopDefault(_MoreKeynote);
   var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\Template.jsx";
   class Template extends _react.Component {
     constructor(props) {
@@ -30376,7 +30378,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
+            lineNumber: 28,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30384,7 +30386,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28,
+            lineNumber: 29,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_NavBarDefault.default, {
@@ -30392,7 +30394,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30400,14 +30402,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32,
+            lineNumber: 33,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_MainTopicDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33,
+            lineNumber: 34,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30415,14 +30417,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_AboutDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 37,
+            lineNumber: 38,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30430,14 +30432,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40,
+            lineNumber: 41,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_landing_pageLatestNewsDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41,
+            lineNumber: 42,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("dir", {
@@ -30445,14 +30447,29 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44,
+            lineNumber: 45,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_KeynoteTemplateDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45,
+            lineNumber: 46,
+            columnNumber: 21
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("dir", {
+          className: "akila-keynote-morekeynote",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_MoreKeynoteDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49,
             columnNumber: 21
           }
         })))
@@ -30466,7 +30483,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./NavBar":"691Yq","./MainTopic":"17xYo","./About":"4nGGx","../landing_page/LatestNews":"6unvj","./KeynoteTemplate":"5Kh9y","../../config.json":"7LU2l","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"691Yq":[function(require,module,exports) {
+},{"react":"3b2NM","./NavBar":"691Yq","./MainTopic":"17xYo","./About":"4nGGx","../landing_page/LatestNews":"6unvj","./KeynoteTemplate":"5Kh9y","../../config.json":"7LU2l","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./MoreKeynote":"21ujq"}],"691Yq":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31268,6 +31285,7 @@ try {
             columnNumber: 37
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_SpeakerDefault.default, {
+          colored: true,
           url: "https://indiaeducationdiary.in/wp-content/uploads/2020/11/shitij-kapur.xae50dfd9.jpg",
           __self: this,
           __source: {
@@ -31290,6 +31308,7 @@ try {
             columnNumber: 33
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_SpeakerDefault.default, {
+          colored: true,
           url: "https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201907/1%2520Patrick%2520Winston%2520at%2520____%2520-%2520photo%2520credit%2520Jason%2520Dorfman%252C%2520MIT%2520CSAIL_0.jpg?itok=r6epNmaH",
           __self: this,
           __source: {
@@ -31358,26 +31377,34 @@ try {
             lineNumber: 10,
             columnNumber: 16
           }
-        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "overlay",
+        }), this.props.colored ? /*#__PURE__*/_reactDefault.default.createElement("canvas", {
+          class: "coveringCanvas",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 11,
+            columnNumber: 36
+          }
+        }) : null, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "overlay",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 21
           }
         }, "Prof. Nobody"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 21
           }
         }, "SLIIT, Sri Lanka")))
@@ -31385,6 +31412,173 @@ try {
     }
   }
   exports.default = Speaker;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"21ujq":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "D:\\Year 03 Sem 01\\AF\\Project\\Frontend\\ICAF-frontend\\components\\landing_page\\MoreKeynote.jsx";
+  class MoreKeynote extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {};
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 18
+          }
+        }, "Latest ", /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 29
+          }
+        }, "News")), /*#__PURE__*/_reactDefault.default.createElement("table", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "",
+          alt: "",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU",
+          alt: "",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17,
+            columnNumber: 29
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("figcaption", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18,
+            columnNumber: 33
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "fig-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19,
+            columnNumber: 37
+          }
+        }, "Fern."), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "fig-author",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 37
+          }
+        }, "by Annie Spratt"))), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU",
+          alt: "",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU",
+          alt: "",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU",
+          alt: "",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32,
+            columnNumber: 25
+          }
+        })))))
+      );
+    }
+  }
+  exports.default = MoreKeynote;
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
