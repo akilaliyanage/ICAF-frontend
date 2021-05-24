@@ -266,6 +266,18 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-50%);
   font-size: 4vw;
 
+  .container {
+    background-color: RGBA(255,255,255,0.10);
+    display: flex;
+    font-size: 2vw;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .container > div {
+    flex: 1; /*grow*/
+  }
+
   h2 {
     font-size: 2vw;
   }
@@ -529,6 +541,7 @@ body::-webkit-scrollbar-thumb {
   background-color: RGBA(232,43,21,0.45);
 }
 .akila-keynote-morekeynote{
+  
   width: 100%;
   margin-top: 2%;
 
@@ -542,21 +555,21 @@ body::-webkit-scrollbar-thumb {
       text-decoration: underline;
     }
   }
+  .akila-scroll{
+    overflow-x: scroll;
+  }
 
   figcaption {
     padding: 10px;
     line-height: 1.5;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    text-align: right;
+    text-align: left;
     color: black;
   }
 
   table{
     td{
       //width: 100px;
-      padding-left: 80px;
+      padding-left: 30px;
     }
   }
 }
