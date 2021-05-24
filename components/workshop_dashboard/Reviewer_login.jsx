@@ -13,9 +13,9 @@ class Reviewer_login extends Component {
         this.OnSubmit = this.OnSubmit.bind(this)
     }
 
-    handleInput = (e) => {
-        this.setState({[e.target.name]:e.target.value});
-    }
+    // handleInput = (e) => {
+    //     this.setState({[e.target.name]:e.target.value});
+    // }
 
     render() {
         return (
