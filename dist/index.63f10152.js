@@ -26278,6 +26278,8 @@ try {
   var _componentsAdminBaseDefault = _parcelHelpers.interopDefault(_componentsAdminBase);
   var _componentsWorkshopDetailsWorkshopTemplateJsx = require('./components/workshopDetails/WorkshopTemplate.jsx');
   var _componentsWorkshopDetailsWorkshopTemplateJsxDefault = _parcelHelpers.interopDefault(_componentsWorkshopDetailsWorkshopTemplateJsx);
+  var _componentsAdminAddReviewer = require("./components/Admin/AddReviewer");
+  var _componentsAdminAddReviewerDefault = _parcelHelpers.interopDefault(_componentsAdminAddReviewer);
   var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
@@ -26289,14 +26291,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26305,14 +26307,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17,
+            lineNumber: 18,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_componentsLanding_pageTemplateDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
+            lineNumber: 19,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26321,14 +26323,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_componentsAdminBaseDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26337,14 +26339,30 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 24,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_componentsWorkshopDetailsWorkshopTemplateJsxDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 25,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/add-reviewer",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_componentsAdminAddReviewerDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28,
             columnNumber: 25
           }
         }))))
@@ -26358,7 +26376,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-router-dom":"1PMSK","./components/landing_page/Template":"5Job1","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Admin/Base":"4cycB","./components/workshopDetails/WorkshopTemplate.jsx":"4PyWU"}],"1PMSK":[function(require,module,exports) {
+},{"react":"3b2NM","react-router-dom":"1PMSK","./components/landing_page/Template":"5Job1","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Admin/Base":"4cycB","./components/workshopDetails/WorkshopTemplate.jsx":"4PyWU","./components/Admin/AddReviewer":"7Ga5n"}],"1PMSK":[function(require,module,exports) {
 "use strict";
 if ("development" === "production") {
   module.exports = require("./cjs/react-router-dom.min.js");
@@ -31445,7 +31463,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./ReviewersCard":"CFKZD","./UpperCardView":"mx2kl","./ConfDetailsCard":"1zeoG","./MainCard":"5AB4g","./AdminNavBar":"3cL4C","../../assets/css/admin/admin.css":"3lUEX"}],"CFKZD":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../assets/css/admin/admin.css":"3lUEX","./ReviewersCard":"CFKZD","./UpperCardView":"mx2kl","./ConfDetailsCard":"1zeoG","./MainCard":"5AB4g","./AdminNavBar":"3cL4C"}],"3lUEX":[function() {},{}],"CFKZD":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31906,7 +31924,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","../../assets/css/admin/admin.css":"3lUEX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3lUEX":[function() {},{}],"3lUEX":[function() {},{}],"4PyWU":[function(require,module,exports) {
+},{"react":"3b2NM","../../assets/css/admin/admin.css":"3lUEX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3lUEX":[function() {},{}],"4PyWU":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -32141,6 +32159,221 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6qynF":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6qynF":[function() {},{}],"7Ga5n":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../../assets/css/admin/admin.css');
+  var _jsxFileName = "C:\\Users\\UDITHA J\\WebstormProjects\\ICAF-frontend\\components\\Admin\\AddReviewer.jsx";
+  function AddReviewer() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("form", {
+        id: "form_26057",
+        className: "appnitro",
+        method: "post",
+        action: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "form_description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11,
+          columnNumber: 21
+        }
+      }, "Untitled Form"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12,
+          columnNumber: 21
+        }
+      }, "This is your form description. Click here to edit.")), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+        id: "li_1",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+        className: "description",
+        htmlFor: "element_1",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 25
+        }
+      }, "Name "), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        id: "element_1",
+        name: "element_1",
+        className: "element text medium",
+        type: "text",
+        maxLength: "255",
+        value: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19,
+          columnNumber: 29
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        id: "li_2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+        className: "description",
+        htmlFor: "element_2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24,
+          columnNumber: 25
+        }
+      }, "Username "), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        id: "element_2",
+        name: "element_2",
+        className: "element text medium",
+        type: "text",
+        maxLength: "255",
+        value: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26,
+          columnNumber: 29
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        id: "li_3",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+        className: "description",
+        htmlFor: "element_3",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31,
+          columnNumber: 25
+        }
+      }, "Access Key "), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        id: "element_3",
+        name: "element_3",
+        className: "element text medium",
+        type: "text",
+        maxLength: "255",
+        value: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 29
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        className: "buttons",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "hidden",
+        name: "form_id",
+        value: "26057",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 25
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        id: "saveForm",
+        className: "button_text",
+        type: "submit",
+        name: "submit",
+        value: "Submit",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 25
+        }
+      })))))
+    );
+  }
+  _c = AddReviewer;
+  exports.default = AddReviewer;
+  var _c;
+  $RefreshReg$(_c, "AddReviewer");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../../assets/css/admin/admin.css":"3lUEX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3lUEX":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire9867")
 
 //# sourceMappingURL=index.63f10152.js.map
