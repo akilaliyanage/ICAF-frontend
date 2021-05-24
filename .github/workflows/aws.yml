@@ -83,3 +83,8 @@ jobs:
         service: af-front
         cluster: af-cluster
         wait-for-service-stability: true
+
+    - name: Sending slack message to akila.liyanage
+      run: |
+          # send message
+          curl -X POST --data-urlencode "payload={\"channel\": \"#af-project\", \"username\": \"webhookbot\", \"text\": \"A new deployemnt is in progress...\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
