@@ -31487,7 +31487,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27,
+          lineNumber: 28,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -31495,14 +31495,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 29,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 31,
           columnNumber: 13
         }
       }, "Current Reviewers"), /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -31511,21 +31511,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 32,
           columnNumber: 13
         }
       }, "+"), /*#__PURE__*/_reactDefault.default.createElement("br", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
+          lineNumber: 33,
           columnNumber: 13
         }
       }), reviewers.map(reviewer => /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35,
+          lineNumber: 36,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("table", {
@@ -31538,21 +31538,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38,
+          lineNumber: 39,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39,
+          lineNumber: 40,
           columnNumber: 29
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("th", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41,
+          lineNumber: 42,
           columnNumber: 33
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -31565,21 +31565,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41,
+          lineNumber: 42,
           columnNumber: 37
         }
       }), " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42,
+          lineNumber: 43,
           columnNumber: 33
         }
       }, reviewer.name), /*#__PURE__*/_reactDefault.default.createElement("td", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43,
+          lineNumber: 44,
           columnNumber: 33
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -31589,7 +31589,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43,
+          lineNumber: 44,
           columnNumber: 37
         }
       }))))))))
@@ -31796,98 +31796,109 @@ try {
           lineNumber: 13,
           columnNumber: 17
         }
-      }, "Registrations"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+      }, " Event Registrations"), /*#__PURE__*/_reactDefault.default.createElement("br", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14,
           columnNumber: 17
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h4", {
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-workshop-stat-card",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h4", {
+        className: "uditha-workshop-stat-align",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 16,
           columnNumber: 17
         }
-      }, "Workshops"), /*#__PURE__*/_reactDefault.default.createElement("br", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h5", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18,
-          columnNumber: 17
-        }
-      }, "Limit: 08"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+      }, "Workshops")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-workshop-allowed",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 19,
           columnNumber: 17
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h5", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("b", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 20,
-          columnNumber: 17
+          columnNumber: 21
         }
-      }, "Status: Closed"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+      }, "Allowed: 08")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-workshop-status",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21,
+          lineNumber: 22,
           columnNumber: 17
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h4", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("b", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23,
-          columnNumber: 17
+          columnNumber: 21
         }
-      }, "Research presentations"), /*#__PURE__*/_reactDefault.default.createElement("br", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h5", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25,
-          columnNumber: 17
-        }
-      }, "Limit: 12"), /*#__PURE__*/_reactDefault.default.createElement("br", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("h5", {
+      }, "Status: Closed")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-research-stat-card",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27,
           columnNumber: 17
         }
-      }, "Status: Open"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("h4", {
+        className: "uditha-research-stat-align",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 28,
           columnNumber: 17
         }
-      })))
+      }, "Research presentations")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-research-allowed",
+        style: {
+          display: "inline-block"
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 21
+        }
+      }, "Allowed: 12")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-research-status",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35,
+          columnNumber: 21
+        }
+      }, "Status: Open"))))
     );
   }
   _c = ConfDetails;
@@ -32420,28 +32431,40 @@ try {
           lineNumber: 54,
           columnNumber: 13
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-avatarInput",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 55,
           columnNumber: 17
         }
-      }, "Add new Reviewer"), /*#__PURE__*/_reactDefault.default.createElement("form", {
-        className: "uditha-form-control",
-        onSubmit: AddReviewer,
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "form-group",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 56,
-          columnNumber: 13
+          columnNumber: 21
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "uditha-avatarPreview",
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "file",
+        className: "uditha-file-control",
+        onChange: onSelectFile,
+        name: "picture",
+        id: "exampleFormControlFile1",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58,
+          lineNumber: 57,
+          columnNumber: 25
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "uditha-avatar-Preview",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61,
           columnNumber: 17
         }
       }, selectedFile && /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -32455,51 +32478,39 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59,
+          lineNumber: 62,
           columnNumber: 39
         }
-      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "uditha-avatarInput",
+      })), /*#__PURE__*/_reactDefault.default.createElement("h2", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62,
+          lineNumber: 65,
           columnNumber: 17
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "form-group",
+      }, "Add new Reviewer"), /*#__PURE__*/_reactDefault.default.createElement("form", {
+        className: "uditha-form-control",
+        onSubmit: AddReviewer,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63,
-          columnNumber: 21
+          lineNumber: 66,
+          columnNumber: 13
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
-        type: "file",
-        className: "uditha-file-control",
-        onChange: onSelectFile,
-        name: "picture",
-        id: "exampleFormControlFile1",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 64,
-          columnNumber: 25
-        }
-      }))), /*#__PURE__*/_reactDefault.default.createElement("label", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("label", {
         className: "description",
         htmlFor: "element_1",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70,
+          lineNumber: 68,
           columnNumber: 25
         }
       }, "Name "), /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71,
+          lineNumber: 69,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -32511,7 +32522,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72,
+          lineNumber: 70,
           columnNumber: 29
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -32520,14 +32531,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75,
+          lineNumber: 73,
           columnNumber: 25
         }
       }, "Username "), /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76,
+          lineNumber: 74,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -32539,7 +32550,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77,
+          lineNumber: 75,
           columnNumber: 29
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -32548,14 +32559,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81,
+          lineNumber: 79,
           columnNumber: 25
         }
       }, "Access Key "), /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82,
+          lineNumber: 80,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -32567,7 +32578,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83,
+          lineNumber: 81,
           columnNumber: 29
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -32577,7 +32588,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87,
+          lineNumber: 85,
           columnNumber: 25
         }
       }))))
