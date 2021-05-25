@@ -5,6 +5,7 @@ import About from './About'
 import LatestNews from '../landing_page/LatestNews'
 import KeynoteTemplate from './KeynoteTemplate'
 import config from '../../config.json'
+import MoreKeynote from './MoreKeynote'
 
 class Template extends Component {
     constructor(props) {
@@ -43,6 +44,9 @@ class Template extends Component {
 
                 <dir className="akila-keynote-speakers">
                     <KeynoteTemplate/>
+                </dir>
+                <dir className="akila-keynote-morekeynote">
+                    <MoreKeynote/>
                 </dir>
             </div>
         );
