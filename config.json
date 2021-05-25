@@ -1,3 +1,3 @@
 {
-    "host" : "http://localhost:8000"
+    "host" : "http://test-1313167560.us-east-1.elb.amazonaws.com:8000"
 }

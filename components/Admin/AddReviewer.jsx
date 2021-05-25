@@ -52,20 +52,18 @@ function AddReviewer(){
         <div>
 
             <div className="uditha-add-reviewer-form">
-                <h2>Add new Reviewer</h2>
-            <form className="uditha-form-control" onSubmit={AddReviewer}>
-
-                <div className="uditha-avatarPreview">
-                    {selectedFile &&  <img style={{borderRadius:'50%'}} src={preview} width="200" height="200" alt="avatar"/>}
-                </div>
-
                 <div className="uditha-avatarInput">
                     <div className="form-group">
-                        <input type="file" className="uditha-file-control"  onChange={onSelectFile} name="picture" id="exampleFormControlFile1"
-                               />
+                        <input type="file" className="uditha-file-control"  onChange={onSelectFile} name="picture" id="exampleFormControlFile1"/>
                     </div>
                 </div>
 
+                <div className="uditha-avatar-Preview">
+                    {selectedFile &&  <img style={{borderRadius:'50%'}} src={preview} width="200" height="200" alt="avatar"/>}
+                </div>
+
+                <h2>Add new Reviewer</h2>
+            <form className="uditha-form-control" onSubmit={AddReviewer}>
 
                         <label className="description" htmlFor="element_1">Name </label>
                         <div>
