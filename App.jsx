@@ -6,7 +6,7 @@ import WorkshopTemplate from './components/workshopDetails/WorkshopTemplate'
 import AddReviewer from "./components/Admin/AddReviewer";
 import WorkshopDashboard from './components/workshop_dashboard/WorkshpDTemp'
 import ResearcherRegistration from './components/ResearcherRegistration/Registration'
-import ReviewerLogin from './components/workshop_dashboard/Reviewer_login'
+import ReviewLogin from './components/workshop_dashboard/ReviewLogin'
 
 
 export default class App extends React.Component {
@@ -37,10 +37,9 @@ export default class App extends React.Component {
                     <Route exact path="/ResearcherRegistration">
                         <ResearcherRegistration/>
                     </Route>
-                    <Route exact path="/reviewerLogin">
-                        <ReviewerLogin/>
+                    <Route exact path="/reviewLogin">
+                        <ReviewLogin/>
                     </Route>
-
                 </Switch>
             </Router>
         );
