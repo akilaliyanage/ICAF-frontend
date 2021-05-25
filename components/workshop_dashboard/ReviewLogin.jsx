@@ -1,22 +1,7 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/reviewerlogin.css'
 
-class Reviewer_login extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            username:"",
-            password:""
-        }
-        this.handleInput = this.handleInput.bind(this)
-        this.OnSubmit = this.OnSubmit.bind(this)
-    }
-
-    // handleInput = (e) => {
-    //     this.setState({[e.target.name]:e.target.value});
-    // }
-
+class ReviewLogin extends Component {
     render() {
         return (
             <div className="nt-r-login">
@@ -27,7 +12,7 @@ class Reviewer_login extends Component {
                         <p className="nt-log-head">REVIEWER LOGIN</p>    
                     </div>    
                 
-                <form onSubmit={this.OnSubmit.bind(this)}>
+                <form>
 
                     <div className="nt-log-form">
                         <div className="nt-formitem">
@@ -52,4 +37,4 @@ class Reviewer_login extends Component {
     }
 }
 
-export default Reviewer_login
+export default ReviewLogin
