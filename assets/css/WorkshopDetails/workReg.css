@@ -1,0 +1,13 @@
+.nt-r-login{
+    background-color: #282c34;
+    padding: 4.7% 5% 5% 20%;
+    height: 100vh;
+}
+.nt-log-card{
+    background-color: #282c34;
+    width: 80%;
+    height: 80vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
+    border-radius: 6%;
+    padding: 5% 20% 5% 20%;
+}
