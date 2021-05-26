@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/workshopDash.css'
 // import UserImg from './../../assets/media/nethsara/workshopUser.png'
+import CardDiv from './WorkDashHome'
 
 class WorkshpDTemp extends Component {
     render() {
@@ -32,6 +33,9 @@ class WorkshpDTemp extends Component {
                     </div>
 
                     <div className="nt-main-cont">
+
+                        <CardDiv/>
+
                         <h2>Sidebar</h2>
                         <p>This sidebar is of full height (100%) and always shown.</p>
                         <p>Scroll down the page to see the result.</p>

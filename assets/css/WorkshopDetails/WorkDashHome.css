@@ -1,0 +1,22 @@
+.nt-dcard-cont{
+    display: flex;
+    padding-left: 1%;
+    padding-top: 2%;
+}
+.nt-dash-card{
+    margin-right: 2%;
+    width: 25%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 29px 0px;
+    padding: 2%;
+    text-align: center;
+}
+.nt-dcard-head{
+    color: #000000;
+    font-weight: lighter;
+}
+.nt-dcard-qunt{
+    font-weight:normal;
+    color: #474747;
+}
