@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import config from '../../config.json'
 
 class MainTopic extends Component {
     constructor(props) {
@@ -8,13 +9,23 @@ class MainTopic extends Component {
             seconds : 0,
             minutes : 0,
             hours : 0,
-            days : 0
+            days : 0,
+            date : ''
          }
     }
 
     componentDidMount(){
+
+        //fetching the datetime form the database
+
+        fetch(config.local + "/event-date").then(res => res.json()).then(data =>{
+            this.setState({date : data[0]['date']})
+        }).catch(err =>{
+            alert(err)
+        })
+
         var now = new Date().getTime();
-        var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
+        var countDownDate = new Date(this.state.date).getTime();
         var timeleft = countDownDate - now;
         
         var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
@@ -29,7 +40,7 @@ class MainTopic extends Component {
 
     tick(){
         var now = new Date().getTime();
-        var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
+        var countDownDate = new Date(this.state.date).getTime();
         var timeleft = countDownDate - now;
         
         var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
