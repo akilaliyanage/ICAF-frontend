@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/reviewerlogin.css'
+import background from ""
 
 class ReviewLogin extends Component {
     render() {
         return (
-            <div className="nt-r-login">
-                <div className="nt-log-card">
+            <div className="nt-r-login" style={{ backgroundImage: `url(https://wallpaperaccess.com/full/16692.jpg)` }}>
+                <div className="nt-log-card" style={{ backgroundImage: `url(https://wallpaperaccess.com/full/16692.jpg)` }}>
 
                     <div className="nt-login">
                         <h1>I C A F</h1>
@@ -13,7 +14,6 @@ class ReviewLogin extends Component {
                     </div>    
                 
                 <form>
-
                     <div className="nt-log-form">
                         <div className="nt-formitem">
                             {/* <label className="nt-lable" htmlFor="">User Name</label><br /> */}
@@ -27,7 +27,6 @@ class ReviewLogin extends Component {
                             <button className="nl-form-btn" type="submit">Login</button>
                         </div>
                     </div>
-
                 </form>
                     
                 </div>
