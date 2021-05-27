@@ -8,6 +8,7 @@ import WorkshopDashboard from './components/workshop_dashboard/WorkshpDTemp'
 import ResearcherRegistration from './components/ResearcherRegistration/Registration'
 import ReviewLogin from './components/workshop_dashboard/ReviewLogin'
 import WorkCordinaorReg from './components/workshopDetails/WorkCordinatorReg'
+import PayTemplate from './components/PaymentPage/PayTemplate'
 
 
 export default class App extends React.Component {
@@ -43,6 +44,9 @@ export default class App extends React.Component {
                     </Route>
                     <Route exact path="/workCordinaorReg">
                         <WorkCordinaorReg/>
+                    </Route>
+                    <Route exact path="/payment">
+                        <PayTemplate/>
                     </Route>
                 </Switch>
             </Router>

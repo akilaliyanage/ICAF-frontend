@@ -7,6 +7,8 @@ $color-light-blue: #d8e3e7;
 
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
 
 * {
   padding: 0;
@@ -740,4 +742,156 @@ body::-webkit-scrollbar-thumb {
        }
      }
    }
+}
+.akila-payment{
+
+  .container {
+    background-color: RGBA(255,255,255,0.10);
+    display: flex;
+    //padding:20px;
+    font-size: larger;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    //font-family: 'Pacifico', cursive;
+    font-family: 'Darker Grotesque', sans-serif;
+
+    div:nth-child(1){
+      flex: 1;
+    }
+    div:nth-child(2){
+      flex: 2;
+    }
+  }
+  .container > div {
+    flex: 35% 0; /*grow*/
+    height: 100vh;
+  }
+
+  
+
+  .img{
+    background-image: url('https://www.rcem.ac.uk/images/RCEM/RCEM_2017_low_res-94.jpg');
+    background-position:top;
+    background-repeat: no-repeat;
+    
+    //padding:20px;
+    p{
+      padding:10px;
+      width: auto;
+    }
+  }
+
+  .payment{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    color: black;
+    p{
+      font-size: 25px;
+    }
+
+    div{
+      width: 100%;
+    }
+
+    .container {
+      background-color: RGBA(255,255,255,0.10);
+      display: flex;
+      //padding:20px;
+      font-size: larger;
+      border: 1px #301b3f solid;
+      text-align: center;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      //font-family: 'Pacifico', cursive;
+      font-family: 'Darker Grotesque', sans-serif;
+
+      div:nth-child(1){
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        cursor: grabbing;
+      }
+
+      div:nth-child(2){
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: grabbing;
+      }
+    }
+    .container > div {
+      //background-color: black;
+      color: white;
+      height: auto;
+      padding:10px;
+      
+      flex: 1; /*grow*/
+      //height: 100vh;
+    }
+
+    .pay-info{
+      margin-top: 50px;
+      font-family: 'Darker Grotesque', sans-serif;
+
+      button{
+        width: 100%;
+        padding: 20px;
+        margin-top: 30px;
+        background-color: #301b3f;
+        color: honeydew;
+        border:none;
+        border-radius: 10px;
+        font-size: 20px;
+        text-decoration-thickness: 3px;
+        cursor:-webkit-grabbing;
+      }
+
+      input{
+        margin-top: 20px;
+        width: 100%;
+        border: 1px solid gray;
+        margin-left: 10px;
+      }
+      label{
+        font-size: 20px;
+      }
+
+      .container {
+        background-color: RGBA(255,255,255,0.10);
+        display: flex;
+        font-size: 2vw;
+        text-align: center;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+      }
+      .container > div {
+        flex: 1; /*grow*/
+        color: black;
+      }
+    }
+
+
+  }
+
+  .dates{
+    .container {
+      background-color: RGBA(255,255,255,0.10);
+      display: flex;
+      font-size: 2vw;
+      text-align: center;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+    }
+    .container > input label {
+      flex: 1; /*grow*/
+      color: black;
+      cursor: none;
+      padding-left: 20px;
+    }
+  }
 }
