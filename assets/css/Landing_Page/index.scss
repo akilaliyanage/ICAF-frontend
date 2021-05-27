@@ -786,6 +786,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .payment{
+    overflow-y: scroll;
     height: 90vh;
     width: 100%;
     text-align: center;
