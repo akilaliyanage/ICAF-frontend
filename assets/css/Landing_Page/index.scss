@@ -7,6 +7,8 @@ $color-light-blue: #d8e3e7;
 
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
 
 * {
   padding: 0;
@@ -740,4 +742,62 @@ body::-webkit-scrollbar-thumb {
        }
      }
    }
+}
+.akila-payment{
+
+  .container {
+    background-color: RGBA(255,255,255,0.10);
+    display: flex;
+    //padding:20px;
+    font-size: larger;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    //font-family: 'Pacifico', cursive;
+    font-family: 'Darker Grotesque', sans-serif;
+
+    div:nth-child(1){
+      flex: 1;
+    }
+    div:nth-child(2){
+      flex: 2;
+    }
+  }
+  .container > div {
+    flex: 35% 0; /*grow*/
+    height: 100vh;
+  }
+
+  
+
+  .img{
+    background-image: url('https://www.rcem.ac.uk/images/RCEM/RCEM_2017_low_res-94.jpg');
+    background-position:top;
+    background-repeat: no-repeat;
+    
+    //padding:20px;
+    p{
+      padding:10px;
+      width: auto;
+    }
+  }
+
+  .payment{
+    width: 100%;
+    text-align: center;
+    color: black;
+
+    div{
+      width: 100%;
+    }
+
+    ul{
+      width: 100%;
+      margin: auto;
+      li{
+        padding: 20px;
+        float: left;
+      }
+    }
+  }
 }
