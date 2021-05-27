@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/workshopDash.css'
 // import UserImg from './../../assets/media/nethsara/workshopUser.png'
 import CardDiv from './WorkDashHome'
+import AllWorkshops from './AllWorkshops'
+import PendingCoordinators from './PendingCoordinators'
 
 class WorkshpDTemp extends Component {
     render() {
@@ -35,6 +37,8 @@ class WorkshpDTemp extends Component {
                     <div className="nt-main-cont">
 
                         <CardDiv/>
+                        <AllWorkshops/>
+                        <PendingCoordinators/>
 
                         <h2>Sidebar</h2>
                         <p>This sidebar is of full height (100%) and always shown.</p>
@@ -49,6 +53,9 @@ class WorkshpDTemp extends Component {
                         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
                         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
                         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    
+                        
+                    
                     </div>
 
                 </div>
