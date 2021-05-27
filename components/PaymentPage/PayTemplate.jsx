@@ -60,7 +60,7 @@ class PayTemplate extends Component {
                                 <NavBar items={this.state.navbar_items}/>
                             </div>
 
-                            <div style={{position:'absolute', bottom:'0',backgroundColor:'rgb(0, 0, 0, 0.5',width:'600px'}}>
+                            <div style={{position:'relative', bottom:'0',backgroundColor:'rgb(0, 0, 0, 0.5',width:'auto'}}>
                                    <p>"Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution."</p>
                                    <p><b>— Albert Einstein</b> </p>
                             </div>
