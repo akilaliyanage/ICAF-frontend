@@ -5,11 +5,15 @@ class About  extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            des : ''
+            des : '',
+            topic : ''
          }
     }
 
     componentDidMount(){
+
+        this.fetchTopic()
+
         fetch(config.host + "/about").then(res => res.json()).then(data =>{
             console.log(data[0]["des"])
             this.setState({des : data[0]["des"]})
@@ -18,13 +22,20 @@ class About  extends Component {
         })
     }
 
+    fetchTopic(){
+        fetch(config.host + "/topic").then(res => res.json()).then(data => {
+            this.setState({topic : data[0]["topic"]})
+        }).catch(err =>{
+            alert(err)
+        })
+    }
     render() { 
         return (
             <div>
                 <div class="flex-container">
                     <div>
                         <h1>About</h1>
-                        <h2>ICAF</h2>
+                        <h2>{this.state.topic}</h2>
                         <h1>Conference</h1>
                     </div>
                     <div className="info">

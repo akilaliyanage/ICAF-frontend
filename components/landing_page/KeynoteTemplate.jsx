@@ -20,7 +20,7 @@ class KeynoteTemplate extends Component {
                              <table>
                             <tr>
                                 <td>
-                                        <Speaker  url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU"/>
+                                        <Speaker  url="http://cdn.differencebetween.net/wp-content/uploads/2018/01/Differences-Between-Teacher-and-Professor-1.jpg"/>
                                     </td>
                                     <td>
                                         <Speaker colored={true} url="https://indiaeducationdiary.in/wp-content/uploads/2020/11/shitij-kapur.xae50dfd9.jpg"/>
