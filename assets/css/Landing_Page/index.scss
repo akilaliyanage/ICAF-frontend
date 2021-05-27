@@ -646,33 +646,98 @@ body::-webkit-scrollbar-thumb {
   .container {
     background-color: RGBA(255,255,255,0.10);
     display: flex;
-    font-size: 2vw;
+    font-size: 1.6vw;
     text-align: center;
     width: 100%;
     border-radius: 5px;
     padding: 20px;
 
+
     div:nth-child(1){
+      
       padding : 20px;
       //font-family: 'Roboto Condensed', sans-serif;
       background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    //background-color: #d1d9d9;
+    //background: rgb(2,0,36);
+    //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 93%, rgba(0,212,255,1) 100%);
+    background-color: #0a1931;
     }
     div:nth-child(2){
       background-color: #273746 ;
+      padding : 20px;
     }
     div:nth-child(3){
       background-color: #566573  ;
-    }
-    div:nth-child(4){
-      background-color: #D5D8DC ;
+      padding : 20px;
     }
 
   }
   .container > div {
     flex: 1; /*grow*/
-    margin: 10px
+    margin: 10px;
+    border-radius: 10px;
   }
 
 
+}
+.akila-footer{
+  .copy{
+    text-align: center;
+  }
+  background-color: #393e46;
+      .container {
+        background-color: RGBA(255,255,255,0.10);
+        display: flex;
+        font-size: 1.6vw;
+        //text-align: center;
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .container > div {
+      flex: 1; /*grow*/
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    //.mapouter{position:relative;text-align:right;height:294px;width:713px;}
+    .gmap_canvas {overflow:hidden;background:none!important;height:auto;width:713px;}
+
+   .links{
+    ul{
+      text-align: center;
+    }
+
+    li{
+      
+      float: left;
+      padding-left: 20px;
+      font-size: 40px;
+    }
+
+   }
+   .ql{
+      ul{
+        margin-top: 10px;
+        p{
+          font-size: 20px;
+        }
+      }
+   }
+   .email{
+     ul{
+       li{
+         font-size: 26px;
+         color: white;
+         text-decoration-color: white;
+       }
+       a{
+         color: white;
+         text-decoration: underline;
+       }
+     }
+   }
 }

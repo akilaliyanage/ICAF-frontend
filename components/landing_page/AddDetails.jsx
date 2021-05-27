@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AiFillCheckCircle } from "react-icons/ai";
+import { AiFillCheckSquare, AiOutlineDollarCircle, AiOutlineUserAdd } from "react-icons/ai";
 
 
 class AddDetails extends Component {
@@ -10,15 +10,17 @@ class AddDetails extends Component {
     render() { 
         return ( 
             <div className="akila-adddet">
-                 <h1>Importatnt <span>Dates & extra</span></h1>
                <div>
                 <div className="container">
                             <div>
-                               <p>Register for a workshop</p>
+                              <p> <span><AiFillCheckSquare/></span> Register for a workshop</p>
                             </div>
-                            <div>{this.state.hours} H</div>  
-                            <div>{this.state.minutes} M</div>
-                            <div>{this.state.seconds} S</div>
+                            <div>
+                              <p> <span><AiOutlineDollarCircle/></span> Payments</p>
+                            </div>  
+                            <div>
+                              <p> <span><AiOutlineUserAdd/></span> Attendee registration</p>
+                            </div> 
                         </div>
                </div>
             </div>
