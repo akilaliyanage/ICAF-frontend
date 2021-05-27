@@ -745,7 +745,10 @@ body::-webkit-scrollbar-thumb {
 }
 .akila-payment{
 
+
+
   .container {
+    overflow-y: hidden;
     background-color: RGBA(255,255,255,0.10);
     display: flex;
     //padding:20px;
@@ -764,7 +767,7 @@ body::-webkit-scrollbar-thumb {
     }
   }
   .container > div {
-    flex: 35% 0; /*grow*/
+    flex: 600px 0; /*grow*/
     height: 100vh;
   }
 
@@ -785,7 +788,7 @@ body::-webkit-scrollbar-thumb {
   .payment{
     width: 100%;
     text-align: center;
-    margin-top: 50px;
+    padding-top: 50px;
     color: black;
     p{
       font-size: 25px;
