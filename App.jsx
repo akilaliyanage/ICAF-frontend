@@ -7,6 +7,9 @@ import AddReviewer from "./components/Admin/AddReviewer";
 import WorkshopDashboard from './components/workshop_dashboard/WorkshpDTemp'
 import ResearcherRegistration from './components/ResearcherRegistration/Registration'
 import ReviewLogin from './components/workshop_dashboard/ReviewLogin'
+import WorkCordinaorReg from './components/workshopDetails/WorkCordinatorReg'
+import PayTemplate from './components/PaymentPage/PayTemplate'
+import UserReg from './components/WorkshopDet/UserReg'
 
 
 export default class App extends React.Component {
@@ -39,6 +42,15 @@ export default class App extends React.Component {
                     </Route>
                     <Route exact path="/reviewLogin">
                         <ReviewLogin/>
+                    </Route>
+                    <Route exact path="/workCordinaorReg">
+                        <WorkCordinaorReg/>
+                    </Route>
+                    <Route exact path="/payment">
+                        <PayTemplate/>
+                    </Route>
+                    <Route exact path="/userReg">
+                        <UserReg/>
                     </Route>
                 </Switch>
             </Router>
