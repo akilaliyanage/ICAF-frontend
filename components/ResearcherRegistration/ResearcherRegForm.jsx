@@ -37,11 +37,12 @@ class ResearcherRegForm extends Component {
 
                     <ResearcherPasswords/>
 
+                    <hr className='Seperator'/>
                     <div className='form-btn-container'>
                         <button className='success-btn'>Cancel</button>
                         <button className='success-fail'>Register</button>
                     </div>
-                    
+                    <hr className='Seperator'/>
                 </React.Fragment>
             );
         }

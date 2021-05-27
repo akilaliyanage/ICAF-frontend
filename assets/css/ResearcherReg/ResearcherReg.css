@@ -54,7 +54,13 @@
 .form-container{
     display: flex;
     margin-bottom: 15px;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.column-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .form-Element-Title{
@@ -68,7 +74,7 @@
     align-items: flex-start;
 }
 
-input[type=text] , input[type=email], input[type=number]{
+input[type=text] , input[type=email], input[type=number] , input[type=password] , select{
     border-radius: 5px;
     height: 5vh;
     font-size: 16px;
@@ -129,17 +135,21 @@ label{
     font-weight: bolder;
     border-radius: 5px;
     outline: none;
-	transition: all 0.5s;
+	transition: all 0.2s;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .success-fail{
     color: black;
-    background-color: red;
+    background-color: #F93154;
     width : 20vh;
     height : 5vh;
     font-weight: bolder;
     border-radius: 5px;
     outline: none;
-	transition: all 0.5s;
+	transition: all 0.2s;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .success-btn::before{
     
@@ -148,12 +158,15 @@ label{
     color: yellow;
 	z-index: 1;
 	
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
-.success-btn:hover::before {
-	opacity: 0 ;
-    color: yellow;
-	transform: scale(0.5,0.5);
+.success-btn:hover{
+    background-color: #00E676;
+	transform: scale(1.1,1.1);
+}
+.success-fail:hover{
+    background-color: #FF1744;
+	transform: scale(1.1,1.1);
 }
 .success-btn::after {
 	z-index: 1;
@@ -164,8 +177,8 @@ label{
 	transform: scale(1.2,1.2);
 }
 .success-btn:hover::after {
-	opacity: 1;
     color: yellow;
+    background-color: yellow;
 	transform: scale(1,1);
 }
 
@@ -174,5 +187,7 @@ label{
 }
 .form-btn-container{
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

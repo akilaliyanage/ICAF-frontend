@@ -16,7 +16,7 @@ class ResearcherPasswords extends Component{
                             <div className='form-row-container'>
                                 <div className='passwordSection-container'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input-name' id='password'/>
+                                        <input type='password' className='Researcher-form-input-name' id='password'/>
                                         <label for='fName'>Password</label>
                                     </div>
                                 </div>
@@ -24,7 +24,7 @@ class ResearcherPasswords extends Component{
                                     <div className='form-container'>
                                         <p className='form-Element-Title'>Confirm Password</p>
                                         <div className='form-Element-container'>
-                                            <input type='text' className='Researcher-form-input-name' id='confPassword'/>
+                                            <input type='password' className='Researcher-form-input-name' id='confPassword'/>
                                             <label>Confirm Password</label>
                                         </div>
                                     </div>
