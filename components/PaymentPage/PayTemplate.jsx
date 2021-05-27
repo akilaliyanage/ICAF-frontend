@@ -114,9 +114,12 @@ class PayTemplate extends Component {
                                 <button>PAY</button>
 
 
+
+
                                 </div>
                             </div>
                             </div>
+                            
                         </div>  
                     </div>
             </div>

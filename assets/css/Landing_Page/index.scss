@@ -9,6 +9,7 @@ $color-light-blue: #d8e3e7;
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@900&display=swap');
 
 * {
   padding: 0;
@@ -897,6 +898,103 @@ body::-webkit-scrollbar-thumb {
       color: black;
       cursor: none;
       padding-left: 20px;
+    }
+  }
+}
+.akila-user{
+
+  overflow: hidden;
+
+
+  .container {
+    overflow-y: hidden;
+    background-color: RGBA(255,255,255,0.10);
+    display: flex;
+    //padding:20px;
+    font-size: larger;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    //font-family: 'Pacifico', cursive;
+    font-family: 'Darker Grotesque', sans-serif;
+
+    div:nth-child(1){
+      flex: 1;
+    }
+    div:nth-child(2){
+      flex: 1;
+    }
+  }
+  .container > div {
+    flex: 1; /*grow*/
+    height: 100vh;
+  }
+
+  .img{
+    background-image: url('http://researchconferences.in/RESEARCH-IN-INCLUDE/images/about-img.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+    //padding:20px;
+    p{
+      padding:10px;
+      width: auto;
+    }
+  }
+
+  .login-form{
+    //background: #0a043c;
+    //background: linear-gradient(90deg, rgba(2,0,36,1) 28%, rgba(11,11,170,1) 60%, rgba(10,48,111,1) 100%);
+  }
+  .login{
+    p{
+      color:black;
+      margin-bottom: 10px;
+      font-family: 'Darker Grotesque', sans-serif;
+      font-size: 40px;
+      //background-color: blue;
+    }
+
+    p::before{
+      content: none;
+      background-color: blueviolet;
+    }
+    padding-top: 40px;
+    background: #ffff;
+    input{
+      width:90%;
+      border:none;
+      margin-top: 10px;
+      background-color: #efefef;
+      //border: 1px solid black;
+    }
+
+    button{
+      margin-top: 20px;
+      width: 90%;
+      outline: none;
+      border:none;
+      padding:20px;
+      border-radius: 10px;
+      background-color: #233e8b;
+      color: white;
+      font-size: 20px;
+
+    }
+
+    img{
+      border-radius: 100%;
+      margin-top: 10px;
+      height: 300px;
+    }
+
+    .overlay{
+      position: absolute;
+      background-color: black;
+      height: 100px;
+      height: 100px;
     }
   }
 }
