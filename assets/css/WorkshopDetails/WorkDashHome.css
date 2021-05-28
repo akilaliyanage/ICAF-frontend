@@ -52,3 +52,14 @@
     text-align: center;
 
 }
+.nt-approve-btn{
+    padding: 3%;
+    width: 80px;
+    background-color: rgb(255, 40, 40);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.nt-approve-btn:hover{
+    background-color: rgb(255, 86, 86);
+}
