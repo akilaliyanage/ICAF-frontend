@@ -4,7 +4,10 @@ class ResearcherPasswords extends Component{
 
     constructor(props){
         super(props)
-        this.state ={}
+        this.state ={
+            //Passwords States
+            password : '', confPassword : '',
+        }
     }
 
     render(){
@@ -16,7 +19,7 @@ class ResearcherPasswords extends Component{
                             <div className='form-row-container'>
                                 <div className='passwordSection-container'>
                                     <div className='form-Element-container'>
-                                        <input type='password' className='Researcher-form-input-name' id='password'/>
+                                        <input type='password' className='Researcher-form-input-name' name='password' id='password' onChange={this.props.getValueOnChange}/>
                                         <label for='fName'>Password</label>
                                     </div>
                                 </div>
@@ -24,7 +27,7 @@ class ResearcherPasswords extends Component{
                                     <div className='form-container'>
                                         <p className='form-Element-Title'>Confirm Password</p>
                                         <div className='form-Element-container'>
-                                            <input type='password' className='Researcher-form-input-name' id='confPassword'/>
+                                            <input type='password' className='Researcher-form-input-name'name='confPassword' id='confPassword' onChange={this.props.getValueOnChange}/>
                                             <label>Confirm Password</label>
                                         </div>
                                     </div>
