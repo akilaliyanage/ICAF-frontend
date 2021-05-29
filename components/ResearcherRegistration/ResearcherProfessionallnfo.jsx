@@ -4,7 +4,11 @@ class ResearcherProfessionalInfo extends Component{
 
     constructor(props){
         super(props)
-        this.state ={}
+        this.state ={
+            //Professional Informaton States
+            wPlace : '', occupation : '',wEmail : '', wCountryCode :'', wPhone : '',
+            wAddL1 : '', wAddL2 : '', wCity : '', wState : '', wZip : ''
+        }
     }
 
     render(){
@@ -16,7 +20,7 @@ class ResearcherProfessionalInfo extends Component{
                         <div className='form-row-container'>
                                 <div className='form-row-container'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input-long' id='pEmail'/>
+                                        <input type='text' className='Researcher-form-input-long' name='wPlace' id='wPlace' onChange={this.props.getValueOnChange}/>
                                         <label>Name of the WorkPlace</label>
                                     </div>
                                 </div>
@@ -27,7 +31,7 @@ class ResearcherProfessionalInfo extends Component{
                         <div className='form-row-container'>
                                 <div className='form-row-container'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input' id='pEmail'/>
+                                        <input type='text' className='Researcher-form-input' name='occupation' id='occupation' onChange={this.props.getValueOnChange}/>
                                         <label>Occupation</label>
                                     </div>
                                 </div>
@@ -37,7 +41,7 @@ class ResearcherProfessionalInfo extends Component{
                             <p className='form-Element-Title'>Email (Work)</p>
                             <div className='form-row-container'>
                                 <div className='form-Element-container'>
-                                    <input type='email' className='Researcher-form-input' id='pEmail'/>
+                                    <input type='email' className='Researcher-form-input' name='wEmail' id='wEmail' onChange={this.props.getValueOnChange}/>
                                     <label>Email</label>
                                 </div>
                             </div>
@@ -46,11 +50,11 @@ class ResearcherProfessionalInfo extends Component{
                             <p className='form-Element-Title'>Phone (Work)</p>
                             <div className='form-row-container'>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input' id='CountryCode'/>
+                                    <input type='text' className='Researcher-form-input' name='wCountryCode' id='wCountryCode' onChange={this.props.getValueOnChange}/>
                                     <label>Country Code</label>
                                 </div>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input' id='pPhone'/>
+                                    <input type='text' className='Researcher-form-input' name='wPhone' id='wPhone' onChange={this.props.getValueOnChange}/>
                                     <label>Phone</label>
                                 </div>
                             </div>
@@ -59,11 +63,11 @@ class ResearcherProfessionalInfo extends Component{
                             <p className='form-Element-Title'>Address (Work)</p>
                             <div className='form-row-container'>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input' id='pAddressL1'/>
+                                    <input type='text' className='Researcher-form-input' name='wAddL1' id='wAddL1' onChange={this.props.getValueOnChange}/>
                                     <label>Address Line 1</label>
                                 </div>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input' id='pAddressL2'/>
+                                    <input type='text' className='Researcher-form-input' name='wAddL2' id='wAddL2' onChange={this.props.getValueOnChange}/>
                                     <label>Address Line 2</label>
                                 </div>
                             </div>
@@ -72,15 +76,15 @@ class ResearcherProfessionalInfo extends Component{
                             <p className='form-Element-Title'></p>
                             <div className='form-row-container'>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input-address-extras' id='pAddressCity'/>
+                                    <input type='text' className='Researcher-form-input-address-extras' name='wCity' id='wCity' onChange={this.props.getValueOnChange}/>
                                     <label>City</label>
                                 </div>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input-address-extras' id='pAddressState'/>
+                                    <input type='text' className='Researcher-form-input-address-extras' name='wState' id='wState' onChange={this.props.getValueOnChange}/>
                                     <label>State/Province</label>
                                 </div>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input-address-extras' id='pAddressZip'/>
+                                    <input type='text' className='Researcher-form-input-address-extras' name='wZip' id='wZip' onChange={this.props.getValueOnChange}/>
                                     <label>Postal/Zip Code</label>
                                 </div>
                             </div>

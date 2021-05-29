@@ -48,17 +48,15 @@ function AddReviewer(){
 
     const AddReviewer = (e) => {
         e.preventDefault();
-        const reviewer = {
-            name,
-            username,
-            password,
-            picture
-        }
 
-        console.log(reviewer);
+        const  formData = new FormData();
+        formData.append("name",name);
+        formData.append("username",username);
+        formData.append("password",password);
+        formData.append("picture",picture);
+
         const url = "http://localhost:8000/reviewer/add";
-        alert(reviewer);
-        axios.post(url,reviewer).then((res) => {
+        axios.post(url,formData).then((res) => {
             if(res.data.status === 200){
                 alert("Success");
             }

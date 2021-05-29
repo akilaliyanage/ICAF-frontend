@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/WorkDashHome.css'
 
-class ApprovedCoordinators extends Component {
+class AllCoordiantors extends Component {
 
     constructor(props){
         super(props)
         this.state={
-            approved:[]
+            allCoords:[]
         }
     }
 
@@ -15,7 +15,7 @@ class ApprovedCoordinators extends Component {
     }
 
     fetchItems(){
-        fetch("url").then(res => res.json()).then(data => this.setState({approved:data})).catch(err => console.log(err))
+        fetch("url").then(res => res.json()).then(data => this.setState({allCoords:data})).catch(err => console.log(err))
     }
     
 
@@ -27,7 +27,7 @@ class ApprovedCoordinators extends Component {
 
                         <div className="nt-div-head">
                             <h3 className="nt-div-head-text">
-                                Pending Workshop Coordinators
+                                All Coordinators
                             </h3>
                         </div>
 
@@ -41,12 +41,12 @@ class ApprovedCoordinators extends Component {
                             </thead>
                             <tbody>
 
-                            {this.state.approved.map((approved) => {
+                            {this.state.allCoords.map((coord) => {
                                 return(
                                         <tr>
-                                            <td className="nt-td">{approved._id}</td>
-                                            <td className="nt-td">{approved.name}</td>
-                                            <td className="nt-td">{approved.studyFeild}</td>
+                                            <td className="nt-td">{coord._id}</td>
+                                            <td className="nt-td">{coord.name}</td>
+                                            <td className="nt-td">{coord.studyFeild}</td>
                                         </tr>
                                 );
                             })}
@@ -76,4 +76,4 @@ class ApprovedCoordinators extends Component {
     }
 }
 
-export default ApprovedCoordinators
+export default AllCoordiantors

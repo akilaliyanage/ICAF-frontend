@@ -11,8 +11,34 @@ class ResearcherRegForm extends Component {
 
     constructor(props){
         super(props);
-        this.state={}
+        this.state={
+            //Personal Information States
+            fName : '', lName : '', mName : '', NIC : '', pEmail : '', pCountryCode :'', pPhone : '',
+            pAddL1 : '', pAddL2 : '', pCity : '', pState : '', pZip : '',
+
+            //Professional Informaton States
+            wPlace : '', occupation : '',wEmail : '', wCountryCode :'', wPhone : '',
+            wAddL1 : '', wAddL2 : '', wCity : '', wState : '', wZip : '',
+
+            qualifications : [],
+            memberships : [],
+            publications : [],
+
+            qualificationCount : 0,
+            membershipCount : 0,
+            publicationCount : 0,
+
+            //Passwords States
+            password : '', confPassword : '',
+        }
+
+        this.getValueOnChange = this.getValueOnChange.bind(this)
     }
+
+    getValueOnChange(val){
+        this.setState({[val.target.name] : val.target.value})
+        console.log(val.target.name , val.target.value)
+    };
 
     render(){
             return(
@@ -23,19 +49,19 @@ class ResearcherRegForm extends Component {
 
                     <RegFormSubHeading title='General Information' />
 
-                    <ResercherGeneralInfo/>
+                    <ResercherGeneralInfo getValueOnChange={this.getValueOnChange}/>
 
                     <RegFormSubHeading title='Professional Information' />
 
-                    <ResearcherProfessionalInfo/>
+                    <ResearcherProfessionalInfo getValueOnChange={this.getValueOnChange}/>
 
                     <RegFormSubHeading title='Academic Information' />
 
-                    <ResearcherAcademicInfo/>
+                    <ResearcherAcademicInfo getValueOnChange={this.getValueOnChange}/>
 
                     <RegFormSubHeading title='Passwords' />
 
-                    <ResearcherPasswords/>
+                    <ResearcherPasswords getValueOnChange={this.getValueOnChange}/>
 
                     <hr className='Seperator'/>
                     <div className='form-btn-container'>
