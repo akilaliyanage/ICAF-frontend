@@ -25,7 +25,11 @@ function UpdateReviewer(props){
         axios.get(url).then((res) => {
 
             setReviewer(res.data);
-            console.log(res.data);
+            setName(res.data[0].name);
+            setUsername(res.data[0].username);
+            setPassword(res.data[0].password);
+
+
 
         }).catch((err) => {
             console.log(err);
@@ -63,15 +67,27 @@ function UpdateReviewer(props){
 
     const UpdateReviewer = (e) => {
         e.preventDefault();
-        const reviewer = {
-            name,
-            username,
-            password,
-            picture
-        }
+
+        const  formData = new FormData();
+        formData.append("name",name);
+        formData.append("username",username);
+        formData.append("password",password);
+        formData.append("picture",picture);
 
         console.log(reviewer);
+    }
 
+    const DeleteReviewer = (e) => {
+        e.preventDefault();
+        const url = "http://localhost:8000/reviewer/delete/"+rid;
+        axios.delete(url).then((res) => {
+            if(res.data.status === 200){
+                alert("Successfully deleted");
+            }
+            else {
+                alert("Failed");
+            }
+        })
     }
 
     return(
@@ -123,11 +139,12 @@ function UpdateReviewer(props){
                     </div>
 
                     <input type="checkBox" onClick={toggleVisible}/>
-                    <label>   Show Access Key</label>
+                    <label>Show Access Key &nbsp; </label>
+
 
 
                     <input  className="uditha-add-button" type="submit"  value="Update"/>
-                    <input  className="uditha-add-button" type="submit"  value="Delete"/>
+                    <input  className="uditha-add-button" onClick={DeleteReviewer} type="submit"  value="Delete"/>
 
 
                 </form>
