@@ -9,6 +9,10 @@ import ResearcherRegistration from './components/ResearcherRegistration/Registra
 import ReviewerLogin from './components/workshop_dashboard/Reviewer_login'
 import ApproveContent from "./components/Admin/ApproveContent";
 import UpdateReviewer from "./components/Admin/UpdateReviewer";
+import ReviewLogin from './components/workshop_dashboard/ReviewLogin'
+import WorkCordinaorReg from './components/workshopDetails/WorkCordinatorReg'
+import PayTemplate from './components/PaymentPage/PayTemplate'
+import UserReg from './components/WorkshopDet/UserReg'
 
 
 export default class App extends React.Component {
@@ -39,16 +43,27 @@ export default class App extends React.Component {
                     <Route exact path="/ResearcherRegistration">
                         <ResearcherRegistration/>
                     </Route>
-                    <Route exact path="/reviewerLogin">
-                        <ReviewerLogin/>
+                    <Route exact path="/reviewLogin">
+                        <ReviewLogin/>
+                    </Route>
+                    <Route exact path="/workCordinaorReg">
+                        <WorkCordinaorReg/>
+                    </Route>
+                    <Route exact path="/payment">
+                        <PayTemplate/>
+                    </Route>
+                    <Route exact path="/userReg">
+                        <UserReg/>
                     </Route>
                     <Route exact path="/approve-content">
                         <ApproveContent/>
                     </Route>
+         
                     {/*<Route exact path="/update-reviewer/:ID">*/}
                     {/*    <UpdateReviewer/>*/}
                     {/*</Route>*/}
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>
+
 
                 </Switch>
             </Router>

@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/workshopDash.css'
 // import UserImg from './../../assets/media/nethsara/workshopUser.png'
+import CardDiv from './WorkDashHome'
+import AllWorkshops from './AllWorkshops'
+import PendingCoordinators from './PendingCoordinators'
+import ApprovedCoordiantors from './ApprovedCoordinators'
 
 class WorkshpDTemp extends Component {
     render() {
@@ -15,10 +19,10 @@ class WorkshpDTemp extends Component {
                         <p className="nt-prof-name">Name goes here</p>
                     </div>
                     <div className="nt-sav-links">
-                        <a href="#about">Home</a>
-                        <a href="#services">Services</a>
-                        <a href="#clients">Clients</a>
-                        <a href="#contact">Contact</a>
+                        <a>Stats</a>
+                        <a>Workshops</a>
+                        <a>Pending Approvals</a>
+                        <a>Approved Users</a>
                     </div>
                 </div>
                 
@@ -32,19 +36,12 @@ class WorkshpDTemp extends Component {
                     </div>
 
                     <div className="nt-main-cont">
-                        <h2>Sidebar</h2>
-                        <p>This sidebar is of full height (100%) and always shown.</p>
-                        <p>Scroll down the page to see the result.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+                        <CardDiv/>
+                        <AllWorkshops/>
+                        <PendingCoordinators/>
+                        <ApprovedCoordiantors/>
+                    
                     </div>
 
                 </div>
