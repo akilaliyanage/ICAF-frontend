@@ -1,5 +1,9 @@
 import React from "react";
 import '../../assets/css/admin/admin.css'
+import WorkshopCountCard from "./UpperCardView/WorkshopCount";
+import ResearchCountCard from "./UpperCardView/ResearchCount";
+import ParticipateCountCard from "./UpperCardView/ParticipationCount";
+import OtherCountCard from "./UpperCardView/OtherCount";
 
 function UpperCard(){
 
@@ -8,41 +12,15 @@ function UpperCard(){
     return(
 
         <div>
-        <div className="uditha-small-card workshopcard-align">
-
-            <div className="smallcard-text-align">
-                <h3>Workshops</h3>
-                <h2>08</h2>
-            </div>
-        </div>
-
-            <div className="uditha-small-card research-align">
-
-            <div className="smallcard-text-align">
-                <h3>Research</h3>
-                <h2>09</h2>
-            </div>
-
-                </div>
 
 
-                <div className="uditha-small-card participation-align">
+            <WorkshopCountCard/>
 
-            <div className="smallcard-text-align">
-                <h3>Participation</h3>
-                <h2>78</h2>
-            </div>
+            <ResearchCountCard/>
 
-                    </div>
+            <ParticipateCountCard/>
 
-            <div className="uditha-small-card other-align">
-
-                <div className="smallcard-text-align">
-                    <h3>other</h3>
-                    <h2>????</h2>
-                </div>
-
-            </div>
+            <OtherCountCard/>
 
 
 

@@ -21,7 +21,7 @@ function Reviewers(){
                 <h2>@</h2>
                 <h1>SLIIT</h1>
                 <br/>
-                <button className="uditha-notify-button">Updates are Pending</button>
+                <button className="uditha-notify-button blink">Updates are Pending</button>
 
             </div>
 
