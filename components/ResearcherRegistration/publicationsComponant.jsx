@@ -13,17 +13,17 @@ class PublicationComponent extends Component{
                 <div className='qualification-container'>
                                 <div className='form-row-container qualification-row'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input-long' id='pubName'/>
+                                        <input type='text' className='Researcher-form-input-long' id='publication' name='publication' onChange={this.props.setPublicationsExtraOnChange}/>
                                         <label>Publication</label>
                                     </div>
                                 </div>
                                 <div className='form-row-container qualification-row'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input-long' id='pubURL'/>
+                                        <input type='text' className='Researcher-form-input-long' id='source' name='source' onChange={this.props.setPublicationsExtraOnChange}/>
                                         <label>Conference/Journal/Book</label>
                                     </div>
                                     <div className='form-Element-container'>
-                                        <select className='Researcher-form-input-address-extras' id='pubYear'>
+                                        <select className='Researcher-form-input-address-extras' id='pubYear' name='pubYear' onChange={this.props.setPublicationsExtraOnChange}>
                                                 {this.props.yearList.map(year =>(
                                                     <option key={year} value={year}>
                                                         {year}
@@ -35,7 +35,7 @@ class PublicationComponent extends Component{
                                 </div>
                                 <div className='form-row-container qualification-row'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input-long' id='pubName'/>
+                                        <input type='text' className='Researcher-form-input-long' id='pubURL' name='pubURL' onChange={this.props.setPublicationsExtraOnChange}/>
                                         <label>URL</label>
                                     </div>
                                 </div>
