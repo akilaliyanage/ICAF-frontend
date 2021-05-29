@@ -50,9 +50,11 @@ class MainTopic extends Component {
 
     fetchEventDate(){
         fetch(config.host + "/event-date").then(res => res.json()).then(data =>{
-            this.setState({date : data[0]['date']})
+            console.log(data)
+            this.setState({date : data['date']})
         }).catch(err =>{
-            alert(err)
+            //alert(err)
+            console.log(err)
         })
     }
 

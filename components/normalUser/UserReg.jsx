@@ -75,7 +75,7 @@ class UserReg extends Component {
                 email : this.state.email
             }
     
-            fetch(config.local + '/n-user/reg',{
+            fetch(config.host + '/n-user/reg',{
                 method : 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ class UserReg extends Component {
                 password : this.state.password
             }
 
-            fetch(config.local + '/n-user/login',{
+            fetch(config.host + '/n-user/login',{
                 method : 'POST',
                 headers: {
                     'Content-Type': 'application/json'
