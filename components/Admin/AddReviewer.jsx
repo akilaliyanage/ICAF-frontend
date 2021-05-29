@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from "react";
 import '../../assets/css/admin/admin.css'
+import AdminNavbar from "./AdminNavBar";
 
 function AddReviewer(){
 
@@ -9,6 +10,7 @@ function AddReviewer(){
     const [password, setPassword] = useState('');
     const [selectedFile, setSelectedFile] = useState();
     const [preview, setPreview] = useState();
+    const [passwordToggle, setToggle] = useState("password");
 
 
     useEffect(()=> {
@@ -34,6 +36,15 @@ function AddReviewer(){
         setPicture(e.target.files[0])
     }
 
+    const toggleVisible = e => {
+        if(passwordToggle === "password") {
+            setToggle("text");
+        }
+        else {
+            setToggle("password");
+        }
+    }
+
     const AddReviewer = (e) => {
         e.preventDefault();
         const reviewer = {
@@ -51,21 +62,21 @@ function AddReviewer(){
 
         <div>
 
+            <AdminNavbar/>
+
             <div className="uditha-add-reviewer-form">
-                <h2>Add new Reviewer</h2>
-            <form className="uditha-form-control" onSubmit={AddReviewer}>
-
-                <div className="uditha-avatarPreview">
-                    {selectedFile &&  <img style={{borderRadius:'50%'}} src={preview} width="200" height="200" alt="avatar"/>}
-                </div>
-
                 <div className="uditha-avatarInput">
                     <div className="form-group">
-                        <input type="file" className="uditha-file-control"  onChange={onSelectFile} name="picture" id="exampleFormControlFile1"
-                               />
+                        <input type="file" className="uditha-file-control"  onChange={onSelectFile} name="picture" id="exampleFormControlFile1"/>
                     </div>
                 </div>
 
+                <div className="uditha-avatar-Preview">
+                    {selectedFile &&  <img style={{borderRadius:'50%'}} src={preview} width="200" height="200" alt="avatar"/>}
+                </div>
+
+                <h2>Add new Reviewer</h2>
+            <form className="uditha-form-control" onSubmit={AddReviewer}>
 
                         <label className="description" htmlFor="element_1">Name </label>
                         <div>
@@ -80,8 +91,11 @@ function AddReviewer(){
 
                         <label className="description" htmlFor="element_3">Access Key </label>
                         <div>
-                            <input type="password"  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
+                            <input type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
                         </div>
+
+                         <input type="checkBox" onClick={toggleVisible}/>
+                         <label>   Show Access Key</label>
 
 
                         <input  className="uditha-add-button" type="submit"  value="Submit"/>
