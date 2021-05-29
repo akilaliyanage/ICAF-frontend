@@ -33,7 +33,7 @@ export default class App extends React.Component {
                     <Route exact path="/admin">
                         <AdminDashboard />
                     </Route>
-                    <Route exact path="/workshop">
+                    <Route exact path="/Workshops">
                         <WorkshopTemplate />
                     </Route>
                     <Route exact path="/add-reviewer">
