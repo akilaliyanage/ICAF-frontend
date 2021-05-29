@@ -35,7 +35,7 @@ class RegisterResearcher extends Component {
                             <ResearcherRegForm/>
                         </div>
                         <div className='regFormRight'>
-                            <h1>hello</h1>
+                            
                         </div>
                     </div>
                 </div>

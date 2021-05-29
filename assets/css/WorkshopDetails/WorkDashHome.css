@@ -4,7 +4,7 @@
     padding-top: 2%;
 }
 .nt-dash-card{
-    margin-right: 2%;
+    margin-right: 3%;
     width: 25%;
     background-color: rgb(255, 255, 255);
     border-radius: 1%;
@@ -19,4 +19,47 @@
 .nt-dcard-qunt{
     font-weight:normal;
     color: #474747;
+}
+.nt-approvedcard{
+    width: 97%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 29px 0px;
+    padding: 2%;
+    text-align: center;
+}
+.nt-div-head{
+    text-align: left;
+    color: #000000;
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+.nt-div-head-text{
+    font-size: large;
+    font-weight: inherit;
+}
+.nt-table{
+    font-size: medium;
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000;
+}
+
+.nt-td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+
+}
+.nt-approve-btn{
+    padding: 3%;
+    width: 80px;
+    background-color: rgb(255, 40, 40);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.nt-approve-btn:hover{
+    background-color: rgb(255, 86, 86);
 }
