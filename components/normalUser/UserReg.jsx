@@ -174,7 +174,7 @@ class UserReg extends Component {
                                 </div>
                                 </div>
                     <div className="login-form">
-                        <div className="login" style={{width:'600px',margin:'0 auto',marginTop:'0px',borderRadius:'10px',height:'90vh'}}>
+                        <div className="login" style={{width:'600px',margin:'0 auto',marginTop:'0px',borderRadius:'10px'}}>
                             <p><b>{this.state.role == 'reg'?'Attendee Registration Form' : 'Attendee Login Form'}</b></p>
                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="" />
                                <div className="overlay">dsdsdsd</div>

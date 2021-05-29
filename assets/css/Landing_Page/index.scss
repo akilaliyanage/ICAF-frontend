@@ -903,11 +903,11 @@ body::-webkit-scrollbar-thumb {
 }
 .akila-user{
 
-  overflow: hidden;
+  //overflow: hidden;
 
 
   .container {
-    overflow-y: hidden;
+    //overflow-y: hidden;
     background-color: RGBA(255,255,255,0.10);
     display: flex;
     //padding:20px;
@@ -923,9 +923,12 @@ body::-webkit-scrollbar-thumb {
     }
     div:nth-child(2){
       flex: 1;
+      overflow-y: scroll;
     }
   }
   .container > div {
+    flex-direction: column;
+    overflow-y: scroll;
     flex: 1; /*grow*/
     height: 100vh;
   }
@@ -951,6 +954,7 @@ body::-webkit-scrollbar-thumb {
     font-size: larger;
 
     div{
+      overflow-y: scroll;
       height: auto;
      // border-radius: 0px;
       padding: 10px;
@@ -962,9 +966,12 @@ body::-webkit-scrollbar-thumb {
     //background: #0a043c;
     //background: linear-gradient(90deg, rgba(2,0,36,1) 28%, rgba(11,11,170,1) 60%, rgba(10,48,111,1) 100%);
     overflow-y: scroll;
+    height: auto;
 
   }
   .login{
+    height: auto;
+    overflow-y: scroll;
     p{
       color:black;
       margin-bottom: 10px;
@@ -983,7 +990,7 @@ body::-webkit-scrollbar-thumb {
     input{
       width:90%;
       border:none;
-      margin-top: 10px;
+      margin-top: 7px;
       background-color: #efefef;
       
       //border: 1px solid black;
@@ -1010,7 +1017,7 @@ body::-webkit-scrollbar-thumb {
     img{
       border-radius: 100%;
       margin-top: 10px;
-      height: 300px;
+      height: 200px;
     }
 
     .overlay{
