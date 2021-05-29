@@ -79,7 +79,7 @@ class WorkCordinatorReg extends Component {
                                 <button className="nl-sign-form-btn" type="submit">SIGN UP</button>
                             </div>
 
-                            <p className="nt-warn">You won't be able to create workshops immediately. A reviewer should accept you as a workshop coordinator before.</p>
+                            {/* <p className="nt-warn">You won't be able to create workshops immediately. A reviewer should accept you as a workshop coordinator before.</p> */}
                         </div>
                     </form>
                     

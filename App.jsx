@@ -10,6 +10,7 @@ import ReviewLogin from './components/workshop_dashboard/ReviewLogin'
 import WorkCordinaorReg from './components/workshopDetails/WorkCordinatorReg'
 import PayTemplate from './components/PaymentPage/PayTemplate'
 import UserReg from './components/WorkshopDet/UserReg'
+import ConductorDTemp from './components/ConductorDashboard/ConductorDTemp'
 
 
 export default class App extends React.Component {
@@ -51,6 +52,9 @@ export default class App extends React.Component {
                     </Route>
                     <Route exact path="/userReg">
                         <UserReg/>
+                    </Route>
+                    <Route exact path="/condDash">
+                        <ConductorDTemp/>
                     </Route>
                 </Switch>
             </Router>

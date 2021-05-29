@@ -55,11 +55,36 @@
 .nt-approve-btn{
     padding: 3%;
     width: 80px;
-    background-color: rgb(255, 40, 40);
+    background-color: rgb(26, 199, 49);
     color: #ffffff;
     border: none;
     cursor: pointer;
 }
 .nt-approve-btn:hover{
+    background-color: rgb(21, 138, 36);
+}
+.nt-decline-btn{
+    margin-left: 1%;
+    padding: 3%;
+    width: 80px;
+    background-color: rgb(255, 40, 40);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.nt-decline-btn:hover{
     background-color: rgb(255, 86, 86);
+}
+.nt-form-div{
+    margin-top: 2%;
+}
+.nl-frm-it{
+    margin-bottom: 2%;
+}
+.nt-frm-lable{
+    font-size: medium;
+    font-weight: bold;
+}
+.nt-frm-input{
+    width: 85%;
 }
