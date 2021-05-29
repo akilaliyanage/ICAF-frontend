@@ -10,8 +10,7 @@ function ReviewersCard(props){
 
 
     useEffect(() => {
-
-        const url = "http://localhost:8000/reviewer/";
+        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/reviewer/";
         axios.get(url).then((res) => {
 
             setReviewers(res.data);
@@ -19,6 +18,7 @@ function ReviewersCard(props){
         }).catch((err) => {
             console.log(err);
         })
+
     },[]);
 
 

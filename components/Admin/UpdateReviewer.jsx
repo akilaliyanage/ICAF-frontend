@@ -25,7 +25,11 @@ function UpdateReviewer(props){
         axios.get(url).then((res) => {
 
             setReviewer(res.data);
-            console.log(res.data);
+            setName(res.data[0].name);
+            setUsername(res.data[0].username);
+            setPassword(res.data[0].password);
+
+
 
         }).catch((err) => {
             console.log(err);
@@ -123,7 +127,8 @@ function UpdateReviewer(props){
                     </div>
 
                     <input type="checkBox" onClick={toggleVisible}/>
-                    <label>   Show Access Key</label>
+                    <label>Show Access Key &nbsp; </label>
+
 
 
                     <input  className="uditha-add-button" type="submit"  value="Update"/>
