@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "jest --watchAll --env=jsdom",
+    "test": "jest --watchAll",
     "start": "parcel -p 3000 index.html",
     "build": "parcel build -d build index.html"
   },
