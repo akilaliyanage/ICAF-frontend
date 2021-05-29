@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "parcel -p 3000 index.html",
     "build": "parcel build -d build index.html"
   },
@@ -20,13 +20,22 @@
   "homepage": "https://github.com/akilaliyanage/ICAF-frontend#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "@testing-library/react": "^11.2.7",
+    "jest-dom": "^4.0.0",
     "parcel": "^2.0.0-beta.2"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "axios": "^0.21.1",
+    "babel-jest": "^27.0.1",
+    "jest": "^27.0.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.2",
+    "react-cookies": "^0.1.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-test-renderer": "^17.0.2"
   }
 }

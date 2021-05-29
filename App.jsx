@@ -6,11 +6,15 @@ import WorkshopTemplate from './components/workshopDetails/WorkshopTemplate'
 import AddReviewer from "./components/Admin/AddReviewer";
 import WorkshopDashboard from './components/workshop_dashboard/WorkshpDTemp'
 import ResearcherRegistration from './components/ResearcherRegistration/Registration'
+import ReviewerLogin from './components/workshop_dashboard/ReviewLogin'
+import ApproveContent from "./components/Admin/ApproveContent";
+import UpdateReviewer from "./components/Admin/UpdateReviewer";
 import ReviewLogin from './components/workshop_dashboard/ReviewLogin'
 import WorkCordinaorReg from './components/workshopDetails/WorkCordinatorReg'
 import PayTemplate from './components/PaymentPage/PayTemplate'
-import UserReg from './components/WorkshopDet/UserReg'
 import ConductorDTemp from './components/ConductorDashboard/ConductorDTemp'
+import UserReg from './components/normalUser/UserReg'
+
 
 
 export default class App extends React.Component {
@@ -53,9 +57,21 @@ export default class App extends React.Component {
                     <Route exact path="/userReg">
                         <UserReg/>
                     </Route>
+
                     <Route exact path="/condDash">
                         <ConductorDTemp/>
                     </Route>
+
+                    <Route exact path="/approve-content">
+                        <ApproveContent/>
+                    </Route>
+         
+                    {/*<Route exact path="/update-reviewer/:ID">*/}
+                    {/*    <UpdateReviewer/>*/}
+                    {/*</Route>*/}
+                    <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>
+
+
                 </Switch>
             </Router>
         );

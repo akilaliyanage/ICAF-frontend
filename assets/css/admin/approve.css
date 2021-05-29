@@ -1,0 +1,68 @@
+.uditha-approve-card{
+    position: absolute;
+    width: 40%;
+    height: 25%;
+    transform: translate(-50%, -50%);
+    color: #f1f5f8;
+    font-size: 1.5vw;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0,0,0,1);
+    border-radius: 5px;
+    display: flex;
+    overflow: auto;
+}
+
+.uditha-title-approve-align{
+
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.uditha-date-approve-align{
+
+    margin-left: 25%;
+    margin-top: 25%;
+
+}
+.uditha-about-approve-align{
+
+    margin-left: 25%;
+    margin-top: 40%;
+}
+
+.uditha-approve-about{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.uditha-approve-date{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.uditha-approve-title{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.button-uditha-approve{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    background-color: #18ab29;
+    border-radius: 5%;
+    border-style: none;
+    display: inline-block;
+}
+
+.button-uditha-decline{
+    width: 100px;
+    height: 30px;
+    background-color: #d32f2f;
+    border-radius: 5%;
+    border-style: none;
+    display: inline-block;
+
+
+}
+
