@@ -71,6 +71,7 @@ class ResearcherAcademicInfo extends Component{
 
         //set dummy aray as original state array
         this.setState({qualificationArray : qualifications})
+        this.props.setQualifications(this.state.qualificationArray)
 
     }
 
@@ -95,8 +96,7 @@ class ResearcherAcademicInfo extends Component{
 
         //set dummy array as original state array
         this.setState({membershipArray : memberships})
-
-        console.log(this.state.membershipArray)
+        this.props.setMemberships(this.state.membershipArray)
 
     }
 
@@ -124,9 +124,7 @@ class ResearcherAcademicInfo extends Component{
 
         //set dummy array as original state array
         this.setState({publicationArray : publications})
-
-        console.log(this.state.publicationArray)
-
+        this.props.setPublications(this.state,publicationArray)
     }
 
     componentDidMount(){
