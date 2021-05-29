@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/WorkDashHome.css'
 
-class PendingCoordinators extends Component {
+class PendingWorkshops extends Component {
 
     constructor(props){
         super(props)
         this.state={
-            pendCrd:[]
+            pendworkshops:[]
         }
     }
 
@@ -15,7 +15,7 @@ class PendingCoordinators extends Component {
     }
 
     fetchItems(){
-        fetch("url").then(res => res.json()).then(data => this.setState({pendCrd:data})).catch(err => console.log(err))
+        fetch("url").then(res => res.json()).then(data => this.setState({pendworkshops:data})).catch(err => console.log(err))
     }
     
 
@@ -27,29 +27,34 @@ class PendingCoordinators extends Component {
 
                         <div className="nt-div-head">
                             <h3 className="nt-div-head-text">
-                                Pending Workshop Coordinators
+                                Approval Pending Workshops
                             </h3>
                         </div>
 
                         <table className="nt-table">
                             <thead>
                                 <tr>
-                                    <th className="nt-td">Coordinator Id</th>
-                                    <th className="nt-td">Coordinator Name</th>
-                                    <th className="nt-td">Study Feild</th>
-                                    <th className="nt-td">Approve</th>
+                                    <th className="nt-td">Workshop Id</th>
+                                    <th className="nt-td">Workshop Title</th>
+                                    <th className="nt-td">Workshop Date</th>
+                                    <th className="nt-td">Conductor</th>
+                                    <th className="nt-td">Created Date</th>
+                                    <th className="nt-td">Approval</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                            {this.state.pendCrd.map((pendCrd) => {
+                            {this.state.pendworkshops.map((workshop) => {
                                 return(
                                         <tr>
-                                            <td className="nt-td">{pendCrd._id}</td>
-                                            <td className="nt-td">{pendCrd.name}</td>
-                                            <td className="nt-td">{pendCrd.studyFeild}</td>
-                                            <td className="nt-td">
+                                            <td className="nt-td">{workshop._id}</td>
+                                            <td className="nt-td">{workshop.title}</td>
+                                            <td className="nt-td">{workshop.eventDate}</td>
+                                            <td className="nt-td">{workshop.conductor}</td>
+                                            <td className="nt-td">{workshop.dateCreated}</td>
+                                            <td>
                                                 <button className="nt-approve-btn"> Approve </button>
+                                                <button className="nt-decline-btn"> Decline </button>
                                             </td>
                                         </tr>
                                 );
@@ -58,24 +63,33 @@ class PendingCoordinators extends Component {
                                     <td className="nt-td">test id</td>
                                     <td className="nt-td">Test title</td>
                                     <td className="nt-td">Test conductor</td>
+                                    <td className="nt-td">Test title</td>
+                                    <td className="nt-td">Test conductor</td>
                                     <td className="nt-td">
                                         <button className="nt-approve-btn"> Approve </button>
+                                        <button className="nt-decline-btn"> Decline </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="nt-td">test id</td>
                                     <td className="nt-td">Test title</td>
                                     <td className="nt-td">Test conductor</td>
+                                    <td className="nt-td">Test title</td>
+                                    <td className="nt-td">Test conductor</td>
                                     <td className="nt-td">
                                         <button className="nt-approve-btn"> Approve </button>
+                                        <button className="nt-decline-btn"> Decline </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="nt-td">test id</td>
                                     <td className="nt-td">Test title</td>
                                     <td className="nt-td">Test conductor</td>
+                                    <td className="nt-td">Test title</td>
+                                    <td className="nt-td">Test conductor</td>
                                     <td className="nt-td">
                                         <button className="nt-approve-btn"> Approve </button>
+                                        <button className="nt-decline-btn"> Decline </button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -89,4 +103,4 @@ class PendingCoordinators extends Component {
     }
 }
 
-export default PendingCoordinators
+export default PendingWorkshops

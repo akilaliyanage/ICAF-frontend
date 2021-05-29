@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/WorkDashHome.css'
 
-class AllWorkshops extends Component {
+class ApprovedWorkshops extends Component {
 
     constructor(props){
         super(props)
         this.state={
-            worksohps:[]
+            workshops:[]
         }
     }
 
@@ -26,13 +26,11 @@ class AllWorkshops extends Component {
                 <div className="nt-dcard-cont">
 
                     <div className="nt-approvedcard">
-                        {/* <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum corporis accusantium repudiandae ex, distinctio animi incidunt cupiditate earum enim omnis. Fuga veritatis neque laudantium voluptate sapiente iste incidunt minus molestiae.
-                        </p> */}
+                        
 
                         <div className="nt-div-head">
                             <h3 className="nt-div-head-text">
-                                All Workshops by approved Coordinators
+                                All approved Workshops
                             </h3>
                         </div>
 
@@ -47,7 +45,7 @@ class AllWorkshops extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {/* {this.state.workshops.map((workshop) => {
+                                {this.state.workshops.map((workshop) => {
                                     return(
                                             <tr>
                                                 <td className="nt-td">{workshop._id}</td>
@@ -57,7 +55,7 @@ class AllWorkshops extends Component {
                                                 <td className="nt-td">{workshop.dateCreated}</td>
                                             </tr>
                                     );
-                                })} */}
+                                })}
 
                                 <tr>
                                     <td className="nt-td">test id</td>
@@ -90,4 +88,4 @@ class AllWorkshops extends Component {
     }
 }
 
-export default AllWorkshops
+export default ApprovedWorkshops
