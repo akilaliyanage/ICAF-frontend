@@ -27,13 +27,13 @@ class QualificationSection extends Component {
                 <div className='qualification-container'>
                                 <div className='form-row-container qualification-row'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input-long' id='degName'/>
+                                        <input type='text' className='Researcher-form-input-long' id='degreeName' name='degreeName' onChange={this.props.setQualificationExtraOnChange}/>
                                         <label>Name of the Degree</label>
                                     </div>
                                 </div>
                                 <div className='form-row-container qualification-row'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input-long' list='uniList' id='degUni'/>
+                                        <input type='text' className='Researcher-form-input-long' list='uniList' id='UniName' name='UniName' onChange={this.props.setQualificationExtraOnChange}/>
                                         <datalist id="uniList">
                                             {this.state.UniList.map(uni => (
                                                 <option key={uni.name} value={uni.name}>
@@ -49,7 +49,7 @@ class QualificationSection extends Component {
                                         <label>Name of the University</label>
                                     </div>
                                     <div className='form-Element-container'>
-                                        <select className='Researcher-form-input-address-extras' id='degYear'>
+                                        <select className='Researcher-form-input-address-extras' id='qualiYear' name='qualiYear' onChange={this.props.setQualificationExtraOnChange}>
                                                 {/* {this.state.yearList.map(year =>(
                                                     <option key={year} value={year}>
                                                         {year}
