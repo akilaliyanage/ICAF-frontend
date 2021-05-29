@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import '../../assets/css/Landing_Page/index.scss'
 import config from '../../config.json'
+import {AiOutlineUser, AiOutlineDown } from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
     constructor(props) {
         super(props);
         this.fetchTopic = this.fetchTopic.bind(this)
+        this.logout = this.logout.bind(this);
         this.state = {
             navbar_items: [],
-            topic : ''
+            topic : '',
+            show : true
          }
     }
 
@@ -24,7 +28,16 @@ class NavBar extends Component {
         })
     }
 
+    logout(){
+        window.localStorage.setItem('username','')
+        window.localStorage.setItem('token','')
+        window.localStorage.setItem('id','')
+
+        window.location.reload();
+    }
+
     render() { 
+        //const item = <li hidden={window.localStorage.getItem('token') == null?true : false} onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""><AiOutlineUser/>   hello {window.localStorage.getItem('username') + ' | SIGN-OUT'}</a></li>
         return (
             <div className='akila-header'>
                 <nav className='akila-navbar'>
@@ -43,6 +56,19 @@ class NavBar extends Component {
                                     <li className="akila-menu-item"><a href={item.url}>{item.name}</a></li>
                                 );
                             })}
+                             <li hidden={this.state.show ? false : true} 
+                             className="akila-menu-item"> 
+                                <div class="dropdown">
+                                <a><AiOutlineDown/> REGISTRATIONS</a>
+                                    <div class="dropdown-content">
+                                        <br />
+                                        <Link to="/userReg"><p>Attendee Registration</p></Link>
+                                        <Link to=""><p>researcher Registration</p></Link>
+                                        <Link to=""><p>workshop presenter</p></Link>
+                                    </div>
+                                </div>
+                             </li>
+                            <li onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""><AiOutlineUser/> {window.localStorage.getItem('token') != '' ? 'hello  ' +  window.localStorage.getItem('username') + ' | SIGN-OUT': 'hello stranger'}</a></li>
                         </ul>
                     </div>
                 </nav>
