@@ -24,7 +24,7 @@ class NavBar extends Component {
         fetch(config.host + "/topic").then(res => res.json()).then(data => {
             this.setState({topic : data[0]["topic"]})
         }).catch(err =>{
-            alert(err)
+            //alert(err)
         })
     }
 
@@ -39,7 +39,7 @@ class NavBar extends Component {
     render() { 
         //const item = <li hidden={window.localStorage.getItem('token') == null?true : false} onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""><AiOutlineUser/>   hello {window.localStorage.getItem('username') + ' | SIGN-OUT'}</a></li>
         return (
-            <div className='akila-header'>
+            <div className='akila-header' data-testid = 'nav-bar'>
                 <nav className='akila-navbar'>
                     <a href="" className='akila-brand'>{this.state.topic}</a>
                     <input type="checkbox" id="nav" className='akila-hidden' />
@@ -53,14 +53,14 @@ class NavBar extends Component {
                         <ul className='akila-menu'>
                             {this.props.items.map(item => {
                                 return (
-                                    <li className="akila-menu-item"><a href={item.url}>{item.name}</a></li>
+                                    <li className="akila-menu-item" key={item._id}><a href={item.url}>{item.name}</a></li>
                                 );
                             })}
                              <li hidden={this.state.show ? false : true} 
                              className="akila-menu-item"> 
-                                <div class="dropdown">
+                                <div className="dropdown">
                                 <a><AiOutlineDown/> REGISTRATIONS</a>
-                                    <div class="dropdown-content">
+                                    <div className="dropdown-content">
                                         <br />
                                         <Link to="/userReg"><p>Attendee Registration</p></Link>
                                         <Link to=""><p>researcher Registration</p></Link>

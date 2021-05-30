@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from "react";
 import '../../assets/css/admin/admin.css'
 import AdminNavbar from "./AdminNavBar";
+import axios from "axios";
 
 function AddReviewer(){
 
@@ -47,14 +48,22 @@ function AddReviewer(){
 
     const AddReviewer = (e) => {
         e.preventDefault();
-        const reviewer = {
-            name,
-            username,
-            password,
-            picture
-        }
 
-        console.log(reviewer);
+        const  formData = new FormData();
+        formData.append("name",name);
+        formData.append("username",username);
+        formData.append("password",password);
+        formData.append("picture",picture);
+
+        const url = "http://localhost:8000/reviewer/add";
+        axios.post(url,formData).then((res) => {
+            if(res.data.status === 200){
+                alert("Success");
+            }
+            else {
+                alert("Failed");
+            }
+        })
 
     }
 
@@ -95,7 +104,7 @@ function AddReviewer(){
                         </div>
 
                          <input type="checkBox" onClick={toggleVisible}/>
-                         <label>   Show Access Key</label>
+                <label>Show Access Key &nbsp; </label>
 
 
                         <input  className="uditha-add-button" type="submit"  value="Submit"/>
