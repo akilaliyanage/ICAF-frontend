@@ -28,7 +28,7 @@ function ReviewersCard(props){
 
         <div className="uditha-reviewers">
 
-            <h3>Current Reviewers</h3>
+            <h4 style={{color:"white"}}>Current Reviewers</h4>
             <div className="uditha-reviewer-button-align">
             <button onClick={e =>  window.location.href='/add-reviewer'} className="button-add-reviewer">Add new</button>
             </div>
@@ -42,7 +42,7 @@ function ReviewersCard(props){
                             <tr>
 
                                 <th><img src={"http://localhost:8000/"+reviewer.profileImage} width="70" height="70" style={{"border-radius": "50%"}}/> </th>
-                                <td>{reviewer.name}</td>
+                                <td style={{color:"white"}}>{reviewer.name}</td>
 
                                 <Link to ={`update-reviewer/${reviewer._id}`}>
                                 <td><img style={{marginTop:"25px"}} src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699302-icon-32-clipboard-edit-512.png" width="25" height="25"/></td>

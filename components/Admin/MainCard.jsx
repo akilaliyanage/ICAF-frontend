@@ -1,9 +1,30 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import '../../assets/css/admin/admin.css'
 import MainCardTitle from "./MainCardContent/Title";
 import MainCardDate from "./MainCardContent/Date";
+import axios from "axios";
 
 function Reviewers(){
+
+    const [visible,setVisible] = useState("");
+
+    useEffect( () => {
+
+        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/edi-noti";
+        axios.get(url).then((res) => {
+            const result = res.data;
+            console.log(result);
+
+            if(result.length === 0){
+                setVisible("none");
+            }
+
+
+        }).catch((err) => {
+            console.log(err);
+        })
+
+    })
 
 
 
@@ -22,7 +43,7 @@ function Reviewers(){
                 <h2>@</h2>
                 <h1>SLIIT</h1>
                 <br/>
-                <button onClick={e =>  window.location.href='/approve-content'} className="uditha-notify-button blink">Updates are Pending</button>
+                <button style={{display:visible }} onClick={e =>  window.location.href='/approve'} className="uditha-notify-button blink">Updates are Pending</button>
 
             </div>
 
