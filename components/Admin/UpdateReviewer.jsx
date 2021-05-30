@@ -2,9 +2,11 @@ import React,{useEffect,useState} from "react";
 import '../../assets/css/admin/admin.css'
 import axios from "axios";
 import AdminNavbar from "./AdminNavBar";
+import {useHistory} from "react-router-dom";
 
 function UpdateReviewer(props){
 
+    const  history = useHistory();
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [picture, setPicture] = useState();
@@ -83,6 +85,7 @@ function UpdateReviewer(props){
         axios.delete(url).then((res) => {
             if(res.data.status === 200){
                 alert("Successfully deleted");
+                history.push("/admin");
             }
             else {
                 alert("Failed");

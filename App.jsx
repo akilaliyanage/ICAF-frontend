@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Template from './components/landing_page/Template'
 import AdminDashboard from "./components/Admin/Base";
@@ -7,13 +8,13 @@ import AddReviewer from "./components/Admin/AddReviewer";
 import WorkshopDashboard from './components/workshop_dashboard/WorkshpDTemp'
 import ResearcherRegistration from './components/ResearcherRegistration/Registration'
 import ReviewerLogin from './components/workshop_dashboard/ReviewLogin'
-import ApproveContent from "./components/Admin/ApproveContent";
 import UpdateReviewer from "./components/Admin/UpdateReviewer";
 import ReviewLogin from './components/workshop_dashboard/ReviewLogin'
 import WorkCordinaorReg from './components/workshopDetails/WorkCordinatorReg'
 import PayTemplate from './components/PaymentPage/PayTemplate'
 import ConductorDTemp from './components/ConductorDashboard/ConductorDTemp'
 import UserReg from './components/normalUser/UserReg'
+import AdminApprove from "./components/Admin/AdminApprove";
 
 
 
@@ -62,8 +63,8 @@ export default class App extends React.Component {
                         <ConductorDTemp/>
                     </Route>
 
-                    <Route exact path="/approve-content">
-                        <ApproveContent/>
+                    <Route exact path="/approve">
+                        <AdminApprove/>
                     </Route>
          
                     {/*<Route exact path="/update-reviewer/:ID">*/}

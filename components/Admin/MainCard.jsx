@@ -22,7 +22,7 @@ function Reviewers(){
                 <h2>@</h2>
                 <h1>SLIIT</h1>
                 <br/>
-                <button className="uditha-notify-button blink">Updates are Pending</button>
+                <button onClick={e =>  window.location.href='/approve-content'} className="uditha-notify-button blink">Updates are Pending</button>
 
             </div>
 

@@ -25,15 +25,18 @@ function ReviewersCard(props){
     return(
 
         <div className="uditha-card uditha-reviewer-card-align">
+
         <div className="uditha-reviewers">
 
             <h3>Current Reviewers</h3>
-            <button onClick={e =>  window.location.href='/add-reviewer'} className="button-add-reviewer">+</button>
+            <div className="uditha-reviewer-button-align">
+            <button onClick={e =>  window.location.href='/add-reviewer'} className="button-add-reviewer">Add new</button>
+            </div>
             <br/>
             {
                 reviewData.map((reviewer) =>
-                    <div>
 
+                    <div>
 
                         <table style={{padding:"5px",borderSpacing:"1px",tableLayout:"fixed",width:"400px"}}>
                             <tr>
@@ -42,7 +45,7 @@ function ReviewersCard(props){
                                 <td>{reviewer.name}</td>
 
                                 <Link to ={`update-reviewer/${reviewer._id}`}>
-                                <td><img style={{marginTop:"25px"}} src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698873-icon-136-document-edit-512.png" width="20" height="20"/></td>
+                                <td><img style={{marginTop:"25px"}} src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699302-icon-32-clipboard-edit-512.png" width="25" height="25"/></td>
                                 </Link>
                             </tr>
 
