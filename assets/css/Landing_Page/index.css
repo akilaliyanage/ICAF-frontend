@@ -1161,4 +1161,12 @@ body::-webkit-scrollbar-thumb {
   text-transform: uppercase;
   padding-top: 10px;
 }
+
+.edi-nav {
+  background-color: #07074b;
+}
+
+.edi-div-1 {
+  border-radius: 0px;
+}
 /*# sourceMappingURL=index.css.map */
