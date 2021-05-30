@@ -22,11 +22,11 @@ function ApproveDate(){
                     return item.cacheName === "eventDate";
                 });
 
-                console.log(result);
                 if(result.length === 0){
                     setVisible("none");
                 }
                 setDate(result[0].data.date);
+                setEditID(result[0]._id);
             }).catch((err) => {
                 console.log(err);
             })
@@ -42,11 +42,18 @@ function ApproveDate(){
                 editID
             }
 
-            const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/approve";
+            console.log(newDate);
+
+            const url = "http://localhost:8000/approve/date";
 
             axios.post(url,newDate).then((res) => {
 
-                console.log(res.data);
+                if(res.data.status === 200){
+                    alert("Approved");
+                }
+                else {
+                    alert("Failed")
+                }
 
 
             }).catch((err) => {
@@ -59,11 +66,13 @@ function ApproveDate(){
     return(
 
         <div style={{display:visible }}>
-            <div className="card w-50">
-                <div className="card-body">
-                    <h5 className="card-title">Date</h5>
-                    <p className="card-text">{date}</p>
-                    <a href="#" className="btn btn-primary">Approve</a>
+            <div className="card w-50" >
+                <div className="card-header">Date</div>
+                <div className="card-body text-primary">
+                    <h5 className="card-title">{date}</h5>
+                    <br/>
+
+                    <a href="#"  onClick={ApproveDate} className="btn btn-primary">Approve</a>
                     &nbsp;
                     <a href="#" className="btn btn-danger">Decline</a>
                 </div>
