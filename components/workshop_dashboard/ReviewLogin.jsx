@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/reviewerlogin.css'
 import background from ""
 
+import config from './../../config.json'
+
 class ReviewLogin extends Component {
 
     constructor(props){
@@ -13,23 +15,28 @@ class ReviewLogin extends Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleInput.bind(this);
+        this.handleInput = this.handleInput.bind(this);
     }
 
     handleInput(event){
         this.setState({
             [event.target.name]:event.target.value
         });
+
+        console.log([event.target.name],event.target.value)
     }
 
-    handleSubmit(){
+    handleSubmit(e){
+        e.preventDefault();
 
         const data = {
             username : this.state.username,
             password : this.state.password
         }
 
-        fetch(config.host + '',{
+        console.log(data)
+        
+        fetch(config.local + '/reviewer/rv-login',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,10 +46,11 @@ class ReviewLogin extends Component {
             console.log(data.token)
 
             if(data.token){
-                window.localStorage.setItem('wc-token',data.token)
-                window.localStorage.setItem('wc-id',data.id)
+                window.localStorage.setItem('rev-token',data.token)
+                window.localStorage.setItem('rev-id',data.id)
                 window.localStorage.setItem('rev-username',data.email)
 
+                console.log(localStorage.getItem('rev-username'))
                 alert("Login Successfull!")
 
                 setInterval(() => {
@@ -67,7 +75,7 @@ class ReviewLogin extends Component {
                         <p className="nt-log-head">REVIEWER LOGIN</p>    
                     </div>    
                 
-                <form>
+                <form method="post">
                     <div className="nt-log-form">
                         <div className="nt-formitem">
                             {/* <label className="nt-lable" htmlFor="">User Name</label><br /> */}
