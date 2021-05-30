@@ -10,7 +10,7 @@ class PublicationComponent extends Component{
     render(){
         return(
             <React.Fragment>
-                <div className='qualification-container'>
+                <div className='qualification-container' data-testid = 'qualification-container'>
                                 <div className='form-row-container qualification-row'>
                                     <div className='form-Element-container'>
                                         <input type='text' className='Researcher-form-input-long' id='publication' name='publication' onChange={this.props.setPublicationsExtraOnChange}/>
