@@ -2,7 +2,7 @@ import React ,  {Component} from 'react'
 import NavBar from '../landing_page/NavBar'
 import config from '../../config.json'
 import '../../assets/css/ResearcherReg/ResearcherReg.css'
-import RegFormHeading from '../ResearcherRegistration/RefFormHeading'
+import 'react-notifications/lib/notifications.css'
 import ResearcherRegForm from '../ResearcherRegistration/ResearcherRegForm'
 
 class RegisterResearcher extends Component {
