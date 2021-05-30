@@ -617,10 +617,10 @@ body::-webkit-scrollbar-thumb {
       font-size: xx-large;
       //text-decoration: underline;
       color: #154360 ;
-      background:rgb(21,67,96,0.1);
+      background:rgba(21,67,96,0.1);
       border-radius: 5px;
       li{
-        text-align: center;
+        text-align: center; 
         margin-top: 20px;
         
         div{
@@ -1083,4 +1083,10 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     padding-top: 10px;
   }
+}
+.edi-nav{
+  background-color: rgb(7, 7, 75);
+}
+.edi-div-1{
+  border-radius: 0px;
 }

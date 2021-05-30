@@ -54,7 +54,7 @@ class PayTemplate extends Component {
 
         return ( 
             <div className="akila-payment">
-                <div class="container">
+                <div className="container">
                         <div className="img">
                             <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
                                 <NavBar items={this.state.navbar_items}/>
@@ -71,7 +71,7 @@ class PayTemplate extends Component {
                             <div className=".center">
                                 <p>Please select your user role before proceeding to the payment</p>
                                 <br />
-                                <div class="container">
+                                <div className="container">
                                     <div onClick = {() => this.role('attendee')} style={this.state.role == 'attendee' ? back : back2}> <b>Attendee</b> </div>
                                     <div onClick = {() => this.role('reser')} style={this.state.role == 'reser' ? back : back2}> <b>Research paper presenter</b> </div>
                                 </div>
@@ -79,7 +79,7 @@ class PayTemplate extends Component {
                                 <div className="pay-info">
                                     <hr />
 
-                                <div class="container">
+                                <div className="container">
                                     <div>Your bill value is</div>
                                     <div>Rs 1000.00</div>
                                 </div>
@@ -92,9 +92,9 @@ class PayTemplate extends Component {
                                 <label htmlFor="CardName">Card number</label>
 
                                <div className="dates" style={{width: '100%'}}>
-                               <div class="container">
+                               <div className="container">
                                     <div>
-                                        <div class="container" >
+                                        <div className="container" >
                                         <input type="text" name="cardName" id="" placeholder="MM"/>
                                         <input type="text" name="cardName" id="" placeholder="YY"/>
                                             

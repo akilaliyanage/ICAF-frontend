@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import NavBar from './NavBar'
 import MainTopic from './MainTopic'
 import About from './About'
-import LatestNews from '../landing_page/LatestNews'
+import LatestNews from './LatestNews'
 import KeynoteTemplate from './KeynoteTemplate'
 import config from '../../config.json'
 import MoreKeynote from './MoreKeynote'
 import Tracks from './Tracks'
 import AddDetails from './AddDetails'
 import Footer from './Footer'
+import { withRouter } from 'react-router'
 
 class Template extends Component {
     constructor(props) {
@@ -65,4 +66,4 @@ class Template extends Component {
     }
 }
  
-export default Template;
+export default (Template);

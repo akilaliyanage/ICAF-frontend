@@ -14,6 +14,7 @@ import PayTemplate from './components/PaymentPage/PayTemplate'
 import ConductorDTemp from './components/ConductorDashboard/ConductorDTemp'
 import UserReg from './components/normalUser/UserReg'
 import AdminApprove from "./components/Admin/AdminApprove";
+import EditorTem from './components/Editor_admin/EditorTem'
 
 
 
@@ -64,6 +65,9 @@ export default class App extends React.Component {
 
                     <Route exact path="/approve">
                         <AdminApprove/>
+                    </Route>
+                    <Route exact path="/edi-admin">
+                        <EditorTem/>
                     </Route>
          
                     {/*<Route exact path="/update-reviewer/:ID">*/}
