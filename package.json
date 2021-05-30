@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest --watchAll --env=jsdom",
     "start": "parcel -p 3000 index.html",
     "build": "parcel build -d build index.html"
   },
@@ -21,8 +21,10 @@
   "devDependencies": {
     "@babel/preset-env": "^7.14.4",
     "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "babel-jest": "^27.0.2",
+    "expect": "^27.0.2",
     "jest": "^27.0.2",
     "jest-dom": "^4.0.0",
     "jest-fetch-mock": "^3.0.3",

@@ -32,7 +32,7 @@ class About  extends Component {
     render() { 
         return (
             <div>
-                <div class="flex-container">
+                <div className="flex-container">
                     <div>
                         <h1>About</h1>
                         <h2>{this.state.topic}</h2>

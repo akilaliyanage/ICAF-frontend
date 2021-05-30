@@ -39,7 +39,7 @@ class NavBar extends Component {
     render() { 
         //const item = <li hidden={window.localStorage.getItem('token') == null?true : false} onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""><AiOutlineUser/>   hello {window.localStorage.getItem('username') + ' | SIGN-OUT'}</a></li>
         return (
-            <div className='akila-header' data-testid = 'nav-bar'>
+            <div className='akila-header' data-testid='nav-bar'>
                 <nav className='akila-navbar'>
                     <a href="" className='akila-brand'>{this.state.topic}</a>
                     <input type="checkbox" id="nav" className='akila-hidden' />
@@ -53,7 +53,7 @@ class NavBar extends Component {
                         <ul className='akila-menu'>
                             {this.props.items.map(item => {
                                 return (
-                                    <li className="akila-menu-item" key={item._id}><a href={item.url}>{item.name}</a></li>
+                                    <li data-testid="nav-list" className="akila-menu-item" key={item._id}><a href={item.url}>{item.name}</a></li>
                                 );
                             })}
                              <li hidden={this.state.show ? false : true} 

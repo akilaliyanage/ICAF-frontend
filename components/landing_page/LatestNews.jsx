@@ -23,7 +23,7 @@ class LatestNews extends Component {
         return (
             <div>
                 <h1>Latest <span>News</span></h1>
-                <div class="flex-container">
+                <div className="flex-container">
                     {this.state.news.map(item => {
                         return (
                             <div><NewsCard date={new Date(item.date)} des={item.des} url={ item.url}/></div>

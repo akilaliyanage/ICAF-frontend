@@ -17,7 +17,7 @@ class MoreKeynote extends Component {
                         </td>
                         {this.state.gSpeak.map(item => {
                             return(
-                                <td>
+                                <td key={item._id}>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU" alt="" />
                                 <figcaption>
                                     <div class="fig-title">Fern.</div>
