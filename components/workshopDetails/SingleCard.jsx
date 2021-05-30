@@ -16,7 +16,7 @@ class SingleCard extends Component {
                             <h1>WORKSHOP TITLE</h1>
                         </div>
                         <div className="nethsara-card-text">
-                            <h2>Workshop Coordinator</h2>
+                            <h2>Workshop Conductor</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Incidunt tempore architecto saepe consectetur, alias 
                                 delectus assumenda. Delectus quae, vero debitis 

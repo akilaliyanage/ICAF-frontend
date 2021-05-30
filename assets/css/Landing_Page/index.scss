@@ -617,10 +617,10 @@ body::-webkit-scrollbar-thumb {
       font-size: xx-large;
       //text-decoration: underline;
       color: #154360 ;
-      background:rgb(21,67,96,0.1);
+      background:rgba(21,67,96,0.1);
       border-radius: 5px;
       li{
-        text-align: center;
+        text-align: center; 
         margin-top: 20px;
         
         div{

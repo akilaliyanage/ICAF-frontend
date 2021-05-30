@@ -3,6 +3,60 @@ import './../../assets/css/WorkshopDetails/reviewerlogin.css'
 import background from ""
 
 class ReviewLogin extends Component {
+
+    constructor(props){
+        super(props)
+        this.state = {
+            username:"",
+            password:"",
+            isAuth: false
+        }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleInput.bind(this);
+    }
+
+    handleInput(event){
+        this.setState({
+            [event.target.name]:event.target.value
+        });
+    }
+
+    handleSubmit(){
+
+        const data = {
+            username : this.state.username,
+            password : this.state.password
+        }
+
+        fetch(config.host + '',{
+            method : 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+              },
+            body : JSON.stringify(data)
+        }).then(res => res.json()).then(data =>{
+            console.log(data.token)
+
+            if(data.token){
+                window.localStorage.setItem('wc-token',data.token)
+                window.localStorage.setItem('wc-id',data.id)
+                window.localStorage.setItem('rev-username',data.email)
+
+                alert("Login Successfull!")
+
+                setInterval(() => {
+                    this.setState({isAuth : true});
+                }, 2000);
+            }
+            
+        }).catch(err =>{
+            console.log(err)
+        })
+
+    }
+
+
     render() {
         return (
             <div className="nt-r-login" style={{ backgroundImage: `url(https://wallpaperaccess.com/full/16692.jpg)` }}>
@@ -17,14 +71,14 @@ class ReviewLogin extends Component {
                     <div className="nt-log-form">
                         <div className="nt-formitem">
                             {/* <label className="nt-lable" htmlFor="">User Name</label><br /> */}
-                            <input type="text" name="username" className="nt-input" placeholder="User Name" onChange={this.handleInput}/>
+                            <input type="text" name="username" className="nt-input" placeholder="Enter UserName" onChange={this.handleInput}/>
                         </div>
                         <div className="nt-formitem">
                             {/* <label className="nt-lable" htmlFor="">User Name</label><br /> */}
-                            <input type="password" name="password" className="nt-input" placeholder="Password" onChange={this.handleInput}/>
+                            <input type="password" name="password" className="nt-input" placeholder="Enter Password" onChange={this.handleInput}/>
                         </div>
                         <div className="nt-formitem">
-                            <button className="nl-form-btn" type="submit">Login</button>
+                            <button className="nl-form-btn" type="submit" onClick={this.handleSubmit}>Login</button>
                         </div>
                     </div>
                 </form>

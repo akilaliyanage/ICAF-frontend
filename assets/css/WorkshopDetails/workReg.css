@@ -19,8 +19,20 @@
     font-size: x-large;
     font-weight: lighter;
 }
+.nt-log-reg{
+    text-align: center;
+    padding-left: 30%;
+    display: flex;
+    margin-top: 5%;
+}
+.nt-rg-btns{
+    padding: 3%;
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid #00b5fddc;
+}
 .nt-sign-form{
-    margin-top: 10%;
+    margin-top: 6%;
     text-align: center;
 }
 .nt-sign-formitem{

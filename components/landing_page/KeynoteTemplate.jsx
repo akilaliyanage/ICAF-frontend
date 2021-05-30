@@ -9,7 +9,7 @@ class KeynoteTemplate extends Component {
     render() { 
         return (
             <div>
-                <div class="flex-container">
+                <div className="flex-container">
                     <div className="topics">
                         <h1>Our</h1>
                         <h2>Keynote</h2>
@@ -18,7 +18,8 @@ class KeynoteTemplate extends Component {
                     <div className="info">
                         <div>
                              <table>
-                            <tr>
+                           <tbody>
+                           <tr>
                                 <td>
                                         <Speaker  url="http://cdn.differencebetween.net/wp-content/uploads/2018/01/Differences-Between-Teacher-and-Professor-1.jpg"/>
                                     </td>
@@ -35,6 +36,7 @@ class KeynoteTemplate extends Component {
                                     <Speaker  url="https://media1.s-nbcnews.com/j/newscms/2020_30/3393635/200630-mike-adams-unc-mc-1354_9abcaec4d365b36dd6352627f7d155b2.fit-2000w.jpg"/>
                                 </td>
                             </tr>
+                           </tbody>
                         </table>
                        </div>
 
