@@ -28,7 +28,7 @@ class ResearcherAcademicInfo extends Component{
             UniName : '',
             qualiYear:'',
 
-            //Properties of publications Section
+            //Properties of membership Section
             membership:'',
 
             //Properties of publications Section

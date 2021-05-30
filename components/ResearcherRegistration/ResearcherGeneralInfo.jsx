@@ -4,11 +4,7 @@ class ResercherGeneralInfo extends Component{
 
     constructor(props){
         super(props)
-        this.state = {
-            //Personal Information States
-            fName : '', lName : '', mName : '', NIC : '', pEmail : '', pCountryCode :'', pPhone : '',
-            pAddL1 : '', pAddL2 : '', pCity : '', pState : '', pZip : ''
-        }
+        this.state = {}
     }
 
     render(){
@@ -23,11 +19,11 @@ class ResercherGeneralInfo extends Component{
                                     <label for='fName'>First Name</label>
                                 </div>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input-name' id='mName' onChange={this.props.getValueOnChange}/>
+                                    <input type='text' className='Researcher-form-input-name' name='mName' id='mName' onChange={this.props.getValueOnChange}/>
                                     <label>Middle Name</label>
                                 </div>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input-name' id='lName' onChange={this.props.getValueOnChange}/>
+                                    <input type='text' className='Researcher-form-input-name' name='lName' id='lName' onChange={this.props.getValueOnChange}/>
                                     <label>Last Name</label>
                                 </div>
                             </div>
@@ -36,7 +32,7 @@ class ResercherGeneralInfo extends Component{
                             <p className='form-Element-Title'>NINO / NIC</p>
                             <div className='form-row-container'>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input' id='NIC' onChange={this.props.getValueOnChange}/>
+                                    <input type='text' className='Researcher-form-input' name='NIC' id='NIC' onChange={this.props.getValueOnChange}/>
                                     <label>National Insurence No / National Identity Card No</label>
                                 </div>
                             </div>
@@ -45,7 +41,7 @@ class ResercherGeneralInfo extends Component{
                             <p className='form-Element-Title'>Email (Personal)</p>
                             <div className='form-row-container'>
                                 <div className='form-Element-container'>
-                                    <input type='email' className='Researcher-form-input' id='pEmail' onChange={this.props.getValueOnChange}/>
+                                    <input type='email' className='Researcher-form-input' name='pEmail' id='pEmail' onChange={this.props.getValueOnChange}/>
                                     <label>Email</label>
                                 </div>
                             </div>
@@ -67,7 +63,7 @@ class ResercherGeneralInfo extends Component{
                             <p className='form-Element-Title'>Address</p>
                             <div className='form-row-container'>
                                 <div className='form-Element-container'>
-                                    <input type='text' className='Researcher-form-input' name='' id='pAddL1' onChange={this.props.getValueOnChange}/>
+                                    <input type='text' className='Researcher-form-input' name='pAddL1' id='pAddL1' onChange={this.props.getValueOnChange}/>
                                     <label>Address Line 1</label>
                                 </div>
                                 <div className='form-Element-container'>

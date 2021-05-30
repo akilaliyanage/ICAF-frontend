@@ -49,7 +49,7 @@ class ResearcherRegForm extends Component {
             NotificationManager.error(feedback + ' -  please re-enter passwords', 'Password Error' , 5000)
             return
         }
-        
+        console.log('inside submit')
         let formData = {
             fName : this.state.fName,
             lName : this.state.lName, 
@@ -83,7 +83,7 @@ class ResearcherRegForm extends Component {
             publications : this.state.publications,
         }
 
-        fetch("http://localhost:8000/" + researcher +"/" , {
+        fetch("http://localhost:8000/researcher/" , {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -101,7 +101,7 @@ class ResearcherRegForm extends Component {
         .catch(error =>{
             console.log(error)
             this.setState({feedback:'Registration Failed'})
-            NotificationManager.success('Sorry -  Something went wrong. Please try again', this.state.feedback , 5000)
+            NotificationManager.fail('Sorry -  Something went wrong. Please try again', this.state.feedback , 5000)
 
         })
 
