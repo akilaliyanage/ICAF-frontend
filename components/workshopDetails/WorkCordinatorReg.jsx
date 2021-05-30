@@ -66,7 +66,7 @@ class WorkCordinatorReg extends Component {
                 }
 
         
-                fetch(config.host + this.state.regURL,{
+                fetch(config.host + '/n-wc/workCon-register',{
                     method : 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -88,7 +88,7 @@ class WorkCordinatorReg extends Component {
                 password : this.state.password
             }
 
-            fetch(config.host + this.state.logInURL,{
+            fetch(config.host + '/n-wc/workCon-login',{
                 method : 'POST',
                 headers: {
                     'Content-Type': 'application/json'
