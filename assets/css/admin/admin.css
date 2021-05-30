@@ -22,20 +22,15 @@
 }
 
 .button-add-reviewer{
-    margin-left: 65%;
-    margin-top: -10px;
-    background-color: blue;
-    border-radius:50px;
-    border:0px solid blue;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Verdana;
-    font-size:19px;
-    font-weight:bold;
-    padding:10px 13px;
-    text-decoration:none;
-    text-shadow:0px 0px 0px blue;
+
+    margin-left:auto;
+    width: 65px;
+    height: 30px;
+    background-color: #18ab29;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
 }
 
 .button-add-reviewer:hover {
@@ -44,6 +39,12 @@
 .button-add-reviewer:active {
     position:relative;
     top:1px;
+}
+
+.uditha-reviewer-button-align{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -8%;
 }
 
 
@@ -130,8 +131,8 @@
     position: absolute;
     left: 50%;
     top:25%;
-    width: 80%;
-    height: 12%;
+    width: 85%;
+    height: 10%;
     margin-top: 5%;
     transform: translate(-50%, -50%);
     color: #f1f5f8;
@@ -147,8 +148,8 @@
     position: absolute;
     left: 50%;
     top: 65%;
-    width: 80%;
-    height: 12%;
+    width: 85%;
+    height: 10%;
     margin-top: 5%;
     transform: translate(-50%, -50%);
     color: #f1f5f8;

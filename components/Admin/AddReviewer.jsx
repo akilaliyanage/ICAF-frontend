@@ -2,8 +2,11 @@ import React,{useEffect,useState} from "react";
 import '../../assets/css/admin/admin.css'
 import AdminNavbar from "./AdminNavBar";
 import axios from "axios";
+import {useHistory} from "react-router-dom";
 
 function AddReviewer(){
+
+    const  history = useHistory();
 
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
@@ -58,7 +61,7 @@ function AddReviewer(){
         const url = "http://localhost:8000/reviewer/add";
         axios.post(url,formData).then((res) => {
             if(res.data.status === 200){
-                alert("Success");
+                history.push("/admin");
             }
             else {
                 alert("Failed");

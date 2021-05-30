@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from "react";
-import '../../assets/css/admin/admin.css'
+import '../../../assets/css/admin/admin.css'
 import axios from "axios";
 
 function ApproveTitle(){
@@ -45,18 +45,16 @@ function ApproveTitle(){
 
     return(
 
-        <div className="uditha-approve-card uditha-title-approve-align">
-            <div className="uditha-approve-title">
-
-                    <h3>{title}</h3>
-                    <br/>
-
-                    <button className="button-uditha-approve">Approve</button>
-                    <button className="button-uditha-decline">Decline</button>
-
-
+        <div>
+            <div className="card w-50">
+                <div className="card-body">
+                    <h5 className="card-title">Topic</h5>
+                    <p className="card-text">{title}</p>
+                    <a href="#" className="btn btn-primary">Approve</a>
+                    &nbsp;
+                    <a href="#" className="btn btn-danger">Decline</a>
+                </div>
             </div>
-
 
         </div>
 
