@@ -24,7 +24,10 @@ class WorkshopTemplate extends Component {
     render() {
         return (
             <div>
-                <NavBar items={this.state.navbar_items}/>
+                <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
+                    <NavBar items={this.state.navbar_items}/>
+                </div>
+                
                 <Workshopcards/>
             </div>
         )
