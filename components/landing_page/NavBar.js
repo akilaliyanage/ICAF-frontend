@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../assets/css/Landing_Page/index.scss'
+import '../../assets/css/Landing_Page/index.css'
 import config from '../../config.json'
 import {AiOutlineUser, AiOutlineDown } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
