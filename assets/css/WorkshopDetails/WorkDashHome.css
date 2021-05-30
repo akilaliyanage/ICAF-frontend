@@ -88,3 +88,15 @@
 .nt-frm-input{
     width: 85%;
 }
+
+.nt-cw-item{
+    margin-top: 3%;
+    text-align: center;
+    width: 90%;
+    color: #000000;
+}
+.nt-cw-input{
+    margin-left: 0%;
+    width: 100%;
+    padding-bottom: 3%;
+}

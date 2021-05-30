@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/workshopDash.css'
 // import UserImg from './../../assets/media/nethsara/workshopUser.png'
+import CreateWorkshop from './CreateWorkshop'
 
 
 class ConductorDTemp extends Component {
@@ -31,6 +32,8 @@ class ConductorDTemp extends Component {
                     </div>
 
                     <div className="nt-main-cont">
+
+                        <CreateWorkshop/>
 
                         
                     </div>

@@ -45,7 +45,9 @@ class WorkCordinatorReg extends Component {
         });
     }
 
-    handleSubmit(){
+    handleSubmit(e){
+        
+        e.preventDefault();
         
         if(this.state.role == 'reg'){
             const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -65,8 +67,9 @@ class WorkCordinatorReg extends Component {
                     password: this.state.password
                 }
 
+                console.log(data)
         
-                fetch(config.host + '/n-wc/workCon-register',{
+                fetch(config.local + '/n-wc/workCon-register',{
                     method : 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -88,7 +91,7 @@ class WorkCordinatorReg extends Component {
                 password : this.state.password
             }
 
-            fetch(config.host + '/n-wc/workCon-login',{
+            fetch(config.local + '/n-wc/workCon-login',{
                 method : 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -143,7 +146,7 @@ class WorkCordinatorReg extends Component {
                         <div onClick = {() => this.role('login')} className="nt-rg-btns" style={this.state.role == 'login' ? back : back2}> <b>LogIn</b> </div>
                     </div> 
                 
-                    <form>
+                    <form method="post">
                         <div className="nt-sign-form">
                             <div className="nt-sign-formitem">
                                 {/* <label className="nt-lable" htmlFor="">User Name</label><br /> */}
@@ -176,7 +179,7 @@ class WorkCordinatorReg extends Component {
                                 />
                             </div>
                             <div className="nt-formitem">
-                                <button className="nl-sign-form-btn" type="submit"  onClick={this.handleSubmit}>{this.state.role == 'reg' ? 'Sign Up' : 'Log In'}</button>
+                                <button className="nl-sign-form-btn" type="submit" onClick={this.handleSubmit}>{this.state.role == 'reg' ? 'Sign Up' : 'Log In'}</button>
                             </div>
 
                             {/* <p className="nt-warn">You won't be able to create workshops immediately. A reviewer should accept you as a workshop coordinator before.</p> */}
