@@ -15,6 +15,7 @@ import ConductorDTemp from './components/ConductorDashboard/ConductorDTemp'
 import UserReg from './components/normalUser/UserReg'
 import AdminApprove from "./components/Admin/AdminApprove";
 import EditorTem from './components/Editor_admin/EditorTem'
+import EventLimitUpdate from "./components/Admin/EventManageContent/EventLimitUpdate";
 
 
 
@@ -69,11 +70,10 @@ export default class App extends React.Component {
                     <Route exact path="/edi-admin">
                         <EditorTem/>
                     </Route>
-         
-                    {/*<Route exact path="/update-reviewer/:ID">*/}
-                    {/*    <UpdateReviewer/>*/}
-                    {/*</Route>*/}
+
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>
+
+                    <Route path = "/manage-workshop" exact component = {EventLimitUpdate}/>
 
 
                 </Switch>

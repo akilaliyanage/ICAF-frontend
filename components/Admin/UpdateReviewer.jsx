@@ -76,7 +76,17 @@ function UpdateReviewer(props){
         formData.append("password",password);
         formData.append("picture",picture);
 
-        console.log(reviewer);
+        console.log(rid);
+       const url = "http://localhost:8000/reviewer/update/"+rid;
+       axios.put(url,formData).then((res) => {
+           if(res.data.status === 200){
+               alert("Successfully updated");
+               history.push("/admin");
+           }
+           else {
+               alert("Failed");
+           }
+       })
     }
 
     const DeleteReviewer = (e) => {
@@ -147,7 +157,7 @@ function UpdateReviewer(props){
 
 
                     <input  className="uditha-add-button" type="submit"  value="Update"/>
-                    <input  className="uditha-add-button" onClick={DeleteReviewer} type="submit"  value="Delete"/>
+                    <input  className="uditha-add-button" onClick={DeleteReviewer} type="button"  value="Delete"/>
 
 
                 </form>

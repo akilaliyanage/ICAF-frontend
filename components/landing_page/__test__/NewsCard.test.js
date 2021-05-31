@@ -13,8 +13,8 @@ import NewsCard from '../NewsCard'
 afterEach(()=>cleanup())
 
 
-//test testcase
-it('fake test',() =>{
+//_test_ testcase
+it('fake _test_',() =>{
     expect(true).toBeTruthy()
 })
 
