@@ -7,13 +7,14 @@ import axios from "axios";
 function Reviewers(){
 
     const [visible,setVisible] = useState("");
+    const [result,setResult] = useState();
 
     useEffect( () => {
 
         const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/edi-noti";
         axios.get(url).then((res) => {
             const result = res.data;
-            console.log(result);
+            setResult(result);
 
             if(result.length === 0){
                 setVisible("none");

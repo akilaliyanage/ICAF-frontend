@@ -1,39 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import '../../assets/css/admin/admin.css'
+import EventStatus from "./EventStatusContent/EventStatus";
+import EventLimitUpdate from "./EventManageContent/EventLimitUpdate";
 
 function ConfDetails(){
 
+
+    const [visible,setVisible] = useState("none");
+
+    const makeVisible = () => {
+        setVisible("")
+    }
 
 
     return(
 
         <div className="uditha-card uditha-conf-detail-card-align">
+            <div className="event-edit-button">
+                <img style={{marginTop:"5px"}} onClick={makeVisible}
+                     src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699302-icon-32-clipboard-edit-512.png" width="25" height="25"/>
+            </div>
+            <div style={{display:visible}}>
+            <EventLimitUpdate/>
+            </div>
             <div className="uditha-current-conf-detail">
 
                 <h3> Event Registrations</h3>
                 <br/>
-                <div className="uditha-workshop-stat-card">
-                <h4 className="uditha-workshop-stat-align">Workshops</h4>
-                </div>
 
-                <div className="uditha-workshop-allowed">
-                    <b>Allowed: 08</b>
-                </div>
-                <div className="uditha-workshop-status">
-                    <b>Status: Closed</b>
-                </div>
-
-
-                <div className="uditha-research-stat-card">
-                <h4 className="uditha-research-stat-align">Research presentations</h4>
-                </div>
-
-                <div className="uditha-research-allowed" style={{display:"inline-block"}}>
-                    <b>Allowed: 12</b>
-                </div>
-                <div className="uditha-research-status">
-                    <b>Status: Open</b>
-                </div>
+                <EventStatus/>
 
 
             </div>

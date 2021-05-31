@@ -36,7 +36,7 @@ class CreateWorkshop extends Component {
             conductor : this.state.loginID,
             desciption: this.state.desciption
 
-            // title : "test title",
+            // title : "_test_ title",
             // eventDate: "22/06/2021",
             // conductor : this.state.loginID,
             // desciption: "testing 1234567809ghjfdb"
