@@ -31,7 +31,7 @@ class QualificationSection extends Component {
                                         <label>Name of the Degree</label>
                                     </div>
                                 </div>
-                                <div className='form-row-container qualification-row'>
+                                <div className='form-row-container qualification-row' data-testid='qualification-container'>
                                     <div className='form-Element-container'>
                                         <input type='text' className='Researcher-form-input-long' list='uniList' id='UniName' name='UniName' onChange={this.props.setQualificationExtraOnChange}/>
                                         <datalist id="uniList">
