@@ -5,8 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "jest --watchAll --env=jsdom",
-    "start": "parcel -p 3000 index.html",
-    "build": "parcel build -d build index.html"
+    "start": "parcel -p 3000 index.html"
   },
   "repository": {
     "type": "git",
