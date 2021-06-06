@@ -21,7 +21,7 @@ class LatestNews extends Component {
     }
     render() { 
         return (
-            <div>
+            <div> 
                 <h1>Latest <span>News</span></h1>
                 <div className="flex-container">
                     {this.state.news.map(item => {

@@ -80,7 +80,7 @@ class MainTopic extends Component {
       }
     render() { 
         return (
-            <div>
+            <div style={{color:'white'}}>
                 <h1>{this.state.topic}</h1>
                     <h2>{this.state.subtop}</h2>
                     <h3>Sri Lanka, {this.state.datetime} <span> @ {this.state.venue}</span></h3>

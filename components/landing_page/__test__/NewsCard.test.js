@@ -12,12 +12,6 @@ import NewsCard from '../NewsCard'
 //clean up
 afterEach(()=>cleanup())
 
-
-//test testcase
-it('fake test',() =>{
-    expect(true).toBeTruthy()
-})
-
 //creating a snapshot
 it('snapshot', () =>{
     const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
