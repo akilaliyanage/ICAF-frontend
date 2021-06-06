@@ -40,7 +40,8 @@ class PaymentForm extends Component {
     }
     render() { 
         const back = {
-            background: '#301b3f'
+            background: '#301b3f',
+            color:'white'
         };
 
         const back2 = {
@@ -52,18 +53,18 @@ class PaymentForm extends Component {
             <div className="payment">
             <div style={{width:'600px',margin:'0 auto'}}>
             <h1>Lets finish setting you up..</h1>
-            <div className=".center">
+            <div className="center">
                 <p>Please select your user role before proceeding to the payment</p>
                 <br />
-                <div className="container">
-                    <div onClick = {() => this.role('attendee')} style={this.state.role == 'attendee' ? back : back2}> <b>Attendee</b> </div>
-                    <div onClick = {() => this.role('reser')} style={this.state.role == 'reser' ? back : back2}> <b>Research paper presenter</b> </div>
+                <div className="row">
+                    <div className="col p-3" onClick = {() => this.role('attendee')} style={this.state.role == 'attendee' ? back : back2}> <b>Attendee</b> </div>
+                    <div className="col p-3" onClick = {() => this.role('reser')} style={this.state.role == 'reser' ? back : back2}> <b>Research paper presenter</b> </div>
                 </div>
 
                 <div className="pay-info">
                     <hr />
 
-                <div className="container">
+                <div className="akila-container">
                     <div>Your bill value is</div>
                     <div>Rs 1000.00</div>
                 </div>
@@ -76,9 +77,9 @@ class PaymentForm extends Component {
                 <label htmlFor="CardName">Card number</label>
 
                <div className="dates" style={{width: '100%'}}>
-               <div className="container">
+               <div className="akila-container">
                     <div>
-                        <div className="container" >
+                        <div className="akila-container" >
                         <input type="text" name="cardName" id="" placeholder="MM"/>
                         <input type="text" name="cardName" id="" placeholder="YY"/>
                             
@@ -95,7 +96,7 @@ class PaymentForm extends Component {
                <input type="text" value={this.state.Cnum} name="country" id="" placeholder="EX: LK/70100" onChange={this.addHyphen}/>
                 <label htmlFor="CardName">Country/ZIP code</label>
 
-                <button>PAY</button>
+                <button><b>PAY</b></button>
 
 
 

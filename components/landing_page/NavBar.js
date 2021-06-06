@@ -41,7 +41,7 @@ class NavBar extends Component {
         return (
             <div className='akila-header' data-testid='nav-bar'>
                 <nav className='akila-navbar'>
-                    <a href="" className='akila-brand'>{this.state.topic}</a>
+                    <Link to="/"><a href="" className='akila-brand'>{this.state.topic}</a></Link>
                     <input type="checkbox" id="nav" className='akila-hidden' />
                     <label htmlFor="nav" className='akila-nav-toggle'>
                         <span></span>

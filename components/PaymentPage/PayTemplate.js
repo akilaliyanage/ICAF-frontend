@@ -35,16 +35,20 @@ class PayTemplate extends Component {
 
         return ( 
             <div className="akila-payment">
-                <div className="container">
-                        <div className="img">
+                <div className="row">
+                        <div className="col">
+                        <div className="img" style={{height:'100vh'}}>
                             <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
                                 <NavBar items={this.state.navbar_items}/>
                             </div>
 
                             <KPanal/>
                         </div>
+                        </div>
 
-                        <PaymentForm/>
+                       <div className="col">
+                       <PaymentForm/>
+                       </div>
                     </div>
             </div>
          );

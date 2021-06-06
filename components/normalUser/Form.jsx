@@ -152,9 +152,9 @@ class Form extends Component {
                 {this.state.notiErr ? notiErr : null}
                 <div style={{color:'black'}} className="login-reg">
                         <p>Please select the desierd action</p>
-                                <div class="container">
-                                    <div onClick = {() => this.role('reg')} style={this.state.role == 'reg' ? back : back2}> <b>New user sign-up</b> </div>
-                                    <div onClick = {() => this.role('login')} style={this.state.role == 'login' ? back : back2}> <b>Login</b> </div>
+                                <div class="row">
+                                    <div className="col mx-4" onClick = {() => this.role('reg')} style={this.state.role == 'reg' ? back : back2}> <b>New user sign-up</b> </div>
+                                    <div className="col mx-4" onClick = {() => this.role('login')} style={this.state.role == 'login' ? back : back2}> <b>Login</b> </div>
                                 </div>
                                 </div>
                     <div className="login-form">

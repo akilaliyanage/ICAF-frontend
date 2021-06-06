@@ -153,7 +153,7 @@ class UserReg extends Component {
             <div className="akila-user" style={{overflow:'hidden'}}>
                
 
-                <div class="container">
+                <div class="akila-container">
                     <div>
                         <div className="img">
                             <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
