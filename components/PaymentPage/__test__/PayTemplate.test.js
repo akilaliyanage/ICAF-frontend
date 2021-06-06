@@ -11,6 +11,10 @@ import expectExport from 'expect';
 //clean up
 afterEach(()=>cleanup())
 
+//_test_ testcase
+it('fake _test_',() =>{
+    expect(true).toBeTruthy()
+})
 
 //checking the component is loading without crashing
 it('renders without crashing',() =>{

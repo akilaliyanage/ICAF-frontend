@@ -1,8 +1,7 @@
 
 .uditha-current-conf-detail{
     color: #f1f5f8;
-    margin-left: 10%;
-    margin-top: 5%;
+    margin: 5%;
 }
 .uditha-reviewers{
     margin-left: 5%;
@@ -18,18 +17,17 @@
 .uditha-reviewer-card-align{
     left: 85%;
     top: 65%;
-
 }
 
 .button-add-reviewer{
 
     margin-left:auto;
-    width: 65px;
+    width: 75px;
     height: 30px;
     background-color: #18ab29;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
 
 }
 
@@ -43,8 +41,8 @@
 
 .uditha-reviewer-button-align{
     position: absolute;
-    margin-left: 65%;
-    margin-top: -8%;
+    margin-left: 68%;
+    margin-top: -10%;
 }
 
 
@@ -73,7 +71,8 @@
 .uditha-card{
     position: absolute;
     width: 25%;
-    height: 60%;
+    height: auto;
+    min-height: 60%;
     background-color: #2C3539;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
@@ -96,8 +95,6 @@
     border-radius: 5px;
     display: flex;
 }
-
-
 
 .workshopcard-align{
     left: 12%;
@@ -278,6 +275,12 @@
     background-color: gold;
 }
 
+.event-edit-button{
+    position: absolute;
+    left: 85%;
+    top: 5%;
+}
+
 .uditha-avatarInput{
     position: absolute;
     top: 80%;
@@ -293,41 +296,6 @@
     position: absolute;
     top: 25%;
     left: 10%;
-}
-
-.navbar{
-    width: 100%;
-    background-color: #282c34;
-    overflow: auto;
-    border-bottom-style: solid;
-    border-bottom-color: #0daad1;
-
-}
-
-.navbar a {
-    float: left;
-    text-align: center;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-
-.navbar a:hover {
-    background-color: #000;
-}
-
-
-.active {
-    background-color: #0061a8;
-}
-
-@media screen and (max-width: 500px) {
-    .navbar a {
-        float: none;
-        display: block;
-    }
 }
 
 
