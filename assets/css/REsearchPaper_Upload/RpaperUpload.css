@@ -11,3 +11,21 @@
     height: 100vh;
     position: relative;
 }
+.paper-bounderies{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.form-container-bounderies{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.topic-Seperator{
+    color: #fc4c1c;
+    background-color: #fc4c1c;
+    height: 1.4vh;
+    width : 40%;
+    border-radius: 30px;
+}
