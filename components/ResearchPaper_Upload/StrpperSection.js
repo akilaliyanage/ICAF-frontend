@@ -71,17 +71,8 @@ function GetIcons(props) {
   );
 }
 GetIcons.propTypes = {
-  /**
-   * Whether this step is active.
-   */
   active: PropTypes.bool,
-  /**
-   * Mark the step as completed. Is passed to child components.
-   */
   completed: PropTypes.bool,
-  /**
-   * The label displayed in the step icon.
-   */
   icon: PropTypes.node,
 };
 
@@ -98,7 +89,7 @@ class StepperSection extends Component{
     
 
     labelList(){
-        return ['General Research Paper Details' , 'Upload General Research Paper' , 'Declaration']
+        return ['Research Paper - General  Details' , 'Upload Research Paper' , 'Declaration']
     }
 
     render(){

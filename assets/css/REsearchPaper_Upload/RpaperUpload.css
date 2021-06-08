@@ -16,7 +16,7 @@
     padding-bottom: 10px;
 }
 .form-container-bounderies{
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
@@ -32,4 +32,12 @@
 .StepperLabel-style{
     font-weight: bold;
     font-size: 16px;
+}
+
+.form-part-header{
+    margin-bottom: 10px;
+}
+.input-element-container{
+    padding-right: 30px;
+    padding-left: 30px;
 }

@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
 import StepperSection from './StrpperSection'
+import ResearchPaperGeneralDetailsSection from './GeneralResearchPaperDetailsSection'
 
 class ResearchPaperUploadeComponant extends Component {
     constructor(props){
@@ -52,7 +53,7 @@ class ResearchPaperUploadeComponant extends Component {
                         </Grid>
                         <Grid item xs={10} sm={10}>
                             <Paper className='form-container-bounderies'>
-                                <h1>Form Container Section</h1>
+                                <ResearchPaperGeneralDetailsSection/>
                             </Paper>
                         </Grid>
                     </Grid>
