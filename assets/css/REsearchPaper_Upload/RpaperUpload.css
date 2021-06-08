@@ -29,3 +29,7 @@
     width : 40%;
     border-radius: 30px;
 }
+.StepperLabel-style{
+    font-weight: bold;
+    font-size: 16px;
+}

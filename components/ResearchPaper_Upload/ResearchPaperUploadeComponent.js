@@ -37,7 +37,7 @@ class ResearchPaperUploadeComponant extends Component {
                     </div>
                     <Grid container justify='center' mt={10}>
                         <Grid item xs={10} sm={10} >
-                            <Box mb={5}>
+                            <Box mb={4}>
                                 <Paper className="paper-bounderies">
                                     <div className='d-flex justify-content-center'>
                                         <div className='d-flex flex-column align-items-center mb-4'>
