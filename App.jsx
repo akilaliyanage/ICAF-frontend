@@ -16,6 +16,7 @@ import UserReg from './components/normalUser/UserReg'
 import AdminApprove from "./components/Admin/AdminApprove";
 import EditorTem from './components/Editor_admin/EditorTem'
 import EventLimitUpdate from "./components/Admin/EventManageContent/EventLimitUpdate";
+import ResearchPaperUploadeComponant from "./components/ResearchPaper_Upload/ResearchPaperUploadeComponent";
 
 
 
@@ -72,6 +73,9 @@ export default class App extends React.Component {
                     </Route>
                     <Route exact path="/edi-admin">
                         <EditorTem/>
+                    </Route>
+                    <Route exact path="/Add-ResearchPaper">
+                        <ResearchPaperUploadeComponant/>
                     </Route>
 
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>
