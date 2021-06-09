@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
 import StepperSection from './StrpperSection'
-import ResearchPaperGeneralDetailsSection from './GeneralResearchPaperDetailsSection'
+import FormContainer from './FormContainer'
 
 class ResearchPaperUploadeComponant extends Component {
     constructor(props){
@@ -36,13 +36,13 @@ class ResearchPaperUploadeComponant extends Component {
                     <div className='akila-template-header'>
                         <NavBar items={this.state.nav_Items}/>
                     </div>
-                    <Grid container justify='center' mt={10}>
+                    <Grid container justify='center'>
                         <Grid item xs={10} sm={10} >
-                            <Box mb={4}>
+                            <Box mb={3}>
                                 <Paper className="paper-bounderies">
                                     <div className='d-flex justify-content-center'>
-                                        <div className='d-flex flex-column align-items-center mb-4'>
-                                            <h1 className="mb-3">Research Paper Submit Form</h1>
+                                        <div className='d-flex flex-column align-items-center'>
+                                            <h1 className="mb-2">Research Paper Submit Form</h1>
                                             <div className='topic-Seperator'></div>
                                         </div>
                                     </div>
@@ -52,9 +52,7 @@ class ResearchPaperUploadeComponant extends Component {
                             
                         </Grid>
                         <Grid item xs={10} sm={10}>
-                            <Paper className='form-container-bounderies'>
-                                <ResearchPaperGeneralDetailsSection/>
-                            </Paper>
+                            <FormContainer/>
                         </Grid>
                     </Grid>
                 </div>
