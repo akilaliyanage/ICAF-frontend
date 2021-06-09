@@ -11,7 +11,7 @@ class AddDetails extends Component {
         return ( 
             <div className="akila-adddet">
                <div>
-                <div className="container">
+                <div className="akila-container">
                             <div>
                               <p> <span><AiFillCheckSquare/></span> Register for a workshop</p>
                             </div>

@@ -16,56 +16,8 @@ class Tracks extends Component {
                     <div className="container">
                         <div>
                             <h5>Application Frameworks</h5>
-                            <div>
-                                <ul>
-                                    <li>
-                                       <div>
-                                           akila
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div>
-                                           akila
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div>
-                                           akila
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div>
-                                           akila
-                                       </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <h5>Database Systems</h5>
-                            <div>
-                                <ul>
-                                    <li>
-                                       <div>
-                                           akila
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div>
-                                           akila
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div>
-                                           akila
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div>
-                                           akila
-                                       </div>
-                                    </li>
-                                </ul>
+                            <div className="row">
+                               
                             </div>
                         </div> 
                     </div>

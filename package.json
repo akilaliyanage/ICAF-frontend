@@ -5,8 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "jest --watchAll --env=jsdom",
-    "start": "parcel -p 3000 index.html",
-    "build": "parcel build -d build index.html"
+    "start": "parcel -p 3000 index.html"
   },
   "repository": {
     "type": "git",
@@ -48,6 +47,7 @@
     "react-cookies": "^0.1.1",
     "react-dom": "^16.14.0",
     "react-icons": "^4.2.0",
+    "react-monocle": "^0.1.6",
     "react-notifications": "^1.7.2",
     "react-router-dom": "^5.2.0"
   }

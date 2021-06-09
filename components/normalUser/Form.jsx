@@ -5,9 +5,7 @@ import NotiErr from './NotiErr';
 import { Redirect } from 'react-router-dom';
 
 import config from '../../config.json'
-import KPanel from './KPnanel';
-import Form from './Form';
-class UserReg extends Component {
+class Form extends Component {
     constructor(props) {
         super(props);
         this.role = this.role.bind(this)
@@ -130,7 +128,6 @@ class UserReg extends Component {
 
                
     }
-   
     render() { 
 
         const back = {
@@ -150,25 +147,31 @@ class UserReg extends Component {
         }
 
         return ( 
-            <div className="akila-user" style={{overflow:'hidden'}}>
-               
-
-                <div class="akila-container">
-                    <div>
-                        <div className="img">
-                            <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
-                                <NavBar items={this.state.navbar_items}/>
-                            </div>
-                            <KPanel/>
+           <div>
+                               {this.state.noti ? noti : null}
+                {this.state.notiErr ? notiErr : null}
+                <div style={{color:'black'}} className="login-reg">
+                        <p>Please select the desierd action</p>
+                                <div class="row">
+                                    <div className="col mx-4" onClick = {() => this.role('reg')} style={this.state.role == 'reg' ? back : back2}> <b>New user sign-up</b> </div>
+                                    <div className="col mx-4" onClick = {() => this.role('login')} style={this.state.role == 'login' ? back : back2}> <b>Login</b> </div>
+                                </div>
+                                </div>
+                    <div className="login-form">
+                        <div className="login" style={{width:'600px',margin:'0 auto',marginTop:'0px',borderRadius:'10px'}}>
+                            <p><b>{this.state.role == 'reg'?'Attendee Registration Form' : 'Attendee Login Form'}</b></p>
+                               <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="" />
+                               <div className="overlay">dsdsdsd</div>
+                               <input  type="text" onChange={this.handleChange} name="username" id="" placeholder="Username" value={this.state.username}/>
+                               <input style={{textTransform: 'revert'}}  type="text" onChange={this.handleChange} name="password" id="password" value={this.state.password} placeholder={this.state.role == 'reg' ? 'Enter new password' : 'Enter password'}/>
+                               <input type="text" onChange={this.handleChange} value={this.state.repass} placeholder="Re-enter the password" name="repass" hidden={this.state.hidden}/>
+                               <input type="text" onChange={this.handleChange} value={this.state.email} placeholder="E-mail address" name="email" hidden={this.state.hidden}/>
+                               <button onClick={this.handleSubmit}>{this.state.role == 'reg' ? 'Sign Up' : 'Log-in'}</button>
                         </div>
                     </div>
-                    <div>
-                        <Form/>
-                    </div>
-                </div>
-            </div>
-        );
+           </div>
+         );
     }
 }
  
-export default UserReg;
+export default Form;
