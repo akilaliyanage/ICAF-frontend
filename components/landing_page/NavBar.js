@@ -18,6 +18,7 @@ class NavBar extends Component {
 
     componentDidMount(){
         this.fetchTopic()
+
     }
 
     fetchTopic(){
@@ -32,16 +33,26 @@ class NavBar extends Component {
         window.localStorage.setItem('username','')
         window.localStorage.setItem('token','')
         window.localStorage.setItem('id','')
+        window.localStorage.setItem('proImg','')
 
         window.location.reload();
     }
 
     render() { 
         //const item = <li hidden={window.localStorage.getItem('token') == null?true : false} onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""><AiOutlineUser/>   hello {window.localStorage.getItem('username') + ' | SIGN-OUT'}</a></li>
+        const drop = <div className="dropdown">
+        <a><AiOutlineDown/> REGISTRATIONS</a>
+            <div className="dropdown-content">
+                <br />
+                <Link to="/userReg"><p>Attendee Registration</p></Link>
+                <Link to=""><p>researcher Registration</p></Link>
+                <Link to=""><p>workshop presenter</p></Link>
+            </div>
+        </div>
         return (
             <div className='akila-header' data-testid='nav-bar'>
                 <nav className='akila-navbar'>
-                    <Link to="/"><a href="" className='akila-brand'>{this.state.topic}</a></Link>
+                    <Link to="/home"><a href="" className='akila-brand'>{this.state.topic}</a></Link>
                     <input type="checkbox" id="nav" className='akila-hidden' />
                     <label htmlFor="nav" className='akila-nav-toggle'>
                         <span></span>
@@ -58,17 +69,9 @@ class NavBar extends Component {
                             })}
                              <li hidden={this.state.show ? false : true} 
                              className="akila-menu-item"> 
-                                <div className="dropdown">
-                                <a><AiOutlineDown/> REGISTRATIONS</a>
-                                    <div className="dropdown-content">
-                                        <br />
-                                        <Link to="/userReg"><p>Attendee Registration</p></Link>
-                                        <Link to=""><p>researcher Registration</p></Link>
-                                        <Link to=""><p>workshop presenter</p></Link>
-                                    </div>
-                                </div>
+                                {window.location.href.includes('/home') ? drop : null}
                              </li>
-                            <li onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""><AiOutlineUser/> {window.localStorage.getItem('token') != '' ? 'hello  ' +  window.localStorage.getItem('username') + ' | SIGN-OUT': 'hello stranger'}</a></li>
+                            <li onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""> <img style={{width:'50px', borderRadius:'10px'}} src={window.localStorage.getItem('proImg')}/> {window.localStorage.getItem('token') != '' ? 'hello  ' +  window.localStorage.getItem('username') + ' | SIGN-OUT': 'hello stranger'}</a></li>
                         </ul>
                     </div>
                 </nav>

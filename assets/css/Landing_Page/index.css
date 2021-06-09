@@ -22,7 +22,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #ffffff;
-  scrollbar-width: 0px;
+  scrollbar-width: 1px;
   /* "auto" or "thin" */
   scrollbar-color: #0061a8 #252a32;
 }
@@ -35,8 +35,8 @@ body {
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 0px;
-  display: none;
+  width: 5px;
+  display: block;
 }
 
 *::-webkit-scrollbar-track {
@@ -1091,7 +1091,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .akila-user .login img {
-  border-radius: 100%;
   margin-top: 10px;
   height: 200px;
 }

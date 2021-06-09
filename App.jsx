@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Template from './components/landing_page/Template'
 import AdminDashboard from "./components/Admin/Base";
 import WorkshopTemplate from './components/workshopDetails/WorkshopTemplate'
@@ -30,7 +30,10 @@ export default class App extends React.Component {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/">
+                <Route exact path="/">
+                       <Redirect to="/home"/>
+                    </Route>
+                    <Route exact path="/home">
                         <Template />
                     </Route>
                     <Route exact path="/admin">
