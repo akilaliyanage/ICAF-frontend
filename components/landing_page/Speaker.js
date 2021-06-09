@@ -7,8 +7,8 @@ class Speaker extends Component {
     render() { 
         return (
             <div className="akila-speaker">
-               <img src={this.props.url} alt=""/>
-               {this.props.colored?<canvas class="coveringCanvas"></canvas>:null}
+               <img data-testid="speaker-img" src={this.props.url} alt=""/>
+               {this.props.colored?<canvas className="coveringCanvas"></canvas>:null}
                 <div className="overlay">
                     <p>Prof. Nobody</p>
                     <p>SLIIT, Sri Lanka</p>

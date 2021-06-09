@@ -1,31 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import '../../assets/css/admin/admin.css'
+import EventStatus from "./EventStatusContent/EventStatus";
+import EventLimitUpdate from "./EventManageContent/EventLimitUpdate";
 
 function ConfDetails(){
 
+
+    const [visible,setVisible] = useState("none");
+
+    const makeVisible = () => {
+        setVisible("")
+    }
 
 
     return(
 
         <div className="uditha-card uditha-conf-detail-card-align">
+            <div className="event-edit-button">
+                <img style={{marginTop:"5px"}} onClick={makeVisible}
+                     src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699302-icon-32-clipboard-edit-512.png" width="25" height="25"/>
+            </div>
+            <div style={{display:visible}}>
+            <EventLimitUpdate/>
+            </div>
             <div className="uditha-current-conf-detail">
 
-                <h3>Registrations</h3>
+                <h3> Event Registrations</h3>
                 <br/>
 
-                <h4>Workshops</h4>
-                <br/>
-                <h5>Limit: 08</h5>
-                <br/>
-                <h5>Status: Closed</h5>
-                <br/>
-
-                <h4>Research presentations</h4>
-                <br/>
-                <h5>Limit: 12</h5>
-                <br/>
-                <h5>Status: Open</h5>
-                <br/>
+                <EventStatus/>
 
 
             </div>
