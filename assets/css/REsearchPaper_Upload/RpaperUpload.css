@@ -13,13 +13,14 @@
 }
 .paper-bounderies{
     padding-top: 10px;
-    padding-bottom: 10px;
 }
 .form-container-bounderies{
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
+    height: 50vh;
+    overflow-y: scroll;
 }
 
 .topic-Seperator{
@@ -35,9 +36,16 @@
 }
 
 .form-part-header{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 .input-element-container{
     padding-right: 30px;
     padding-left: 30px;
+}
+.section-seperater{
+   margin-top: 20px;
+   margin-bottom: 20px;
+   background-color: #fc4c1c;
+   height: 3px;
+   border-radius: 5px;
 }
