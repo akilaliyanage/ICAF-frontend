@@ -26,7 +26,9 @@ class EditorTem extends Component {
             evDate : '',
             datePen : 0,
             about : '',
-            aboutPen : 0
+            aboutPen : 0,
+            newsList : [],
+
 
 
          }
@@ -43,6 +45,27 @@ class EditorTem extends Component {
             console.log(err)
         })
 
+        fetch(config.host + "/edi-noti/pending-date").then(res => res.json()).then(data => {
+            this.setState({datePen : data.len})
+            console.log(data.len)
+        }).catch(err =>{
+            console.log(err)
+        })
+
+        fetch(config.host + "/edi-noti/pending-topic").then(res => res.json()).then(data => {
+            this.setState({topicPen : data.len})
+            console.log(data.len)
+        }).catch(err =>{
+            console.log(err)
+        })
+
+        fetch(config.host + "/news").then(res => res.json()).then(data => {
+            this.setState({newsList : data})
+            //console.log(data.len)
+        }).catch(err =>{
+            console.log(err)
+        })
+
     }
 
     fetchTopic(){
@@ -53,12 +76,6 @@ class EditorTem extends Component {
             console.log(err)
         })
 
-        fetch(config.host + "/edi-noti/pending-topic").then(res => res.json()).then(data => {
-            this.setState({topicPen : data.len})
-            console.log(data.len)
-        }).catch(err =>{
-            console.log(err)
-        })
     }
 
     handleChange(e){
@@ -104,12 +121,6 @@ class EditorTem extends Component {
             console.log(err)
         })
 
-        fetch(config.host + "/edi-noti/pending-date").then(res => res.json()).then(data => {
-            this.setState({datePen : data.len})
-            console.log(data.len)
-        }).catch(err =>{
-            console.log(err)
-        })
     }
 
     handSubmitDate(e){
@@ -167,7 +178,7 @@ class EditorTem extends Component {
 
     render() { 
         return ( 
-            <div>
+            <div style={{overflowY:'hidden'}}>
                 <div className="edi-nav">
                     <NavBar items={["test"]}/>
                 </div>
@@ -226,7 +237,7 @@ class EditorTem extends Component {
 
                     <div className="col" style={{textAlign:'center'}}>
                         <div class="alert alert-success" style={{borderRadius:'0px', textAlign:'center', marginBottom:'0px'}} role="alert">
-                            EVENT DATE <br /> YOU HAVE <span class="badge bg-danger">{this.state.aboutPen}</span> PENDING ACTIONS
+                            EVENT DATE <br /> YOU HAVE <span class="badge bg-danger">{this.state.datePen}</span> PENDING ACTIONS
                         </div>
                         <div className="p-5 py-0">
                         <h4 className="p-3">
@@ -253,17 +264,77 @@ class EditorTem extends Component {
                                 
                                     <div class="input-group mb-3 mt-3">
                                         <span class="input-group-text">New about</span>
-                                        <textarea rows="9" name="about" onChange={this.handleChange} class="form-control" aria-label="With textarea"></textarea>
+                                        <textarea rows="8" name="about" onChange={this.handleChange} class="form-control" aria-label="With textarea"></textarea>
                                     </div>
 
                                 <button onClick={this.handSubmitAbout} name="date" type="button" class="btn btn-primary" style={{width:'100%'}}>SUBMIT</button>
                                 </div>
                         </div>
                     </div>
+                    <div className="row mt-5">
+                    <div class="alert alert-warning" style={{borderRadius:'0px', textAlign:'center', marginBottom:'0px'}} role="alert">
+                            NEWS <br /> YOU HAVE <span class="badge bg-danger">{this.state.aboutPen}</span> PENDING ACTIONS
+                        </div>
+                        <div className="col-6 px-5" style={{maxHeight:'500px',overflowY:'scroll'}}>
+                       
+                        <h4 className="p-3">
+                            CURRENT NEWS ITEMS 
+                            </h4>
 
-                    
-                    <div className="col">
-                    Column
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Event Date</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">URL pattern</th>
+                                    <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                   {this.state.newsList.map(item =>{
+                                       return(
+                                        <tr>
+                                        <td>{new Date(item.date).toDateString()}</td>
+                                        <td>{item.des}</td>
+                                        <td>{item.url}</td>
+                                        <td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-danger">DELETE</button>
+                                                <button type="button" class="btn btn-success">MAKE DE-ACTIVATE</button>
+                                            </div>
+                                        </td>
+                                        </td>
+                                        </tr>
+                                       )
+                                   })}
+                                </tbody>
+                            </table>
+                    </div>
+
+                    <div className="col-6">
+                    <h4 className="p-3">
+                            ADD NEW NEWS ITEM
+                            </h4>
+                     <div className="mt-5">
+                     <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">New Date</span>
+                            <input name="evDate" onChange={this.handleChange} type="datetime-local" class="form-control" id="basic-url" aria-describedby="basic-addon3"/>
+                        </div>
+
+                        <div class="input-group mb-3 mt-3">
+                                        <span class="input-group-text">New Description</span>
+                                        <textarea rows="5" name="about" onChange={this.handleChange} class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">New URL pattern</span>
+                            <input name="ven" onChange={this.handleChange} type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"/>
+                        </div>
+
+                        <button onClick={this.handSubmit} name="date" onChange={this.handleChange} type="button" class="btn btn-primary" style={{width:'100%'}}>SUBMIT</button>
+                     </div>
+                    </div>
                     </div>
                 </div>
                 </div>
