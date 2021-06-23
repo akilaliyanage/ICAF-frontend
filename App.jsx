@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Template from './components/landing_page/Template'
+import 'antd/dist/antd.css'
 import AdminDashboard from "./components/Admin/Base";
 import WorkshopTemplate from './components/workshopDetails/WorkshopTemplate'
 import AddReviewer from "./components/Admin/AddReviewer";
@@ -13,6 +14,7 @@ import WorkCordinaorReg from './components/workshopDetails/WorkCordinatorReg'
 import PayTemplate from './components/PaymentPage/PayTemplate'
 import ConductorDTemp from './components/ConductorDashboard/ConductorDTemp'
 import UserReg from './components/normalUser/UserReg'
+import UserSkeliton from './components/normalUser/UserSkeliton'
 import AdminApprove from "./components/Admin/AdminApprove";
 import EditorTem from './components/Editor_admin/EditorTem'
 import EventLimitUpdate from "./components/Admin/EventManageContent/EventLimitUpdate";
@@ -61,7 +63,7 @@ export default class App extends React.Component {
                         <PayTemplate/>
                     </Route>
                     <Route exact path="/userReg">
-                        <UserReg/>
+                        <UserSkeliton/>
                     </Route>
 
                     <Route exact path="/condDash">

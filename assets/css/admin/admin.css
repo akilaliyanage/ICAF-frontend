@@ -307,3 +307,9 @@
 @keyframes blinker {
     50% { opacity: 0.4; }
 }
+
+.user-login{
+    background-image: url('https://sliit-af-images.s3.amazonaws.com/images/edwin-andrade-4V1dC_eoCwg-unsplash.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+}
