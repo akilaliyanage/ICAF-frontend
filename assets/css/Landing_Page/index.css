@@ -24,29 +24,30 @@ body {
   color: #ffffff;
   scrollbar-width: 1px;
   /* "auto" or "thin" */
-  scrollbar-color: #0061a8 #252a32;
+  scrollbar-color: #0061a8 ;
 }
 
 /* Works on Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #0061a8 #252a32;
+  scrollbar-width: 1px;
+  scrollbar-color: #0061a8 white;
 }
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 5px;
+  width: 1px;
+  height: 0px;
   display: block;
 }
 
 *::-webkit-scrollbar-track {
-  background: #252a32;
+  background: white;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #0061a8;
   border-radius: 10px;
-  border: 0px solid #252a32;
+  border: 0px solid white;
 }
 
 .akila-hidden {
@@ -648,6 +649,7 @@ body::-webkit-scrollbar-thumb {
 
 .akila-tracks {
   padding-bottom: 90px;
+  background-color: white;
   height: auto;
 }
 

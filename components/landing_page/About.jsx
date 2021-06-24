@@ -1,5 +1,7 @@
+import { Col, Row } from 'antd';
 import React, { Component } from 'react'
 import config from '../../config.json'
+import { Divider } from 'antd';
 
 class About  extends Component {
     constructor(props) {
@@ -32,16 +34,19 @@ class About  extends Component {
     render() { 
         return (
             <div>
-                <div className="flex-container">
-                    <div>
-                        <h1>About</h1>
-                        <h2>{this.state.topic}</h2>
-                        <h1>Conference</h1>
-                    </div>
-                    <div className="info">
+                <Row>
+                    <Col span={12} style={{paddingLeft:"10rem"}}>
+                        <h1 style={{fontSize:"7rem"}}>About</h1>
+                        <br />
+                        <h2 style={{fontSize:"4rem"}} >{this.state.topic}</h2>
+                        <h1 style={{fontSize:"7rem"}}>Conference</h1>
+
+                        <Divider type="vertical" />
+                    </Col>
+                    <Col span={12}> 
                         <p>{this.state.des}</p>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
          );
     }

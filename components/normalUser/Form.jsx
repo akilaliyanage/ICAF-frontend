@@ -50,7 +50,7 @@ class Form extends Component {
         const formData = new FormData()
         formData.append('image', e.target.files[0])
 
-        fetch(config.local + "/image", {
+        fetch(config.host + "/image", {
             method: 'POST',
             body: formData
           })

@@ -19,6 +19,7 @@ import AdminApprove from "./components/Admin/AdminApprove";
 import EditorTem from './components/Editor_admin/EditorTem'
 import EventLimitUpdate from "./components/Admin/EventManageContent/EventLimitUpdate";
 import ResearchPaperUploadeComponant from "./components/ResearchPaper_Upload/ResearchPaperUploadeComponent";
+import UserRegForm from './components/normalUser/UserRegForm';
 
 
 
@@ -62,8 +63,12 @@ export default class App extends React.Component {
                     <Route exact path="/payment">
                         <PayTemplate/>
                     </Route>
-                    <Route exact path="/userReg">
+                    <Route exact path="/login">
                         <UserSkeliton/>
+                    </Route>
+
+                    <Route exact path="/register">
+                        <UserRegForm/>
                     </Route>
 
                     <Route exact path="/condDash">

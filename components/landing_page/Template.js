@@ -49,10 +49,7 @@ class Template extends Component {
                 <dir className="akila-keynote-speakers">
                     <KeynoteTemplate/>
                 </dir>
-                <dir className="akila-keynote-morekeynote">
-                    <MoreKeynote/>
-                </dir>
-                <dir className="akila-keynote-speakers">
+                <dir className="">
                     <Tracks/>
                 </dir>
                 <dir className="akila-keynote-morekeynote">

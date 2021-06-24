@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import '../../assets/css/Landing_Page/index.css'
 import config from '../../config.json'
+import { Avatar, Image } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
 import {AiOutlineUser, AiOutlineDown } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 
@@ -44,9 +46,19 @@ class NavBar extends Component {
         <a><AiOutlineDown/> REGISTRATIONS</a>
             <div className="dropdown-content">
                 <br />
-                <Link to="/userReg"><p>Attendee Registration</p></Link>
+                <Link to="/register"><p>Attendee Registration</p></Link>
+                <Link to="/login"><p>Attendee Login</p></Link>
                 <Link to=""><p>researcher Registration</p></Link>
                 <Link to=""><p>workshop presenter</p></Link>
+            </div>
+        </div>
+
+        const user = <div className="dropdown">
+        <Avatar src={window.localStorage.getItem('proImg')} />
+            <div className="dropdown-content">
+                <br />
+                <p>{window.localStorage.getItem('username')}</p>
+                <Link><p onClick={this.logout}>Log Out</p></Link>
             </div>
         </div>
         return (
@@ -71,7 +83,9 @@ class NavBar extends Component {
                              className="akila-menu-item"> 
                                 {window.location.href.includes('/home') ? drop : null}
                              </li>
-                            <li onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""> <img style={{width:'50px', borderRadius:'10px'}} src={window.localStorage.getItem('proImg')}/> {window.localStorage.getItem('token') != '' ? 'hello  ' +  window.localStorage.getItem('username') + ' | SIGN-OUT': 'hello stranger'}</a></li>
+                            <li onClick={this.logout} className="akila-menu-item">
+                                {user}
+                            </li>
                         </ul>
                     </div>
                 </nav>
