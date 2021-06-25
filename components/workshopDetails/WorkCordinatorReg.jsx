@@ -137,8 +137,8 @@ class WorkCordinatorReg extends Component {
                 <div className="nt-sign-card" style={{ backgroundImage: `url(http://ig.com.my/wp-content/uploads/2017/11/profile-background.jpg)` }}>
 
                     <div className="nt-signin">
-                        <h1>I C A F</h1>
-                        <p className="nt-sign-head">Workshop Coordinator | {this.state.role == 'reg'?'SignUp' : 'LogIn'}</p>    
+                        <h1 style={{color:"white"}} >I C A F</h1>
+                        <p className="nt-sign-head" style={{color:"white"}}>Workshop Coordinator | {this.state.role == 'reg'?'SignUp' : 'LogIn'}</p>    
                     </div>   
 
                     <div className="nt-log-reg">

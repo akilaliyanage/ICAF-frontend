@@ -31,6 +31,7 @@
     "jest-dom": "^4.0.0",
     "jest-fetch-mock": "^3.0.3",
     "parcel": "^2.0.0-beta.2",
+    "parcel-bundler": "^1.12.5",
     "react-test-renderer": "^17.0.2",
     "ts-jest": "^27.0.1"
   },
