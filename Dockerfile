@@ -8,4 +8,4 @@ EXPOSE 3000/tcp
 
 COPY . .
 
-CMD ["npm", "start"]
+CMD ["node", "index.jsx"]

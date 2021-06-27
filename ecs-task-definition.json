@@ -15,7 +15,9 @@
             ],
             "essential": true
         }
+        
     ],
+    
     "requiresCompatibilities": [
         "EC2"
     ],

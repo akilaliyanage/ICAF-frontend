@@ -3,6 +3,7 @@
 exports[`create a snapshot of membershipComponent 1`] = `
 <div
   className="form-row-container"
+  data-testid="membership-container"
 >
   <div
     className="form-Element-container"

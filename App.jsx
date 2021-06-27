@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Template from './components/landing_page/Template'
+import 'antd/dist/antd.css'
 import AdminDashboard from "./components/Admin/Base";
 import WorkshopTemplate from './components/workshopDetails/WorkshopTemplate'
 import AddReviewer from "./components/Admin/AddReviewer";
@@ -13,9 +14,17 @@ import WorkCordinaorReg from './components/workshopDetails/WorkCordinatorReg'
 import PayTemplate from './components/PaymentPage/PayTemplate'
 import ConductorDTemp from './components/ConductorDashboard/ConductorDTemp'
 import UserReg from './components/normalUser/UserReg'
+import UserSkeliton from './components/normalUser/UserSkeliton'
 import AdminApprove from "./components/Admin/AdminApprove";
 import EditorTem from './components/Editor_admin/EditorTem'
 import EventLimitUpdate from "./components/Admin/EventManageContent/EventLimitUpdate";
+import ResearchPaperUploadeComponant from "./components/ResearchPaper_Upload/ResearchPaperUploadeComponent";
+import UserRegForm from './components/normalUser/UserRegForm';
+import EditorTemplate from './components/Editor_admin/EditorTemplate';
+import EventDate from './components/Editor_admin/EventDate';
+import EventAbout from './components/Editor_admin/EventAbout';
+import EventNews from './components/Editor_admin/EventNews';
+import KeyNote from './components/Editor_admin/KeyNote';
 import Report from "./components/Admin/Report/Report";
 
 
@@ -30,7 +39,10 @@ export default class App extends React.Component {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/">
+                <Route exact path="/">
+                       <Redirect to="/home"/>
+                    </Route>
+                    <Route exact path="/home">
                         <Template />
                     </Route>
                     <Route exact path="/admin">
@@ -57,8 +69,12 @@ export default class App extends React.Component {
                     <Route exact path="/payment">
                         <PayTemplate/>
                     </Route>
-                    <Route exact path="/userReg">
-                        <UserReg/>
+                    <Route exact path="/login">
+                        <UserSkeliton/>
+                    </Route>
+
+                    <Route exact path="/register">
+                        <UserRegForm/>
                     </Route>
 
                     <Route exact path="/condDash">
@@ -70,7 +86,27 @@ export default class App extends React.Component {
                     </Route>
 
                     <Route exact path="/edi-admin">
-                        <EditorTem/>
+                        <EditorTemplate/>
+                    </Route>
+
+                    <Route exact path="/edi-admin/date">
+                        <EventDate/>
+                    </Route>
+
+                    <Route exact path="/edi-admin/about">
+                        <EventAbout/>
+                    </Route>
+
+                    <Route exact path="/edi-admin/news">
+                        <EventNews/>
+                    </Route>
+
+                    <Route exact path="/edi-admin/keynote">
+                        <KeyNote/>
+                    </Route>
+
+                    <Route exact path="/Add-ResearchPaper">
+                        <ResearchPaperUploadeComponant/>
                     </Route>
 
                     <Route exact path="/report">

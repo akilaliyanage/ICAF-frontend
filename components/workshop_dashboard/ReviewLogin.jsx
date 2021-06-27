@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/reviewerlogin.css'
-import background from ""
+//import background from ""
 
 import config from './../../config.json'
 

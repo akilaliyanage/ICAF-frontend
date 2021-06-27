@@ -5,15 +5,14 @@ import NotiErr from './NotiErr';
 import { Redirect } from 'react-router-dom';
 
 import config from '../../config.json'
-import KPanel from './KPnanel';
-import Form from './Form';
-class UserReg extends Component {
+class Form extends Component {
     constructor(props) {
         super(props);
         this.role = this.role.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.timer = this.timer.bind(this)
+        this.submitFile = this.submitFile.bind(this);
         this.state = { 
             navbar_items : [],
             role: 'reg',
@@ -26,7 +25,11 @@ class UserReg extends Component {
             noti : false,
             message : '',
             notiErr : false,
-            isAuth : false
+            isAuth : false,
+            selectedFile: null,
+            curImage : '',
+            spin : 'true',
+            inputImg : ''
          }
     }
 
@@ -36,6 +39,31 @@ class UserReg extends Component {
         }else if(val == 'login'){
             this.setState({role : 'login', hidden : true})
         }
+    }
+
+    submitFile(e){
+        console.log(e.target.files[0].name)
+        this.setState({ selectedFile: e.target.files[0] });
+
+        this.setState({spin:'',inputImg : 'true'})
+
+        const formData = new FormData()
+        formData.append('image', e.target.files[0])
+
+        fetch(config.host + "/image", {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data)
+            this.setState({curImage : data.Location,spin: 'true', inputImg:''})
+            window.localStorage.setItem('proImg',data.Location)
+
+          })
+          .catch(error => {
+            console.error(error)
+          })
     }
 
     handleChange(e){
@@ -73,7 +101,7 @@ class UserReg extends Component {
             const data = {
                 username : this.state.username,
                 password: this.state.password,
-                proImg : "bcjcdsc",
+                proImg : this.state.curImage,
                 email : this.state.email
             }
     
@@ -114,6 +142,7 @@ class UserReg extends Component {
                     window.localStorage.setItem('token',data.token)
                     window.localStorage.setItem('id',data.id)
                     window.localStorage.setItem('username',data.username)
+                    window.localStorage.setItem('proImg',data.proImg)
                     this.setState({noti : true});
 
                     setInterval(() => {
@@ -130,7 +159,7 @@ class UserReg extends Component {
 
                
     }
-   
+
     render() { 
 
         const back = {
@@ -150,25 +179,41 @@ class UserReg extends Component {
         }
 
         return ( 
-            <div className="akila-user" style={{overflow:'hidden'}}>
-               
-
-                <div class="akila-container">
-                    <div>
-                        <div className="img">
-                            <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
-                                <NavBar items={this.state.navbar_items}/>
-                            </div>
-                            <KPanel/>
+           <div>
+                               {this.state.noti ? noti : null}
+                {this.state.notiErr ? notiErr : null}
+                <div style={{color:'black'}} className="login-reg">
+                        <p>Please select the desierd action</p>
+                                <div class="row">
+                                    <div className="col mx-4" onClick = {() => this.role('reg')} style={this.state.role == 'reg' ? back : back2}> <b>New user sign-up</b> </div>
+                                    <div className="col mx-4" onClick = {() => this.role('login')} style={this.state.role == 'login' ? back : back2}> <b>Login</b> </div>
+                                </div>
+                                </div>
+                    <div className="login-form">
+                        <div className="login" style={{width:'600px',margin:'0 auto',marginTop:'0px',borderRadius:'10px'}}>
+                            <p><b>{this.state.role == 'reg'?'Attendee Registration Form' : 'Attendee Login Form'}</b></p>
+                               <img className="mb-4" src={this.state.curImage} alt="" />
+                               <div className="row">
+                                    <div className="col">
+                                        <input onChange={this.submitFile} accept=".jpg,.png"  type="file" id="formFile" hidden={this.state.inputImg | this.state.hidden}/>
+                                            <div class="alert alert-danger" role="alert" hidden={this.state.spin}>
+                                           Please wait, we are uploading ypur image      
+                                            <span className="px-3"><div class="spinner-border text-danger" role="status">
+                                            <span class="visually-hidden">     Loading...</span>
+                                            </div></span>
+                                            </div>
+                                    </div>
+                               </div>
+                               <input  type="text" onChange={this.handleChange} name="username" id="" placeholder="Username" value={this.state.username}/>
+                               <input style={{textTransform: 'revert'}}  type="text" onChange={this.handleChange} name="password" id="password" value={this.state.password} placeholder={this.state.role == 'reg' ? 'Enter new password' : 'Enter password'}/>
+                               <input type="text" onChange={this.handleChange} value={this.state.repass} placeholder="Re-enter the password" name="repass" hidden={this.state.hidden}/>
+                               <input type="text" onChange={this.handleChange} value={this.state.email} placeholder="E-mail address" name="email" hidden={this.state.hidden}/>
+                               <button onClick={this.handleSubmit}>{this.state.role == 'reg' ? 'Sign Up' : 'Log-in'}</button>
                         </div>
                     </div>
-                    <div>
-                        <Form/>
-                    </div>
-                </div>
-            </div>
-        );
+           </div>
+         );
     }
 }
  
-export default UserReg;
+export default Form;

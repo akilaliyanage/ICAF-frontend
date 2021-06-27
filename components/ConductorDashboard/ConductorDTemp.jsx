@@ -5,12 +5,20 @@ import CreateWorkshop from './CreateWorkshop'
 
 
 class ConductorDTemp extends Component {
+
+    constructor(props){
+        super(props)
+        this.state = {
+            loginID:localStorage.getItem('wc-id')
+        }
+    }
+
     render() {
         return (
             <div className="nt-dashboard">
-                <div className="nt-sidenav">
+                <div className="nt-sidenav" style={{color:"white"}}>
                     <div className="nt-sideHead">
-                        <h1>I C A F</h1>
+                        <h1 style={{color:"white"}}>I C A F</h1>
                     </div>
                     <div className="nt-profile">
                         {/* <img src={userImg} alt="user image" /> */}

@@ -8,7 +8,7 @@ class Footer extends Component {
     render() { 
         return ( 
             <div>
-                <div class="container">
+                <div class="akila-container">
                 <div className="links"> 
                     <p>Get in touch with us</p>
                 <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=sliit&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe><br></br></div></div>

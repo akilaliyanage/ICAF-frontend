@@ -10,9 +10,9 @@ class WorkshpDTemp extends Component {
     render() {
         return (
             <div className="nt-dashboard">
-                <div className="nt-sidenav">
+                <div className="nt-sidenav" style={{color:"white"}}>
                     <div className="nt-sideHead">
-                        <h1>I C A F</h1>
+                        <h1 style={{color:"white"}}>I C A F</h1>
                     </div>
                     <div className="nt-profile">
                         {/* <img src={userImg} alt="user image" /> */}

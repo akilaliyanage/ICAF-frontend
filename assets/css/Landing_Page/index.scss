@@ -29,7 +29,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: $color-white;
-  scrollbar-width: 0px; /* "auto" or "thin" */
+  scrollbar-width: 1px; /* "auto" or "thin" */
   scrollbar-color: $color-blue $color-black;
 }
 /* Works on Firefox */
@@ -40,8 +40,8 @@ body {
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 0px;
-  display: none;
+  width: 5px;
+  display: block;
 }
 
 *::-webkit-scrollbar-track {
@@ -273,7 +273,7 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-50%);
   font-size: 4vw;
 
-  .container {
+  .akila-container {
     background-color: RGBA(255,255,255,0.10);
     display: flex;
     font-size: 2vw;
@@ -281,8 +281,11 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     border-radius: 5px;
   }
-  .container > div {
+  .akila-container > div {
     flex: 1; /*grow*/
+  }
+  h1{
+    font-size: 10rem;
   }
 
   h2 {
@@ -590,7 +593,7 @@ body::-webkit-scrollbar-thumb {
 .akila-tracks{
   padding-bottom: 90px;
   height: auto;
-  .container {
+  .akila-container {
     background-color: rgba(255,255,255,0.10);
     display: flex;
     font-size: 2vw;
@@ -606,7 +609,7 @@ body::-webkit-scrollbar-thumb {
     }
   }
 
-  .container > div {
+  .akila-container > div {
     margin-left: 20px;
     flex: 1; /*grow*/
     //border-right: 1px solid black;
@@ -646,7 +649,7 @@ body::-webkit-scrollbar-thumb {
 .akila-adddet{
   padding : 20px;
 
-  .container {
+  .akila-container {
     background-color: RGBA(255,255,255,0.10);
     display: flex;
     font-size: 1.6vw;
@@ -677,7 +680,7 @@ body::-webkit-scrollbar-thumb {
     }
 
   }
-  .container > div {
+  .akila-container > div {
     flex: 1; /*grow*/
     margin: 10px;
     border-radius: 10px;
@@ -690,7 +693,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
   }
   background-color: #393e46;
-      .container {
+      .akila-container {
         background-color: RGBA(255,255,255,0.10);
         display: flex;
         font-size: 1.6vw;
@@ -700,7 +703,7 @@ body::-webkit-scrollbar-thumb {
         padding: 20px;
     }
 
-    .container > div {
+    .akila-container > div {
       flex: 1; /*grow*/
       margin: 20px;
       border-radius: 10px;
@@ -748,7 +751,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-  .container {
+  .akila-container {
     overflow-y: hidden;
     background-color: RGBA(255,255,255,0.10);
     display: flex;
@@ -767,7 +770,7 @@ body::-webkit-scrollbar-thumb {
       flex: 2;
     }
   }
-  .container > div {
+  .akila-container > div {
     flex: 600px 0; /*grow*/
     height: 100vh;
   }
@@ -801,7 +804,7 @@ body::-webkit-scrollbar-thumb {
       width: 100%;
     }
 
-    .container {
+    .akila-container {
       background-color: RGBA(255,255,255,0.10);
       display: flex;
       //padding:20px;
@@ -828,7 +831,7 @@ body::-webkit-scrollbar-thumb {
         cursor: grabbing;
       }
     }
-    .container > div {
+    .akila-container > div {
       //background-color: black;
       color: white;
       height: auto;
@@ -865,7 +868,7 @@ body::-webkit-scrollbar-thumb {
         font-size: 20px;
       }
 
-      .container {
+      .akila-container {
         background-color: RGBA(255,255,255,0.10);
         display: flex;
         font-size: 2vw;
@@ -874,7 +877,7 @@ body::-webkit-scrollbar-thumb {
         border-radius: 5px;
         border: none;
       }
-      .container > div {
+      .akila-container > div {
         flex: 1; /*grow*/
         color: black;
       }
@@ -884,7 +887,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .dates{
-    .container {
+    .akila-container {
       background-color: RGBA(255,255,255,0.10);
       display: flex;
       font-size: 2vw;
@@ -893,7 +896,7 @@ body::-webkit-scrollbar-thumb {
       border-radius: 5px;
       border: none;
     }
-    .container > input label {
+    .akila-container > input label {
       flex: 1; /*grow*/
       color: black;
       cursor: none;
@@ -906,7 +909,7 @@ body::-webkit-scrollbar-thumb {
   //overflow: hidden;
 
 
-  .container {
+  .akila-container {
     //overflow-y: hidden;
     background-color: RGBA(255,255,255,0.10);
     display: flex;
@@ -926,7 +929,7 @@ body::-webkit-scrollbar-thumb {
       overflow-y: scroll;
     }
   }
-  .container > div {
+  .akila-container > div {
     flex-direction: column;
     overflow-y: scroll;
     flex: 1; /*grow*/
@@ -1015,7 +1018,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     img{
-      border-radius: 100%;
+      //border-radius: 100px;
       margin-top: 10px;
       height: 200px;
     }

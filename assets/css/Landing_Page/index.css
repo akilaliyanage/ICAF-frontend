@@ -22,31 +22,32 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #ffffff;
-  scrollbar-width: 0px;
+  scrollbar-width: 1px;
   /* "auto" or "thin" */
-  scrollbar-color: #0061a8 #252a32;
+  scrollbar-color: #0061a8 ;
 }
 
 /* Works on Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #0061a8 #252a32;
+  scrollbar-width: 1px;
+  scrollbar-color: #0061a8 white;
 }
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 0px;
-  display: none;
+  width: 1px;
+  height: 0px;
+  display: block;
 }
 
 *::-webkit-scrollbar-track {
-  background: #252a32;
+  background: white;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #0061a8;
   border-radius: 10px;
-  border: 0px solid #252a32;
+  border: 0px solid white;
 }
 
 .akila-hidden {
@@ -297,7 +298,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 4vw;
 }
 
-.akila-main-topic .container {
+.akila-main-topic .akila-container {
   background-color: RGBA(255, 255, 255, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -308,11 +309,15 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-.akila-main-topic .container > div {
+.akila-main-topic .akila-container > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   /*grow*/
+}
+
+.akila-main-topic h1 {
+  font-size: 10rem;
 }
 
 .akila-main-topic h2 {
@@ -644,10 +649,11 @@ body::-webkit-scrollbar-thumb {
 
 .akila-tracks {
   padding-bottom: 90px;
+  background-color: white;
   height: auto;
 }
 
-.akila-tracks .container {
+.akila-tracks .akila-container {
   background-color: rgba(255, 255, 255, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -660,11 +666,11 @@ body::-webkit-scrollbar-thumb {
   padding-right: 50px;
 }
 
-.akila-tracks .container div::nth-child(1) {
+.akila-tracks .akila-container div::nth-child(1) {
   background-color: black;
 }
 
-.akila-tracks .container > div {
+.akila-tracks .akila-container > div {
   margin-left: 20px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -672,7 +678,7 @@ body::-webkit-scrollbar-thumb {
   /*grow*/
 }
 
-.akila-tracks .container > div ul {
+.akila-tracks .akila-container > div ul {
   margin-top: 20px;
   font-size: xx-large;
   color: #154360;
@@ -680,12 +686,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-.akila-tracks .container > div ul li {
+.akila-tracks .akila-container > div ul li {
   text-align: center;
   margin-top: 20px;
 }
 
-.akila-tracks .container > div ul li div {
+.akila-tracks .akila-container > div ul li div {
   width: 100%;
   height: 100%;
   border: none;
@@ -701,7 +707,7 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
 }
 
-.akila-adddet .container {
+.akila-adddet .akila-container {
   background-color: RGBA(255, 255, 255, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -713,23 +719,23 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
 }
 
-.akila-adddet .container div:nth-child(1) {
+.akila-adddet .akila-container div:nth-child(1) {
   padding: 20px;
   background: #020024;
   background-color: #0a1931;
 }
 
-.akila-adddet .container div:nth-child(2) {
+.akila-adddet .akila-container div:nth-child(2) {
   background-color: #273746;
   padding: 20px;
 }
 
-.akila-adddet .container div:nth-child(3) {
+.akila-adddet .akila-container div:nth-child(3) {
   background-color: #566573;
   padding: 20px;
 }
 
-.akila-adddet .container > div {
+.akila-adddet .akila-container > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -746,7 +752,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
-.akila-footer .container {
+.akila-footer .akila-container {
   background-color: RGBA(255, 255, 255, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -757,7 +763,7 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
 }
 
-.akila-footer .container > div {
+.akila-footer .akila-container > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -803,7 +809,7 @@ body::-webkit-scrollbar-thumb {
   text-decoration: underline;
 }
 
-.akila-payment .container {
+.akila-payment .akila-container {
   overflow-y: hidden;
   background-color: RGBA(255, 255, 255, 0.1);
   display: -webkit-box;
@@ -816,19 +822,19 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Darker Grotesque', sans-serif;
 }
 
-.akila-payment .container div:nth-child(1) {
+.akila-payment .akila-container div:nth-child(1) {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.akila-payment .container div:nth-child(2) {
+.akila-payment .akila-container div:nth-child(2) {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
 
-.akila-payment .container > div {
+.akila-payment .akila-container > div {
   -webkit-box-flex: 600px;
       -ms-flex: 600px 0;
           flex: 600px 0;
@@ -864,7 +870,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
-.akila-payment .payment .container {
+.akila-payment .payment .akila-container {
   background-color: RGBA(255, 255, 255, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -880,21 +886,21 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Darker Grotesque', sans-serif;
 }
 
-.akila-payment .payment .container div:nth-child(1) {
+.akila-payment .payment .akila-container div:nth-child(1) {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.akila-payment .payment .container div:nth-child(2) {
+.akila-payment .payment .akila-container div:nth-child(2) {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.akila-payment .payment .container > div {
+.akila-payment .payment .akila-container > div {
   color: white;
   height: auto;
   padding: 10px;
@@ -933,7 +939,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 20px;
 }
 
-.akila-payment .payment .pay-info .container {
+.akila-payment .payment .pay-info .akila-container {
   background-color: RGBA(255, 255, 255, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -945,7 +951,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
 }
 
-.akila-payment .payment .pay-info .container > div {
+.akila-payment .payment .pay-info .akila-container > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -953,7 +959,7 @@ body::-webkit-scrollbar-thumb {
   color: black;
 }
 
-.akila-payment .dates .container {
+.akila-payment .dates .akila-container {
   background-color: RGBA(255, 255, 255, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -965,7 +971,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
 }
 
-.akila-payment .dates .container > input label {
+.akila-payment .dates .akila-container > input label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -975,7 +981,7 @@ body::-webkit-scrollbar-thumb {
   padding-left: 20px;
 }
 
-.akila-user .container {
+.akila-user .akila-container {
   background-color: RGBA(255, 255, 255, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -987,20 +993,20 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Darker Grotesque', sans-serif;
 }
 
-.akila-user .container div:nth-child(1) {
+.akila-user .akila-container div:nth-child(1) {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.akila-user .container div:nth-child(2) {
+.akila-user .akila-container div:nth-child(2) {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   overflow-y: scroll;
 }
 
-.akila-user .container > div {
+.akila-user .akila-container > div {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1087,7 +1093,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .akila-user .login img {
-  border-radius: 100%;
   margin-top: 10px;
   height: 200px;
 }
