@@ -20,6 +20,10 @@ import EditorTem from './components/Editor_admin/EditorTem'
 import EventLimitUpdate from "./components/Admin/EventManageContent/EventLimitUpdate";
 import ResearchPaperUploadeComponant from "./components/ResearchPaper_Upload/ResearchPaperUploadeComponent";
 import UserRegForm from './components/normalUser/UserRegForm';
+import EditorTemplate from './components/Editor_admin/EditorTemplate';
+import EventDate from './components/Editor_admin/EventDate';
+import EventAbout from './components/Editor_admin/EventAbout';
+import EventNews from './components/Editor_admin/EventNews';
 
 
 
@@ -79,8 +83,21 @@ export default class App extends React.Component {
                         <AdminApprove/>
                     </Route>
                     <Route exact path="/edi-admin">
-                        <EditorTem/>
+                        <EditorTemplate/>
                     </Route>
+
+                    <Route exact path="/edi-admin/date">
+                        <EventDate/>
+                    </Route>
+
+                    <Route exact path="/edi-admin/about">
+                        <EventAbout/>
+                    </Route>
+
+                    <Route exact path="/edi-admin/news">
+                        <EventNews/>
+                    </Route>
+
                     <Route exact path="/Add-ResearchPaper">
                         <ResearchPaperUploadeComponant/>
                     </Route>

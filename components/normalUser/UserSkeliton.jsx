@@ -33,7 +33,7 @@ class UserKeliton extends Component {
               },
             body : JSON.stringify(data)
         }).then(res => res.json()).then(data =>{
-            console.log(data.token)
+            console.log(data)
 
             if(data.token){
                 // alert('login')
@@ -47,7 +47,7 @@ class UserKeliton extends Component {
                       'You have sucessfully logged into the syste, you will redirect to the homepage shortly',
                   });
                   
-                window.location.replace("/home")
+                //window.location.replace("/home")
             }
             
         }).catch(err =>{
