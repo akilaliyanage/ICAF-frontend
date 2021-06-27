@@ -1,16 +1,28 @@
 import { Row, Col } from 'antd';
 import React, { Component } from 'react'
 import Speaker from './Speaker'
+import config from '../../config.json'
 
 class KeynoteTemplate extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            list : []
+         }
+    }
+
+    componentDidMount(){
+        //fetch key note
+        fetch(config.local + "/keynote").then(res => res.json()).then(data => {
+            this.setState({list : data})
+            //console.log(this.state.list[0].image);
+        })
+        
     }
     render() { 
+
         return (
             <div>
-                <br />
                 <div className="flex-container">
                     <div className="topics">
                         <h1>Our</h1>
@@ -19,28 +31,38 @@ class KeynoteTemplate extends Component {
                     </div>
                     <div className="info">
                         <Row>
-                            <Col span={12}>
-                            <Speaker  url="http://cdn.differencebetween.net/wp-content/uploads/2018/01/Differences-Between-Teacher-and-Professor-1.jpg"/>
+                            {this.state.list.map(item =>{
+                                return(
+                                    <Col span={12}>
+                                <div className="akila-speaker" style={{height:'300px'}}>
+                                    <img data-testid="speaker-img" src={item.image} alt="" style={{objectFit:'contain', height:'100%'}}/>
+                                    {this.props.colored?<canvas className="coveringCanvas"></canvas>:null}
+                                        <div className="overlay">
+                                            <p>{item.name}</p>
+                                            <p>{item.des}</p>
+                                    </div>
+                                </div>
                             </Col>
+                                )
+                            })}
+{/* 
+                            <Col span={12}>
+                                <div className="akila-speaker">
+                                    <img data-testid="speaker-img" src={this.state.list[0].image} alt="" style={{objectFit:'cover'}}/>
+                                    {this.props.colored?<canvas className="coveringCanvas"></canvas>:null}
+                                        <div className="overlay">
+                                            <p>{this.state.list[0].name}</p>
+                                            <p>{this.state.list[0].des}</p>
+                                    </div>
+                                </div>
+                            </Col> */}
 
-                            <Col span={12}>
-                            <Speaker colored={true} url="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201907/1%2520Patrick%2520Winston%2520at%2520____%2520-%2520photo%2520credit%2520Jason%2520Dorfman%252C%2520MIT%2520CSAIL_0.jpg?itok=r6epNmaH" />
-                            </Col>
-                        </Row>
 
-                        <Row>
-                            <Col span={12}>
-                            <Speaker colored={true} url="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201907/1%2520Patrick%2520Winston%2520at%2520____%2520-%2520photo%2520credit%2520Jason%2520Dorfman%252C%2520MIT%2520CSAIL_0.jpg?itok=r6epNmaH" />
-                            </Col>
-
-                            <Col span={12}>
-                            <Speaker  url="https://media1.s-nbcnews.com/j/newscms/2020_30/3393635/200630-mike-adams-unc-mc-1354_9abcaec4d365b36dd6352627f7d155b2.fit-2000w.jpg"/>
-                            </Col>
-                        </Row>                       
+                          
+                        </Row>                    
                     </div>
                     
                 </div>
-                <br />
             </div>
          );
     }
