@@ -24,6 +24,7 @@ import EditorTemplate from './components/Editor_admin/EditorTemplate';
 import EventDate from './components/Editor_admin/EventDate';
 import EventAbout from './components/Editor_admin/EventAbout';
 import EventNews from './components/Editor_admin/EventNews';
+import KeyNote from './components/Editor_admin/KeyNote';
 
 
 
@@ -96,6 +97,10 @@ export default class App extends React.Component {
 
                     <Route exact path="/edi-admin/news">
                         <EventNews/>
+                    </Route>
+
+                    <Route exact path="/edi-admin/keynote">
+                        <KeyNote/>
                     </Route>
 
                     <Route exact path="/Add-ResearchPaper">

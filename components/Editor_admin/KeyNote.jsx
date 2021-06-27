@@ -1,73 +1,124 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Breadcrumb, Avatar, Card, Input, Form , DatePicker, Button, message} from 'antd';
+import { Layout, Menu, Breadcrumb, Avatar, Card, Input, Form , DatePicker, Button, message, Table, Tag, Space} from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import { Descriptions, Badge } from 'antd';
 import {Link} from 'react-router-dom'
 import config from '../../config.json'
+import { Upload } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
+const { RangePicker } = DatePicker;
 const { Header, Content, Footer, Sider } = Layout;
 
+const props = {
+  name: 'image',
+  action: config.host + '/image',
+  onChange(info) {
+    if (info.file.status !== 'uploading') {
+      console.log(info.file, info.fileList);
+    }
+    if (info.file.status === 'done') {
+      message.success(`${info.file.name} file uploaded successfully`);
+      console.log(info.file.response.Location)
+      window.localStorage.setItem('keynote',info.file.response.Location)
 
-class EditorTemplate extends Component {
+    } else if (info.file.status === 'error') {
+      message.error(`${info.file.name} file upload failed.`);
+    }
+  },
+};
+
+
+const columns = [
+  {
+    title: 'Speaker Name',
+    dataIndex: 'name',
+    key: 'name',
+    render: text => <a>{text}</a>,
+  },
+  {
+    title: 'Designation/Description',
+    dataIndex: 'des',
+    key: 'age',
+  },
+  {
+    title: 'Action',
+    key: 'action',
+    render: (text, record) => (
+      <Space size="middle">
+        <Button onClick={ () => {
+          console.log(record._id);
+          fetch(config.local+ "/news/delete/" + record._id,{
+            method : 'DELETE',
+          }).then(res => res.json()).then(data =>{
+            console.log(data);
+            if(data.message == "deleted"){
+              message.success('Successfully deleated the item from the database.');
+            }else{
+              message.error('Error occurred');
+            }
+
+            setTimeout(function(){
+              window.location.reload()
+            },500)
+          })
+        }} style={{backgroundColor : 'red', color : 'white'}} type="default">Delete</Button>
+      </Space>
+    ),
+  },
+];
+
+
+class KeyNote extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            topic:'',
-            venue:'',
-            subtop:'',
-            datetime:'',
-            url:'',
-            newurl: '',
-            date: '',
-            topicPen: 0
+          keynote : [],
+          kname : '',
+          kdes : ''
          }
     }
 
     onChange = (date, dateString) => {
         console.log(date, dateString);
-        this.setState({date : dateString})
-      }
+        this.setState({edate : dateString})
+      } 
 
     componentDidMount(){
-        this.fetchTopic()
 
-        fetch(config.host + "/edi-noti/pending-topic").then(res => res.json()).then(data => {
-            this.setState({topicPen : data.len})
-            console.log(data.len)
-        }).catch(err =>{
-            console.log(err)
-        })
+
+        fetch(config.local + "/keynote").then(res => res.json()).then(data => {
+          this.setState({keynote : data})
+          console.log(data);
+          //console.log(data.len)
+      }).catch(err =>{
+          console.log(err)
+      })
     }
     
-
-      fetchTopic = () => {
-        fetch(config.host + "/topic").then(res => res.json()).then(data => {
-            this.setState({topic : data[0]["topic"],venue : data[0]['venue'], subtop : data[0]['SubTopic'], datetime : data[0]['datemonth'], url : data[0]['url']})
-        }).catch(err =>{
-            //alert(err)
-            console.log(err)
-        })
-
-    }
 
     handleChange = (e) =>{
         this.setState({[e.target.name] : e.target.value});
         console.log([e.target.name] , e.target.value)
     }
 
-    handSubmit = () =>{
+
+    onOk = (value) =>{
+        console.log('onOk: ', value);
+      }
+
+      handSubmitKeynote = (e) =>{
+
         const data = {
-            topic : this.state.top,
-            SubTopic : this.state.sub,
-            datemonth : this.state.date,
-            venue : this.state.ven,
-            url : this.state.newurl
+            des : this.state.kdes,
+            image : window.localStorage.getItem('keynote'),
+            name : this.state.kname
         }
 
         console.log(data)
 
-        fetch(config.local + '/topic/sendToAdmin',{
+        fetch(config.local + '/keynote/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -83,7 +134,6 @@ class EditorTemplate extends Component {
         }).catch(err =>{
             console.log(err)
         })
-
     }
 
 
@@ -115,7 +165,7 @@ class EditorTemplate extends Component {
                 <Sider className="site-layout-background" width={200}>
                   <Menu
                     mode="inline"
-                    defaultSelectedKeys={['1']}
+                    defaultSelectedKeys={['5']}
                     defaultOpenKeys={['sub1']}
                     style={{ height: '100%' }}
                   >
@@ -129,67 +179,41 @@ class EditorTemplate extends Component {
                   </Menu>
                 </Sider>
                 <Content style={{ padding: '0 24px', minHeight: 280 }}>
-                    <Card>
-                    <Descriptions title="Current Topic details" bordered>
-                    <Descriptions.Item label="Main Topic">{this.state.topic}</Descriptions.Item>
-                    <Descriptions.Item label="Sub topic">{this.state.subtop}</Descriptions.Item>
-                    <Descriptions.Item label="Venue">{this.state.venue}</Descriptions.Item>
-                    <Descriptions.Item label="Date">{this.state.datetime}</Descriptions.Item>
-                    <Descriptions.Item label="Link" span={2}>
-                    {this.state.url}
-                    </Descriptions.Item>
-                    <Descriptions.Item label="Status" span={3}>
-                    <Badge status="processing" text="Active" />
-                    </Descriptions.Item>
-                    <Descriptions.Item label="Pending Activities" span={3}>
-                    <Badge status="warning" text={this.state.topicPen} />
-                    </Descriptions.Item>
-                </Descriptions>
+                    <Card title="Current News Items">
+                        <Table columns={columns} dataSource={this.state.keynote} />
                     </Card>
                         <br />
-                    <Card title="New Topic">
+                    <Card title="Keynote Speaker Name">
+
                         <Form.Item
-                            label="Main Topic"
-                            onChange={this.handleChange}
-                            name="top"
+                            label="Event Name"
+                            name="kname"
                             rules={[{ required: true, message: 'Please input your username!' }]}
                         >
-                            <Input name="top"  onChange={this.handleChange}/>
-                        </Form.Item>
-                        
-                        <Form.Item
-                            label="Sub Topic"
-                            name="sub"
-                            rules={[{ required: true, message: 'Please input your username!' }]}
-                        >
-                            <Input name="sub" onChange={this.handleChange}/>
+                            <Input name="kname" onChange={this.handleChange}/>
                         </Form.Item>
 
                         <Form.Item
-                            label="Venue"
+                            label="Keynote Speaker Description"
                             name="ven"
                             rules={[{ required: true, message: 'Please input your username!' }]}
                         >
-                            <Input name="ven" onChange={this.handleChange}/>
+                            <Input name="kdes" onChange={this.handleChange}/>
                         </Form.Item>
 
                         <Form.Item
-                            label="Date"
-                            name="date"
+                            label="Upload Image"
+                            style={{width : '100%'}}
                             rules={[{ required: true, message: 'Please input your username!' }]}
                         >
-                             <DatePicker onChange={this.onChange} />
+                                <Upload {...props}>
+                                  <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                </Upload>
                         </Form.Item>
 
-                        <Form.Item
-                            label="URL"
-                            name="newurl"
-                            rules={[{ required: true, message: 'Please input your username!' }]}
-                        >
-                            <Input  name="newurl" onChange={this.handleChange}/>
-                        </Form.Item>
 
-                        <Button block type="primary" onClick={this.handSubmit}>SUBMIT</Button>
+
+                        <Button block type="primary" onClick={this.handSubmitKeynote}>SUBMIT</Button>
 
                     </Card>
                 </Content>
@@ -201,4 +225,4 @@ class EditorTemplate extends Component {
     }
 }
  
-export default EditorTemplate;
+export default KeyNote;
