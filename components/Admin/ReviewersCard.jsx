@@ -39,7 +39,7 @@ function ReviewersCard(props){
                         <table style={{padding:"5px",borderSpacing:"1px",tableLayout:"fixed",width:"400px"}}>
                             <tr>
 
-                                <th><img src={"http://localhost:8000/"+reviewer.profileImage} width="70" height="70" style={{"border-radius": "50%"}}/> </th>
+                                <th><img src={"http://localhost:8000/"+reviewer.profileImage} width="70"  style={{"border-radius": "50%"}}/> </th>
                                 <td style={{color:"white"}}>{reviewer.name}</td>
 
                                 <Link to ={`update-reviewer/${reviewer._id}`}>

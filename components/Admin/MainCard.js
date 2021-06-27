@@ -45,6 +45,7 @@ function Reviewers(){
                 <h1>SLIIT</h1>
                 <br/>
                 <button style={{display:visible }} onClick={e =>  window.location.href='/approve'} className="uditha-notify-button blink">Updates are Pending</button>
+                <button onClick={e =>  window.location.href='/report'} type="button" className="btn btn-info">Report</button>
 
             </div>
 

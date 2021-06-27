@@ -16,12 +16,12 @@ function EventLimitUpdate(){
         const url = "http://localhost:8000/event-update";
         axios.get(url).then((res) => {
 
-            setWorkshopLimit(res.data[0].ResearchLimit);
-            setResearchLimit(res.data[0].WorkshopLimit);
+            setWorkshopLimit(res.data[0].WorkshopLimit);
+            setResearchLimit(res.data[0].ResearchLimit);
 
         })
 
-    })
+    },[])
 
 
     const updateEvents = (e) => {
@@ -58,7 +58,7 @@ function EventLimitUpdate(){
                     <div className="form-group">
                    <form onSubmit={updateEvents}>
                        <label>Workshops</label>
-                       <input type="number"  defaultValue={workshopLimit}
+                       <input type="number" defaultValue={workshopLimit}
                               onChange={(e) => {setWorkshopLimit(e.target.value)}} className="form-control"/>
                        <br/>
                        <label>Research</label>

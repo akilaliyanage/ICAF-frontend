@@ -16,6 +16,7 @@ import UserReg from './components/normalUser/UserReg'
 import AdminApprove from "./components/Admin/AdminApprove";
 import EditorTem from './components/Editor_admin/EditorTem'
 import EventLimitUpdate from "./components/Admin/EventManageContent/EventLimitUpdate";
+import Report from "./components/Admin/Report/Report";
 
 
 
@@ -67,8 +68,13 @@ export default class App extends React.Component {
                     <Route exact path="/approve">
                         <AdminApprove/>
                     </Route>
+
                     <Route exact path="/edi-admin">
                         <EditorTem/>
+                    </Route>
+
+                    <Route exact path="/report">
+                        <Report/>
                     </Route>
 
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>
