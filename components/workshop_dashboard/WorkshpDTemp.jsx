@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/workshopDash.css'
 // import UserImg from './../../assets/media/nethsara/workshopUser.png'
 import CardDiv from './WorkDashHome'
+import ApprovedResearches from './ApprovedResearches'
 import ApprovedWorkshops from './ApprovedWorkshops'
 import PendingWorkshops from './PendingWorkshops'
+import PendingResearches from './PendingResearches'
 import AllCoordiantors from './AllCoordinators'
 
 class WorkshpDTemp extends Component {
@@ -21,8 +23,10 @@ class WorkshpDTemp extends Component {
                     <div className="nt-sav-links">
                         <a>Stats</a>
                         <a>Pending Approvals</a>
+                        <a>Approved Researches</a>
                         <a>Approved Workshops</a>
-                        <a>All Coordinators</a>
+                        <a>Researchers</a>
+                        <a>Coordinators</a>
                     </div>
                 </div>
                 
@@ -38,7 +42,9 @@ class WorkshpDTemp extends Component {
                     <div className="nt-main-cont">
 
                         <CardDiv/>
+                        <PendingResearches/>
                         <PendingWorkshops/>
+                        <ApprovedResearches/>
                         <ApprovedWorkshops/>
                         <AllCoordiantors/>
                     
