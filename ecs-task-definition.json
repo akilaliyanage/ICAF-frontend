@@ -21,18 +21,6 @@
     "requiresCompatibilities": [
         "EC2"
     ],
-    "logConfiguration": {
-        "logDriver": "fluentd",
-        "options": {
-            "KeyName": ""
-        },
-        "secretOptions": [
-            {
-                "name": "",
-                "valueFrom": ""
-            }
-        ]
-    },
     "cpu": "256",
     "memory": "256"
 }
