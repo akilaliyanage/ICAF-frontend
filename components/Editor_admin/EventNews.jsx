@@ -4,10 +4,31 @@ import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/
 import { Descriptions, Badge } from 'antd';
 import {Link} from 'react-router-dom'
 import config from '../../config.json'
+import { Upload } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 const { RangePicker } = DatePicker;
 const { Header, Content, Footer, Sider } = Layout;
+
+const props = {
+  name: 'image',
+  action: config.host + '/image',
+  onChange(info) {
+    if (info.file.status !== 'uploading') {
+      console.log(info.file, info.fileList);
+    }
+    if (info.file.status === 'done') {
+      message.success(`${info.file.name} file uploaded successfully`);
+      console.log(info.file.response.Location)
+      window.localStorage.setItem('newsImg',info.file.response.Location)
+
+    } else if (info.file.status === 'error') {
+      message.error(`${info.file.name} file upload failed.`);
+    }
+  },
+};
+
 
 const columns = [
   {
@@ -60,13 +81,17 @@ class EventNews extends Component {
         this.state = { 
             data:[],
             newsList:[],
-            datePen: 0
+            datePen: 0,
+            ename : '',
+            edes : '',
+            eurl : '',
+            edate : ''
          }
     }
 
     onChange = (date, dateString) => {
         console.log(date, dateString);
-        this.setState({evDate : dateString})
+        this.setState({edate : dateString})
       } 
 
     componentDidMount(){
@@ -92,16 +117,20 @@ class EventNews extends Component {
         console.log('onOk: ', value);
       }
 
-      handSubmitDate = (e) =>{
+      handSubmitNews = (e) =>{
         console.log(this.state.evDate)
 
         const data = {
-            date : this.state.evDate
+            des : this.state.edes,
+            url : this.state.eurl,
+            image : window.localStorage.getItem('newsImg'),
+            edate : this.state.edate,
+            name : this.state.ename
         }
 
         console.log(data)
 
-        fetch(config.local + '/event-date/sendToAdmin',{
+        fetch(config.local + '/news/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -180,15 +209,52 @@ class EventNews extends Component {
                     <Card title="New Topic">
 
                         <Form.Item
-                            label="Date"
-                            name="date"
+                            label="Event Name"
+                            name="ven"
+                            rules={[{ required: true, message: 'Please input your username!' }]}
+                        >
+                            <Input name="ename" onChange={this.handleChange}/>
+                        </Form.Item>
+
+                        <Form.Item
+                            label="Event Description"
+                            name="ven"
+                            rules={[{ required: true, message: 'Please input your username!' }]}
+                        >
+                            <Input name="edes" onChange={this.handleChange}/>
+                        </Form.Item>
+
+
+                        <Form.Item
+                            label="Event Event Url"
+                            name="ven"
+                            rules={[{ required: true, message: 'Please input your username!' }]}
+                        >
+                            <Input name="eurl" onChange={this.handleChange}/>
+                        </Form.Item>
+
+                        <Form.Item
+                            label="Event Date"
+                            name="edate"
                             style={{width : '100%'}}
                             rules={[{ required: true, message: 'Please input your username!' }]}
                         >
                               <DatePicker style={{width : '100%'}} showTime onChange={this.onChange} onOk={this.onOk} />
                         </Form.Item>
 
-                        <Button block type="primary" onClick={this.handSubmitDate}>SUBMIT</Button>
+                        <Form.Item
+                            label="Upload Image"
+                            style={{width : '100%'}}
+                            rules={[{ required: true, message: 'Please input your username!' }]}
+                        >
+                                <Upload {...props}>
+                                  <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                </Upload>
+                        </Form.Item>
+
+
+
+                        <Button block type="primary" onClick={this.handSubmitNews}>SUBMIT</Button>
 
                     </Card>
                 </Content>
