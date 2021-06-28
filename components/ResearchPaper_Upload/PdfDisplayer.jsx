@@ -18,6 +18,7 @@ export default class PdfDisplayer extends Component {
         if(ext == 'pdf'){
             this.setState({fileTypeValidator : false})
             this.setState({pdfDefault2:event.target.files[0]})
+            this.props.fileChanger(event.target.files[0]);
         }
         else{
             event.target.value = null;

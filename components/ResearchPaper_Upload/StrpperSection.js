@@ -81,7 +81,7 @@ class StepperSection extends Component{
     constructor(props){
         super(props);
         this.state = {
-
+          currentStep: 0
         }
         this.labelList = this.labelList.bind(this);
     }
@@ -95,7 +95,7 @@ class StepperSection extends Component{
     render(){
         return (
             <React.Fragment>
-                <Stepper orientation="horizontal" activeStep="1" alternativeLabel connector={<ConnectorCompo/>}>
+                <Stepper orientation="horizontal" activeStep={this.props.currentSteperStep} alternativeLabel connector={<ConnectorCompo/>}>
                     {this.labelList().map((title) =>
                         (
                             <Step key={title}>

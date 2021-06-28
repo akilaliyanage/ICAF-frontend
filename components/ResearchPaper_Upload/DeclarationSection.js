@@ -25,10 +25,9 @@ export default class DeclarationSection extends Component {
                 </div>
                 <div class="row mt-4">
                     <div className="form-check d-flex justify-content-center">
-                        <input className="form-check-input mr-5 ml-5" type="checkbox" id="agreement"/>
+                        <input className="form-check-input mr-5 ml-5" type="checkbox" id="isAgree" name='isAgree' onChange={this.props.setAgreement}/>
                         <label for="agreement" className="ml-5 mr-5"><h6 className="ml-5 mr-5">I/We acknowledge my/our agreement with the above statements.</h6></label><br/>
                     </div>
-                    <span className="text-danger text-center mt-1 mb-1">Must agree to the conditions to proceed</span>
                 </div>
             </div>
         )
