@@ -23,7 +23,7 @@ useEffect(() => {
 
             <div className="uditha-main-card-title">
 
-                <h1>{title}</h1>
+                <h1 style={{color:"white"}}>{title}</h1>
 
             </div>
 

@@ -26,7 +26,7 @@ function MainCardDate(){
         <div className="uditha-main-card-title">
 
 
-            <h3>{date}</h3>
+            <h3 style={{color:"white"}}>{date}</h3>
 
         </div>
 

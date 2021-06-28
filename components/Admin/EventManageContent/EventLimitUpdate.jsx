@@ -9,6 +9,7 @@ function EventLimitUpdate(){
 
     const [workshopLimit,setWorkshopLimit] = useState();
     const [researchLimit,setResearchLimit] = useState();
+    const [participateLimit,setParticipateLimit] = useState();
     const [visible,setVisible] = useState("");
 
     useEffect(() => {
@@ -18,6 +19,7 @@ function EventLimitUpdate(){
 
             setWorkshopLimit(res.data[0].WorkshopLimit);
             setResearchLimit(res.data[0].ResearchLimit);
+            setParticipateLimit(res.data[0].ParticipateLimit)
 
         })
 
@@ -29,7 +31,8 @@ function EventLimitUpdate(){
 
         const update = {
             workshopLimit,
-            researchLimit
+            researchLimit,
+            participateLimit
         }
         console.log(update);
 
@@ -49,11 +52,16 @@ function EventLimitUpdate(){
 
     }
 
+    const cancel = () => {
+        setVisible("none");
+        window.location.reload();
+    }
+
 
     return(
 
         <div style={{display:visible}}>
-            <div className="card" style = {{"width": "22rem"}}>
+            <div className="card" style = {{"width": "22rem", marginTop:'30px'}}>
                 <div className="card-body">
                     <div className="form-group">
                    <form onSubmit={updateEvents}>
@@ -65,7 +73,13 @@ function EventLimitUpdate(){
                        <input type="number" defaultValue={researchLimit}
                               onChange={(e) => {setResearchLimit(e.target.value)}} className="form-control"/>
                        <br/>
+                       <br/>
+                       <label>Participation</label>
+                       <input type="number" defaultValue={participateLimit}
+                              onChange={(e) => {setParticipateLimit(e.target.value)}} className="form-control"/>
+                       <br/>
                        <input className="btn btn-primary" type="submit"  value="Save"/>
+                       <input style={{marginLeft:'10px'}} onClick={cancel} className="btn btn-primary" type="button"  value="Cancel"/>
 
                    </form>
                     </div>

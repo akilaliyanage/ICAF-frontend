@@ -273,11 +273,11 @@
 
 .uditha-notify-button{
     position: absolute;
-    width: 150px;
+    width: 160px;
     height: 35px;
     left: 70%;
     top:10%;
-    background-color: orange;
+    background-color: #f89406;
     border-radius: 5px;
     border-style: hidden;
     align-content: center;
