@@ -20,13 +20,13 @@ export default class ResearcgPaperUploadSection extends Component {
                 <div className='input-element-container ml-5'>
                     <div className="row mt-4">
                         <div className="col-5">
-                            <PdfDisplayer/>
+                            <PdfDisplayer fileChanger={this.props.fileChanger}/>
                         </div>
                         <div className="col-7">
                               <div className='input-element-container'>
                                 <div className="row">
                                     <div className="col-6">
-                                        <TextField id="noOfPages" type="number" InputProps={{inputProps:{max:5000 , min : 1}}} fullWidth label="Number of pages" variant="outlined" size="small"/>
+                                        <TextField id="noOfPages" name="noOfPages" type="number" InputProps={{inputProps:{max:5000 , min : 1}}} fullWidth label="Number of pages" variant="outlined" size="small"  onChange={this.props.getValueOnChange}/>
                                     </div>
                                 </div>
                                 <div className="row mt-4">
