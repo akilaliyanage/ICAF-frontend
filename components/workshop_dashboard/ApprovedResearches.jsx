@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import config from '../../config.json'
+
 export class ApprovedResearches extends Component {
     constructor(props){
         super(props)
@@ -13,7 +15,7 @@ export class ApprovedResearches extends Component {
     }
 
     fetchItems(){
-        fetch("url").then(res => res.json()).then(data => this.setState({researchs:data})).catch(err => console.log(err))
+        fetch(config.local + '/resrch/approved').then(res => res.json()).then(data => this.setState({researchs:data})).catch(err => console.log(err))
     }
 
 
@@ -35,27 +37,25 @@ export class ApprovedResearches extends Component {
                         <table className="nt-table">
                             <thead>
                                 <tr>
-                                    <th className="nt-td">Workshop Id</th>
-                                    <th className="nt-td">Workshop Title</th>
-                                    <th className="nt-td">Workshop Date</th>
-                                    <th className="nt-td">Conductor</th>
-                                    <th className="nt-td">Created Date</th>
+                                    <th className="nt-td">Paper Name</th>
+                                    <th className="nt-td">Researcher Name</th>
+                                    <th className="nt-td">Description</th>
+                                    <th className="nt-td">Research paper</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {this.state.researchs.map((research) => {
                                     return(
                                             <tr>
-                                                <td className="nt-td">{research._id}</td>
-                                                <td className="nt-td">{research.title}</td>
-                                                <td className="nt-td">{research.eventDate}</td>
-                                                <td className="nt-td">{research.conductor}</td>
-                                                <td className="nt-td">{research.dateCreated}</td>
+                                                <td className="nt-td">{research.paperName}</td>
+                                                <td className="nt-td">{research.researcherName}</td>
+                                                <td className="nt-td">{research.description}</td>
+                                                <td className="nt-td"><a href={research.researchPaper}>Preview Paper</a></td>
                                             </tr>
                                     );
                                 })}
 
-                                <tr>
+                                {/* <tr>
                                     <td className="nt-td">test id</td>
                                     <td className="nt-td">Test title</td>
                                     <td className="nt-td">Test date</td>
@@ -75,7 +75,7 @@ export class ApprovedResearches extends Component {
                                     <td className="nt-td">Test date</td>
                                     <td className="nt-td">Test conductor</td>
                                     <td className="nt-td">Test date</td>
-                                </tr>
+                                </tr> */}
                             </tbody>
                         </table>
 

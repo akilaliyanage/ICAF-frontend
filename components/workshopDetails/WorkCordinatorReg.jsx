@@ -111,6 +111,8 @@ class WorkCordinatorReg extends Component {
                     setInterval(() => {
                         this.setState({isAuth : true});
                     }, 2000);
+
+                    window.location = `/condDash`
                 }
                 
             }).catch(err =>{
