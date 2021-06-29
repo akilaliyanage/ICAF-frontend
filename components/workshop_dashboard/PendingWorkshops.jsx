@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/WorkDashHome.css'
+import { Modal} from 'antd';
 
 import config from '../../config.json'
 
@@ -8,9 +9,22 @@ class PendingWorkshops extends Component {
     constructor(props){
         super(props)
         this.state={
-            pendworkshops:[]
+            pendworkshops:[],
+            visible:'false'
         }
     }
+
+    showModal = () => {
+        this.setState({visible : 'true'})
+    };
+    
+    handleOk = () => {
+        this.setState({visible : 'false'})
+    };
+    
+    handleCancel = () => {
+        this.setState({visible : 'false'})
+    };
 
     componentDidMount(){
         this.fetchItems(); 
@@ -61,44 +75,22 @@ class PendingWorkshops extends Component {
                                         </tr>
                                 );
                             })}
-                                {/* <tr>
-                                    <td className="nt-td">test id</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">
-                                        <button className="nt-approve-btn"> Approve </button>
-                                        <button className="nt-decline-btn"> Decline </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="nt-td">test id</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">
-                                        <button className="nt-approve-btn"> Approve </button>
-                                        <button className="nt-decline-btn"> Decline </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="nt-td">test id</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">
-                                        <button className="nt-approve-btn"> Approve </button>
-                                        <button className="nt-decline-btn"> Decline </button>
-                                    </td>
-                                </tr> */}
+                                
                             </tbody>
                         </table>
                     </div>
 
                 </div>
+
+                {/* <Modal title="Basic Modal" 
+                    visible={this.state.visible} 
+                    onOk={handleOk} 
+                    onCancel={handleCancel}
+                    >
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                </Modal>             */}
                 
             </div>
         )
