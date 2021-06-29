@@ -21,7 +21,7 @@ class ProgresserSection extends Component {
                         <Button variant="contained" color="default" startIcon={<ArrowBackIcon/>} onClick={this.props.stepDown}>Back</Button>
                         <Button variant="contained" color="default" endIcon={<ArrowForwardIcon/>} onClick={this.props.stepUp}>Next</Button>
                         {this.props.showSubmit ?
-                            <Button variant="contained" style={{backgroundColor:"green" , color:"white"}} startIcon={<DescriptionIcon/>}>Submit</Button> : null
+                            <Button variant="contained" style={{backgroundColor:"green" , color:"white"}} startIcon={<DescriptionIcon/>} onClick={this.props.submitResearchPaperForm} >Submit</Button> : null
                         }
                         
                     </div>
