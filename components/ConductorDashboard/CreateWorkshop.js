@@ -28,8 +28,6 @@ class CreateWorkshop extends Component {
         console.log([event.target.name],event.target.value)
     }
 
-    
-
 
     handleSubmit(e){
         
@@ -39,15 +37,14 @@ class CreateWorkshop extends Component {
             title : this.state.workshopTitle,
             eventDate: this.state.eventDate,
             conductor : this.state.loginID,
-            desciption: this.state.desciption
+            description: this.state.description
 
             // title : "_test_ title",
             // eventDate: "22/06/2021",
             // conductor : this.state.loginID,
             // desciption: "testing 1234567809ghjfdb"
         }
-
-        // console.log(data)
+        console.log(data)
 
         fetch(config.local + '/wShop/create',{
             method : 'POST',
@@ -56,7 +53,7 @@ class CreateWorkshop extends Component {
             },
             body : JSON.stringify(data)
         }).then(res => res.json()).then(data =>{
-
+            
             alert("Workshop Created Successfully!")
             
         }).catch(err =>{
@@ -75,12 +72,14 @@ class CreateWorkshop extends Component {
                         <form action="" method="POST" style={{marginLeft:"10%"}}>
                             <table style={{width:"80%", marginTop:"4%"}}>
                                 <tbody>
-                                    <tr >
+                                    <tr>
                                         <td>
                                             Workshop Title :
                                         </td>
                                         <td>
-                                            <input type="text" name="workshopTitle" className="nt-cw-input" value={this.state.workshopTitle} onChange={this.handleChange}/>
+                                            <input type="text" name="workshopTitle" className="nt-cw-input" 
+                                            value={this.state.workshopTitle} 
+                                            onChange={this.handleChange}/>
                                             
                                         </td>
                                     </tr>
@@ -90,7 +89,9 @@ class CreateWorkshop extends Component {
                                             Workshop date :
                                         </td>
                                         <td>
-                                            <input type="date" name="workshopDate" className="nt-cw-input" placeholder="DD/MM/YYYY" value={this.state.eventDate} onChange={this.handleChange}/>
+                                            <input type="date" name="eventDate" className="nt-cw-input" 
+                                            placeholder="" value={this.state.eventDate} 
+                                            onChange={this.handleChange}/>
                                         </td>
                                     </tr>
                                     <br />
@@ -99,7 +100,10 @@ class CreateWorkshop extends Component {
                                             Workshop Description :
                                         </td>
                                         <td>
-                                            <textarea type="text" style={{border: "2px solid #000000dc;"}} name="workshopTitle" className="nt-cw-input" placeholder="" value={this.state.description} onChange={this.handleChange}/>
+                                            <textarea type="text" style={{border: "2px solid #000000dc;"}} name="description" 
+                                            className="nt-cw-input" 
+                                            placeholder="" value={this.state.description} 
+                                            onChange={this.handleChange}/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -122,19 +126,16 @@ class CreateWorkshop extends Component {
                                                 </div>
                                                 <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Resources</button>
                                             </div> */}
-                                            <input className="w-file-upload" type='file' accept=".pdf, .doc, .docx, .zip" multiple/>
+                                            <input className="w-file-upload" type='file' 
+                                            accept=".pdf, .doc, .docx, .zip" multiple/>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
 
-                            
-                        
-                            <button type="submit" className="nl-sign-form-btn" style={{width:"50%"}} onClick={this.handleSubmit}>Create Workshop</button>
+                            <button type="submit" className="nl-sign-form-btn" style={{width:"50%"}} 
+                            onClick={this.handleSubmit}>Create Workshop</button>
                         </form>
-
-                        
-
                     </div>
                 </div>
                 

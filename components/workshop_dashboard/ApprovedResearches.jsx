@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
-import './../../assets/css/WorkshopDetails/WorkDashHome.css'
 
-import config from '../../config.json'
-
-class ApprovedWorkshops extends Component {
-
+export class ApprovedResearches extends Component {
     constructor(props){
         super(props)
         this.state={
-            workshops:[]
+            researchs:[]
         }
     }
 
@@ -17,7 +13,7 @@ class ApprovedWorkshops extends Component {
     }
 
     fetchItems(){
-        fetch(config.local + '/wShop/approved').then(res => res.json()).then(data => this.setState({workshops:data})).catch(err => console.log(err))
+        fetch("url").then(res => res.json()).then(data => this.setState({researchs:data})).catch(err => console.log(err))
     }
 
 
@@ -32,14 +28,14 @@ class ApprovedWorkshops extends Component {
 
                         <div className="nt-div-head">
                             <h3 className="nt-div-head-text">
-                                All approved Workshops
+                                All approved Researches
                             </h3>
                         </div>
 
                         <table className="nt-table">
                             <thead>
                                 <tr>
-                                    {/* <th className="nt-td">Workshop Id</th> */}
+                                    <th className="nt-td">Workshop Id</th>
                                     <th className="nt-td">Workshop Title</th>
                                     <th className="nt-td">Workshop Date</th>
                                     <th className="nt-td">Conductor</th>
@@ -47,25 +43,18 @@ class ApprovedWorkshops extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {this.state.workshops.map((workshop) => {
+                                {this.state.researchs.map((research) => {
                                     return(
                                             <tr>
-                                                {/* <td className="nt-td">{workshop._id}</td> */}
-                                                <td className="nt-td">{workshop.title}</td>
-                                                <td className="nt-td">{workshop.eventDate}</td>
-                                                <td className="nt-td">{workshop.conductor}</td>
-                                                <td className="nt-td">{workshop.dateCreated}</td>
+                                                <td className="nt-td">{research._id}</td>
+                                                <td className="nt-td">{research.title}</td>
+                                                <td className="nt-td">{research.eventDate}</td>
+                                                <td className="nt-td">{research.conductor}</td>
+                                                <td className="nt-td">{research.dateCreated}</td>
                                             </tr>
                                     );
                                 })}
 
-                                {/* <tr>
-                                    <td className="nt-td">test id</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test date</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">Test date</td>
-                                </tr>
                                 <tr>
                                     <td className="nt-td">test id</td>
                                     <td className="nt-td">Test title</td>
@@ -79,7 +68,14 @@ class ApprovedWorkshops extends Component {
                                     <td className="nt-td">Test date</td>
                                     <td className="nt-td">Test conductor</td>
                                     <td className="nt-td">Test date</td>
-                                </tr> */}
+                                </tr>
+                                <tr>
+                                    <td className="nt-td">test id</td>
+                                    <td className="nt-td">Test title</td>
+                                    <td className="nt-td">Test date</td>
+                                    <td className="nt-td">Test conductor</td>
+                                    <td className="nt-td">Test date</td>
+                                </tr>
                             </tbody>
                         </table>
 
@@ -90,4 +86,4 @@ class ApprovedWorkshops extends Component {
     }
 }
 
-export default ApprovedWorkshops
+export default ApprovedResearches

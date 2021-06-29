@@ -54,7 +54,8 @@
 }
 .nt-approve-btn{
     padding: 3%;
-    width: 80px;
+    width: 50px;
+    font-size: 10px;
     background-color: rgb(26, 199, 49);
     color: #ffffff;
     border: none;
@@ -66,7 +67,8 @@
 .nt-decline-btn{
     margin-left: 1%;
     padding: 3%;
-    width: 80px;
+    width: 50px;
+    font-size: 10px;
     background-color: rgb(255, 40, 40);
     color: #ffffff;
     border: none;

@@ -91,6 +91,7 @@ class WorkCordinatorReg extends Component {
                 password : this.state.password
             }
 
+            console.log(data)
             fetch(config.local + '/n-wc/workCon-login',{
                 method : 'POST',
                 headers: {

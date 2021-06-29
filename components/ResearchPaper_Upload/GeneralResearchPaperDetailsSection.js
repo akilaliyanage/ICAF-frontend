@@ -21,15 +21,15 @@ class ResearchPaperGeneralDetailsSection extends Component{
                 <div className='input-element-container'>
                     <div className="row mt-4">
                         <div className="col-6">
-                            <TextField id="Paper_Title" fullWidth label="Research Paper Title" variant="outlined" size="small"/>
+                            <TextField id="paperName" name='paperName' fullWidth label="Research Paper Title" variant="outlined" size="small" onChange={this.props.getValueOnChange}/>
                         </div>
                         <div className="col-6">
-                            <TextField id="research_Area" fullWidth label="Research Area" variant="outlined" size="small"/>
+                            <TextField id="researchArea" name='researchArea' fullWidth label="Research Area" variant="outlined" size="small" onChange={this.props.getValueOnChange}/>
                         </div>
                     </div>
                     <div className="row mt-4 d-flex align-items-center">
                         <div className="col-3">
-                            <TextField id="research_Area" fullWidth label="Researcher Name" variant="outlined" size="small"/>
+                            <TextField id="researcherName" name='researcherName' fullWidth label="Researcher Name" variant="outlined" size="small" onChange={this.props.getValueOnChange}/>
                         </div>
                         <div className="col-1 ">
                             <IconButton style={{color:"green", width:5}} aria-label="Add More Researchers">
@@ -39,7 +39,7 @@ class ResearchPaperGeneralDetailsSection extends Component{
                     </div>
                     <div className="row mt-4 d-flex align-items-center">
                         <div className="col-12">
-                            <TextField id="Description" fullWidth label="Breif Description about the research paper" variant="outlined" multiline size="small"/>
+                            <TextField id="description" name='description' fullWidth label="Breif Description about the research paper" variant="outlined" multiline size="small" onChange={this.props.getValueOnChange}/>
                         </div>
                     </div>
                 </div>
