@@ -6,6 +6,8 @@ import ApproveTitle from "./ApproveContent/ApproveTitle";
 import ApproveDate from "./ApproveContent/ApproveDate";
 import ApproveAbout from "./ApproveContent/ApproveAbout";
 import AdminNavbar from "./AdminNavBar";
+import ApproveSpeecher from "./ApproveContent/ApproveSpeechers";
+import ApproveNews from "./ApproveContent/ApproveNews";
 
 function AdminApprove(){
 
@@ -29,6 +31,10 @@ function AdminApprove(){
              <ApproveDate/>
             <br/>
              <ApproveAbout/>
+             <br/>
+            <ApproveSpeecher/>
+            <br/>
+            <ApproveNews/>
 
         </div>
         </div>

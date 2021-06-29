@@ -3,6 +3,7 @@ import '../../assets/css/admin/admin.css'
 import AdminNavbar from "./AdminNavBar";
 import axios from "axios";
 import {useHistory} from "react-router-dom";
+import config from "../../config.json";
 
 function AddReviewer(){
 
@@ -58,7 +59,7 @@ function AddReviewer(){
         formData.append("password",password);
         formData.append("picture",picture);
 
-        const url = "http://localhost:8000/reviewer/add";
+        const url = config.host+"/reviewer/add";
         axios.post(url,formData).then((res) => {
             if(res.data.status === 200){
                 history.push("/admin");
@@ -92,18 +93,18 @@ function AddReviewer(){
 
                         <label className="description" htmlFor="element_1">Name </label>
                         <div>
-                            <input type="text"  onChange={(e) => {setName(e.target.value)}} className="uditha-text-control"/>
+                            <input style={{color:"black"}} type="text"  onChange={(e) => {setName(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
                         <label className="description" htmlFor="element_2">Username </label>
                         <div>
-                            <input type="text" onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
+                            <input style={{color:"black"}} type="text" onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
 
                         <label className="description" htmlFor="element_3">Access Key </label>
                         <div>
-                            <input type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
+                            <input style={{color:"black"}} type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
                          <input type="checkBox" onClick={toggleVisible}/>

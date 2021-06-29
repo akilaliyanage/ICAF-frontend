@@ -648,7 +648,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .akila-tracks {
-  padding-bottom: 90px;
+  margin: 50px;
   background-color: white;
   height: auto;
 }
@@ -745,7 +745,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .akila-footer {
-  background-color: #393e46;
+  background-color: #020c18;
+  background-image: url('https://sliitfoss.org/topography.25b51db14378afd93491.svg');
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .akila-footer .copy {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/WorkDashHome.css'
+import { Modal} from 'antd';
 
 import config from '../../config.json'
 
@@ -8,9 +9,24 @@ class PendingWorkshops extends Component {
     constructor(props){
         super(props)
         this.state={
-            pendworkshops:[]
+            pendworkshops:[],
+            visible:'false'
         }
+        // this.approveWorkshop = this.approveWorkshop.bind(this);
+        
     }
+
+    showModal = () => {
+        this.setState({visible : 'true'})
+    };
+    
+    handleOk = () => {
+        this.setState({visible : 'false'})
+    };
+    
+    handleCancel = () => {
+        this.setState({visible : 'false'})
+    };
 
     componentDidMount(){
         this.fetchItems(); 
@@ -20,6 +36,27 @@ class PendingWorkshops extends Component {
         fetch(config.local + '/wShop/pending').then(res => res.json()).then(data => this.setState({pendworkshops:data})).catch(err => console.log(err))
     }
     
+    approveWorkshop(e){
+        fetch(config.local + '',{
+            method : 'patch',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json()).then(data =>{
+            
+            if(res.data.status === 200){
+                alert("Successfully updated");
+            }
+            else {
+                alert("Failed");
+            }
+            
+        }).catch(err =>{
+            console.log(err)
+        })
+
+    }
+
 
     render() {
         return (
@@ -55,50 +92,28 @@ class PendingWorkshops extends Component {
                                             <td className="nt-td">{workshop.conductor}</td>
                                             {/* <td className="nt-td">{workshop.dateCreated}</td> */}
                                             <td>
-                                                <button className="nt-approve-btn"> Approve </button>
+                                                <button className="nt-approve-btn" onClick={this.approveWorkshop}> Approve </button>
                                                 <button className="nt-decline-btn"> Decline </button>
                                             </td>
                                         </tr>
                                 );
                             })}
-                                {/* <tr>
-                                    <td className="nt-td">test id</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">
-                                        <button className="nt-approve-btn"> Approve </button>
-                                        <button className="nt-decline-btn"> Decline </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="nt-td">test id</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">
-                                        <button className="nt-approve-btn"> Approve </button>
-                                        <button className="nt-decline-btn"> Decline </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="nt-td">test id</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">Test title</td>
-                                    <td className="nt-td">Test conductor</td>
-                                    <td className="nt-td">
-                                        <button className="nt-approve-btn"> Approve </button>
-                                        <button className="nt-decline-btn"> Decline </button>
-                                    </td>
-                                </tr> */}
+                                
                             </tbody>
                         </table>
                     </div>
 
                 </div>
+
+                {/* <Modal title="Basic Modal" 
+                    visible={this.state.visible} 
+                    onOk={handleOk} 
+                    onCancel={handleCancel}
+                    >
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                </Modal>             */}
                 
             </div>
         )

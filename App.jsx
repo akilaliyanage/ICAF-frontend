@@ -27,7 +27,8 @@ import EventNews from './components/Editor_admin/EventNews';
 import KeyNote from './components/Editor_admin/KeyNote';
 import LoginComponant from './components/ResearcherLogin/LoginComponant';
 import DashboardHome from './components/ResearcherDashboard/DashboardHome';
-
+import Report from "./components/Admin/Report/Report";
+import AdminLogin from "./components/Admin/AdminLogin";
 
 
 export default class App extends React.Component {
@@ -40,7 +41,7 @@ export default class App extends React.Component {
         return (
             <Router>
                 <Switch>
-                <Route exact path="/">
+                    <Route exact path="/">
                        <Redirect to="/home"/>
                     </Route>
                     <Route exact path="/home">
@@ -85,6 +86,7 @@ export default class App extends React.Component {
                     <Route exact path="/approve">
                         <AdminApprove/>
                     </Route>
+
                     <Route exact path="/edi-admin">
                         <EditorTemplate/>
                     </Route>
@@ -111,6 +113,14 @@ export default class App extends React.Component {
 
                     <Route exact path="/researcher-login">
                         <LoginComponant/>
+
+                    <Route exact path="/report">
+                        <Report/>
+                    </Route>
+
+                    <Route exact path="/admin/login">
+                        <AdminLogin/>
+
                     </Route>
 
                     <Route exact path="/researcher-dashboard">

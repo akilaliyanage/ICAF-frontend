@@ -1,9 +1,10 @@
 import { Card, Col, Row } from 'antd';
 import React, { Component } from 'react';
+import { Timeline } from 'antd';
 import { Carousel } from 'antd';
 import { Avatar } from 'antd';
 import { Image } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { EditOutlined, EllipsisOutlined, SettingOutlined, ForkOutlined } from '@ant-design/icons';
 import { Descriptions, Badge } from 'antd';
 
 const { Meta } = Card;
@@ -33,19 +34,23 @@ class Tracks extends Component {
                                     cover={
                                     <img
                                         alt="example"
-                                        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                                        src="https://502343-1592314-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/03/web-design-2021-1-1024x635.jpg"
                                     />
                                     }
-                                    actions={[
-                                    <SettingOutlined key="setting" />,
-                                    <EditOutlined key="edit" />,
-                                    <EllipsisOutlined key="ellipsis" />,
-                                    ]}
+                                    
                                 >
+                                     <Timeline>
+                                        <Timeline.Item>React JS</Timeline.Item>
+                                        <Timeline.Item>Node JS</Timeline.Item>
+                                        <Timeline.Item>KOA JS</Timeline.Item>
+                                        <Timeline.Item>Express/Node JS</Timeline.Item>
+                                    </Timeline>
+
                                     <Meta
-                                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                                    title="Card title"
-                                    description="This is the description"
+                                    avatar={
+                                        <ForkOutlined />
+                                    }
+                                    title="Application Frameworks"
                                     />
                                 </Card>
                             </Col>
@@ -56,19 +61,20 @@ class Tracks extends Component {
                                     cover={
                                     <img
                                         alt="example"
-                                        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                                        src="https://clockwise.software/img/blog/relational-vs-non-relational-databases-advantages-and-disadvantages/header-background.jpg"
                                     />
                                     }
-                                    actions={[
-                                    <SettingOutlined key="setting" />,
-                                    <EditOutlined key="edit" />,
-                                    <EllipsisOutlined key="ellipsis" />,
-                                    ]}
+                                    
                                 >
+                                      <Timeline>
+                                        <Timeline.Item>MYSQL</Timeline.Item>
+                                        <Timeline.Item>MSSQL Server</Timeline.Item>
+                                        <Timeline.Item>Mongo DB</Timeline.Item>
+                                    </Timeline>
+
                                     <Meta
-                                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                                    title="Card title"
-                                    description="This is the description"
+                                    avatar={ <ForkOutlined />}
+                                    title="Databases"
                                     />
                                 </Card>
                             </Col>
@@ -79,19 +85,20 @@ class Tracks extends Component {
                                     cover={
                                     <img
                                         alt="example"
-                                        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                                        src="https://thetrendingbuzz.com/wp-content/uploads/2019/04/Cloud-Storage-Services-Startups-e1555350085421.png"
                                     />
                                     }
-                                    actions={[
-                                    <SettingOutlined key="setting" />,
-                                    <EditOutlined key="edit" />,
-                                    <EllipsisOutlined key="ellipsis" />,
-                                    ]}
+                                   
                                 >
+
+                                    <Timeline>
+                                        <Timeline.Item>Docker</Timeline.Item>
+                                        <Timeline.Item>Kubernates</Timeline.Item>
+                                        <Timeline.Item>AWS</Timeline.Item>
+                                    </Timeline>
                                     <Meta
-                                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                                    title="Card title"
-                                    description="This is the description"
+                                    avatar={ <ForkOutlined />}
+                                    title="Cloud Services / DevOps"
                                     />
                                 </Card>
                             </Col>

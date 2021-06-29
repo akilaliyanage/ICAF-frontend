@@ -13,14 +13,12 @@ class SingleCard extends Component {
                 <div className="nethsara-card">
                         <div className="nethsara-card-image">
                             {/* <img src={this.props.url} alt="" /> */}
-                            <h1>WORKSHOP TITLE</h1>
+                            <h3>{this.props.item.title}</h3>
                         </div>
                         <div className="nethsara-card-text">
-                            <h2>Workshop Conductor</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Incidunt tempore architecto saepe consectetur, alias 
-                                delectus assumenda. Delectus quae, vero debitis 
-                                voluptatibus cupiditate ipsa non doloribus natus voluptatum obcaecati hic itaque!</p>
+                            <h3>{this.props.item.consuctor}</h3>
+                            <h6>Conducted on : {this.props.item.eventDate}</h6>
+                            <p>{this.props.item.description}</p>
                         </div>
                         <div>
                             <button className="nethsara-card-button">

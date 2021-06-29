@@ -3,6 +3,7 @@ import '../../assets/css/admin/admin.css'
 import axios from "axios";
 import AdminNavbar from "./AdminNavBar";
 import {useHistory} from "react-router-dom";
+import config from "../../config.json";
 
 function UpdateReviewer(props){
 
@@ -23,13 +24,12 @@ function UpdateReviewer(props){
     useEffect(()=> {
         document.body.style.backgroundColor = "#282c34"
 
-        const url = "http://localhost:8000/reviewer/"+ rid;
+        const url = config.host+"/reviewer/"+ rid;
         axios.get(url).then((res) => {
 
             setReviewer(res.data);
             setName(res.data[0].name);
             setUsername(res.data[0].username);
-            setPassword(res.data[0].password);
 
 
 
@@ -73,7 +73,6 @@ function UpdateReviewer(props){
         const  formData = new FormData();
         formData.append("name",name);
         formData.append("username",username);
-        formData.append("password",password);
         formData.append("picture",picture);
 
         console.log(rid);
@@ -132,27 +131,18 @@ function UpdateReviewer(props){
 
                 <form className="uditha-form-control" onSubmit={UpdateReviewer}>
 
-                    <label className="description" htmlFor="element_1">Name </label>
+                    <label className="description" htmlFor="element_1">Full Name </label>
                     <div>
-                        <input type="text"
+                        <input style={{color:"black"}} type="text"
                                defaultValue={reviewer.name} onChange={(e) => {setName(e.target.value)}} className="uditha-text-control"/>
                     </div>
 
                     <label className="description" htmlFor="element_2">Username </label>
                     <div>
-                        <input type="text"
+                        <input style={{color:"black"}} type="text"
                                defaultValue={reviewer.username} onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
                     </div>
 
-
-                    <label className="description" htmlFor="element_3">Access Key </label>
-                    <div>
-                        <input type={passwordToggle}
-                               defaultValue={reviewer.password} onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
-                    </div>
-
-                    <input type="checkBox" onClick={toggleVisible}/>
-                    <label>Show Access Key &nbsp; </label>
 
 
 

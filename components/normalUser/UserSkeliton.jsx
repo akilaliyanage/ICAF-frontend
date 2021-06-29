@@ -41,13 +41,14 @@ class UserKeliton extends Component {
                 window.localStorage.setItem('id',data.id)
                 window.localStorage.setItem('username',data.username)
                 window.localStorage.setItem('proImg',data.proImg)
+                window.localStorage.setItem('role','atendee')
                 notification['success']({
                     message: 'Login Sucessfull',
                     description:
                       'You have sucessfully logged into the syste, you will redirect to the homepage shortly',
                   });
                   
-                //window.location.replace("/home")
+                window.location.replace("/home")
             }
             
         }).catch(err =>{
