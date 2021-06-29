@@ -47,9 +47,20 @@ class NavBar extends Component {
             <div className="dropdown-content">
                 <br />
                 <Link to="/register"><p>Attendee Registration</p></Link>
-                <Link to="/login"><p>Attendee Login</p></Link>
                 <Link to=""><p>researcher Registration</p></Link>
                 <Link to=""><p>workshop presenter</p></Link>
+            </div>
+        </div>
+
+        const login = <div className="dropdown">
+        <a><AiOutlineDown/> LOGINS</a>
+            <div className="dropdown-content">
+                <br />
+                <Link to="/login"><p>Attendee Login</p></Link>
+                <Link to=""><p>researcher Login</p></Link>
+                <Link to=""><p>workshop Login</p></Link>
+                <Link to=""><p>Admin Login</p></Link>
+                <Link to=""><p>Editor Login</p></Link>
             </div>
         </div>
 
@@ -83,6 +94,11 @@ class NavBar extends Component {
                              className="akila-menu-item"> 
                                 {window.location.href.includes('/home') ? drop : null}
                              </li>
+                             
+                            <li className="akila-menu-item">
+                                {login}
+                            </li>
+
                             <li onClick={this.logout} className="akila-menu-item">
                                 {user}
                             </li>

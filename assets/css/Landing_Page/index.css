@@ -648,7 +648,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .akila-tracks {
-  padding-bottom: 90px;
+  margin: 50px;
   background-color: white;
   height: auto;
 }
