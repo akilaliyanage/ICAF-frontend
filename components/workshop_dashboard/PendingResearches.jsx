@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import config from '../../config.json'
+
 class PendingResearches extends Component {
     constructor(props){
         super(props)
@@ -13,7 +15,7 @@ class PendingResearches extends Component {
     }
 
     fetchItems(){
-        fetch("url").then(res => res.json()).then(data => this.setState({pendResearches:data})).catch(err => console.log(err))
+        fetch(config.local + '/resrch/pending').then(res => res.json()).then(data => this.setState({pendResearches:data})).catch(err => console.log(err))
     }
     
 
@@ -32,11 +34,11 @@ class PendingResearches extends Component {
                         <table className="nt-table">
                             <thead>
                                 <tr>
-                                    <th className="nt-td">Workshop Id</th>
-                                    <th className="nt-td">Workshop Title</th>
-                                    <th className="nt-td">Workshop Date</th>
-                                    <th className="nt-td">Conductor</th>
-                                    <th className="nt-td">Created Date</th>
+                                    <th className="nt-td">Paper Name</th>
+                                    <th className="nt-td">Researcher Name</th>
+                                    <th className="nt-td">Preview</th>
+                                    {/* <th className="nt-td">Conductor</th>
+                                    <th className="nt-td">Created Date</th> */}
                                     <th className="nt-td">Approval</th>
                                 </tr>
                             </thead>
@@ -45,11 +47,11 @@ class PendingResearches extends Component {
                             {this.state.pendResearches.map((research) => {
                                 return(
                                         <tr>
-                                            <td className="nt-td">{research._id}</td>
-                                            <td className="nt-td">{research.title}</td>
-                                            <td className="nt-td">{research.eventDate}</td>
-                                            <td className="nt-td">{research.conductor}</td>
-                                            <td className="nt-td">{research.dateCreated}</td>
+                                            <td className="nt-td">{research.paperName}</td>
+                                            <td className="nt-td">{research.researcherName}</td>
+                                            {/* <td className="nt-td">{research.eventDate}</td>
+                                            <td className="nt-td">{research.conductor}</td> */}
+                                            <td className="nt-td">Preview</td>
                                             <td>
                                                 <button className="nt-approve-btn"> Approve </button>
                                                 <button className="nt-decline-btn"> Decline </button>
@@ -57,7 +59,7 @@ class PendingResearches extends Component {
                                         </tr>
                                 );
                             })}
-                                <tr>
+                                {/* <tr>
                                     <td className="nt-td">test id</td>
                                     <td className="nt-td">Test title</td>
                                     <td className="nt-td">Test conductor</td>
@@ -89,7 +91,7 @@ class PendingResearches extends Component {
                                         <button className="nt-approve-btn"> Approve </button>
                                         <button className="nt-decline-btn"> Decline </button>
                                     </td>
-                                </tr>
+                                </tr> */}
                             </tbody>
                         </table>
                     </div>

@@ -48,7 +48,7 @@ class ReviewLogin extends Component {
             if(data.token){
                 window.localStorage.setItem('rev-token',data.token)
                 window.localStorage.setItem('rev-id',data.id)
-                window.localStorage.setItem('rev-username',data.email)
+                window.localStorage.setItem('rev-username',data.username)
 
                 console.log(localStorage.getItem('rev-username'))
                 alert("Login Successfull!")
@@ -56,6 +56,8 @@ class ReviewLogin extends Component {
                 setInterval(() => {
                     this.setState({isAuth : true});
                 }, 2000);
+
+                window.location = `/workshopDash`
             }
             
         }).catch(err =>{
@@ -71,8 +73,8 @@ class ReviewLogin extends Component {
                 <div className="nt-log-card" style={{ backgroundImage: `url(https://wallpaperaccess.com/full/16692.jpg)` }}>
 
                     <div className="nt-login">
-                        <h1>I C A F</h1>
-                        <p className="nt-log-head">REVIEWER LOGIN</p>    
+                        <h1 style={{color:"white"}}>I C A F</h1>
+                        <p className="nt-log-head" style={{color:"white"}}>REVIEWER LOGIN</p>    
                     </div>    
                 
                 <form method="post">
