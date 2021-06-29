@@ -26,6 +26,7 @@ import EventAbout from './components/Editor_admin/EventAbout';
 import EventNews from './components/Editor_admin/EventNews';
 import KeyNote from './components/Editor_admin/KeyNote';
 import LoginComponant from './components/ResearcherLogin/LoginComponant';
+import DashboardHome from './components/ResearcherDashboard/DashboardHome';
 
 
 
@@ -110,6 +111,10 @@ export default class App extends React.Component {
 
                     <Route exact path="/researcher-login">
                         <LoginComponant/>
+                    </Route>
+
+                    <Route exact path="/researcher-dashboard">
+                        <DashboardHome/>
                     </Route>
 
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>
