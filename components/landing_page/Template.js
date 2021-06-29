@@ -58,6 +58,9 @@ class Template extends Component {
                 <dir className="akila-footer">
                     <Footer/>
                 </dir>
+                <div style={{textAlign:'center', backgroundColor:'#020c18', padding:"10px"}}>
+                    Copyright © 2021 | All Rights Reserved
+                </div>
             </div>
         );
     }
