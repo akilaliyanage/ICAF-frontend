@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import '../../assets/css/admin/admin.css'
 import EventStatus from "./EventStatusContent/EventStatus";
 import EventLimitUpdate from "./EventManageContent/EventLimitUpdate";
+import { BsPencilSquare } from 'react-icons/bs';
 
 function ConfDetails(){
 
@@ -17,15 +18,14 @@ function ConfDetails(){
 
         <div className="uditha-card uditha-conf-detail-card-align">
             <div className="event-edit-button">
-                <img onClick={makeVisible}
-                     src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699302-icon-32-clipboard-edit-512.png" width="25" height="25"/>
+                <BsPencilSquare style={{color:"whitesmoke"}} onClick={makeVisible}/>
             </div>
             <div style={{display:visible}}>
             <EventLimitUpdate/>
             </div>
             <div className="uditha-current-conf-detail">
 
-                <h3> Event Registrations</h3>
+                <h3 style={{color:"white"}}> Event Registrations</h3>
                 <br/>
 
                 <EventStatus/>

@@ -3,7 +3,7 @@ import '../../../assets/css/admin/admin.css'
 import axios from "axios";
 
 
-function EventStatus(){
+function EventStatus(props){
 
     const [workshopLimit,setWorkshopLimit] = useState();
     const [researchLimit,setResearchLimit] = useState();
@@ -12,11 +12,38 @@ function EventStatus(){
     const [researchStatus,setResearchStatus] = useState('Open');
     const [participateStatus,setParticipateStatus] = useState('Open');
 
+    const [workshopCount,setWorkshopCount] = useState(0);
+    const [researchCount,setResearchCount] = useState(0);
+    const [participationCount,setParticipationCount] = useState(0);
+
     const[workshopStatusColor,setWorkshopStatusColor] = useState('btn btn-success');
     const[researchStatusColor,setResearchStatusColor] = useState('btn btn-success');
-    const[participateStatusColor,setParticipateColor] = useState('btn btn-success')
+    const[participateStatusColor,setParticipateColor] = useState('btn btn-success');
 
     useEffect(() => {
+        const url = "http://localhost:8000/event-update/workshop";
+        axios.get(url).then((res) => {
+            setWorkshopCount(res.data.count);
+        })
+    });
+
+    useEffect(() => {
+        const url = "http://localhost:8000/event-update/research";
+        axios.get(url).then((res) => {
+            setResearchCount(res.data.count);
+        })
+    });
+
+    useEffect(() => {
+        const url = "http://localhost:8000/event-update/participation";
+        axios.get(url).then((res) => {
+            setParticipationCount(res.data.count);
+        })
+    });
+
+    useEffect(() => {
+
+        console.log(props.wcount);
 
         const url = "http://localhost:8000/event-update";
         axios.get(url).then((res) => {
@@ -26,23 +53,19 @@ function EventStatus(){
             setParticipateLimit(res.data[0].ParticipateLimit);
 
         }).then(() => {
-            const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/wShop/";
-            axios.get(url).then((res) => {
 
-                if(20 >= workshopLimit){
+                if(workshopCount >= workshopLimit){
                     setWorkshopStatus('Closed');
                     setWorkshopStatusColor('btn btn-danger')
                 }
-                if (10 >= researchLimit){
+                if (researchCount >= researchLimit){
                     setResearchStatus('Closed');
                     setResearchStatusColor('btn btn-danger')
                 }
-                if (150 >= participateLimit){
+                if (participationCount >= participateLimit){
                     setParticipateStatus('Closed');
                     setParticipateColor('btn btn-danger')
                 }
-
-            })
         })
 
     });
@@ -56,14 +79,14 @@ function EventStatus(){
                     <div className="card-body">
 
 
-                        <h5>Workshops<span className="pull-right">
+                        <h5 style={{color:"orange"}}>Workshops<span className="pull-right">
                         <button type="button" style={{marginLeft:"20%",width:"40%"}} className={workshopStatusColor}>{workshopStatus}</button></span></h5>
 
-                        <h5>Researches<span className="pull-right">
-                        <button type="button" style={{marginLeft:"21%", width:"40%"}} className={researchStatusColor}>{researchStatus}</button></span></h5>
+                        <h5 style={{color:"orange"}}>Researches<span className="pull-right">
+                        <button type="button" style={{marginLeft:"20%", width:"40%"}} className={researchStatusColor}>{researchStatus}</button></span></h5>
 
-                        <h5>Participation<span className="pull-right">
-                        <button type="button" style={{marginLeft:"16%", width:"40%"}} className={participateStatusColor}>{participateStatus}</button></span></h5>
+                        <h5 style={{color:"orange"}}>Participation<span className="pull-right">
+                        <button type="button" style={{marginLeft:"15%", width:"40%"}} className={participateStatusColor}>{participateStatus}</button></span></h5>
 
 
                     </div>

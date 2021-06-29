@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from "react";
 import '../../../assets/css/admin/admin.css'
 import axios from "axios";
+import config from "../../../config.json";
 
 
 
@@ -14,7 +15,7 @@ function EventLimitUpdate(){
 
     useEffect(() => {
 
-        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/event-update";
+        const url = config.host+"/event-update";
         axios.get(url).then((res) => {
 
             setWorkshopLimit(res.data[0].WorkshopLimit);
@@ -36,7 +37,7 @@ function EventLimitUpdate(){
         }
         console.log(update);
 
-        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/admin/event-update";
+        const url = config.host+"/event-update";
 
     axios.post(url,update).then((res) => {
         if(res.data.status === 200){
@@ -65,7 +66,7 @@ function EventLimitUpdate(){
                 <div className="card-body">
                     <div className="form-group">
                    <form onSubmit={updateEvents}>
-                       <label>Workshops</label>
+                       <label >Workshops</label>
                        <input type="number" defaultValue={workshopLimit}
                               onChange={(e) => {setWorkshopLimit(e.target.value)}} className="form-control"/>
                        <br/>

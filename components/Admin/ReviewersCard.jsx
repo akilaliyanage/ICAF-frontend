@@ -3,6 +3,7 @@ import '../../assets/css/admin/admin.css'
 import axios from "axios";
 import {Link} from "react-router-dom";
 import config from "../../config.json";
+import { BsPencilSquare } from 'react-icons/bs';
 
 function ReviewersCard(props){
 
@@ -44,7 +45,7 @@ function ReviewersCard(props){
                                 <td style={{color:"white"}}>{reviewer.name}</td>
 
                                 <Link to ={`update-reviewer/${reviewer._id}`}>
-                                <td><img style={{marginTop:"25px"}} src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699302-icon-32-clipboard-edit-512.png" width="25" height="25"/></td>
+                                <td><BsPencilSquare/></td>
                                 </Link>
                             </tr>
 
