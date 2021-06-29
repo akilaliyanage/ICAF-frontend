@@ -9,7 +9,8 @@ class ConductorDTemp extends Component {
     constructor(props){
         super(props)
         this.state = {
-            loginID:localStorage.getItem('wc-id')
+            loginID:window.localStorage.getItem('wc-id'),
+            loggedUser:window.localStorage.getItem('wc-email')
         }
     }
 
@@ -22,7 +23,7 @@ class ConductorDTemp extends Component {
                     </div>
                     <div className="nt-profile">
                         {/* <img src={userImg} alt="user image" /> */}
-                        <p className="nt-prof-name">Name goes here</p>
+                        <p className="nt-prof-name">{this.state.loggedUser}</p>
                     </div>
                     <div className="nt-sav-links">
                         <a>My Workshops</a>

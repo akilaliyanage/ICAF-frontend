@@ -9,6 +9,15 @@ import PendingResearches from './PendingResearches'
 import AllCoordiantors from './AllCoordinators'
 
 class WorkshpDTemp extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            reviewerName:window.localStorage.getItem('rev-username'),
+            loggedID:window.localStorage.getItem('rev-id')
+        }
+        
+    }
+
     render() {
         return (
             <div className="nt-dashboard">
@@ -18,7 +27,7 @@ class WorkshpDTemp extends Component {
                     </div>
                     <div className="nt-profile">
                         {/* <img src={userImg} alt="user image" /> */}
-                        <p className="nt-prof-name">Name goes here</p>
+                        <p className="nt-prof-name">{this.state.reviewerName}</p>
                     </div>
                     <div className="nt-sav-links">
                         <a>Stats</a>
