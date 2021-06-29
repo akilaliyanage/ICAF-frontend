@@ -1,9 +1,20 @@
-import React from "react";
-import '../../../assets/css/admin/admin.css'
+import React, {useEffect, useState} from "react";
+import '../../../assets/css/admin/admin.css';
+import config from "../../../config.json";
+import axios from "axios";
+import EventStatus from "../EventStatusContent/EventStatus";
+import { BsFillDisplayFill } from 'react-icons/bs';
 
 function WorkshopCountCard(){
 
+    const [count,setCount] = useState(0);
 
+    useEffect(() => {
+    const url = config.host+"event-update/workshop";
+    axios.get(url).then((res) => {
+        setCount(res.data.count);
+    });
+    })
 
     return(
 
@@ -12,7 +23,10 @@ function WorkshopCountCard(){
 
                 <div className="smallcard-text-align">
                     <h3 style={{color:"white"}}>Workshops</h3>
-                    <h2 style={{color:"white"}}>08</h2>
+                    <h2 style={{color:"white"}}>{count}</h2>
+                    <div className="uditha-icon">
+                        < BsFillDisplayFill/>
+                    </div>
                 </div>
             </div>
 

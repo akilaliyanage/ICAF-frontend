@@ -33,8 +33,7 @@ function AdminLogin(){
         }
 
 
-        //const url = config.host+"/admin/login";
-        const url = "http://localhost:8000/admin/login";
+        const url = config.host+"/admin/login";
         axios.post(url,admin).then((res) => {
 
             if(res.data.status === 200){

@@ -93,18 +93,18 @@ function AddReviewer(){
 
                         <label className="description" htmlFor="element_1">Name </label>
                         <div>
-                            <input type="text"  onChange={(e) => {setName(e.target.value)}} className="uditha-text-control"/>
+                            <input style={{color:"black"}} type="text"  onChange={(e) => {setName(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
                         <label className="description" htmlFor="element_2">Username </label>
                         <div>
-                            <input type="text" onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
+                            <input style={{color:"black"}} type="text" onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
 
                         <label className="description" htmlFor="element_3">Access Key </label>
                         <div>
-                            <input type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
+                            <input style={{color:"black"}} type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
                          <input type="checkBox" onClick={toggleVisible}/>
