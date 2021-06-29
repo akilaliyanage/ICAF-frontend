@@ -26,6 +26,8 @@ import EventAbout from './components/Editor_admin/EventAbout';
 import EventNews from './components/Editor_admin/EventNews';
 import KeyNote from './components/Editor_admin/KeyNote';
 import LoginComponant from './components/ResearcherLogin/LoginComponant';
+import Report from "./components/Admin/Report/Report";
+import AdminLogin from "./components/Admin/AdminLogin";
 
 
 
@@ -84,6 +86,7 @@ export default class App extends React.Component {
                     <Route exact path="/approve">
                         <AdminApprove/>
                     </Route>
+
                     <Route exact path="/edi-admin">
                         <EditorTemplate/>
                     </Route>
@@ -110,6 +113,14 @@ export default class App extends React.Component {
 
                     <Route exact path="/researcher-login">
                         <LoginComponant/>
+
+                    <Route exact path="/report">
+                        <Report/>
+                    </Route>
+
+                    <Route exact path="/admin/login">
+                        <AdminLogin/>
+
                     </Route>
 
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>

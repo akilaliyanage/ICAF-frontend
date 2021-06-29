@@ -24,7 +24,10 @@ class WorkshopTemplate extends Component {
     render() {
         return (
             <div>
-                <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
+                {/* <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
+                    <NavBar items={this.state.navbar_items}/>
+                </div> */}
+                <div className="w-img-div">
                     <NavBar items={this.state.navbar_items}/>
                 </div>
                 

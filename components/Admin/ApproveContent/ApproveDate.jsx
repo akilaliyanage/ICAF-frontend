@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from "react";
 import '../../../assets/css/admin/admin.css'
 import axios from "axios";
+import config from '../../../config.json'
 
 
 function ApproveDate(){
@@ -16,7 +17,7 @@ function ApproveDate(){
 
         useEffect( () => {
 
-            const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/edi-noti";
+            const url = config.host+"/edi-noti";
             axios.get(url).then((res) => {
                 const result = res.data.filter(function(item){
                     return item.cacheName === "eventDate";
@@ -44,7 +45,7 @@ function ApproveDate(){
 
             console.log(newDate);
 
-            const url = "http://localhost:8000/approve/date";
+            const url = config.host+"/admin/approve/date";
 
             axios.post(url,newDate).then((res) => {
 
@@ -61,6 +62,23 @@ function ApproveDate(){
             })
         }
 
+    const decline = () => {
+
+        const url = config.host+"/admin/delete/"+editID;
+        axios.delete(url).then((res) => {
+
+            if(res.data.status === 200){
+                alert("Declined");
+                setVisible("none");
+            }
+            else {
+                alert("Failed")
+            }
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
 
 
     return(
@@ -74,7 +92,7 @@ function ApproveDate(){
 
                     <a href="#"  onClick={ApproveDate} className="btn btn-primary">Approve</a>
                     &nbsp;
-                    <a href="#" className="btn btn-danger">Decline</a>
+                    <a href="#" onClick={decline} className="btn btn-danger">Decline</a>
                 </div>
             </div>
 

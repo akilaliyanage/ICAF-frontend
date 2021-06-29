@@ -49,7 +49,7 @@ const columns = [
       <Space size="middle">
         <Button onClick={ () => {
           console.log(record._id);
-          fetch(config.local+ "/news/delete/" + record._id,{
+          fetch(config.local+ "/keynote/delete/" + record._id,{
             method : 'DELETE',
           }).then(res => res.json()).then(data =>{
             console.log(data);

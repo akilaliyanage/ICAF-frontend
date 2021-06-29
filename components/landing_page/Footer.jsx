@@ -1,5 +1,11 @@
+import { Col, Row } from 'antd';
 import React, { Component } from 'react';
-import { AiFillFacebook, AiFillTwitterSquare, AiOutlineInstagram, AiOutlineSlack } from "react-icons/ai";
+import { Typography, Divider, Image } from 'antd';
+import { AiFillFacebook, AiFillTwitterSquare, AiOutlineInstagram, AiOutlineSlack, FacebookOutlined } from "react-icons/ai";
+
+const { Title, Paragraph, Text, Link } = Typography;
+
+
 class Footer extends Component {
     constructor(props) {
         super(props);
@@ -8,73 +14,80 @@ class Footer extends Component {
     render() { 
         return ( 
             <div>
-                <div class="akila-container">
-                <div className="links"> 
-                    <p>Get in touch with us</p>
-                <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=sliit&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe><br></br></div></div>
-
-                    <ul>
-                        <li>
-                            <AiFillFacebook/> 
-                        </li>
-                        <li>
-                            <AiFillTwitterSquare/>
-                        </li>
-                        <li>
-                            <AiOutlineInstagram/>
-                        </li>
-                        <li>
-                            <AiOutlineSlack/>
-                        </li>
-                    </ul>
-                </div>
-                <div className="ql">
-                    <p>Quick links</p>
-
-                    <ul>
-                        <li>
-                            <p>Main topic</p>
-                        </li>
-                        <li>
-                            <p>About</p>
-                        </li>
-                        <li>
-                            <p>Speakers</p>
-                        </li>
-                        <li>
-                            <p>Additional speakers</p>
-                        </li>
-                        <li>
-                            <p>
-                            Conference Tracks
-                            </p>
-                        </li>
-                    </ul>
+            <Row className="akila-footer">
+                <Col span={4} style={{margin:'20px', color:'white'}}>
+                    <Image
+                    width={200}
+                    src="https://sliit-af-images.s3.amazonaws.com/images/IC+F.png"
+                    preview={false}
+                    />
                     
-                </div>  
-                <div className="email">
-                    <p>
-                        Additional Links
-                    </p>
+                </Col>
 
-                    <ul>
-                        <li>
-                            <p>
-                                <a href="mailto:icaf@sliit.lk">icaf@sliit.lk</a>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="mailto:icafinfo@sliit.lk">icafinfo@sliit.lk</a>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
+                <Col span={7}>
+                    <Typography>
+                        <Title style={{color : 'white'}}>About</Title>
+                        <Paragraph style={{color : 'white'}}>
+                        In the process of internal desktop applications development, many different design specs and
+                        implementations would be involved, which might cause designers and developers difficulties and
+                        duplication and reduce the efficiency of development.
+                        </Paragraph>
+
+                        <Title style={{color : 'white'}} level={3}>Connect with us</Title>
+
+                        <Row>
+                            <Col span={2}>
+                                <AiFillFacebook  style={{color : 'white', fontSize:'2rem'}}/>
+                            </Col>
+                            <Col span={2}>
+                                <AiFillTwitterSquare  style={{color : 'white', fontSize:'2rem'}}/>
+                            </Col>
+                            <Col span={2}>
+                                <AiOutlineInstagram  style={{color : 'white', fontSize:'2rem'}}/>
+                            </Col>
+                        </Row>
+                        </Typography>
+                </Col>
+
+                <Col span={5}>
+                <Typography>
+                        <Title style={{color : 'white'}}>Usefull Links</Title>
+                        <Paragraph style={{color : 'white'}}>
+                            <ul style={{lineHeight:'3rem'}}>
+                                <Link to="/Workshops">
+                                    <li>Workshop</li>
+                                </Link>
+                                <Link to="">
+                                    <li>Publications</li>
+                                </Link>
+                                <Link to="">
+                                    <li>Keynote Speakers</li>
+                                </Link>
+                                <Link to="">
+                                    <li>Latest News</li>
+                                </Link>
+                            </ul>
+                        </Paragraph>
+                        </Typography>
+                </Col>
+
+                <Col>
+                <Typography>
+                        <Title style={{color : 'white'}}>Subscribe</Title>
+                        <Paragraph style={{color : 'white'}}>
+                             Don’t forget to subscribe to our news letters, enter your e-mail here. 
+                        </Paragraph>
+                        </Typography>
+                        <input placeholder="Enter your email address" type="text" name="" id="" style={{width:'100%', backgroundColor:'#2e2e2e', border: 'none', borderRadius:'0px', color:'whitesmoke'}}/>
+                </Col>
+
+                
+            </Row>
+
+            
+
             </div>
-            <div>
-            <p className="copy">Copyright© 2021 ICAF-sliit</p>
-            </div>
-            </div>
+
          );
     }
 }
