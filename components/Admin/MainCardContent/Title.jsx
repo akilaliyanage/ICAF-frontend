@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import '../../../assets/css/admin/admin.css'
 import axios from "axios";
+import config from "../../../config.json";
 
 function MainCardTitle(){
 
@@ -10,7 +11,7 @@ function MainCardTitle(){
 
 useEffect(() => {
 
-    const url = "http://localhost:8000/topic/";
+    const url = config.host+"/topic/";
     axios.get(url).then((res) => {
         setTitle(res.data[0].topic);
     }).catch((err) => {

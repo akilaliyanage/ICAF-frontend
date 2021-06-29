@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import '../../../assets/css/admin/admin.css'
 import axios from "axios";
+import config from "../../../config.json";
 
 function Participation(){
 
@@ -8,7 +9,7 @@ function Participation(){
 
     useEffect(() => {
 
-        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/n-user/";
+        const url = config.host+"/n-user/";
         axios.get(url).then((res) => {
 
             setData(res.data);

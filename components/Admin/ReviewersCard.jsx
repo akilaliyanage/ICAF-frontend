@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import '../../assets/css/admin/admin.css'
 import axios from "axios";
 import {Link} from "react-router-dom";
+import config from "../../config.json";
 
 function ReviewersCard(props){
 
@@ -10,7 +11,7 @@ function ReviewersCard(props){
 
 
     useEffect(() => {
-        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/reviewer/";
+        const url = config.host+"/reviewer/";
         axios.get(url).then((res) => {
             setReviewers(res.data);
         }).catch((err) => {

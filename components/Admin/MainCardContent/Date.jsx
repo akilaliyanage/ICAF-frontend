@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../../../assets/css/admin/admin.css'
 import axios from "axios";
+import config from '../../../config.json'
 
 function MainCardDate(){
 
@@ -9,7 +10,7 @@ function MainCardDate(){
 
     useEffect(() => {
 
-        const url = "http://localhost:8000/event-date/";
+        const url = config.host+"/event-date/";
         axios.get(url).then((res) => {
             setDate(res.data.date);
         }).catch((err) => {

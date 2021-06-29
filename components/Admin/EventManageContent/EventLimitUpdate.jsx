@@ -14,7 +14,7 @@ function EventLimitUpdate(){
 
     useEffect(() => {
 
-        const url = "http://localhost:8000/event-update";
+        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/event-update";
         axios.get(url).then((res) => {
 
             setWorkshopLimit(res.data[0].WorkshopLimit);
@@ -36,7 +36,7 @@ function EventLimitUpdate(){
         }
         console.log(update);
 
-        const url = "http://localhost:8000/event-update";
+        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/admin/event-update";
 
     axios.post(url,update).then((res) => {
         if(res.data.status === 200){

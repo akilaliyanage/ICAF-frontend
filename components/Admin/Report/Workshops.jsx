@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import '../../../assets/css/admin/admin.css'
 import axios from "axios";
+import config from "../../../config.json";
 
 function Workshops(){
 
@@ -8,7 +9,7 @@ function Workshops(){
 
     useEffect(() => {
 
-        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/wShop/";
+        const url = config.host+"/wShop/";
         axios.get(url).then((res) => {
 
             setData(res.data);

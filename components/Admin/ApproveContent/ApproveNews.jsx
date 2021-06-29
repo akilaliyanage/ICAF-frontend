@@ -4,10 +4,12 @@ import axios from "axios";
 import config from '../../../config.json'
 
 
-function ApproveSpeecher(){
+function ApproveNews(){
 
     const [name,setName] = useState();
-    const [profileImage,setImage] = useState();
+    const [image,setImage] = useState();
+    const [edate,setEdate] = useState();
+    const [newsUrl,setUrl] = useState();
     const [description,setDescription] = useState();
     const [editID,setEditID] = useState();
     const [visible,setVisible] = useState("");
@@ -17,14 +19,17 @@ function ApproveSpeecher(){
         const url = config.host+"/edi-noti";
         axios.get(url).then((res) => {
             const result = res.data.filter(function(item){
-                return item.cacheName === "Keynote";
+                return item.cacheName === "eventNews";
             });
+            console.log(result);
             if(result.length === 0){
                 setVisible("none");
             }
             setName(result[0].data.name);
             setImage(result[0].data.image);
             setDescription(result[0].data.des);
+            setEdate(result[0].data.edate);
+            setUrl(result[0].data.url);
             setEditID(result[0]._id);
 
         }).catch((err) => {
@@ -35,17 +40,18 @@ function ApproveSpeecher(){
 
     const ApproveAbout = () => {
 
-        const Speecher = {
+        const news = {
             name,
-            profileImage,
+            image,
+            edate,
+            newsUrl,
             editID,
             description
         }
 
-        console.log(Speecher);
-        const url = config.host+"/admin/approve/keynote";
+        const url = config.host+"/admin/approve/news";
 
-        axios.post(url,Speecher).then((res) => {
+        axios.post(url,news).then((res) => {
 
             if(res.data.status === 200){
                 alert("Approved");
@@ -87,9 +93,9 @@ function ApproveSpeecher(){
 
 
             <div className="card w-50" >
-                <div className="card-header">Speecher</div>
+                <div className="card-header">News</div>
                 <div className="card-body text-primary">
-                    <img src={profileImage} width="70" height="70" style={{"border-radius": "50%"}} />
+                    <img src={image} width="70" height="70" style={{"border-radius": "50%"}} />
                     <br/>
                     <h5 className="card-title">{name}</h5>
                     <br/>
@@ -110,4 +116,4 @@ function ApproveSpeecher(){
     )
 }
 
-export default ApproveSpeecher;
+export default ApproveNews;
