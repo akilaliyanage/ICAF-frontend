@@ -3,6 +3,7 @@ import '../../assets/css/admin/admin.css'
 import axios from "axios";
 import AdminNavbar from "./AdminNavBar";
 import {useHistory} from "react-router-dom";
+import config from "../../config.json";
 
 function UpdateReviewer(props){
 
@@ -23,7 +24,7 @@ function UpdateReviewer(props){
     useEffect(()=> {
         document.body.style.backgroundColor = "#282c34"
 
-        const url = "http://localhost:8000/reviewer/"+ rid;
+        const url = config.host+"/reviewer/"+ rid;
         axios.get(url).then((res) => {
 
             setReviewer(res.data);

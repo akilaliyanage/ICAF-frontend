@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from "react";
 import '../../../assets/css/admin/admin.css'
 import axios from "axios";
+import config from "../../../config.json";
 
 function ApproveTitle(){
 
@@ -17,7 +18,7 @@ function ApproveTitle(){
 
     useEffect( () => {
 
-        const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/edi-noti";
+        const url = config.host+"/edi-noti";
         axios.get(url).then((res) => {
             const result = res.data.filter(function(item){
                 return item.cacheName === "eventTopic";
@@ -48,12 +49,29 @@ function ApproveTitle(){
         }
 
         console.log(newTitle);
-        const url = "http://localhost:8000/approve/topic";
+        const url = config.host+"/admin/approve/topic";
 
         axios.post(url,newTitle).then((res) => {
 
             if(res.data.status === 200){
                 alert("Approved");
+            }
+            else {
+                alert("Failed")
+            }
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
+    const decline = () => {
+
+        const url = config.host+"/admin/delete/"+editID;
+        axios.delete(url).then((res) => {
+
+            if(res.data.status === 200){
+                alert("Declined");
+                setVisible("none");
             }
             else {
                 alert("Failed")
@@ -78,7 +96,7 @@ function ApproveTitle(){
 
                     <a href="#" onClick={ApproveTitle} className="btn btn-primary">Approve</a>
                     &nbsp;
-                    <a href="#" className="btn btn-danger">Decline</a>
+                    <a href="#" onClick={decline} className="btn btn-danger">Decline</a>
                 </div>
             </div>
 

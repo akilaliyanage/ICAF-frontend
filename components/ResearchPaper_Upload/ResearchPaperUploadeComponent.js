@@ -14,7 +14,11 @@ class ResearchPaperUploadeComponant extends Component {
         super(props);
         this.state = {
             nav_Items : [],
+            currentSteperStep: 0
         }
+
+        this.stepperUp = this.stepperUp.bind(this);
+        this.stepperDown = this.stepperDown.bind(this);
     }
     componentDidMount(){
             fetch(config.host + "nav-items")
@@ -27,6 +31,18 @@ class ResearchPaperUploadeComponant extends Component {
             })
         }
 
+    stepperUp(){
+        if(this.state.currentSteperStep < 2)
+            this.setState({currentSteperStep : this.state.currentSteperStep + 1});
+        console.log(this.state.currentSteperStep);
+    };
+
+    stepperDown(){
+        if(this.state.currentSteperStep != 0)
+            this.setState({currentSteperStep : this.state.currentSteperStep - 1})
+
+        console.log(this.state.currentSteperStep);
+    };
     
 
     render(){
@@ -46,13 +62,13 @@ class ResearchPaperUploadeComponant extends Component {
                                             <div className='topic-Seperator'></div>
                                         </div>
                                     </div>
-                                    <StepperSection/>
+                                    <StepperSection currentSteperStep={this.state.currentSteperStep}/>
                                 </Paper>
                             </Box>
                             
                         </Grid>
                         <Grid item xs={10} sm={10}>
-                            <FormContainer/>
+                            <FormContainer stepperUp={this.stepperUp} stepperDown={this.stepperDown}/>
                         </Grid>
                     </Grid>
                 </div>

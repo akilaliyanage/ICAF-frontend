@@ -11,8 +11,8 @@ function WorkshopCountCard(){
             <div className="uditha-small-card workshopcard-align">
 
                 <div className="smallcard-text-align">
-                    <h3>Workshops</h3>
-                    <h2>08</h2>
+                    <h3 style={{color:"white"}}>Workshops</h3>
+                    <h2 style={{color:"white"}}>08</h2>
                 </div>
             </div>
 

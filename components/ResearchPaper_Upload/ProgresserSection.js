@@ -18,9 +18,12 @@ class ProgresserSection extends Component {
             <React.Fragment>
                 <div className="row d-flex justify-content-end">
                     <div className="col-4 d-flex justify-content-between">
-                        <Button variant="contained" color="default" startIcon={<ArrowBackIcon/>}>Back</Button>
-                    <Button variant="contained" color="default" endIcon={<ArrowForwardIcon/>}>Next</Button>
-                    <Button variant="contained" style={{backgroundColor:"green" , color:"white"}} startIcon={<DescriptionIcon/>}>Submit</Button>
+                        <Button variant="contained" color="default" startIcon={<ArrowBackIcon/>} onClick={this.props.stepDown}>Back</Button>
+                        <Button variant="contained" color="default" endIcon={<ArrowForwardIcon/>} onClick={this.props.stepUp}>Next</Button>
+                        {this.props.showSubmit ?
+                            <Button variant="contained" style={{backgroundColor:"green" , color:"white"}} startIcon={<DescriptionIcon/>}>Submit</Button> : null
+                        }
+                        
                     </div>
                 </div>
             </React.Fragment>

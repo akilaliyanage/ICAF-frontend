@@ -7,18 +7,45 @@ function EventStatus(){
 
     const [workshopLimit,setWorkshopLimit] = useState();
     const [researchLimit,setResearchLimit] = useState();
+    const [participateLimit,setParticipateLimit] = useState();
+    const [workshopStatus,setWorkshopStatus] = useState('Open');
+    const [researchStatus,setResearchStatus] = useState('Open');
+    const [participateStatus,setParticipateStatus] = useState('Open');
+
+    const[workshopStatusColor,setWorkshopStatusColor] = useState('btn btn-success');
+    const[researchStatusColor,setResearchStatusColor] = useState('btn btn-success');
+    const[participateStatusColor,setParticipateColor] = useState('btn btn-success')
 
     useEffect(() => {
 
         const url = "http://localhost:8000/event-update";
         axios.get(url).then((res) => {
 
-            setWorkshopLimit(res.data[0].ResearchLimit);
-            setResearchLimit(res.data[0].WorkshopLimit);
+            setWorkshopLimit(res.data[0].WorkshopLimit);
+            setResearchLimit(res.data[0].ResearchLimit);
+            setParticipateLimit(res.data[0].ParticipateLimit);
 
+        }).then(() => {
+            const url = "http://test-1313167560.us-east-1.elb.amazonaws.com:8000/wShop/";
+            axios.get(url).then((res) => {
+
+                if(20 >= workshopLimit){
+                    setWorkshopStatus('Closed');
+                    setWorkshopStatusColor('btn btn-danger')
+                }
+                if (10 >= researchLimit){
+                    setResearchStatus('Closed');
+                    setResearchStatusColor('btn btn-danger')
+                }
+                if (150 >= participateLimit){
+                    setParticipateStatus('Closed');
+                    setParticipateColor('btn btn-danger')
+                }
+
+            })
         })
 
-    })
+    });
 
 
     return(
@@ -29,12 +56,16 @@ function EventStatus(){
                     <div className="card-body">
 
 
-                            <p>Workshops<span className="pull-right">
-                        <button type="button" style={{marginLeft:"10%",width:"40%"}} className="btn btn-primary">{workshopLimit}</button></span></p>
+                        <h5>Workshops<span className="pull-right">
+                        <button type="button" style={{marginLeft:"20%",width:"40%"}} className={workshopStatusColor}>{workshopStatus}</button></span></h5>
+
+                        <h5>Researches<span className="pull-right">
+                        <button type="button" style={{marginLeft:"21%", width:"40%"}} className={researchStatusColor}>{researchStatus}</button></span></h5>
+
+                        <h5>Participation<span className="pull-right">
+                        <button type="button" style={{marginLeft:"16%", width:"40%"}} className={participateStatusColor}>{participateStatus}</button></span></h5>
 
 
-                        <p>Research<span className="pull-right">
-                        <button type="button" style={{marginLeft:"16%", width:"40%"}} className="btn btn-primary">{researchLimit}</button></span></p>
                     </div>
             </div>
         </div>

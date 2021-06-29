@@ -17,7 +17,7 @@ function ConfDetails(){
 
         <div className="uditha-card uditha-conf-detail-card-align">
             <div className="event-edit-button">
-                <img style={{marginTop:"5px"}} onClick={makeVisible}
+                <img onClick={makeVisible}
                      src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699302-icon-32-clipboard-edit-512.png" width="25" height="25"/>
             </div>
             <div style={{display:visible}}>
