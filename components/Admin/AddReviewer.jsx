@@ -3,6 +3,7 @@ import '../../assets/css/admin/admin.css'
 import AdminNavbar from "./AdminNavBar";
 import axios from "axios";
 import {useHistory} from "react-router-dom";
+import config from "../../config.json";
 
 function AddReviewer(){
 
@@ -58,7 +59,7 @@ function AddReviewer(){
         formData.append("password",password);
         formData.append("picture",picture);
 
-        const url = "http://localhost:8000/reviewer/add";
+        const url = config.host+"/reviewer/add";
         axios.post(url,formData).then((res) => {
             if(res.data.status === 200){
                 history.push("/admin");

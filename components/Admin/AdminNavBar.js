@@ -1,8 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import '../../assets/css/admin/admin.css'
+import {useHistory} from "react-router-dom";
 
 function AdminNavbar(){
 
+    const  history = useHistory();
+
+    const [admin,setAdmin] = useState();
+    const [visible,setVisible] = useState('none')
+
+
+    useEffect(() => {
+        const admin = localStorage.getItem('user_name');
+        if(admin !== null){
+            setAdmin(admin);
+            setVisible('')
+        }
+    });
+
+    const logout = () => {
+        localStorage.clear();
+        history.push("/admin/login");
+    }
 
 
     return(
@@ -19,7 +38,10 @@ function AdminNavbar(){
                             <a className="nav-link" href="#">Home </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Logout</a>
+                            <a style={{display:visible }} onClick={logout} className="nav-link" href="#">Logout</a>
+                        </li>
+                        <li className="nav-item">
+                            <a style={{display:visible }} className="nav-link" href="#">Logged in as {admin}</a>
                         </li>
 
 
