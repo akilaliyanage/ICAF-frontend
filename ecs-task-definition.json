@@ -21,6 +21,6 @@
     "requiresCompatibilities": [
         "EC2"
     ],
-    "cpu": "256",
+    "cpu": "512",
     "memory": "256"
 }

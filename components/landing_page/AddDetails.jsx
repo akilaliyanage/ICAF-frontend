@@ -38,7 +38,7 @@ class AddDetails extends Component {
                     </Col>
 
                     <Col span={8}>
-                    <Link to="/" style={{cursor:'grabbing', textDecoration:'none'}}>
+                    <Link to="/payment" style={{cursor:'grabbing', textDecoration:'none'}}>
                     <Alert
                         message="Payment Portal"
                         description="Inbuild payment portal for all your payment needs "

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Input } from 'antd';
 import config from '../../config.json'
 class PaymentForm extends Component {
     constructor(props) {
@@ -9,6 +10,13 @@ class PaymentForm extends Component {
             navbar_items : [],
             role: 'attendee',
             Cnum : '',
+            price : 0,
+            cardName : '',
+            cardNo : '',
+            month : '',
+            year : '',
+            cvv : '',
+            zip : ''
          }
     }
 
@@ -24,8 +32,14 @@ class PaymentForm extends Component {
     role(val){
         if(val == 'attendee'){
             this.setState({role : 'attendee'})
+            fetch(config.local + "/price/atendee").then(res => res.json()).then(data =>{
+                this.setState({price : data.price})
+            })
         }else if(val == 'reser'){
             this.setState({role : 'reser'})
+            fetch(config.local + "/price/re-paper presenter").then(res => res.json()).then(data =>{
+                this.setState({price : data.price})
+            })
         }
     }
 
@@ -37,6 +51,37 @@ class PaymentForm extends Component {
         console.log(finalVal)
         this.setState({Cnum : finalVal})
         //document.getElementById(element.id).value = finalVal;
+    }
+
+    handleChange = (e) =>{
+        this.setState({[e.target.name] : e.target.value})
+        console.log([e.target.name] , e.target.value);
+    }
+
+    handleSubmit = () =>{
+        const data = {
+            cardName : this.state.cardName,
+            cardNo : this.state.cardNo,
+            month : this.state.month,
+            year : this.state.year,
+            cvv : this.state.cvv,
+            zip : this.state.zip,
+            userid : window.localStorage.getItem('id'),
+            amount : this.state.price,
+            role : window.localStorage.getItem('role')
+        }
+
+        console.log(data);
+
+        fetch(config.local + "/payment",{
+            method : 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+              },
+            body : JSON.stringify(data)
+        }).then(res => res.json()).then(data =>{
+            console.log(data);
+        })
     }
     render() { 
         const back = {
@@ -54,7 +99,6 @@ class PaymentForm extends Component {
             <div style={{width:'600px',margin:'0 auto'}}>
             <h1>Lets finish setting you up..</h1>
             <div className="center">
-                <p>Please select your user role before proceeding to the payment</p>
                 <br />
                 <div className="row">
                     <div className="col p-3" onClick = {() => this.role('attendee')} style={this.state.role == 'attendee' ? back : back2}> <b>Attendee</b> </div>
@@ -66,37 +110,37 @@ class PaymentForm extends Component {
 
                 <div className="akila-container">
                     <div>Your bill value is</div>
-                    <div>Rs 1000.00</div>
+                    <div>Rs {this.state.price}</div>
                 </div>
                 <hr />
 
-                <input type="text" name="cardName" id="" />
+                <input type="text" name="cardName" id="" onChange={this.handleChange}/>
                 <label htmlFor="CardName">Name on the card</label>
 
-                <input type="text" value={this.state.Cnum} name="cardName" id="" onChange={this.addHyphen}/>
+                <input type="number" maxLength={12} onChange={this.handleChange} name="cardNo" id="" />
                 <label htmlFor="CardName">Card number</label>
 
                <div className="dates" style={{width: '100%'}}>
                <div className="akila-container">
                     <div>
                         <div className="akila-container" >
-                        <input type="text" name="cardName" id="" placeholder="MM"/>
-                        <input type="text" name="cardName" id="" placeholder="YY"/>
+                        <input type="text" onChange={this.handleChange} name="month" id="" placeholder="MM"/>
+                        <input type="text" onChange={this.handleChange} name="year" id="" placeholder="YY"/>
                             
                         </div>
 
                     </div>
                     <div>
-                        <input type="text" name="cardName" id="" />
+                        <input type="text" onChange={this.handleChange} name="cvv" id="" />
                         <label htmlFor="CardName">CVV</label>
                     </div>
                 </div>
                </div>
 
-               <input type="text" value={this.state.Cnum} name="country" id="" placeholder="EX: LK/70100" onChange={this.addHyphen}/>
+               <input onChange={this.handleChange} type="text" name="zip" id="" placeholder="EX: LK/70100"/>
                 <label htmlFor="CardName">Country/ZIP code</label>
 
-                <button><b>PAY</b></button>
+                <button onClick={this.handleSubmit}><b>PAY</b></button>
 
 
 
