@@ -23,7 +23,7 @@ export default class LoginForm extends Component {
         }
         console.log(data);
 
-        fetch(config.local + '/researcher/login',{
+        fetch(config.host + '/researcher/login',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'

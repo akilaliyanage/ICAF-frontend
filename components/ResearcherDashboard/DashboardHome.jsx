@@ -7,6 +7,7 @@ import config from '../../config.json'
 import Paper from '@material-ui/core/Paper'
 import TextField from '@material-ui/core/TextField'
 import ResearchCard from './ResearchCard'
+import PresentationAddModel from './PresentationAddModel'
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -16,8 +17,13 @@ export default class DashboardHome extends Component {
     constructor(props){
         super(props)
         this.state = {
-            
+            presentationmodelOpen : false,
         }
+        this.toggleModel = this.toggleModel.bind(this)
+    }
+
+    toggleModel(){
+        this.setState({presentationmodelOpen : !presentationmodelOpen})
     }
 
     render() {
@@ -47,16 +53,15 @@ export default class DashboardHome extends Component {
                             <div className='row text-center'>
                                 <h1>My Research Papers</h1>
                             </div>
-                            
                         </Paper>
-
                         <Paper className="paper-bounderies mt-3 p-4">
                             <div className='row text-center'>
                                 <ResearchCard/>
                             </div>
-                            
                         </Paper>
                     </Content>
+                    
+                    <PresentationAddModel opened={this.state.presentationmodelOpen} toggleModel={this.toggleModel}/>
                 </Layout>    
             </Layout>
         )
