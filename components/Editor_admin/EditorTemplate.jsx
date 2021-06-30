@@ -67,7 +67,7 @@ class EditorTemplate extends Component {
 
         console.log(data)
 
-        fetch(config.local + '/topic/sendToAdmin',{
+        fetch(config.host + '/topic/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'

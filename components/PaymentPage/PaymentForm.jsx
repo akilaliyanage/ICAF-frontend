@@ -32,12 +32,12 @@ class PaymentForm extends Component {
     role(val){
         if(val == 'attendee'){
             this.setState({role : 'attendee'})
-            fetch(config.local + "/price/atendee").then(res => res.json()).then(data =>{
+            fetch(config.host + "/price/atendee").then(res => res.json()).then(data =>{
                 this.setState({price : data.price})
             })
         }else if(val == 'reser'){
             this.setState({role : 'reser'})
-            fetch(config.local + "/price/re-paper presenter").then(res => res.json()).then(data =>{
+            fetch(config.host + "/price/re-paper presenter").then(res => res.json()).then(data =>{
                 this.setState({price : data.price})
             })
         }
@@ -73,7 +73,7 @@ class PaymentForm extends Component {
 
         console.log(data);
 
-        fetch(config.local + "/payment",{
+        fetch(config.host + "/payment",{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'

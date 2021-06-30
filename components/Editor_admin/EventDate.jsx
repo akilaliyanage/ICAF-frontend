@@ -67,7 +67,7 @@ class EventDate extends Component {
 
         console.log(data)
 
-        fetch(config.local + '/event-date/sendToAdmin',{
+        fetch(config.host + '/event-date/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'

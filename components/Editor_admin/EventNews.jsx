@@ -54,7 +54,7 @@ const columns = [
       <Space size="middle">
         <Button onClick={ () => {
           console.log(record._id);
-          fetch(config.local+ "/news/delete/" + record._id,{
+          fetch(config.host+ "/news/delete/" + record._id,{
             method : 'DELETE',
           }).then(res => res.json()).then(data =>{
             console.log(data);
@@ -130,7 +130,7 @@ class EventNews extends Component {
 
         console.log(data)
 
-        fetch(config.local + '/news/sendToAdmin',{
+        fetch(config.host + '/news/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'

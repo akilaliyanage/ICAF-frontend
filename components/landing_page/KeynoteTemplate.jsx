@@ -13,7 +13,7 @@ class KeynoteTemplate extends Component {
 
     componentDidMount(){
         //fetch key note
-        fetch(config.local + "/keynote").then(res => res.json()).then(data => {
+        fetch(config.host + "/keynote").then(res => res.json()).then(data => {
             this.setState({list : data})
             //console.log(this.state.list[0].image);
         })

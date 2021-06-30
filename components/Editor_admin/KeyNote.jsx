@@ -49,7 +49,7 @@ const columns = [
       <Space size="middle">
         <Button onClick={ () => {
           console.log(record._id);
-          fetch(config.local+ "/keynote/delete/" + record._id,{
+          fetch(config.host+ "/keynote/delete/" + record._id,{
             method : 'DELETE',
           }).then(res => res.json()).then(data =>{
             console.log(data);
@@ -88,7 +88,7 @@ class KeyNote extends Component {
     componentDidMount(){
 
 
-        fetch(config.local + "/keynote").then(res => res.json()).then(data => {
+        fetch(config.host + "/keynote").then(res => res.json()).then(data => {
           this.setState({keynote : data})
           console.log(data);
           //console.log(data.len)
@@ -118,7 +118,7 @@ class KeyNote extends Component {
 
         console.log(data)
 
-        fetch(config.local + '/keynote/sendToAdmin',{
+        fetch(config.host + '/keynote/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'

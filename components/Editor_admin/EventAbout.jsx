@@ -67,7 +67,7 @@ class EventAbout extends Component {
 
         console.log(data)
 
-        fetch(config.local + '/about/sendToAdmin',{
+        fetch(config.host + '/about/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
