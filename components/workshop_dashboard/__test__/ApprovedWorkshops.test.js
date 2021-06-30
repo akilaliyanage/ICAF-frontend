@@ -11,7 +11,6 @@ import ApprovedWorkshops from '../ApprovedWorkshops'
 
 //clean up
 afterEach(()=>cleanup())
-
 //_test_ testcase
 it('fake _test_',() =>{
     expect(true).toBeTruthy()
@@ -25,9 +24,7 @@ it('renders without crashing',() =>{
                 <ApprovedWorkshops/>
            </BrowserRouter>
     ,div)
-
 })
-
 
 it('matches snapshot', () =>{
     const tree = renderer.create(
@@ -35,7 +32,5 @@ it('matches snapshot', () =>{
             <ApprovedWorkshops/>
         </BrowserRouter>
     ).toJSON();
-
     expect(tree).toMatchSnapshot();
-    
 })

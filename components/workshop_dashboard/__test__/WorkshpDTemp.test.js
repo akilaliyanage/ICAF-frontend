@@ -25,9 +25,7 @@ it('renders without crashing',() =>{
                 <WorkshopDTemplate/>
            </BrowserRouter>
     ,div)
-
 })
-
 
 it('matches snapshot', () =>{
     const tree = renderer.create(
@@ -35,7 +33,5 @@ it('matches snapshot', () =>{
             <WorkshopDTemplate/>
         </BrowserRouter>
     ).toJSON();
-
     expect(tree).toMatchSnapshot();
-    
 })
