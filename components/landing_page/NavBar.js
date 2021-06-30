@@ -57,10 +57,11 @@ class NavBar extends Component {
             <div className="dropdown-content">
                 <br />
                 <Link to="/login"><p>Attendee Login</p></Link>
-                <Link to=""><p>researcher Login</p></Link>
+                <Link to="/researcher-login"><p>researcher Login</p></Link>
                 <Link to=""><p>workshop Login</p></Link>
-                <Link to=""><p>Admin Login</p></Link>
-                <Link to=""><p>Editor Login</p></Link>
+                <Link to="/admin/login"><p>Admin Login</p></Link>
+                <Link to="/edi-login"><p>Editor Login</p></Link>
+                <Link to="/reviewLogin"><p>Reviewer Login</p></Link>
             </div>
         </div>
 

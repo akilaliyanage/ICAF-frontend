@@ -310,6 +310,12 @@
     left: 10%;
 }
 
+.uditha-login-cover{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
 
 .blink {
 
@@ -328,4 +334,10 @@
 .uditha-icon{
     margin-left: 80px;
     margin-top: -40px;
+}
+
+.uditha-report-button{
+    position: relative;
+    top: 15%;
+    left: 90%;
 }

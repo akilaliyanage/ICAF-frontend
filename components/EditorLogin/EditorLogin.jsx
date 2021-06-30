@@ -11,7 +11,7 @@ import Footer from '../landing_page/Footer'
 
 const { Header, Content } = Layout;
 
-class UserKeliton extends Component {
+class EditorLogin extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -27,7 +27,7 @@ class UserKeliton extends Component {
         }
         console.log(data);
 
-        fetch(config.host + '/n-user/login',{
+        fetch(config.host + '/editor/login',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ class UserKeliton extends Component {
                       'You have sucessfully logged into the syste, you will redirect to the homepage shortly',
                   });
                   
-                window.location.replace("/home")
+                window.location.replace("/edi-admin")
             }
             
         }).catch(err =>{
@@ -107,4 +107,4 @@ class UserKeliton extends Component {
     }
 }
  
-export default UserKeliton;
+export default EditorLogin;

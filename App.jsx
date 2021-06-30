@@ -29,7 +29,13 @@ import LoginComponant from './components/ResearcherLogin/LoginComponant';
 import DashboardHome from './components/ResearcherDashboard/DashboardHome';
 import Report from "./components/Admin/Report/Report";
 import AdminLogin from "./components/Admin/AdminLogin";
+
 import DownloadsComponent from "./components/DownloadPage/DownloadsComponent";
+
+import EditorLogin from "./components/EditorLogin/EditorLogin";
+import ViewResearcPapers from "./components/Admin/ViewResearchPapers";
+import ViewParticipation from "./components/Admin/ViewParticipation";
+
 
 
 export default class App extends React.Component {
@@ -120,10 +126,15 @@ export default class App extends React.Component {
                         <Report/>
                     </Route>
 
+                    <Route exact path="/edi-login">
+                        <EditorLogin/>
+                    </Route>
+
                     <Route exact path="/admin/login">
                         <AdminLogin/>
 
                     </Route>
+
 
                     <Route exact path="/researcher-dashboard">
                         <DashboardHome/>
@@ -131,6 +142,14 @@ export default class App extends React.Component {
 
                     <Route exact path="/common-downloads">
                         <DownloadsComponent/>
+
+                    <Route exact path="/admin/view-research-papers">
+                        <ViewResearcPapers/>
+                    </Route>
+
+                    <Route exact path="/admin/view-participation">
+                        <ViewParticipation/>
+
                     </Route>
 
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>

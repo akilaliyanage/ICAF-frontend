@@ -8,34 +8,34 @@ class WorkDashHome extends Component {
                 <div className="nt-dcard-cont">
                     <div className="nt-dash-card">
                         <h4 className="nt-dcard-head">
-                            Workshop Coordinators
+                            Work. Conductors
                         </h4>
                         <h1 className="nt-dcard-qunt">
-                            50
+                            04
                         </h1>
                     </div>
                     <div className="nt-dash-card">
                         <h4 className="nt-dcard-head">
-                            Workshop Coordinators
+                            Researchers
                         </h4>
                         <h1 className="nt-dcard-qunt">
-                            50
+                            08
                         </h1>
                     </div>
                     <div className="nt-dash-card">
                         <h4 className="nt-dcard-head">
-                            Workshop Coordinators
+                            All Workshops
                         </h4>
                         <h1 className="nt-dcard-qunt">
-                            50
+                            04
                         </h1>
                     </div>
                     <div className="nt-dash-card">
                         <h4 className="nt-dcard-head">
-                            Workshop Coordinators
+                            All Researches
                         </h4>
                         <h1 className="nt-dcard-qunt">
-                            50
+                            12
                         </h1>
                     </div>
                 </div>

@@ -26,8 +26,10 @@ class PreviewModal extends Component {
         return (
             <div>
                 <Modal title="Basic Modal" visible={this.state.visible} onOk={handleOk} onCancel={handleCancel}>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                    
+                    <h3>Workshop Title</h3>
+                    <h6>date</h6>
+                    <p>decsription</p>
                     <p>Some contents...</p>
                 </Modal>
             </div>

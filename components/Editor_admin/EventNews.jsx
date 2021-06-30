@@ -6,10 +6,11 @@ import {Link} from 'react-router-dom'
 import config from '../../config.json'
 import { Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
+import Footer from '../landing_page/Footer'
 
 const { SubMenu } = Menu;
 const { RangePicker } = DatePicker;
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 
 const props = {
   name: 'image',
@@ -54,7 +55,7 @@ const columns = [
       <Space size="middle">
         <Button onClick={ () => {
           console.log(record._id);
-          fetch(config.local+ "/news/delete/" + record._id,{
+          fetch(config.host+ "/news/delete/" + record._id,{
             method : 'DELETE',
           }).then(res => res.json()).then(data =>{
             console.log(data);
@@ -130,7 +131,7 @@ class EventNews extends Component {
 
         console.log(data)
 
-        fetch(config.local + '/news/sendToAdmin',{
+        fetch(config.host + '/news/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -249,7 +250,7 @@ class EventNews extends Component {
                 </Content>
               </Layout>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footer/>
           </Layout>
           );
     }

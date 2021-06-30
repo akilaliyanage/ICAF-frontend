@@ -4,11 +4,12 @@ import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/
 import { Descriptions, Badge } from 'antd';
 import {Link} from 'react-router-dom'
 import config from '../../config.json'
+import Footer from '../landing_page/Footer'
 
 const { SubMenu } = Menu;
 const { TextArea } = Input;
 const { RangePicker } = DatePicker;
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 
 
 class EventAbout extends Component {
@@ -67,7 +68,7 @@ class EventAbout extends Component {
 
         console.log(data)
 
-        fetch(config.local + '/about/sendToAdmin',{
+        fetch(config.host + '/about/sendToAdmin',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -157,7 +158,7 @@ class EventAbout extends Component {
                 </Content>
               </Layout>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footer/>
           </Layout>
           );
     }

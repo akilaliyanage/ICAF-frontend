@@ -3,6 +3,7 @@ import NavBar from '../landing_page/NavBar';
 import config from '../../config.json'
 import KPanal from './KPanal';
 import PaymentForm from './PaymentForm';
+import Footer from '../landing_page/Footer';
 
 class PayTemplate extends Component {
     constructor(props) {
@@ -50,6 +51,8 @@ class PayTemplate extends Component {
                        <PaymentForm/>
                        </div>
                     </div>
+
+                    <Footer/>
             </div>
          );
     }
