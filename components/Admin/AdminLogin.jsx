@@ -15,6 +15,10 @@ function AdminLogin(){
 
     const [passwordToggle, setToggle] = useState("password");
 
+    useEffect(()=> {
+        document.body.style.backgroundColor = "#282c34"
+        });
+
 
     const toggleVisible = e => {
         if(passwordToggle === "password") {
@@ -60,20 +64,23 @@ function AdminLogin(){
             <div className="uditha-add-reviewer-form">
 
 
-                <h2>Login</h2>
+                <div className="uditha-login-cover">
+                    <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" width="370" height="450"/>
+                </div>
+
                 <form className="uditha-form-control" onSubmit={Login}>
 
-
-
+                    <h2 style={{color:"white"}}>Admin Login</h2>
+                    <br/>
                     <label className="description" htmlFor="element_2">Username </label>
                     <div>
-                        <input style={{color:"black"}} type="text" onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
+                        <input required={true} style={{color:"black"}} type="text" onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
                     </div>
 
 
                     <label className="description" htmlFor="element_3">Access Key </label>
                     <div>
-                        <input style={{color:"black"}} type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
+                        <input required={true} style={{color:"black"}} type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
                     </div>
 
                     <input type="checkBox" onClick={toggleVisible}/>
