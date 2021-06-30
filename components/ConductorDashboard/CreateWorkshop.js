@@ -11,7 +11,7 @@ const { Dragger } = Upload;
 const props = {
     name: 'image',
     multiple: false,
-    action: config.local + '/image',
+    action: config.host + '/image',
     onChange(info) {
         if (info.file.status !== 'uploading') {
           console.log(info.file, info.fileList);
@@ -75,7 +75,7 @@ class CreateWorkshop extends Component {
         }
         console.log(data)
 
-        fetch(config.local + '/wShop/create',{
+        fetch(config.host + '/wShop/create',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -166,7 +166,7 @@ class CreateWorkshop extends Component {
                                                 </p>
                                                 <p className="ant-upload-text">Click or drag file to this area to upload</p>
                                                 <p className="ant-upload-hint">
-                                                You are only allowed upload a single file. If you have multiple documents, Please Zip them in to a single file and upload.
+                                                    You are only allowed to upload a single PDF.
                                                 </p>
                                             </Dragger>
                                         </td>

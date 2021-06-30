@@ -15,7 +15,7 @@ export class ApprovedResearches extends Component {
     }
 
     fetchItems(){
-        fetch(config.local + '/resrch/approved').then(res => res.json()).then(data => this.setState({researchs:data})).catch(err => console.log(err))
+        fetch(config.host + '/resrch/approved').then(res => res.json()).then(data => this.setState({researchs:data})).catch(err => console.log(err))
     }
 
 
@@ -50,7 +50,7 @@ export class ApprovedResearches extends Component {
                                                 <td className="nt-td">{research.paperName}</td>
                                                 <td className="nt-td">{research.researcherName}</td>
                                                 <td className="nt-td">{research.description}</td>
-                                                <td className="nt-td"><a href={research.researchPaper}>Preview Paper</a></td>
+                                                <td className="nt-td"><a href={research.researchPaper} target="_blank">Preview Paper</a></td>
                                             </tr>
                                     );
                                 })}

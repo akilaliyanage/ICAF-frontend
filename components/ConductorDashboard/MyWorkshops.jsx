@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import './../../assets/css/WorkshopDetails/WorkDashHome.css'
 
 import config from '../../config.json'
 
-class AllCoordiantors extends Component {
+class MyWorkshops extends Component {
 
     constructor(props){
         super(props)
         this.state={
-            allCoords:[]
+            myWorkshops:[],
+            loginID:localStorage.getItem('wc-id')
         }
     }
 
@@ -17,9 +17,8 @@ class AllCoordiantors extends Component {
     }
 
     fetchItems(){
-        fetch(config.host + '/n-wc/all').then(res => res.json()).then(data => this.setState({allCoords:data})).catch(err => console.log(err))
+        fetch(config.host + '/wShop/myWorkshops/'+this.state.loginID).then(res => res.json()).then(data => this.setState({myWorkshops:data})).catch(err => console.log(err))
     }
-    
 
     render() {
         return (
@@ -29,28 +28,28 @@ class AllCoordiantors extends Component {
 
                         <div className="nt-div-head">
                             <h3 className="nt-div-head-text">
-                                All Coordinators
+                                My Workshops
                             </h3>
                         </div>
-
+                        
                         <table className="nt-table">
                             <thead>
                                 <tr>
-                                    <th className="nt-td">Coordinator Id</th>
-                                    <th className="nt-td">Coordinator Name</th>
-                                    <th className="nt-td">Email</th>
-                                    <th className="nt-td">Study Feild</th>
+                                    <th className="nt-td">Workshop Id</th>
+                                    <th className="nt-td">Workshop Title</th>
+                                    <th className="nt-td">Workshop Date</th>
+                                    <th className="nt-td">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                            {this.state.allCoords.map((coord) => {
+                            {this.state.myWorkshops.map((workshop) => {
                                 return(
                                         <tr>
-                                            <td className="nt-td">{coord._id}</td>
-                                            <td className="nt-td">{coord.name}</td>
-                                            <td className="nt-td">{coord.email}</td>
-                                            <td className="nt-td">{coord.studyField}</td>
+                                            <td className="nt-td">{workshop._id}</td>
+                                            <td className="nt-td">{workshop.title}</td>
+                                            <td className="nt-td">{workshop.eventDate}</td>
+                                            <td className="nt-td">{workshop.aproveStatus}</td>
                                         </tr>
                                 );
                             })}
@@ -66,4 +65,4 @@ class AllCoordiantors extends Component {
     }
 }
 
-export default AllCoordiantors
+export default MyWorkshops
