@@ -17,15 +17,11 @@ function ParticipateCountCard(){
         });
     })
 
-    const display = () => {
-
-    }
-
     return(
 
         <div>
 
-            <Link to ={`/Workshops`}>
+            <Link to ={`/admin/view-participation`}>
             <div className="uditha-small-card participation-align">
 
                 <div className="smallcard-text-align">

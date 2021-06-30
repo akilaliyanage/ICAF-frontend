@@ -28,6 +28,7 @@ import KeyNote from './components/Editor_admin/KeyNote';
 import Report from "./components/Admin/Report/Report";
 import AdminLogin from "./components/Admin/AdminLogin";
 import ViewResearcPapers from "./components/Admin/ViewResearchPapers";
+import ViewParticipation from "./components/Admin/ViewParticipation";
 
 
 
@@ -121,6 +122,10 @@ export default class App extends React.Component {
 
                     <Route exact path="/admin/view-research-papers">
                         <ViewResearcPapers/>
+                    </Route>
+
+                    <Route exact path="/admin/view-participation">
+                        <ViewParticipation/>
                     </Route>
 
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>
