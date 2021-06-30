@@ -3,6 +3,7 @@ import '../../../assets/css/admin/admin.css'
 import axios from "axios";
 import config from "../../../config.json";
 import { BsFolderFill } from 'react-icons/bs';
+import {Link} from "react-router-dom";
 
 
 function ResearchCountCard(){
@@ -10,7 +11,7 @@ function ResearchCountCard(){
     const [count,setCount] = useState(0);
 
     useEffect(() => {
-        const url = config.host+"event-update/research";
+        const url = config.host+"/event-update/research";
         axios.get(url).then((res) => {
             setCount(res.data.count);
         });
@@ -20,6 +21,7 @@ function ResearchCountCard(){
 
         <div>
 
+            <Link to ={`/admin/view-research-papers`}>
             <div className="uditha-small-card research-align">
 
                 <div className="smallcard-text-align">
@@ -31,6 +33,7 @@ function ResearchCountCard(){
                 </div>
 
             </div>
+            </Link>
 
 
         </div>

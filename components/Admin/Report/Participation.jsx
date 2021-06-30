@@ -20,7 +20,7 @@ function Participation(){
 
     return(
         <div>
-
+            <h4 style={{marginLeft:'20%'}}>Participation</h4>
             <table className="table table-success table-striped center" style={{width:'60%'}}>
                 <thead>
                 <tr>
