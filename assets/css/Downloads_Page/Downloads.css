@@ -1,0 +1,7 @@
+.common-download-nav-cover{
+  background-color:rgb(23, 24, 26, 0.3);
+  background-image: linear-gradient(rgba(51, 51, 51, 0.527), rgba(0, 0, 0, 0.5)), url("../../media/Mahen/downloadcent.jpg");
+  height: 50vh;
+  background-image: no-repeat;
+  background-size: cover;
+}

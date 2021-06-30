@@ -29,6 +29,7 @@ import LoginComponant from './components/ResearcherLogin/LoginComponant';
 import DashboardHome from './components/ResearcherDashboard/DashboardHome';
 import Report from "./components/Admin/Report/Report";
 import AdminLogin from "./components/Admin/AdminLogin";
+import DownloadsComponent from "./components/DownloadPage/DownloadsComponent";
 
 
 export default class App extends React.Component {
@@ -126,6 +127,10 @@ export default class App extends React.Component {
 
                     <Route exact path="/researcher-dashboard">
                         <DashboardHome/>
+                    </Route>
+
+                    <Route exact path="/common-downloads">
+                        <DownloadsComponent/>
                     </Route>
 
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>
