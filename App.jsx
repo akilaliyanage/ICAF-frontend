@@ -28,6 +28,7 @@ import KeyNote from './components/Editor_admin/KeyNote';
 import LoginComponant from './components/ResearcherLogin/LoginComponant';
 import Report from "./components/Admin/Report/Report";
 import AdminLogin from "./components/Admin/AdminLogin";
+import EditorLogin from "./components/EditorLogin/EditorLogin";
 
 
 export default class App extends React.Component {
@@ -116,6 +117,10 @@ export default class App extends React.Component {
 
                     <Route exact path="/report">
                         <Report/>
+                    </Route>
+
+                    <Route exact path="/edi-login">
+                        <EditorLogin/>
                     </Route>
 
                     <Route exact path="/admin/login">
