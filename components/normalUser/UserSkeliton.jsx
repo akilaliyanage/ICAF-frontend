@@ -6,9 +6,10 @@ import { UserOutlined, KeyOutlined } from '@ant-design/icons';
 import config from '../../config.json'
 import { notification, Space } from 'antd';
 import {Link, Redirect} from 'react-router-dom'
+import Footer from '../landing_page/Footer'
 
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 class UserKeliton extends Component {
     constructor(props) {
@@ -69,7 +70,12 @@ class UserKeliton extends Component {
                 <Content style={{ padding: '0 50px' }}>
                     <div className="site-layout-content" >
                         <Row>
-                            <Col span={8}></Col>
+                            <Col span={9}>
+
+                            </Col>
+
+                            <Col span={15}>
+                            <Row>
                             <Col span={8}>
                                 <Image
                                     width={"80%"}
@@ -87,11 +93,15 @@ class UserKeliton extends Component {
                                     LOGIN
                                 </Button>
                             </Col>
-                            <Col span={8}></Col>
                         </Row>
+                            </Col>
+                        </Row>
+
+                        
+                        
                     </div>
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>ICAF ©{new Date().getFullYear()}</Footer>
+                <Footer/>
             </Layout>
          );
     }
