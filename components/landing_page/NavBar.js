@@ -60,7 +60,7 @@ class NavBar extends Component {
                 <Link to=""><p>researcher Login</p></Link>
                 <Link to=""><p>workshop Login</p></Link>
                 <Link to=""><p>Admin Login</p></Link>
-                <Link to=""><p>Editor Login</p></Link>
+                <Link to="/edi-login"><p>Editor Login</p></Link>
                 <Link to="/reviewLogin"><p>Reviewer Login</p></Link>
             </div>
         </div>
