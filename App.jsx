@@ -30,7 +30,6 @@ import Report from "./components/Admin/Report/Report";
 import AdminLogin from "./components/Admin/AdminLogin";
 
 
-
 export default class App extends React.Component {
     constructor(props) {
         super(props);
