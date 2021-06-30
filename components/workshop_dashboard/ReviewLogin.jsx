@@ -36,7 +36,7 @@ class ReviewLogin extends Component {
 
         console.log(data)
         
-        fetch(config.local + '/reviewer/rv-login',{
+        fetch(config.host + '/reviewer/rv-login',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'

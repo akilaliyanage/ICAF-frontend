@@ -77,6 +77,19 @@
 .nt-decline-btn:hover{
     background-color: rgb(255, 86, 86);
 }
+.nt-preview-btn{
+    margin-left: 1%;
+    padding: 3%;
+    width: 50px;
+    font-size: 10px;
+    background-color: rgb(40, 169, 255);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.nt-preview-btn:hover{
+    background-color: rgb(94, 191, 255);
+}
 .nt-form-div{
     margin-top: 2%;
 }

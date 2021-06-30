@@ -3,6 +3,7 @@ import '../../../assets/css/admin/admin.css'
 import axios from "axios";
 import config from "../../../config.json";
 import { BsPeopleFill } from 'react-icons/bs';
+import {Link} from "react-router-dom";
 
 
 function ParticipateCountCard(){
@@ -10,7 +11,7 @@ function ParticipateCountCard(){
     const [count,setCount] = useState(0);
 
     useEffect(() => {
-        const url = config.host+"event-update/participation";
+        const url = config.host+"/event-update/participation";
         axios.get(url).then((res) => {
             setCount(res.data.count);
         });
@@ -20,7 +21,7 @@ function ParticipateCountCard(){
 
         <div>
 
-
+            <Link to ={`/admin/view-participation`}>
             <div className="uditha-small-card participation-align">
 
                 <div className="smallcard-text-align">
@@ -32,6 +33,7 @@ function ParticipateCountCard(){
                 </div>
 
             </div>
+            </Link>
 
         </div>
 

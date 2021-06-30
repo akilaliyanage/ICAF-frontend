@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import './../../assets/css/WorkshopDetails/WorkDashHome.css'
 
 import config from '../../config.json'
 
-class AllCoordiantors extends Component {
+class AllResearchers extends Component {
 
     constructor(props){
         super(props)
         this.state={
-            allCoords:[]
+            allRchs:[]
         }
     }
 
@@ -17,9 +16,8 @@ class AllCoordiantors extends Component {
     }
 
     fetchItems(){
-        fetch(config.host + '/n-wc/all').then(res => res.json()).then(data => this.setState({allCoords:data})).catch(err => console.log(err))
+        fetch(config.host + '/reviewer/researchers').then(res => res.json()).then(data => this.setState({allRchs:data})).catch(err => console.log(err))
     }
-    
 
     render() {
         return (
@@ -29,28 +27,28 @@ class AllCoordiantors extends Component {
 
                         <div className="nt-div-head">
                             <h3 className="nt-div-head-text">
-                                All Coordinators
+                                All Researchers
                             </h3>
                         </div>
 
                         <table className="nt-table">
                             <thead>
                                 <tr>
-                                    <th className="nt-td">Coordinator Id</th>
-                                    <th className="nt-td">Coordinator Name</th>
+                                    <th className="nt-td">Researcher Id</th>
+                                    <th className="nt-td">Researcher Name</th>
                                     <th className="nt-td">Email</th>
-                                    <th className="nt-td">Study Feild</th>
+                                    <th className="nt-td">Occupation</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                            {this.state.allCoords.map((coord) => {
+                            {this.state.allRchs.map((researcher) => {
                                 return(
                                         <tr>
-                                            <td className="nt-td">{coord._id}</td>
-                                            <td className="nt-td">{coord.name}</td>
-                                            <td className="nt-td">{coord.email}</td>
-                                            <td className="nt-td">{coord.studyField}</td>
+                                            <td className="nt-td">{researcher._id}</td>
+                                            <td className="nt-td">{researcher.fName}</td>
+                                            <td className="nt-td">{researcher.pEmail}</td>
+                                            <td className="nt-td">{researcher.occupation}</td>
                                         </tr>
                                 );
                             })}
@@ -66,4 +64,4 @@ class AllCoordiantors extends Component {
     }
 }
 
-export default AllCoordiantors
+export default AllResearchers

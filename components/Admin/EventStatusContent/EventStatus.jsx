@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from "react";
 import '../../../assets/css/admin/admin.css'
 import axios from "axios";
+import config from "../../../config.json";
 
 
 function EventStatus(props){
@@ -21,21 +22,21 @@ function EventStatus(props){
     const[participateStatusColor,setParticipateColor] = useState('btn btn-success');
 
     useEffect(() => {
-        const url = "http://localhost:8000/event-update/workshop";
+        const url = config.host+"/event-update/workshop";
         axios.get(url).then((res) => {
             setWorkshopCount(res.data.count);
         })
     });
 
     useEffect(() => {
-        const url = "http://localhost:8000/event-update/research";
+        const url = config.host+"/event-update/research";
         axios.get(url).then((res) => {
             setResearchCount(res.data.count);
         })
     });
 
     useEffect(() => {
-        const url = "http://localhost:8000/event-update/participation";
+        const url = config.host+"/event-update/participation";
         axios.get(url).then((res) => {
             setParticipationCount(res.data.count);
         })
@@ -43,9 +44,7 @@ function EventStatus(props){
 
     useEffect(() => {
 
-        console.log(props.wcount);
-
-        const url = "http://localhost:8000/event-update";
+        const url = config.host+"/event-update";
         axios.get(url).then((res) => {
 
             setWorkshopLimit(res.data[0].WorkshopLimit);

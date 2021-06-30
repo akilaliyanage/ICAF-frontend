@@ -11,7 +11,6 @@ function UpdateReviewer(props){
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [picture, setPicture] = useState();
-    const [password, setPassword] = useState('');
     const [selectedFile, setSelectedFile] = useState();
     const [preview, setPreview] = useState();
     const [reviewer,setReviewer] = useState([]);
@@ -121,7 +120,7 @@ function UpdateReviewer(props){
                 <h2>Update Reviewer</h2>
 
                 <div className="uditha-old-avatar-Preview">
-                    <img style={{borderRadius:'50%'}} src={"http://localhost:8000/"+reviewer.profileImage} width="200" height="200" alt="avatar"/>
+                    <img style={{borderRadius:'50%'}} src={config.host+"/"+reviewer.profileImage} width="200" height="200" alt="avatar"/>
                 </div>
 
                 <div className="uditha-avatar-Preview">

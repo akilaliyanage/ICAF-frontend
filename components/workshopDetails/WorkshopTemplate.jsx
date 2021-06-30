@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Workshopcards from './WorkshopCards.jsx'
-import NavBar from './../landing_page/NavBar'
+import NavBar from '../landing_page/NavBar'
 import config from '../../config.json'
 import './../../assets/css/WorkshopDetails/workshopDetails.css'
+
+import Footer from './../landing_page/Footer'
 
 class WorkshopTemplate extends Component {
 
@@ -32,6 +34,8 @@ class WorkshopTemplate extends Component {
                 </div>
                 
                 <Workshopcards/>
+                <Footer/>
+
             </div>
         )
     }

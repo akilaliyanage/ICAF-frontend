@@ -84,27 +84,32 @@ function AddReviewer(){
                     </div>
                 </div>
 
+                <div className="uditha-old-avatar-Preview">
+                    <img style={{borderRadius:'50%'}} src="https://static.vecteezy.com/system/resources/previews/000/550/731/non_2x/user-icon-vector.jpg" width="200" height="200" alt="avatar"/>
+                </div>
+
                 <div className="uditha-avatar-Preview">
                     {selectedFile &&  <img style={{borderRadius:'50%'}} src={preview} width="200" height="200" alt="avatar"/>}
                 </div>
 
-                <h2>Add new Reviewer</h2>
+                <h2 style={{color:"white"}}>Add new Reviewer</h2>
+
             <form className="uditha-form-control" onSubmit={AddReviewer}>
 
                         <label className="description" htmlFor="element_1">Name </label>
                         <div>
-                            <input style={{color:"black"}} type="text"  onChange={(e) => {setName(e.target.value)}} className="uditha-text-control"/>
+                            <input required={true} style={{color:"black"}} type="text"  onChange={(e) => {setName(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
                         <label className="description" htmlFor="element_2">Username </label>
                         <div>
-                            <input style={{color:"black"}} type="text" onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
+                            <input required={true} style={{color:"black"}} type="text" onChange={(e) => {setUsername(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
 
                         <label className="description" htmlFor="element_3">Access Key </label>
                         <div>
-                            <input style={{color:"black"}} type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
+                            <input required={true} style={{color:"black"}} type={passwordToggle}  onChange={(e) => {setPassword(e.target.value)}} className="uditha-text-control"/>
                         </div>
 
                          <input type="checkBox" onClick={toggleVisible}/>

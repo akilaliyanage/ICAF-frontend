@@ -16,7 +16,7 @@ class WorkshopCards extends Component {
     }
 
     fetchItems(){
-        fetch(config.local + '/wShop/').then(res => res.json()).then(data => this.setState({workshops:data})).catch(err => console.log(err))
+        fetch(config.host + '/wShop/approved').then(res => res.json()).then(data => this.setState({workshops:data})).catch(err => console.log(err))
     }
     
     render() {

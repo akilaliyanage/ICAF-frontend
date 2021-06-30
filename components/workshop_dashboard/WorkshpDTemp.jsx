@@ -6,6 +6,7 @@ import ApprovedResearches from './ApprovedResearches'
 import ApprovedWorkshops from './ApprovedWorkshops'
 import PendingWorkshops from './PendingWorkshops'
 import PendingResearches from './PendingResearches'
+import AllResearchers from './AllResearchers'
 import AllCoordiantors from './AllCoordinators'
 
 class WorkshpDTemp extends Component {
@@ -55,6 +56,7 @@ class WorkshpDTemp extends Component {
                         <PendingWorkshops/>
                         <ApprovedResearches/>
                         <ApprovedWorkshops/>
+                        <AllResearchers/>
                         <AllCoordiantors/>
                     
                     </div>
