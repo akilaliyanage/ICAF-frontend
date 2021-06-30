@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/WorkDashHome.css'
-import { Modal} from 'antd';
+import { Modal, Button } from 'antd';
+import pdfimg from './../../assets/media/nethsara/pdf.png'
 
 import config from '../../config.json'
 
@@ -10,53 +11,94 @@ class PendingWorkshops extends Component {
         super(props)
         this.state={
             pendworkshops:[],
-            visible:'false'
+            modalTitle:'',
+            description:'',
+            date:'',
+            createdDate:'',
+            constuctorName:'',
+            studyFeild:'',
+            document:'',
+            visible:false,
+            isAuth: false
         }
-        // this.approveWorkshop = this.approveWorkshop.bind(this);
-        
+        this.approveWorkshop = this.approveWorkshop.bind(this);
+        this.declineWorkshop = this.declineWorkshop.bind(this);
+        this.showModal = this.showModal.bind(this);
+        this.handleOk = this.handleOk.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
-    showModal = () => {
-        this.setState({visible : 'true'})
+    showModal(workshop){
+        this.setState({
+            visible : true,
+            modalTitle: workshop.title,
+            description: workshop.description,
+            date: workshop.eventDate,
+            createdDate: workshop.dateCreated,
+            document: workshop.document
+        })
+
     };
     
-    handleOk = () => {
-        this.setState({visible : 'false'})
+    handleOk(){
+        this.setState({visible : false})
     };
     
-    handleCancel = () => {
-        this.setState({visible : 'false'})
+    handleCancel(){
+        this.setState({visible : false})
     };
+
 
     componentDidMount(){
         this.fetchItems(); 
     }
 
     fetchItems(){
-        fetch(config.local + '/wShop/pending').then(res => res.json()).then(data => this.setState({pendworkshops:data})).catch(err => console.log(err))
+        fetch(config.host + '/wShop/pending').then(res => res.json()).then(data => this.setState({pendworkshops:data})).catch(err => console.log(err))
     }
     
-    approveWorkshop(e){
-        fetch(config.local + '',{
-            method : 'patch',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(res => res.json()).then(data =>{
+    approveWorkshop(id){
+        console.log(id)
+        fetch(config.host + '/wShop/approve/'+id).then(res => res.json()).then(data =>{
             
-            if(res.data.status === 200){
-                alert("Successfully updated");
+            if(data.message == 'success'){
+                alert("Workshop Approve Successful");
+                window.location = `/workshopDash`
             }
             else {
-                alert("Failed");
+                alert("Workshop Approve Failed");
+                window.location = `/workshopDash`
+            }
+            
+        }).catch(err =>{
+            console.log(err)
+        })
+    }
+
+    declineWorkshop(){
+        console.log(id)
+        fetch(config.host + '/wShop/decline/'+id,).then(res => res.json()).then(data =>{
+            
+            if(data.message == 'success'){
+                alert("Workshop Decline Successful");
+                window.location = `/workshopDash`
+            }
+            else {
+                alert("Workshop Decline Failed");
+                window.location = `/workshopDash`
             }
             
         }).catch(err =>{
             console.log(err)
         })
 
-    }
+        // setInterval(() => {
+        //     this.setState({isAuth : true});
+        // }, 2000);
 
+        // window.location = `/workshopDash`
+    }
+    
 
     render() {
         return (
@@ -76,7 +118,7 @@ class PendingWorkshops extends Component {
                                     {/* <th className="nt-td">Workshop Id</th> */}
                                     <th className="nt-td">Workshop Title</th>
                                     <th className="nt-td">Workshop Date</th>
-                                    <th className="nt-td">Conductor</th>
+                                    <th className="nt-td">Preview</th>
                                     {/* <th className="nt-td">Created Date</th> */}
                                     <th className="nt-td">Approval</th>
                                 </tr>
@@ -89,11 +131,13 @@ class PendingWorkshops extends Component {
                                             {/* <td className="nt-td">{workshop._id}</td> */}
                                             <td className="nt-td">{workshop.title}</td>
                                             <td className="nt-td">{workshop.eventDate}</td>
-                                            <td className="nt-td">{workshop.conductor}</td>
+                                            <td className="nt-td"><button className="nt-preview-btn" 
+                                            onClick={() => this.showModal(workshop)}
+                                            >Preview</button></td>
                                             {/* <td className="nt-td">{workshop.dateCreated}</td> */}
                                             <td>
-                                                <button className="nt-approve-btn" onClick={this.approveWorkshop}> Approve </button>
-                                                <button className="nt-decline-btn"> Decline </button>
+                                                <button className="nt-approve-btn" onClick={() => this.approveWorkshop(workshop._id)}> Approve </button>
+                                                <button className="nt-decline-btn" onClick={() => this.declineWorkshop(workshop._id)}> Decline </button>
                                             </td>
                                         </tr>
                                 );
@@ -102,19 +146,21 @@ class PendingWorkshops extends Component {
                             </tbody>
                         </table>
                     </div>
-
                 </div>
-
-                {/* <Modal title="Basic Modal" 
-                    visible={this.state.visible} 
-                    onOk={handleOk} 
-                    onCancel={handleCancel}
-                    >
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                </Modal>             */}
-                
+      
+                <Modal title="Preview Workshop" 
+                    centered
+                    visible={this.state.visible} onOk={this.handleOk} onCancel={this.handleCancel}
+                    
+                >
+                    
+                    <h3>Workshop Title :  {this.state.modalTitle}</h3>
+                    <h6>Workshop date : {this.state.date}</h6>
+                    <p>Decsription : {this.state.description}</p>
+                    <p>Resources : <a href={this.state.document} target='_blank'>View Resource</a></p>
+                    <a href={this.state.document} target='_blank'><img src={pdfimg} alt="" style={{width:"80px", marginLeft:"80px"}}/></a>
+                    
+                </Modal>         
             </div>
         )
     }

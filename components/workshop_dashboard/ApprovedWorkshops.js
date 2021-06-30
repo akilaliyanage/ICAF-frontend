@@ -17,7 +17,7 @@ class ApprovedWorkshops extends Component {
     }
 
     fetchItems(){
-        fetch(config.local + '/wShop/approved').then(res => res.json()).then(data => this.setState({workshops:data})).catch(err => console.log(err))
+        fetch(config.host + '/wShop/approved').then(res => res.json()).then(data => this.setState({workshops:data})).catch(err => console.log(err))
     }
 
 
@@ -43,7 +43,7 @@ class ApprovedWorkshops extends Component {
                                     <th className="nt-td">Workshop Title</th>
                                     <th className="nt-td">Workshop Date</th>
                                     <th className="nt-td">Conductor</th>
-                                    <th className="nt-td">Created Date</th>
+                                    <th className="nt-td">Workshop Resource</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,7 +54,7 @@ class ApprovedWorkshops extends Component {
                                                 <td className="nt-td">{workshop.title}</td>
                                                 <td className="nt-td">{workshop.eventDate}</td>
                                                 <td className="nt-td">{workshop.conductor}</td>
-                                                <td className="nt-td">{workshop.dateCreated}</td>
+                                                <td className="nt-td"><a href={workshop.document} target="_blank">Preview Document</a></td>
                                             </tr>
                                     );
                                 })}

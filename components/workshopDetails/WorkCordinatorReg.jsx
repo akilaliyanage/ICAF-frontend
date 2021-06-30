@@ -69,7 +69,7 @@ class WorkCordinatorReg extends Component {
 
                 console.log(data)
         
-                fetch(config.local + '/n-wc/workCon-register',{
+                fetch(config.host + '/n-wc/workCon-register',{
                     method : 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -92,7 +92,7 @@ class WorkCordinatorReg extends Component {
             }
 
             console.log(data)
-            fetch(config.local + '/n-wc/workCon-login',{
+            fetch(config.host + '/n-wc/workCon-login',{
                 method : 'POST',
                 headers: {
                     'Content-Type': 'application/json'
