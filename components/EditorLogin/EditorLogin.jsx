@@ -27,7 +27,7 @@ class EditorLogin extends Component {
         }
         console.log(data);
 
-        fetch(config.local + '/editor/login',{
+        fetch(config.host + '/editor/login',{
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
