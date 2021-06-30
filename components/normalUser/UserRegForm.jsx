@@ -8,10 +8,11 @@ import { notification, Space } from 'antd';
 import {Link, Redirect} from 'react-router-dom'
 import { Upload, message } from 'antd';
 import { UploadOutlined,MailOutlined } from '@ant-design/icons';
+import Footer from '../landing_page/Footer'
 
 const { Dragger } = Upload;
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 const props = {
     name: 'image',
     action: config.host + '/image',
@@ -86,7 +87,7 @@ class UserRegForm extends Component {
     }
     render() { 
         return ( 
-            <Layout className="layout user-login" style={{ height: '100vh', backgroundColor:"white" }}>
+            <Layout className="layout user-login" style={{ height: 'auto', backgroundColor:"white" }}>
             <Content style={{ padding: '0 50px' }}>
                 <div className="site-layout-content" >
                     <Row>
@@ -122,7 +123,8 @@ class UserRegForm extends Component {
                     </Row>
                 </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>ICAF ©{new Date().getFullYear()}</Footer>
+            <br />
+            <Footer/>
         </Layout>
          );
     }
